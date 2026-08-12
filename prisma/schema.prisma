@@ -1,0 +1,115 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum TechnologyCategory {
+  Frameworks
+  Databases
+  ORMs
+  Validation
+  Testing
+  Authentication
+  BuildTools
+  StateManagement
+  UILibraries
+}
+
+enum CrawlJobStatus {
+  queued
+  running
+  completed
+  failed
+}
+
+model Technology {
+  id          String             @id @default(uuid())
+  slug        String             @unique
+  name        String
+  npmPackage  String             @unique
+  category    TechnologyCategory
+  description String?
+  isActive    Boolean            @default(true)
+  repoCount   Int                @default(0)
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+
+  repositories  RepositoryTechnology[]
+  snapshotsA    TrendingSnapshot[]
+  pairingsA     TechnologyPairing[]    @relation("PairingA")
+  pairingsB     TechnologyPairing[]    @relation("PairingB")
+}
+
+model Repository {
+  id              String   @id @default(uuid())
+  githubId        BigInt   @unique
+  fullName        String   @unique
+  url             String
+  stars           Int      @default(0)
+  defaultBranch   String   @default("main")
+  lastPushedAt    DateTime?
+  lastCrawledAt   DateTime?
+  packageJsonSha  String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  technologies    RepositoryTechnology[]
+}
+
+model RepositoryTechnology {
+  repositoryId   String
+  technologyId   String
+  lastDetectedAt DateTime @default(now())
+  repository     Repository @relation(fields: [repositoryId], references: [id])
+  technology     Technology @relation(fields: [technologyId], references: [id])
+
+  @@id([repositoryId, technologyId])
+}
+
+model TechnologyPairing {
+  technologyAId   String
+  technologyBId   String
+  repositoryCount Int
+  strengthScore   Float
+  updatedAt       DateTime @updatedAt
+
+  technologyA     Technology @relation("PairingA", fields: [technologyAId], references: [id])
+  technologyB     Technology @relation("PairingB", fields: [technologyBId], references: [id])
+
+  @@id([technologyAId, technologyBId])
+}
+
+model TrendingSnapshot {
+  technologyId  String
+  snapshotDate  DateTime @db.Date
+  adoptionCount Int
+  trendScore    Float    @default(0)
+  adoptionDelta Float    @default(0)
+  technology    Technology @relation(fields: [technologyId], references: [id])
+
+  @@id([technologyId, snapshotDate])
+}
+
+model CrawlState {
+  id            Int      @id @default(1)
+  activeWindow  Int      @default(1)
+  cursors       Json     @default("{}")
+  updatedAt     DateTime @updatedAt
+}
+
+model CrawlJob {
+  id                    String        @id @default(uuid())
+  status                CrawlJobStatus
+  repositoriesProcessed Int           @default(0)
+  repositoriesMatched   Int           @default(0)
+  errors                Int           @default(0)
+  startedAt             DateTime?
+  completedAt           DateTime?
+  createdAt             DateTime      @default(now())
+}

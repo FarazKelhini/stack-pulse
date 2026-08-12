@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 47% 11%;
+  --foreground: 213 31% 91%;
+
+  --card: 222 47% 14%;
+  --card-foreground: 213 31% 91%;
+
+  --popover: 222 47% 11%;
+  --popover-foreground: 213 31% 91%;
+
+  --primary: 226 70% 60%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 222 47% 20%;
+  --secondary-foreground: 213 31% 91%;
+
+  --muted: 222 47% 25%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 226 70% 60%;
+  --accent-foreground: 210 40% 98%;
+
+  --border: 222 47% 20%;
+  --input: 222 47% 20%;
+  --ring: 226 70% 60%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    /* Subtle Grid Background */
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-background/60 backdrop-blur-md border border-border;
+  }
+
+  .card-modern {
+    @apply bg-card text-card-foreground border border-border rounded-xl shadow-card transition-all duration-200 hover:border-primary/50 hover:shadow-lg;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
