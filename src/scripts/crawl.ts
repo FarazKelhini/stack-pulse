@@ -514,81 +514,65 @@ async function runCrawl() {
           existingTechIdsByRepoId.get(rel.repositoryId)!.add(rel.technologyId);
         }
 
-        // Process the whole batch's repo/technology writes in a single
-        // transaction instead of one transaction per repository.
-        try {
-          await prisma.$transaction(
-            async (tx) => {
-              for (let i = 0; i < nodesToMatch.length; i++) {
-                const item = nodesToMatch[i];
-                if (!item) continue;
-                const { node, matchedSlugs } = item;
+        // Keep every transaction to one repository. A full GitHub page can
+        // require hundreds of dependent writes, which can outlive Prisma's
+        // interactive-transaction timeout on hosted databases. Per-repository
+        // transactions remain atomic while allowing the rest of the page to
+        // continue if one repository fails.
+        for (let i = 0; i < nodesToMatch.length; i++) {
+          const item = nodesToMatch[i];
+          if (!item) continue;
+          const { node, matchedSlugs } = item;
 
-                // Update real-time progress with current repo (throttled to 10Hz)
-                const now = Date.now();
-                if (now - lastUpdate > 100) {
-                  printProgress(
-                    slot.label,
-                    activeSlotIdx,
-                    SLOTS.length,
-                    totalProcessed + i,
-                    totalMatched,
-                    totalErrors,
-                    node.nameWithOwner,
-                    lastError,
-                  );
-                  lastUpdate = now;
-                }
+          const now = Date.now();
+          if (now - lastUpdate > 100) {
+            printProgress(
+              slot.label,
+              activeSlotIdx,
+              SLOTS.length,
+              totalProcessed + i,
+              totalMatched,
+              totalErrors,
+              node.nameWithOwner,
+              lastError,
+            );
+            lastUpdate = now;
+          }
 
-                if (matchedSlugs.length > 0) {
-                  batchMatched++;
-                }
+          const techIds = matchedSlugs
+            .map((slug: string) => techIdBySlug.get(slug))
+            .filter((id: string | undefined): id is string => Boolean(id));
+          const existingRepo = existingRepoByGithubId.get(BigInt(node.databaseId).toString());
+          const existingTechIds = existingRepo
+            ? existingTechIdsByRepoId.get(existingRepo.id) ?? new Set<string>()
+            : new Set<string>();
 
-                const techIds = matchedSlugs
-                  .map((slug: string) => techIdBySlug.get(slug))
-                  .filter((id: string | undefined): id is string => Boolean(id));
-
-                const existingRepo = existingRepoByGithubId.get(
-                  BigInt(node.databaseId).toString(),
-                );
-                const existingTechIds = existingRepo
-                  ? existingTechIdsByRepoId.get(existingRepo.id) ?? new Set<string>()
-                  : new Set<string>();
-
-                const { affectedTechIds: ids } = await processRepository(
-                  tx,
-                  node,
-                  techIds,
-                  existingTechIds,
-                );
-                ids.forEach((id) => affectedTechIds.add(id));
-              }
-            },
-            {
-              maxWait: TRANSACTION_MAX_WAIT_MS,
-              timeout: TRANSACTION_TIMEOUT_MS,
-            },
-          );
-        } catch (err) {
-          // If the batched transaction fails we don't know exactly which repo
-          // caused it, so count the whole sub-batch as errored and log it.
-          batchErrors += nodesToMatch.length;
-          totalErrors += nodesToMatch.length;
-          lastError = err instanceof Error ? err.message : String(err);
-          logger.error(
-            { err, window: slot.label, count: nodesToMatch.length },
-            'Failed to process batch transaction',
-          );
-          cliLog(`Failed to process batch transaction for ${slot.label} (${nodesToMatch.length} repos)`, 'error', {
-            slotLabel: slot.label,
-            slotIdx: activeSlotIdx,
-            totalSlots: SLOTS.length,
-            processed: totalProcessed,
-            matched: totalMatched,
-            errors: totalErrors,
-            currentRepo: '...',
-            lastError: lastError,
-          });
+          try {
+            const { affectedTechIds: ids } = await prisma.$transaction(
+              (tx) => processRepository(tx, node, techIds, existingTechIds),
+              {
+                maxWait: TRANSACTION_MAX_WAIT_MS,
+                timeout: TRANSACTION_TIMEOUT_MS,
+              },
+            );
+            ids.forEach((id) => affectedTechIds.add(id));
+            if (matchedSlugs.length > 0) batchMatched++;
+          } catch (err) {
+            batchErrors++;
+            totalErrors++;
+            lastError = err instanceof Error ? err.message : String(err);
+            logger.error({ err, window: slot.label, repo: node.nameWithOwner }, 'Failed to process repository');
+            cliLog(`Failed to process ${node.nameWithOwner}`, 'error', {
+              slotLabel: slot.label,
+              slotIdx: activeSlotIdx,
+              totalSlots: SLOTS.length,
+              processed: totalProcessed + i,
+              matched: totalMatched,
+              errors: totalErrors,
+              currentRepo: node.nameWithOwner,
+              lastError,
+            });
+          }
         }
       }
 
