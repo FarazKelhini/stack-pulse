@@ -22,6 +22,9 @@ const MAX_DURATION = parseInt(process.env.CRAWL_MAX_DURATION_MS ?? '5400000', 10
 // full GitHub page on a hosted database.
 const TRANSACTION_TIMEOUT_MS = parseInt(process.env.CRAWL_TRANSACTION_TIMEOUT_MS ?? '60000', 10);
 const TRANSACTION_MAX_WAIT_MS = parseInt(process.env.CRAWL_TRANSACTION_MAX_WAIT_MS ?? '10000', 10);
+// Keep interactive transactions comfortably below their timeout. This affects
+// only database writes; GitHub pages are still fetched once at BATCH_SIZE.
+const DB_SUB_BATCH_SIZE = Math.max(1, parseInt(process.env.CRAWL_DB_SUB_BATCH_SIZE ?? '10', 10));
 
 const COLORS = {
   blue: '\x1b[34m',
@@ -514,63 +517,88 @@ async function runCrawl() {
           existingTechIdsByRepoId.get(rel.repositoryId)!.add(rel.technologyId);
         }
 
-        // Keep every transaction to one repository. A full GitHub page can
-        // require hundreds of dependent writes, which can outlive Prisma's
-        // interactive-transaction timeout on hosted databases. Per-repository
-        // transactions remain atomic while allowing the rest of the page to
-        // continue if one repository fails.
-        for (let i = 0; i < nodesToMatch.length; i++) {
-          const item = nodesToMatch[i];
-          if (!item) continue;
-          const { node, matchedSlugs } = item;
-
-          const now = Date.now();
-          if (now - lastUpdate > 100) {
-            printProgress(
-              slot.label,
-              activeSlotIdx,
-              SLOTS.length,
-              totalProcessed + i,
-              totalMatched,
-              totalErrors,
-              node.nameWithOwner,
-              lastError,
-            );
-            lastUpdate = now;
-          }
-
-          const techIds = matchedSlugs
-            .map((slug: string) => techIdBySlug.get(slug))
-            .filter((id: string | undefined): id is string => Boolean(id));
-          const existingRepo = existingRepoByGithubId.get(BigInt(node.databaseId).toString());
-          const existingTechIds = existingRepo
-            ? existingTechIdsByRepoId.get(existingRepo.id) ?? new Set<string>()
-            : new Set<string>();
+        // A GitHub page may contain up to 100 repositories. Commit it in small
+        // chunks so a slow hosted database cannot expire one giant interactive
+        // transaction and roll back the entire page.
+        for (let start = 0; start < nodesToMatch.length; start += DB_SUB_BATCH_SIZE) {
+          const writeChunk = nodesToMatch.slice(start, start + DB_SUB_BATCH_SIZE);
+          const chunkAffectedTechIds = new Set<string>();
+          let chunkMatched = 0;
 
           try {
-            const { affectedTechIds: ids } = await prisma.$transaction(
-              (tx) => processRepository(tx, node, techIds, existingTechIds),
-              {
-                maxWait: TRANSACTION_MAX_WAIT_MS,
-                timeout: TRANSACTION_TIMEOUT_MS,
-              },
+            await prisma.$transaction(
+            async (tx) => {
+              for (let i = 0; i < writeChunk.length; i++) {
+                const item = writeChunk[i];
+                if (!item) continue;
+                const { node, matchedSlugs } = item;
+
+                // Update real-time progress with current repo (throttled to 10Hz)
+                const now = Date.now();
+                if (now - lastUpdate > 100) {
+                  printProgress(
+                    slot.label,
+                    activeSlotIdx,
+                    SLOTS.length,
+                    totalProcessed + start + i,
+                    totalMatched + batchMatched,
+                    totalErrors,
+                    node.nameWithOwner,
+                    lastError,
+                  );
+                  lastUpdate = now;
+                }
+
+                if (matchedSlugs.length > 0) {
+                  chunkMatched++;
+                }
+
+                const techIds = matchedSlugs
+                  .map((slug: string) => techIdBySlug.get(slug))
+                  .filter((id: string | undefined): id is string => Boolean(id));
+
+                const existingRepo = existingRepoByGithubId.get(
+                  BigInt(node.databaseId).toString(),
+                );
+                const existingTechIds = existingRepo
+                  ? existingTechIdsByRepoId.get(existingRepo.id) ?? new Set<string>()
+                  : new Set<string>();
+
+                const { affectedTechIds: ids } = await processRepository(
+                  tx,
+                  node,
+                  techIds,
+                  existingTechIds,
+                );
+                ids.forEach((id) => chunkAffectedTechIds.add(id));
+              }
+            },
+            {
+              maxWait: TRANSACTION_MAX_WAIT_MS,
+              timeout: TRANSACTION_TIMEOUT_MS,
+            },
             );
-            ids.forEach((id) => affectedTechIds.add(id));
-            if (matchedSlugs.length > 0) batchMatched++;
+            batchMatched += chunkMatched;
+            chunkAffectedTechIds.forEach((id) => affectedTechIds.add(id));
           } catch (err) {
-            batchErrors++;
-            totalErrors++;
+            // The other chunks have already committed, and later chunks can
+            // still be processed. Only this chunk is counted as failed.
+            batchErrors += writeChunk.length;
+            totalErrors += writeChunk.length;
             lastError = err instanceof Error ? err.message : String(err);
-            logger.error({ err, window: slot.label, repo: node.nameWithOwner }, 'Failed to process repository');
-            cliLog(`Failed to process ${node.nameWithOwner}`, 'error', {
+            logger.error(
+              { err, window: slot.label, count: writeChunk.length },
+              'Failed to process crawl transaction chunk',
+            );
+            cliLog(`Failed to process transaction chunk for ${slot.label} (${writeChunk.length} repos)`, 'error', {
               slotLabel: slot.label,
               slotIdx: activeSlotIdx,
               totalSlots: SLOTS.length,
-              processed: totalProcessed + i,
+              processed: totalProcessed,
               matched: totalMatched,
               errors: totalErrors,
-              currentRepo: node.nameWithOwner,
-              lastError,
+              currentRepo: '...',
+              lastError: lastError,
             });
           }
         }
