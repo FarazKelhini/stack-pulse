@@ -7,12 +7,6 @@ import { matchTechnologies } from '../lib/matcher';
 import { Prisma, TechnologyCategory } from '@prisma/client';
 import { performance } from 'perf_hooks';
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-if (!GITHUB_TOKEN) {
-  logger.error('GITHUB_TOKEN is not set in environment variables');
-  process.exit(1);
-}
-
 const BATCH_SIZE = Math.min(parseInt(process.env.CRAWL_BATCH_SIZE ?? '100', 10), 100);
 const DELAY_MS = parseInt(process.env.CRAWL_DELAY_MS ?? '500', 10);
 const MAX_RETRIES = parseInt(process.env.CRAWL_MAX_RETRIES ?? '3', 10);
@@ -306,8 +300,13 @@ export async function recomputeRepoCounts(techIds: string[]) {
   `;
 }
 
-async function runCrawl() {
-  const github = new GitHubClient(GITHUB_TOKEN as string);
+export async function runCrawl() {
+  const githubToken = process.env.GITHUB_TOKEN;
+  if (!githubToken) {
+    throw new Error('GITHUB_TOKEN is not set in environment variables');
+  }
+
+  const github = new GitHubClient(githubToken);
   const jobId = (await prisma.crawlJob.create({
     data: { status: 'queued' },
   })).id;
