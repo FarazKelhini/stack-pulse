@@ -17,6 +17,11 @@ const BATCH_SIZE = Math.min(parseInt(process.env.CRAWL_BATCH_SIZE ?? '100', 10),
 const DELAY_MS = parseInt(process.env.CRAWL_DELAY_MS ?? '500', 10);
 const MAX_RETRIES = parseInt(process.env.CRAWL_MAX_RETRIES ?? '3', 10);
 const MAX_DURATION = parseInt(process.env.CRAWL_MAX_DURATION_MS ?? '5400000', 10);
+// A matching batch can perform several dependent writes per repository. Prisma
+// defaults interactive transactions to five seconds, which is too short for a
+// full GitHub page on a hosted database.
+const TRANSACTION_TIMEOUT_MS = parseInt(process.env.CRAWL_TRANSACTION_TIMEOUT_MS ?? '60000', 10);
+const TRANSACTION_MAX_WAIT_MS = parseInt(process.env.CRAWL_TRANSACTION_MAX_WAIT_MS ?? '10000', 10);
 
 const COLORS = {
   blue: '\x1b[34m',
@@ -512,52 +517,58 @@ async function runCrawl() {
         // Process the whole batch's repo/technology writes in a single
         // transaction instead of one transaction per repository.
         try {
-          await prisma.$transaction(async (tx) => {
-            for (let i = 0; i < nodesToMatch.length; i++) {
-              const item = nodesToMatch[i];
-              if (!item) continue;
-              const { node, matchedSlugs } = item;
+          await prisma.$transaction(
+            async (tx) => {
+              for (let i = 0; i < nodesToMatch.length; i++) {
+                const item = nodesToMatch[i];
+                if (!item) continue;
+                const { node, matchedSlugs } = item;
 
-              // Update real-time progress with current repo (throttled to 10Hz)
-              const now = Date.now();
-              if (now - lastUpdate > 100) {
-                printProgress(
-                  slot.label,
-                  activeSlotIdx,
-                  SLOTS.length,
-                  totalProcessed + i,
-                  totalMatched,
-                  totalErrors,
-                  node.nameWithOwner,
-                  lastError,
+                // Update real-time progress with current repo (throttled to 10Hz)
+                const now = Date.now();
+                if (now - lastUpdate > 100) {
+                  printProgress(
+                    slot.label,
+                    activeSlotIdx,
+                    SLOTS.length,
+                    totalProcessed + i,
+                    totalMatched,
+                    totalErrors,
+                    node.nameWithOwner,
+                    lastError,
+                  );
+                  lastUpdate = now;
+                }
+
+                if (matchedSlugs.length > 0) {
+                  batchMatched++;
+                }
+
+                const techIds = matchedSlugs
+                  .map((slug: string) => techIdBySlug.get(slug))
+                  .filter((id: string | undefined): id is string => Boolean(id));
+
+                const existingRepo = existingRepoByGithubId.get(
+                  BigInt(node.databaseId).toString(),
                 );
-                lastUpdate = now;
+                const existingTechIds = existingRepo
+                  ? existingTechIdsByRepoId.get(existingRepo.id) ?? new Set<string>()
+                  : new Set<string>();
+
+                const { affectedTechIds: ids } = await processRepository(
+                  tx,
+                  node,
+                  techIds,
+                  existingTechIds,
+                );
+                ids.forEach((id) => affectedTechIds.add(id));
               }
-
-              if (matchedSlugs.length > 0) {
-                batchMatched++;
-              }
-
-              const techIds = matchedSlugs
-                .map((slug: string) => techIdBySlug.get(slug))
-                .filter((id: string | undefined): id is string => Boolean(id));
-
-              const existingRepo = existingRepoByGithubId.get(
-                BigInt(node.databaseId).toString(),
-              );
-              const existingTechIds = existingRepo
-                ? existingTechIdsByRepoId.get(existingRepo.id) ?? new Set<string>()
-                : new Set<string>();
-
-              const { affectedTechIds: ids } = await processRepository(
-                tx,
-                node,
-                techIds,
-                existingTechIds ?? new Set<string>(),
-              );
-              ids.forEach((id) => affectedTechIds.add(id));
-            }
-          });
+            },
+            {
+              maxWait: TRANSACTION_MAX_WAIT_MS,
+              timeout: TRANSACTION_TIMEOUT_MS,
+            },
+          );
         } catch (err) {
           // If the batched transaction fails we don't know exactly which repo
           // caused it, so count the whole sub-batch as errored and log it.

@@ -171,6 +171,8 @@ Optional (sensible defaults shown):
 | Variable | Default | Purpose |
 |---|---|---|
 | `CRAWL_BATCH_SIZE` | `100` | Repositories per crawl batch |
+| `CRAWL_TRANSACTION_TIMEOUT_MS` | `60000` | Maximum duration for a crawl database transaction |
+| `CRAWL_TRANSACTION_MAX_WAIT_MS` | `10000` | Maximum wait to acquire a database transaction |
 | `CRAWL_DELAY_MS` | `500` | Delay between requests |
 | `CRAWL_MAX_RETRIES` | `3` | Max retries per repository before skipping |
 | `CRAWL_MAX_DURATION_MS` | `5400000` (90 min) | Wall-clock cap on one crawl run |
