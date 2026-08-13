@@ -25,7 +25,7 @@ export async function refreshRepository(github: GitHubClient, repo: any): Promis
   if (node.object && node.object.text) {
     try {
       const pkg = JSON.parse(node.object.text);
-      matchedSlugs = matchTechnologies(pkg);
+      matchedSlugs = await matchTechnologies(pkg);
     } catch (e) {
       logger.warn({ repo: repo.fullName }, 'Failed to parse package.json during refresh, skipping');
       console.log(`[WARN] Repository: ${repo.fullName} (failed to parse package.json)`);

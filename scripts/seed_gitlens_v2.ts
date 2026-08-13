@@ -11,7 +11,7 @@ async function seed() {
   // The 'node.object.text' is indeed JSON, but the raw output was dumping the *entire* parsed object
   // Let's just use the repo object returned directly.
   const pkg = JSON.parse(repo.object!.text!);
-  const slugs = matchTechnologies(pkg);
+  const slugs = await matchTechnologies(pkg);
   const techs = await prisma.technology.findMany({ where: { slug: { in: slugs } } });
 
   // Use a unique ID to be absolutely sure we aren't hitting collisions

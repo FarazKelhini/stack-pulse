@@ -2,6 +2,8 @@ import { TrendingUp, Calendar, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 import { TrendingList } from '@/components/trending/TrendingList';
 
+export const dynamic = 'force-dynamic';
+
 export default async function TrendingPage() {
   const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
   const res = await fetch(`${baseUrl}/api/trending`);

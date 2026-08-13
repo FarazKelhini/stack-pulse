@@ -2,6 +2,8 @@ import { TrendingUp, Calendar } from 'lucide-react';
 import Link from 'next/link';
 import { HotThisWeek } from '@/components/home/HotThisWeek';
 
+export const dynamic = 'force-dynamic';
+
 interface WeeklyTechnology {
   slug: string;
   name: string;
