@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { fileURLToPath } from 'url';
 
 function writeGitHubStepSummary(stats: {
   totalProcessed: number;
