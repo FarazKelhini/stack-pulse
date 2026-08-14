@@ -1,4 +1,34 @@
-import { fileURLToPath } from 'url';
+import fs from 'fs';
+
+function writeGitHubStepSummary(stats: {
+  totalProcessed: number;
+  totalMatched: number;
+  totalErrors: number;
+  durationSeconds: number;
+}) {
+  const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+  if (!summaryPath) return;
+
+  const markdown = `
+### 🕷️ StackPulse Crawl Summary
+
+| Metric | Count |
+| :--- | :--- |
+| **Total Processed** | \`${stats.totalProcessed.toLocaleString()}\` |
+| **Total Matched** | \`${stats.totalMatched.toLocaleString()}\` |
+| **Total Errors** | \`${stats.totalErrors.toLocaleString()}\` |
+| **Duration** | \`${stats.durationSeconds}s\` |
+
+*Crawl completed successfully.*
+`;
+
+  try {
+    fs.appendFileSync(summaryPath, markdown);
+  } catch (err) {
+    logger.warn({ err }, 'Failed to write GitHub Step Summary');
+  }
+}
+
 import 'dotenv/config';
 import prisma from '../lib/prisma';
 import { logger } from '../lib/logger';
@@ -87,6 +117,14 @@ function printProgress(
   const filledWidth = Math.round(progress * barWidth);
   const bar = `${COLORS.green}${'█'.repeat(filledWidth)}${COLORS.reset}${COLORS.dim}${'░'.repeat(barWidth - filledWidth)}${COLORS.reset}`;
   const percent = Math.round(progress * 100);
+
+  // In CI: Log a clean single milestone line
+  if (!process.stdout.isTTY) {
+    console.log(
+      `[PROGRESS] ${slotLabel} (${percent}%) | Processed: ${processed.toLocaleString()} | Matched: ${matched.toLocaleString()} | Errors: ${errors.toLocaleString()}`
+    );
+    return;
+  }
 
   // 2. Line 1: Overall Progress
   const line1 = `${COLORS.yellow}'[CRAWL]'${COLORS.reset} ${bar} ${percent}% | ` +
@@ -645,6 +683,7 @@ export async function runCrawl() {
     });
 
     const durationSeconds = Math.round((performance.now() - startTime) / 1000);
+    writeGitHubStepSummary({ totalProcessed, totalMatched, totalErrors, durationSeconds });
 
     if (process.stdout.isTTY) {
       process.stdout.write('\n'); // Move to next line after the progress bar
