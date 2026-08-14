@@ -10,25 +10,35 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 > StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#Repository Eligibility)).
 
 <!-- STACKPULSE:SUMMARY:START -->
-### 📊 Daily Snapshot (Updated: August 12, 2026)
+### 📊 Daily Snapshot (Updated: August 14, 2026)
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| Next.js | 0.0% | - |
-| Vue.js | 0.0% | - |
-| Nuxt | 0.0% | - |
-| Angular | 0.0% | - |
-| Svelte | 0.0% | - |
-| SvelteKit | 0.0% | - |
-| Express | 0.0% | - |
-| Fastify | 0.0% | - |
-| NestJS | 0.0% | - |
-| Koa | 0.0% | - |
+| TypeScript | 61.0% | - |
+| React | 27.9% | - |
+| Vitest | 17.5% | - |
+| Jest | 16.8% | - |
+| Vite | 14.1% | - |
+| Babel | 13.7% | - |
+| rimraf | 13.4% | - |
+| Mocha | 13.3% | - |
+| Webpack | 12.3% | - |
+| cross-env | 11.8% | - |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
+| 1 | TypeScript | BuildTools | N/A |
+| 2 | React | Frameworks | N/A |
+| 3 | Vitest | Testing | N/A |
+| 4 | Jest | Testing | N/A |
+| 5 | Vite | BuildTools | N/A |
+| 6 | Babel | BuildTools | N/A |
+| 7 | rimraf | BuildTools | N/A |
+| 8 | Mocha | Testing | N/A |
+| 9 | Webpack | BuildTools | N/A |
+| 10 | cross-env | BuildTools | N/A |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -38,19 +48,29 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🏷️ Top Per Category
 | Category | Top Technology |
 |---|---|
-| Authentication | Passport |
+| Authentication | CORS |
 | BuildTools | TypeScript |
 | Databases | PostgreSQL (pg) |
-| Frameworks | Next.js |
-| ORMs | Prisma |
-| StateManagement | Redux |
-| Testing | Jest |
-| UILibraries | Material UI |
+| Frameworks | React |
+| ORMs | Mongoose |
+| StateManagement | Zustand |
+| Testing | Vitest |
+| UILibraries | Tailwind CSS |
 | Validation | Zod |
 
 ### 🔗 Top Pairings
 | Tech A | Tech B | Strength Score |
 |---|---|---|
+| cva | tailwind-merge | 0.77 |
+| clsx | tailwind-merge | 0.72 |
+| react-redux | redux | 0.67 |
+| testing-library-react | testing-library-jest-dom | 0.66 |
+| lucide-react | tailwind-merge | 0.64 |
+| cva | lucide-react | 0.62 |
+| cva | clsx | 0.61 |
+| lucide-react | clsx | 0.57 |
+| mobx | mobx-react | 0.56 |
+| chai | mocha | 0.51 |
 
 <small><i>Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient: $rac{|A cap B|}{|A| + |B| - |A cap B|}$ (the number of repositories containing both divided by the number of repositories containing either). Scores range from 0 to 1.</i></small>
 
