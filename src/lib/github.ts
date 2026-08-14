@@ -83,7 +83,10 @@ export async function fetchWithBackoff<T>(
       }
 
       // Transient errors: exponential backoff with jitter
-      const backoff = Math.min(500 * 2 ** attempt + Math.random() * 200, 30_000);
+      // Server gateway errors (502/503/504) use a higher initial base delay (2s)
+      const isServerError = err.status >= 500 && err.status <= 504;
+      const baseDelay = isServerError ? 2000 : 500;
+      const backoff = Math.min(baseDelay * 2 ** attempt + Math.random() * 500, 30_000);
       logger.warn({ backoff, attempt, err: err.message }, 'GitHub request failed, retrying with backoff...');
       await new Promise((r) => setTimeout(r, backoff));
     }
@@ -110,6 +113,7 @@ export class GitHubClient {
           headers: {
             Authorization: `Bearer ${this.token}`,
             'Content-Type': 'application/json',
+            'User-Agent': 'StackPulse-Crawler/1.0',
           },
           body: JSON.stringify({
             query: DISCOVER_REPOS_QUERY,
@@ -166,6 +170,7 @@ export class GitHubClient {
           headers: {
             Authorization: `Bearer ${this.token}`,
             'Content-Type': 'application/json',
+            'User-Agent': 'StackPulse-Crawler/1.0',
           },
           body: JSON.stringify({ query, variables: { owner, name } }),
         });

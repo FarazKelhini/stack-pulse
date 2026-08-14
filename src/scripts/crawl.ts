@@ -7,7 +7,7 @@ import { matchTechnologies } from '../lib/matcher';
 import { Prisma, TechnologyCategory } from '@prisma/client';
 import { performance } from 'perf_hooks';
 
-const BATCH_SIZE = Math.min(parseInt(process.env.CRAWL_BATCH_SIZE ?? '100', 10), 100);
+const BATCH_SIZE = Math.min(parseInt(process.env.CRAWL_BATCH_SIZE ?? '50', 10), 100);
 const DELAY_MS = parseInt(process.env.CRAWL_DELAY_MS ?? '500', 10);
 const MAX_RETRIES = parseInt(process.env.CRAWL_MAX_RETRIES ?? '3', 10);
 const MAX_DURATION = parseInt(process.env.CRAWL_MAX_DURATION_MS ?? '5400000', 10);
@@ -193,18 +193,29 @@ async function discoverWithRetry(
   batchSize: number,
   cursor?: string,
 ): Promise<RepoSearchResult> {
+  let currentBatchSize = batchSize;
   let lastErr: unknown;
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     try {
-      return await github.discoverRepositories(query, batchSize, cursor);
-    } catch (err) {
+      return await github.discoverRepositories(query, currentBatchSize, cursor);
+    } catch (err: any) {
       lastErr = err;
+      // On 502/503/504 gateway timeouts or server errors, halve the batch size
+      if ((err.status >= 500 && err.status <= 504) || err.message?.includes('502')) {
+        if (currentBatchSize > 25) {
+          currentBatchSize = Math.max(25, Math.floor(currentBatchSize / 2));
+          logger.warn(
+            { err: err.message, newBatchSize: currentBatchSize, attempt },
+            'Halving GraphQL batch size due to GitHub server 502 timeout',
+          );
+        }
+      }
       logger.error(
         { err, attempt, maxRetries: MAX_RETRIES, query },
         'GitHub search failed, retrying',
       );
       if (attempt < MAX_RETRIES) {
-        const backoffMs = 2 ** attempt * 1000;
+        const backoffMs = 2000 * 2 ** attempt;
         await new Promise((r) => setTimeout(r, backoffMs));
       }
     }
