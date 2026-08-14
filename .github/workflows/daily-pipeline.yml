@@ -40,6 +40,7 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          CRAWL_MAX_DURATION_MS: 1200000  # 20 minutes (in milliseconds)
 
       - name: Refresh dormant repositories
         run: npm run refresh
