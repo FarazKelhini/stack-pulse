@@ -50,7 +50,8 @@ async function main() {
 
     // Generate content
     let content = `\n<!-- STACKPULSE:SUMMARY:START -->\n`;
-    content += `### 📊 Daily Snapshot (Updated: ${dateStr})\n`;
+    content += `## The Pulse (Updated: ${dateStr})\n`
+    content += `### 📊 Daily Snapshot\n`;
 
     content += `| Technology | Adoption | Trend Score |\n|------------|---------:|------------:|\n`;
     const topTech = [...technologies].sort((a, b) => b.repoCount - a.repoCount).slice(0, 10);
