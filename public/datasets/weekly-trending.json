@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-14T07:35:54.745Z",
-  "commitSha": "9cc28169152d999f25e0b67a2aededf68f84c4f8",
+  "generatedAt": "2026-08-15T03:08:37.054Z",
+  "commitSha": "18907870803c3b3610f21a57222099f81176ddef",
   "technologies": [
     {
       "slug": "typescript",
@@ -39,8 +39,8 @@
       "slug": "vite",
       "name": "Vite",
       "category": "BuildTools",
-      "repoCount": 763,
-      "weeklyDelta": 763,
+      "repoCount": 764,
+      "weeklyDelta": 764,
       "weeklyPercentChange": null
     },
     {
@@ -1164,6 +1164,6 @@
       "weeklyPercentChange": null
     }
   ],
-  "snapshotDate": "2026-08-14",
-  "comparisonDate": "2026-08-07"
+  "snapshotDate": "2026-08-15",
+  "comparisonDate": "2026-08-08"
 }

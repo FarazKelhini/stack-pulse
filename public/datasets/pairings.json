@@ -1,8 +1,158 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-14T07:35:54.745Z",
-  "commitSha": "9cc28169152d999f25e0b67a2aededf68f84c4f8",
+  "generatedAt": "2026-08-15T03:08:37.054Z",
+  "commitSha": "18907870803c3b3610f21a57222099f81176ddef",
   "pairings": [
+    {
+      "technologyA": "typeorm",
+      "technologyB": "react",
+      "repositoryCount": 4,
+      "strengthScore": 0.002610966057441253
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "mysql2",
+      "repositoryCount": 4,
+      "strengthScore": 0.08
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "chai",
+      "repositoryCount": 4,
+      "strengthScore": 0.00851063829787234
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "cross-env",
+      "repositoryCount": 4,
+      "strengthScore": 0.006060606060606061
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "nodemon",
+      "repositoryCount": 6,
+      "strengthScore": 0.02777777777777778
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "mikro-orm",
+      "repositoryCount": 1,
+      "strengthScore": 0.04166666666666666
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "express",
+      "repositoryCount": 6,
+      "strengthScore": 0.0119047619047619
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "chakra-ui",
+      "repositoryCount": 1,
+      "strengthScore": 0.02941176470588235
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "fastify",
+      "repositoryCount": 2,
+      "strengthScore": 0.04545454545454546
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "cookie-parser",
+      "repositoryCount": 4,
+      "strengthScore": 0.04123711340206185
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "class-validator",
+      "repositoryCount": 9,
+      "strengthScore": 0.225
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "pg",
+      "repositoryCount": 11,
+      "strengthScore": 0.088
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "webpack",
+      "repositoryCount": 3,
+      "strengthScore": 0.004366812227074236
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "vue",
+      "repositoryCount": 1,
+      "strengthScore": 0.00352112676056338
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "next-auth",
+      "repositoryCount": 1,
+      "strengthScore": 0.01538461538461539
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "express-session",
+      "repositoryCount": 2,
+      "strengthScore": 0.03174603174603174
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "ajv",
+      "repositoryCount": 1,
+      "strengthScore": 0.006289308176100629
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "sass",
+      "repositoryCount": 1,
+      "strengthScore": 0.003378378378378379
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "jsonwebtoken",
+      "repositoryCount": 3,
+      "strengthScore": 0.02362204724409449
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "vuex",
+      "repositoryCount": 1,
+      "strengthScore": 0.01666666666666667
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "heroicons",
+      "repositoryCount": 1,
+      "strengthScore": 0.01428571428571429
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "react-redux",
+      "repositoryCount": 1,
+      "strengthScore": 0.005988023952095809
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "sqlite3",
+      "repositoryCount": 5,
+      "strengthScore": 0.07142857142857142
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "prisma",
+      "repositoryCount": 2,
+      "strengthScore": 0.02352941176470588
+    },
+    {
+      "technologyA": "typeorm",
+      "technologyB": "sinon",
+      "repositoryCount": 4,
+      "strengthScore": 0.01201201201201201
+    },
     {
       "technologyA": "typeorm",
       "technologyB": "babel",
@@ -985,7 +1135,7 @@
       "technologyA": "react",
       "technologyB": "vite",
       "repositoryCount": 384,
-      "strengthScore": 0.2029598308668076
+      "strengthScore": 0.2028526148969889
     },
     {
       "technologyA": "react",
@@ -1675,7 +1825,7 @@
       "technologyA": "nx",
       "technologyB": "vite",
       "repositoryCount": 11,
-      "strengthScore": 0.01421188630490956
+      "strengthScore": 0.01419354838709678
     },
     {
       "technologyA": "nx",
@@ -2143,7 +2293,7 @@
       "technologyA": "mysql2",
       "technologyB": "vite",
       "repositoryCount": 5,
-      "strengthScore": 0.006337135614702154
+      "strengthScore": 0.006329113924050633
     },
     {
       "technologyA": "mysql2",
@@ -2761,7 +2911,7 @@
       "technologyA": "rollup",
       "technologyB": "vite",
       "repositoryCount": 80,
-      "strengthScore": 0.06451612903225806
+      "strengthScore": 0.064464141821112
     },
     {
       "technologyA": "rollup",
@@ -3379,7 +3529,7 @@
       "technologyA": "chai",
       "technologyB": "vite",
       "repositoryCount": 12,
-      "strengthScore": 0.009983361064891847
+      "strengthScore": 0.00997506234413965
     },
     {
       "technologyA": "chai",
@@ -3991,7 +4141,7 @@
       "technologyA": "cross-env",
       "technologyB": "vite",
       "repositoryCount": 127,
-      "strengthScore": 0.09945184025058731
+      "strengthScore": 0.09937402190923318
     },
     {
       "technologyA": "cross-env",
@@ -4747,7 +4897,7 @@
       "technologyA": "nodemon",
       "technologyB": "vite",
       "repositoryCount": 23,
-      "strengthScore": 0.02449414270500532
+      "strengthScore": 0.02446808510638298
     },
     {
       "technologyA": "nodemon",
@@ -5419,7 +5569,7 @@
       "technologyA": "vitest",
       "technologyB": "vite",
       "repositoryCount": 407,
-      "strengthScore": 0.3123561013046815
+      "strengthScore": 0.3121165644171779
     },
     {
       "technologyA": "vitest",
@@ -6031,7 +6181,7 @@
       "technologyA": "xstate",
       "technologyB": "vite",
       "repositoryCount": 4,
-      "strengthScore": 0.005208333333333333
+      "strengthScore": 0.005201560468140442
     },
     {
       "technologyA": "xstate",
@@ -6463,7 +6613,7 @@
       "technologyA": "esbuild",
       "technologyB": "vite",
       "repositoryCount": 107,
-      "strengthScore": 0.09972041006523766
+      "strengthScore": 0.09962756052141528
     },
     {
       "technologyA": "esbuild",
@@ -6985,7 +7135,7 @@
       "technologyA": "mikro-orm",
       "technologyB": "vite",
       "repositoryCount": 1,
-      "strengthScore": 0.00130890052356021
+      "strengthScore": 0.00130718954248366
     },
     {
       "technologyA": "mikro-orm",
@@ -7099,7 +7249,7 @@
       "technologyA": "parcel",
       "technologyB": "vite",
       "repositoryCount": 2,
-      "strengthScore": 0.002564102564102564
+      "strengthScore": 0.002560819462227913
     },
     {
       "technologyA": "parcel",
@@ -7375,7 +7525,7 @@
       "technologyA": "mui-material",
       "technologyB": "vite",
       "repositoryCount": 17,
-      "strengthScore": 0.021437578814628
+      "strengthScore": 0.02141057934508816
     },
     {
       "technologyA": "mui-material",
@@ -7921,7 +8071,7 @@
       "technologyA": "express",
       "technologyB": "vite",
       "repositoryCount": 59,
-      "strengthScore": 0.04953820319059614
+      "strengthScore": 0.04949664429530201
     },
     {
       "technologyA": "express",
@@ -8479,7 +8629,7 @@
       "technologyA": "chakra-ui",
       "technologyB": "vite",
       "repositoryCount": 5,
-      "strengthScore": 0.006493506493506494
+      "strengthScore": 0.00648508430609598
     },
     {
       "technologyA": "chakra-ui",
@@ -8689,7 +8839,7 @@
       "technologyA": "fastify",
       "technologyB": "vite",
       "repositoryCount": 8,
-      "strengthScore": 0.0102827763496144
+      "strengthScore": 0.01026957637997433
     },
     {
       "technologyA": "fastify",
@@ -9127,7 +9277,7 @@
       "technologyA": "cookie-parser",
       "technologyB": "vite",
       "repositoryCount": 7,
-      "strengthScore": 0.008393285371702638
+      "strengthScore": 0.008383233532934131
     },
     {
       "technologyA": "cookie-parser",
@@ -9607,7 +9757,7 @@
       "technologyA": "class-validator",
       "technologyB": "vite",
       "repositoryCount": 3,
-      "strengthScore": 0.003816793893129771
+      "strengthScore": 0.003811944091486658
     },
     {
       "technologyA": "class-validator",
@@ -9991,7 +10141,7 @@
       "technologyA": "valtio",
       "technologyB": "vite",
       "repositoryCount": 4,
-      "strengthScore": 0.00522875816993464
+      "strengthScore": 0.005221932114882507
     },
     {
       "technologyA": "valtio",
@@ -10159,7 +10309,7 @@
       "technologyA": "pg",
       "technologyB": "vite",
       "repositoryCount": 18,
-      "strengthScore": 0.02097902097902098
+      "strengthScore": 0.0209545983701979
     },
     {
       "technologyA": "pg",
@@ -10729,7 +10879,7 @@
       "technologyA": "webpack",
       "technologyB": "vite",
       "repositoryCount": 30,
-      "strengthScore": 0.02142857142857143
+      "strengthScore": 0.02141327623126338
     },
     {
       "technologyA": "webpack",
@@ -11305,7 +11455,7 @@
       "technologyA": "vue",
       "technologyB": "vite",
       "repositoryCount": 120,
-      "strengthScore": 0.1325966850828729
+      "strengthScore": 0.1324503311258278
     },
     {
       "technologyA": "vue",
@@ -11803,7 +11953,7 @@
       "technologyA": "oidc-provider",
       "technologyB": "vite",
       "repositoryCount": 1,
-      "strengthScore": 0.00130718954248366
+      "strengthScore": 0.001305483028720627
     },
     {
       "technologyA": "oidc-provider",
@@ -11983,7 +12133,7 @@
       "technologyA": "jotai",
       "technologyB": "vite",
       "repositoryCount": 21,
-      "strengthScore": 0.0269576379974326
+      "strengthScore": 0.02692307692307692
     },
     {
       "technologyA": "jotai",
@@ -12295,7 +12445,7 @@
       "technologyA": "next-auth",
       "technologyB": "vite",
       "repositoryCount": 2,
-      "strengthScore": 0.002487562189054726
+      "strengthScore": 0.002484472049689441
     },
     {
       "technologyA": "next-auth",
@@ -12643,7 +12793,7 @@
       "technologyA": "express-session",
       "technologyB": "vite",
       "repositoryCount": 2,
-      "strengthScore": 0.0024906600249066
+      "strengthScore": 0.002487562189054726
     },
     {
       "technologyA": "express-session",
@@ -12979,7 +13129,7 @@
       "technologyA": "solid-js",
       "technologyB": "vite",
       "repositoryCount": 17,
-      "strengthScore": 0.02187902187902188
+      "strengthScore": 0.02185089974293059
     },
     {
       "technologyA": "solid-js",
@@ -13255,7 +13405,7 @@
       "technologyA": "bulma",
       "technologyB": "vite",
       "repositoryCount": 1,
-      "strengthScore": 0.001300390117035111
+      "strengthScore": 0.001298701298701299
     },
     {
       "technologyA": "bulma",
@@ -13423,7 +13573,7 @@
       "technologyA": "ajv",
       "technologyB": "vite",
       "repositoryCount": 27,
-      "strengthScore": 0.03092783505154639
+      "strengthScore": 0.03089244851258581
     },
     {
       "technologyA": "ajv",
@@ -13987,7 +14137,7 @@
       "technologyA": "sass",
       "technologyB": "vite",
       "repositoryCount": 78,
-      "strengthScore": 0.08133472367049009
+      "strengthScore": 0.08125
     },
     {
       "technologyA": "sass",
@@ -14466,8 +14616,8 @@
     {
       "technologyA": "turborepo",
       "technologyB": "vite",
-      "repositoryCount": 44,
-      "strengthScore": 0.04222648752399232
+      "repositoryCount": 45,
+      "strengthScore": 0.04318618042226487
     },
     {
       "technologyA": "turborepo",
@@ -14779,7 +14929,7 @@
       "technologyA": "jsonwebtoken",
       "technologyB": "vite",
       "repositoryCount": 16,
-      "strengthScore": 0.01873536299765808
+      "strengthScore": 0.01871345029239766
     },
     {
       "technologyA": "jsonwebtoken",
@@ -15277,7 +15427,7 @@
       "technologyA": "vuex",
       "technologyB": "vite",
       "repositoryCount": 4,
-      "strengthScore": 0.005018820577164366
+      "strengthScore": 0.005012531328320802
     },
     {
       "technologyA": "vuex",
@@ -15463,7 +15613,7 @@
       "technologyA": "heroicons",
       "technologyB": "vite",
       "repositoryCount": 15,
-      "strengthScore": 0.01884422110552764
+      "strengthScore": 0.01882057716436637
     },
     {
       "technologyA": "heroicons",
@@ -15895,7 +16045,7 @@
       "technologyA": "react-redux",
       "technologyB": "vite",
       "repositoryCount": 16,
-      "strengthScore": 0.0179372197309417
+      "strengthScore": 0.01791713325867861
     },
     {
       "technologyA": "react-redux",
@@ -16381,517 +16531,517 @@
       "technologyA": "vite",
       "technologyB": "sqlite3",
       "repositoryCount": 5,
-      "strengthScore": 0.006172839506172839
+      "strengthScore": 0.006165228113440197
     },
     {
       "technologyA": "vite",
       "technologyB": "prisma",
       "repositoryCount": 8,
-      "strengthScore": 0.009768009768009768
+      "strengthScore": 0.00975609756097561
     },
     {
       "technologyA": "vite",
       "technologyB": "runtypes",
       "repositoryCount": 1,
-      "strengthScore": 0.00130718954248366
+      "strengthScore": 0.001305483028720627
     },
     {
       "technologyA": "vite",
       "technologyB": "sinon",
       "repositoryCount": 11,
-      "strengthScore": 0.01031894934333959
+      "strengthScore": 0.01030927835051546
     },
     {
       "technologyA": "vite",
       "technologyB": "cva",
       "repositoryCount": 99,
-      "strengthScore": 0.1092715231788079
+      "strengthScore": 0.1091510474090408
     },
     {
       "technologyA": "vite",
       "technologyB": "playwright",
       "repositoryCount": 136,
-      "strengthScore": 0.1413721413721414
+      "strengthScore": 0.1412253374870197
     },
     {
       "technologyA": "vite",
       "technologyB": "babel",
       "repositoryCount": 76,
-      "strengthScore": 0.05310971348707198
+      "strengthScore": 0.05307262569832402
     },
     {
       "technologyA": "vite",
       "technologyB": "nestjs",
       "repositoryCount": 5,
-      "strengthScore": 0.006377551020408163
+      "strengthScore": 0.006369426751592357
     },
     {
       "technologyA": "vite",
       "technologyB": "ts-node",
       "repositoryCount": 72,
-      "strengthScore": 0.05607476635514019
+      "strengthScore": 0.05603112840466926
     },
     {
       "technologyA": "vite",
       "technologyB": "swr",
       "repositoryCount": 17,
-      "strengthScore": 0.02130325814536341
+      "strengthScore": 0.02127659574468085
     },
     {
       "technologyA": "vite",
       "technologyB": "zod",
       "repositoryCount": 146,
-      "strengthScore": 0.1349353049907578
+      "strengthScore": 0.1348107109879963
     },
     {
       "technologyA": "vite",
       "technologyB": "testing-library-react",
       "repositoryCount": 131,
-      "strengthScore": 0.1264478764478764
+      "strengthScore": 0.1263259402121504
     },
     {
       "technologyA": "vite",
       "technologyB": "gulp",
       "repositoryCount": 7,
-      "strengthScore": 0.007106598984771574
+      "strengthScore": 0.007099391480730223
     },
     {
       "technologyA": "vite",
       "technologyB": "jasmine",
       "repositoryCount": 1,
-      "strengthScore": 0.001231527093596059
+      "strengthScore": 0.001230012300123001
     },
     {
       "technologyA": "vite",
       "technologyB": "superstruct",
       "repositoryCount": 1,
-      "strengthScore": 0.001302083333333333
+      "strengthScore": 0.001300390117035111
     },
     {
       "technologyA": "vite",
       "technologyB": "io-ts",
       "repositoryCount": 1,
-      "strengthScore": 0.001300390117035111
+      "strengthScore": 0.001298701298701299
     },
     {
       "technologyA": "vite",
       "technologyB": "cypress",
       "repositoryCount": 22,
-      "strengthScore": 0.02644230769230769
+      "strengthScore": 0.02641056422569028
     },
     {
       "technologyA": "vite",
       "technologyB": "cors",
       "repositoryCount": 19,
-      "strengthScore": 0.02164009111617312
+      "strengthScore": 0.02161547212741752
     },
     {
       "technologyA": "vite",
       "technologyB": "koa",
       "repositoryCount": 7,
-      "strengthScore": 0.0085995085995086
+      "strengthScore": 0.008588957055214725
     },
     {
       "technologyA": "vite",
       "technologyB": "zustand",
       "repositoryCount": 84,
-      "strengthScore": 0.1005988023952096
+      "strengthScore": 0.1004784688995215
     },
     {
       "technologyA": "vite",
       "technologyB": "yup",
       "repositoryCount": 12,
-      "strengthScore": 0.01540436456996149
+      "strengthScore": 0.01538461538461539
     },
     {
       "technologyA": "vite",
       "technologyB": "nock",
       "repositoryCount": 5,
-      "strengthScore": 0.006031363088057901
+      "strengthScore": 0.006024096385542169
     },
     {
       "technologyA": "vite",
       "technologyB": "validator",
       "repositoryCount": 4,
-      "strengthScore": 0.005012531328320802
+      "strengthScore": 0.005006257822277847
     },
     {
       "technologyA": "vite",
       "technologyB": "astro",
       "repositoryCount": 4,
-      "strengthScore": 0.005089058524173028
+      "strengthScore": 0.005082592121982211
     },
     {
       "technologyA": "vite",
       "technologyB": "typescript",
       "repositoryCount": 678,
-      "strengthScore": 0.1997642899233942
+      "strengthScore": 0.1997054491899853
     },
     {
       "technologyA": "vite",
       "technologyB": "clerk-nextjs",
       "repositoryCount": 1,
-      "strengthScore": 0.001285347043701799
+      "strengthScore": 0.001283697047496791
     },
     {
       "technologyA": "vite",
       "technologyB": "pinia",
       "repositoryCount": 41,
-      "strengthScore": 0.05338541666666666
+      "strengthScore": 0.05331599479843954
     },
     {
       "technologyA": "vite",
       "technologyB": "react-query",
       "repositoryCount": 52,
-      "strengthScore": 0.06364749082007344
+      "strengthScore": 0.06356968215158924
     },
     {
       "technologyA": "vite",
       "technologyB": "jest",
       "repositoryCount": 54,
-      "strengthScore": 0.03335392217418159
+      "strengthScore": 0.03333333333333333
     },
     {
       "technologyA": "vite",
       "technologyB": "framer-motion",
       "repositoryCount": 57,
-      "strengthScore": 0.06705882352941177
+      "strengthScore": 0.06698002350176263
     },
     {
       "technologyA": "vite",
       "technologyB": "jsonschema",
       "repositoryCount": 1,
-      "strengthScore": 0.001300390117035111
+      "strengthScore": 0.001298701298701299
     },
     {
       "technologyA": "vite",
       "technologyB": "testing-library-jest-dom",
       "repositoryCount": 116,
-      "strengthScore": 0.1175278622087133
+      "strengthScore": 0.1174089068825911
     },
     {
       "technologyA": "vite",
       "technologyB": "swc",
       "repositoryCount": 39,
-      "strengthScore": 0.04588235294117647
+      "strengthScore": 0.04582843713278496
     },
     {
       "technologyA": "vite",
       "technologyB": "passport",
       "repositoryCount": 3,
-      "strengthScore": 0.00375
+      "strengthScore": 0.003745318352059925
     },
     {
       "technologyA": "vite",
       "technologyB": "msw",
       "repositoryCount": 24,
-      "strengthScore": 0.03057324840764331
+      "strengthScore": 0.03053435114503817
     },
     {
       "technologyA": "vite",
       "technologyB": "preact",
       "repositoryCount": 14,
-      "strengthScore": 0.01756587202007528
+      "strengthScore": 0.01754385964912281
     },
     {
       "technologyA": "vite",
       "technologyB": "next-js",
       "repositoryCount": 16,
-      "strengthScore": 0.01449275362318841
+      "strengthScore": 0.01447963800904977
     },
     {
       "technologyA": "vite",
       "technologyB": "mobx",
       "repositoryCount": 7,
-      "strengthScore": 0.00880503144654088
+      "strengthScore": 0.008793969849246231
     },
     {
       "technologyA": "vite",
       "technologyB": "firebase",
       "repositoryCount": 9,
-      "strengthScore": 0.01125
+      "strengthScore": 0.01123595505617977
     },
     {
       "technologyA": "vite",
       "technologyB": "joi",
       "repositoryCount": 3,
-      "strengthScore": 0.003807106598984772
+      "strengthScore": 0.003802281368821293
     },
     {
       "technologyA": "vite",
       "technologyB": "redux-toolkit",
       "repositoryCount": 13,
-      "strengthScore": 0.016270337922403
+      "strengthScore": 0.01625
     },
     {
       "technologyA": "vite",
       "technologyB": "supabase-js",
       "repositoryCount": 11,
-      "strengthScore": 0.01385390428211587
+      "strengthScore": 0.01383647798742138
     },
     {
       "technologyA": "vite",
       "technologyB": "bcrypt",
       "repositoryCount": 7,
-      "strengthScore": 0.008871989860583017
+      "strengthScore": 0.008860759493670886
     },
     {
       "technologyA": "vite",
       "technologyB": "angular",
       "repositoryCount": 9,
-      "strengthScore": 0.01052631578947368
+      "strengthScore": 0.01051401869158878
     },
     {
       "technologyA": "vite",
       "technologyB": "nuxt",
       "repositoryCount": 8,
-      "strengthScore": 0.01026957637997433
+      "strengthScore": 0.01025641025641026
     },
     {
       "technologyA": "vite",
       "technologyB": "drizzle-orm",
       "repositoryCount": 26,
-      "strengthScore": 0.03241895261845387
+      "strengthScore": 0.0323785803237858
     },
     {
       "technologyA": "vite",
       "technologyB": "lucide-react",
       "repositoryCount": 125,
-      "strengthScore": 0.1341201716738197
+      "strengthScore": 0.1339764201500536
     },
     {
       "technologyA": "vite",
       "technologyB": "mongoose",
       "repositoryCount": 1,
-      "strengthScore": 0.001207729468599034
+      "strengthScore": 0.00120627261761158
     },
     {
       "technologyA": "vite",
       "technologyB": "bootstrap",
       "repositoryCount": 11,
-      "strengthScore": 0.0131578947368421
+      "strengthScore": 0.01314217443249701
     },
     {
       "technologyA": "vite",
       "technologyB": "headlessui-react",
       "repositoryCount": 13,
-      "strengthScore": 0.01606922126081582
+      "strengthScore": 0.01604938271604938
     },
     {
       "technologyA": "vite",
       "technologyB": "storybook",
       "repositoryCount": 38,
-      "strengthScore": 0.04738154613466334
+      "strengthScore": 0.04732254047322541
     },
     {
       "technologyA": "vite",
       "technologyB": "redis",
       "repositoryCount": 3,
-      "strengthScore": 0.003703703703703704
+      "strengthScore": 0.003699136868064118
     },
     {
       "technologyA": "vite",
       "technologyB": "tailwindcss",
       "repositoryCount": 237,
-      "strengthScore": 0.214868540344515
+      "strengthScore": 0.2146739130434783
     },
     {
       "technologyA": "vite",
       "technologyB": "ava",
       "repositoryCount": 1,
-      "strengthScore": 0.001190476190476191
+      "strengthScore": 0.001189060642092747
     },
     {
       "technologyA": "vite",
       "technologyB": "apollo-client",
       "repositoryCount": 3,
-      "strengthScore": 0.003846153846153846
+      "strengthScore": 0.003841229193341869
     },
     {
       "technologyA": "vite",
       "technologyB": "rimraf",
       "repositoryCount": 105,
-      "strengthScore": 0.07592190889370933
+      "strengthScore": 0.07586705202312138
     },
     {
       "technologyA": "vite",
       "technologyB": "less",
       "repositoryCount": 35,
-      "strengthScore": 0.04036908881199539
+      "strengthScore": 0.04032258064516129
     },
     {
       "technologyA": "vite",
       "technologyB": "mobx-react",
       "repositoryCount": 2,
-      "strengthScore": 0.002554278416347382
+      "strengthScore": 0.002551020408163265
     },
     {
       "technologyA": "vite",
       "technologyB": "lerna",
       "repositoryCount": 25,
-      "strengthScore": 0.02604166666666667
+      "strengthScore": 0.02601456815816857
     },
     {
       "technologyA": "vite",
       "technologyB": "kysely",
       "repositoryCount": 2,
-      "strengthScore": 0.00261437908496732
+      "strengthScore": 0.002610966057441253
     },
     {
       "technologyA": "vite",
       "technologyB": "firebase-admin",
       "repositoryCount": 4,
-      "strengthScore": 0.00516795865633075
+      "strengthScore": 0.005161290322580645
     },
     {
       "technologyA": "vite",
       "technologyB": "daisyui",
       "repositoryCount": 6,
-      "strengthScore": 0.007731958762886598
+      "strengthScore": 0.007722007722007722
     },
     {
       "technologyA": "vite",
       "technologyB": "auth0-react",
       "repositoryCount": 3,
-      "strengthScore": 0.003926701570680628
+      "strengthScore": 0.00392156862745098
     },
     {
       "technologyA": "vite",
       "technologyB": "bcryptjs",
       "repositoryCount": 10,
-      "strengthScore": 0.01239157372986369
+      "strengthScore": 0.01237623762376238
     },
     {
       "technologyA": "vite",
       "technologyB": "ant-design",
       "repositoryCount": 17,
-      "strengthScore": 0.02101359703337454
+      "strengthScore": 0.02098765432098765
     },
     {
       "technologyA": "vite",
       "technologyB": "tape",
       "repositoryCount": 2,
-      "strengthScore": 0.002395209580838323
+      "strengthScore": 0.002392344497607655
     },
     {
       "technologyA": "vite",
       "technologyB": "emotion-react",
       "repositoryCount": 26,
-      "strengthScore": 0.03170731707317073
+      "strengthScore": 0.03166869671132765
     },
     {
       "technologyA": "vite",
       "technologyB": "redux",
       "repositoryCount": 12,
-      "strengthScore": 0.01349831271091114
+      "strengthScore": 0.01348314606741573
     },
     {
       "technologyA": "vite",
       "technologyB": "istanbul",
       "repositoryCount": 14,
-      "strengthScore": 0.01424211597151577
+      "strengthScore": 0.01422764227642276
     },
     {
       "technologyA": "vite",
       "technologyB": "mongodb",
       "repositoryCount": 3,
-      "strengthScore": 0.003754693366708385
+      "strengthScore": 0.00375
     },
     {
       "technologyA": "vite",
       "technologyB": "puppeteer",
       "repositoryCount": 21,
-      "strengthScore": 0.02351623740201568
+      "strengthScore": 0.02348993288590604
     },
     {
       "technologyA": "vite",
       "technologyB": "dotenv",
       "repositoryCount": 84,
-      "strengthScore": 0.07506702412868632
+      "strengthScore": 0.075
     },
     {
       "technologyA": "vite",
       "technologyB": "pm2",
       "repositoryCount": 2,
-      "strengthScore": 0.002541296060991106
+      "strengthScore": 0.002538071065989848
     },
     {
       "technologyA": "vite",
       "technologyB": "better-sqlite3",
       "repositoryCount": 41,
-      "strengthScore": 0.05012224938875306
+      "strengthScore": 0.05006105006105006
     },
     {
       "technologyA": "vite",
       "technologyB": "sequelize",
       "repositoryCount": 3,
-      "strengthScore": 0.003831417624521073
+      "strengthScore": 0.003826530612244898
     },
     {
       "technologyA": "vite",
       "technologyB": "svelte",
       "repositoryCount": 29,
-      "strengthScore": 0.03666245259165613
+      "strengthScore": 0.03661616161616162
     },
     {
       "technologyA": "vite",
       "technologyB": "knex",
       "repositoryCount": 5,
-      "strengthScore": 0.006402048655569782
+      "strengthScore": 0.00639386189258312
     },
     {
       "technologyA": "vite",
       "technologyB": "clsx",
       "repositoryCount": 146,
-      "strengthScore": 0.1482233502538071
+      "strengthScore": 0.1480730223123732
     },
     {
       "technologyA": "vite",
       "technologyB": "valibot",
       "repositoryCount": 4,
-      "strengthScore": 0.00517464424320828
+      "strengthScore": 0.00516795865633075
     },
     {
       "technologyA": "vite",
       "technologyB": "remix",
       "repositoryCount": 3,
-      "strengthScore": 0.003911342894393742
+      "strengthScore": 0.00390625
     },
     {
       "technologyA": "vite",
       "technologyB": "supertest",
       "repositoryCount": 10,
-      "strengthScore": 0.01124859392575928
+      "strengthScore": 0.01123595505617977
     },
     {
       "technologyA": "vite",
       "technologyB": "mocha",
       "repositoryCount": 16,
-      "strengthScore": 0.010906612133606
+      "strengthScore": 0.0108991825613079
     },
     {
       "technologyA": "vite",
       "technologyB": "styled-components",
       "repositoryCount": 13,
-      "strengthScore": 0.01555023923444976
+      "strengthScore": 0.01553166069295102
     },
     {
       "technologyA": "vite",
       "technologyB": "sveltekit",
       "repositoryCount": 13,
-      "strengthScore": 0.01701570680628272
+      "strengthScore": 0.01699346405228758
     },
     {
       "technologyA": "vite",
       "technologyB": "tailwind-merge",
       "repositoryCount": 123,
-      "strengthScore": 0.1312700106723586
+      "strengthScore": 0.1311300639658849
     },
     {
       "technologyA": "vite",
       "technologyB": "ioredis",
       "repositoryCount": 10,
-      "strengthScore": 0.01231527093596059
+      "strengthScore": 0.01230012300123001
     },
     {
       "technologyA": "sqlite3",
@@ -32762,156 +32912,6 @@
       "technologyB": "styled-components",
       "repositoryCount": 5,
       "strengthScore": 0.01587301587301587
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "react",
-      "repositoryCount": 4,
-      "strengthScore": 0.002610966057441253
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "mysql2",
-      "repositoryCount": 4,
-      "strengthScore": 0.08
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "chai",
-      "repositoryCount": 4,
-      "strengthScore": 0.00851063829787234
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "cross-env",
-      "repositoryCount": 4,
-      "strengthScore": 0.006060606060606061
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "nodemon",
-      "repositoryCount": 6,
-      "strengthScore": 0.02777777777777778
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "mikro-orm",
-      "repositoryCount": 1,
-      "strengthScore": 0.04166666666666666
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "express",
-      "repositoryCount": 6,
-      "strengthScore": 0.0119047619047619
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "chakra-ui",
-      "repositoryCount": 1,
-      "strengthScore": 0.02941176470588235
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "fastify",
-      "repositoryCount": 2,
-      "strengthScore": 0.04545454545454546
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "cookie-parser",
-      "repositoryCount": 4,
-      "strengthScore": 0.04123711340206185
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "class-validator",
-      "repositoryCount": 9,
-      "strengthScore": 0.225
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "pg",
-      "repositoryCount": 11,
-      "strengthScore": 0.088
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "webpack",
-      "repositoryCount": 3,
-      "strengthScore": 0.004366812227074236
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "vue",
-      "repositoryCount": 1,
-      "strengthScore": 0.00352112676056338
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "next-auth",
-      "repositoryCount": 1,
-      "strengthScore": 0.01538461538461539
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "express-session",
-      "repositoryCount": 2,
-      "strengthScore": 0.03174603174603174
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "ajv",
-      "repositoryCount": 1,
-      "strengthScore": 0.006289308176100629
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "sass",
-      "repositoryCount": 1,
-      "strengthScore": 0.003378378378378379
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "jsonwebtoken",
-      "repositoryCount": 3,
-      "strengthScore": 0.02362204724409449
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "vuex",
-      "repositoryCount": 1,
-      "strengthScore": 0.01666666666666667
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "heroicons",
-      "repositoryCount": 1,
-      "strengthScore": 0.01428571428571429
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "react-redux",
-      "repositoryCount": 1,
-      "strengthScore": 0.005988023952095809
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "sqlite3",
-      "repositoryCount": 5,
-      "strengthScore": 0.07142857142857142
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "prisma",
-      "repositoryCount": 2,
-      "strengthScore": 0.02352941176470588
-    },
-    {
-      "technologyA": "typeorm",
-      "technologyB": "sinon",
-      "repositoryCount": 4,
-      "strengthScore": 0.01201201201201201
     },
     {
       "technologyA": "istanbul",
