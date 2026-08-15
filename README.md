@@ -81,6 +81,7 @@ StackPulse provides an open, machine-readable dataset of technology adoption:
 - [technologies.json](public/datasets/technologies.json)
 - [repositories.json](public/datasets/repositories.json)
 - [pairings.json](public/datasets/pairings.json)
+- [trending.json](public/datasets/trending.json)
 - [weekly-trending.json](public/datasets/weekly-trending.json)
 
 These are committed to the repo automatically by the GitHub Actions pipeline (see [Daily Pipeline](#daily-pipeline)), so you can browse or consume the data directly from this repository without running the app or standing up a database.
