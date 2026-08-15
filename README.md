@@ -13,6 +13,13 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 > StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#repository-eligibility)).
 
+## Contents
+
+- [📊 Live snapshot](#-daily-snapshot-updated-august-15-2026)
+- [Full dataset](#full-dataset) — browse the data without running anything
+- [Getting started](#getting-started) — run StackPulse locally
+- [Deployment](#deployment) — deploy your own instance
+
 <!-- STACKPULSE:SUMMARY:START -->
 ### 📊 Daily Snapshot (Updated: August 15, 2026)
 | Technology | Adoption | Trend Score |
