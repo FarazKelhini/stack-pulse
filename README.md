@@ -81,7 +81,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | mobx | mobx-react | 0.56 |
 | chai | mocha | 0.51 |
 
-<small><i>Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient: $rac{|A cap B|}{|A| + |B| - |A cap B|}$ (the number of repositories containing both divided by the number of repositories containing either). Scores range from 0 to 1.</i></small>
+<small><i>Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient: $\frac{|A \cap B|}{|A| + |B| - |A \cap B|}$ (the number of repositories containing both divided by the number of repositories containing either). Scores range from 0 to 1.</i></small>
 
 <!-- STACKPULSE:SUMMARY:END -->
 
