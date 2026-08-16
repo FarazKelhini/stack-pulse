@@ -50,11 +50,9 @@ async function main() {
 
     // Generate content
     let content = `\n<!-- STACKPULSE:SUMMARY:START -->\n`;
-    content += `## The Pulse (Updated: ${dateStr})\n`
-    
-    content += `🔗 [View the live dashboard →](https://stack-pulse-one.vercel.app)\n`
-    
-    content += `### 📊 Daily Snapshot\n`;
+    content += `## The Pulse (Updated: ${dateStr})\n\n`;
+    content += `🔗 [View the live dashboard →](https://stack-pulse-one.vercel.app)\n\n`;
+    content += `### 📊 Daily Snapshot\n\n`;
 
     content += `| Technology | Adoption | Trend Score |\n|------------|---------:|------------:|\n`;
     const topTech = [...technologies].sort((a, b) => b.repoCount - a.repoCount).slice(0, 10);
