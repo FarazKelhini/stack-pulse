@@ -120,7 +120,7 @@ async function main() {
       content += `| ${p.technologyA} | ${p.technologyB} | ${p.strengthScore.toFixed(2)} |\n`;
     });
 
-    content += `\n<small><i>Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient: $\frac{|A \cap B|}{|A| + |B| - |A \cap B|}$ (the number of repositories containing both divided by the number of repositories containing either). Scores range from 0 to 1.</i></small>\n\n`;
+    content += `\n<small><i>Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient: $\\frac{|A \\cap B|}{|A| + |B| - |A \\cap B|}$ (the number of repositories containing both divided by the number of repositories containing either). Scores range from 0 to 1.</i></small>\n\n`;
 
     content += `<!-- STACKPULSE:SUMMARY:END -->\n`;
 
