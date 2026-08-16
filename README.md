@@ -21,19 +21,20 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 - [Deployment](#deployment) — deploy your own instance
 
 <!-- STACKPULSE:SUMMARY:START -->
-### 📊 Daily Snapshot (Updated: August 15, 2026)
+## The Pulse (Updated: August 16, 2026)
+### 📊 Daily Snapshot
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 61.0% | - |
-| React | 27.9% | - |
-| Vitest | 17.5% | - |
-| Jest | 16.8% | - |
-| Vite | 14.1% | - |
-| Babel | 13.7% | - |
-| rimraf | 13.4% | - |
-| Mocha | 13.3% | - |
-| Webpack | 12.3% | - |
-| cross-env | 11.8% | - |
+| TypeScript | 61.7% | ▲ +3.73 |
+| React | 28.1% | ▲ +3.39 |
+| Vitest | 17.7% | ▲ +3.14 |
+| Jest | 16.8% | ▲ +3.09 |
+| Vite | 14.3% | ▲ +3.07 |
+| Babel | 13.8% | ▲ +3.02 |
+| rimraf | 13.4% | ▲ +3.00 |
+| Mocha | 13.4% | ▲ +3.02 |
+| Webpack | 12.4% | ▲ +2.95 |
+| cross-env | 11.9% | ▲ +2.92 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
