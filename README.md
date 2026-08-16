@@ -86,7 +86,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 <!-- STACKPULSE:SUMMARY:END -->
 
 ## Full dataset
-StackPulse provides an open, machine-readable dataset of technology adoption:
+StackPulse provides an open dataset of technology adoption:
 - [technologies.json](public/datasets/technologies.json)
 - [repositories.json](public/datasets/repositories.json)
 - [pairings.json](public/datasets/pairings.json)
@@ -94,6 +94,8 @@ StackPulse provides an open, machine-readable dataset of technology adoption:
 - [weekly-trending.json](public/datasets/weekly-trending.json)
 
 These are committed to the repo automatically by the GitHub Actions pipeline (see [Daily Pipeline](#daily-pipeline)), so you can browse or consume the data directly from this repository without running the app or standing up a database.
+
+> **License note:** these datasets are licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), separate from the MIT-licensed codebase. Attribution is required if you reuse them.
 
 > **Note:** cloning this repo gets you the code and the exported datasets — it does not give you a running instance of the website. The live app requires a deployed Next.js instance (Vercel) connected to a hosted PostgreSQL database. See [Deployment](#deployment).
 
