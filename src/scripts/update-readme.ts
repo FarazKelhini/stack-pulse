@@ -122,7 +122,7 @@ async function main() {
 
     content += `\n*Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*\n\n`;
     content += `$$\n\\frac{|A \\cap B|}{|A| + |B| - |A \\cap B|}\n$$\n\n`;
-    content += `*The number of repositories containing both divided by the number of repositories containing either. Scores range from 0 to 1.)*\n\n`;
+    content += `*The number of repositories containing both divided by the number of repositories containing either. Scores range from 0 to 1.*\n\n`;
 
     content += `<!-- STACKPULSE:SUMMARY:END -->\n`;
 

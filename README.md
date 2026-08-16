@@ -4,10 +4,10 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/FarazKelhini/stack-pulse/daily-pipeline.yml?branch=main)](https://github.com/FarazKelhini/stack-pulse/actions)
 [![Last commit](https://img.shields.io/github/last-commit/FarazKelhini/stack-pulse)](https://github.com/FarazKelhini/stack-pulse/commits/main)
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Node.js](https://img.shields.io/badge/node-20+-blue.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 [![Website](https://img.shields.io/badge/website-live-brightgreen)](https://stack-pulse-data.vercel.app/)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 [![Dataset](https://img.shields.io/badge/dataset-CC--BY%204.0-lightgrey)](public/datasets/technologies.json)
 [![GitHub stars](https://img.shields.io/github/stars/FarazKelhini/stack-pulse?style=social)](https://github.com/FarazKelhini/stack-pulse/stargazers)
 
