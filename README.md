@@ -15,7 +15,11 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 <!-- STACKPULSE:SUMMARY:START -->
 ## The Pulse (Updated: August 16, 2026)
+
+🔗 [View the live dashboard →](https://stack-pulse-one.vercel.app)
+
 ### 📊 Daily Snapshot
+
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
 | TypeScript | 61.7% | ▲ +3.73 |
