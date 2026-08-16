@@ -81,7 +81,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | mobx | mobx-react | 0.56 |
 | chai | mocha | 0.51 |
 
-<small><i>Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient: $\frac{|A \cap B|}{|A| + |B| - |A \cap B|}$ (the number of repositories containing both divided by the number of repositories containing either). Scores range from 0 to 1.</i></small>
+<small><i>Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient: $$\frac{|A \cap B|}{|A| + |B| - |A \cap B|}$$ (the number of repositories containing both divided by the number of repositories containing either). Scores range from 0 to 1.</i></small>
 
 <!-- STACKPULSE:SUMMARY:END -->
 
@@ -97,11 +97,11 @@ These are committed to the repo automatically by the GitHub Actions pipeline (se
 
 > **License note:** these datasets are licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), separate from the MIT-licensed codebase. Attribution is required if you reuse them.
 
-> **Note:** cloning this repo gets you the code and the exported datasets — it does not give you a running instance of the website. The live app requires a deployed Next.js instance (Vercel) connected to a hosted PostgreSQL database. See [Deployment](#deployment).
+> **Note:** cloning this repo gets you the code and the exported datasets. It does not give you a running instance of the website. The live app requires a deployed Next.js instance (Vercel) connected to a hosted PostgreSQL database. See [Deployment](#deployment).
 
 ## Scope
 
-**Deliberately out of scope:** full repository browsing/search. Technology pages include a read-only "top repositories" panel (up to 10 entries) instead.
+**Deliberately out of scope:** full repository browsing/search. Technology pages include a read-only "top repositories" panel instead.
 
 **May be revisited later:** knowledge graph visualization, migration detection, AI recommendations, multi-language ecosystem analysis, user accounts.
 
@@ -122,15 +122,15 @@ Excluded: forks, archived repositories, disabled repositories, empty repositorie
 
 ## Pages
 
+Pages are React Server Components that fetch from the API routes above rather than querying the database directly, so there's a single data-access path for both the UI and any external consumer of the API.
+
 | Path | Description |
 |---|---|
-| `/` | Homepage — search bar, category grid, trending preview |
+| `/` | Homepage: search bar, category grid, trending preview |
 | `/search` | Search results |
 | `/trending` | Full trending list |
 | `/trending/weekly` | Weekly breakout |
 | `/technology/[slug]` | Technology detail — adoption, trend chart, pairings, top repositories |
-
-Pages are React Server Components that fetch from the API routes above rather than querying the database directly, so there's a single data-access path for both the UI and any external consumer of the API.
 
 ## Stack
 
