@@ -52,7 +52,7 @@ async function main() {
     let content = `\n<!-- STACKPULSE:SUMMARY:START -->\n`;
     content += `## The Pulse (Updated: ${dateStr})\n`
     
-    content += `**🔗 [View the live dashboard →](https://stack-pulse-one.vercel.app)**\n`
+    content += `🔗 [View the live dashboard →](https://stack-pulse-one.vercel.app)\n`
     
     content += `### 📊 Daily Snapshot\n`;
 
