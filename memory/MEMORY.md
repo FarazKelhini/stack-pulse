@@ -1,0 +1,1 @@
+- [Vercel deployment data issue](memory/vercel-deployment-data-issue.md) — Top Pairings and Top Per Category sections missing data on Vercel

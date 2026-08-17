@@ -20,7 +20,9 @@ const CATEGORIES = [
 ];
 
 async function TrendingDataWrapper() {
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+  // Replace your existing baseUrl line with this:
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+
   let trending = [];
   try {
     const res = await fetch(`${baseUrl}/api/trending?limit=5`);
