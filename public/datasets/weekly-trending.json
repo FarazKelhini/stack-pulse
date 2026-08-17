@@ -1,14 +1,14 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-16T03:15:10.682Z",
-  "commitSha": "8360ed51c27d7b19da8f27a9cf85e8e18856bfc8",
+  "generatedAt": "2026-08-17T03:16:55.849Z",
+  "commitSha": "b1d2a3d7ee1dab4bae500e70e4f64545bfb9c068",
   "technologies": [
     {
       "slug": "typescript",
       "name": "TypeScript",
       "category": "BuildTools",
-      "repoCount": 3343,
-      "weeklyDelta": 3343,
+      "repoCount": 3346,
+      "weeklyDelta": 3346,
       "weeklyPercentChange": null
     },
     {
@@ -23,8 +23,8 @@
       "slug": "vitest",
       "name": "Vitest",
       "category": "Testing",
-      "repoCount": 958,
-      "weeklyDelta": 958,
+      "repoCount": 959,
+      "weeklyDelta": 959,
       "weeklyPercentChange": null
     },
     {
@@ -39,8 +39,8 @@
       "slug": "vite",
       "name": "Vite",
       "category": "BuildTools",
-      "repoCount": 774,
-      "weeklyDelta": 774,
+      "repoCount": 775,
+      "weeklyDelta": 775,
       "weeklyPercentChange": null
     },
     {
@@ -63,16 +63,16 @@
       "slug": "mocha",
       "name": "Mocha",
       "category": "Testing",
-      "repoCount": 724,
-      "weeklyDelta": 724,
+      "repoCount": 723,
+      "weeklyDelta": 723,
       "weeklyPercentChange": null
     },
     {
       "slug": "webpack",
       "name": "Webpack",
       "category": "BuildTools",
-      "repoCount": 670,
-      "weeklyDelta": 670,
+      "repoCount": 669,
+      "weeklyDelta": 669,
       "weeklyPercentChange": null
     },
     {
@@ -95,8 +95,8 @@
       "slug": "tailwindcss",
       "name": "Tailwind CSS",
       "category": "UILibraries",
-      "repoCount": 584,
-      "weeklyDelta": 584,
+      "repoCount": 585,
+      "weeklyDelta": 585,
       "weeklyPercentChange": null
     },
     {
@@ -111,8 +111,8 @@
       "slug": "express",
       "name": "Express",
       "category": "Frameworks",
-      "repoCount": 488,
-      "weeklyDelta": 488,
+      "repoCount": 489,
+      "weeklyDelta": 489,
       "weeklyPercentChange": null
     },
     {
@@ -127,8 +127,8 @@
       "slug": "chai",
       "name": "Chai",
       "category": "Testing",
-      "repoCount": 455,
-      "weeklyDelta": 455,
+      "repoCount": 454,
+      "weeklyDelta": 454,
       "weeklyPercentChange": null
     },
     {
@@ -143,8 +143,8 @@
       "slug": "esbuild",
       "name": "esbuild",
       "category": "BuildTools",
-      "repoCount": 424,
-      "weeklyDelta": 424,
+      "repoCount": 425,
+      "weeklyDelta": 425,
       "weeklyPercentChange": null
     },
     {
@@ -175,16 +175,16 @@
       "slug": "testing-library-jest-dom",
       "name": "jest-dom",
       "category": "Testing",
-      "repoCount": 343,
-      "weeklyDelta": 343,
+      "repoCount": 344,
+      "weeklyDelta": 344,
       "weeklyPercentChange": null
     },
     {
       "slug": "playwright",
       "name": "Playwright",
       "category": "Testing",
-      "repoCount": 339,
-      "weeklyDelta": 339,
+      "repoCount": 340,
+      "weeklyDelta": 340,
       "weeklyPercentChange": null
     },
     {
@@ -199,8 +199,8 @@
       "slug": "sinon",
       "name": "Sinon",
       "category": "Testing",
-      "repoCount": 317,
-      "weeklyDelta": 317,
+      "repoCount": 316,
+      "weeklyDelta": 316,
       "weeklyPercentChange": null
     },
     {
@@ -247,8 +247,8 @@
       "slug": "istanbul",
       "name": "nyc (Istanbul)",
       "category": "Testing",
-      "repoCount": 234,
-      "weeklyDelta": 234,
+      "repoCount": 233,
+      "weeklyDelta": 233,
       "weeklyPercentChange": null
     },
     {
@@ -263,8 +263,8 @@
       "slug": "lerna",
       "name": "Lerna",
       "category": "BuildTools",
-      "repoCount": 222,
-      "weeklyDelta": 222,
+      "repoCount": 223,
+      "weeklyDelta": 223,
       "weeklyPercentChange": null
     },
     {
@@ -316,6 +316,14 @@
       "weeklyPercentChange": null
     },
     {
+      "slug": "ajv",
+      "name": "Ajv",
+      "category": "Validation",
+      "repoCount": 139,
+      "weeklyDelta": 139,
+      "weeklyPercentChange": null
+    },
+    {
       "slug": "less",
       "name": "Less",
       "category": "UILibraries",
@@ -332,14 +340,6 @@
       "weeklyPercentChange": null
     },
     {
-      "slug": "ajv",
-      "name": "Ajv",
-      "category": "Validation",
-      "repoCount": 138,
-      "weeklyDelta": 138,
-      "weeklyPercentChange": null
-    },
-    {
       "slug": "supertest",
       "name": "SuperTest",
       "category": "Testing",
@@ -351,8 +351,8 @@
       "slug": "cors",
       "name": "CORS",
       "category": "Authentication",
-      "repoCount": 134,
-      "weeklyDelta": 134,
+      "repoCount": 135,
+      "weeklyDelta": 135,
       "weeklyPercentChange": null
     },
     {
@@ -383,8 +383,8 @@
       "slug": "react-query",
       "name": "TanStack Query",
       "category": "StateManagement",
-      "repoCount": 106,
-      "weeklyDelta": 106,
+      "repoCount": 105,
+      "weeklyDelta": 105,
       "weeklyPercentChange": null
     },
     {
@@ -740,14 +740,6 @@
       "weeklyPercentChange": null
     },
     {
-      "slug": "yup",
-      "name": "Yup",
-      "category": "Validation",
-      "repoCount": 28,
-      "weeklyDelta": 28,
-      "weeklyPercentChange": null
-    },
-    {
       "slug": "astro",
       "name": "Astro",
       "category": "Frameworks",
@@ -756,11 +748,19 @@
       "weeklyPercentChange": null
     },
     {
+      "slug": "yup",
+      "name": "Yup",
+      "category": "Validation",
+      "repoCount": 28,
+      "weeklyDelta": 28,
+      "weeklyPercentChange": null
+    },
+    {
       "slug": "pm2",
       "name": "PM2",
       "category": "BuildTools",
-      "repoCount": 26,
-      "weeklyDelta": 26,
+      "repoCount": 27,
+      "weeklyDelta": 27,
       "weeklyPercentChange": null
     },
     {
@@ -860,16 +860,16 @@
       "weeklyPercentChange": null
     },
     {
-      "slug": "firebase-admin",
-      "name": "Firebase Admin",
+      "slug": "mysql",
+      "name": "MySQL",
       "category": "Databases",
       "repoCount": 16,
       "weeklyDelta": 16,
       "weeklyPercentChange": null
     },
     {
-      "slug": "mysql",
-      "name": "MySQL",
+      "slug": "firebase-admin",
+      "name": "Firebase Admin",
       "category": "Databases",
       "repoCount": 16,
       "weeklyDelta": 16,
@@ -1060,16 +1060,16 @@
       "weeklyPercentChange": null
     },
     {
-      "slug": "is-my-json-valid",
-      "name": "is-my-json-valid",
+      "slug": "typia",
+      "name": "Typia",
       "category": "Validation",
       "repoCount": 3,
       "weeklyDelta": 3,
       "weeklyPercentChange": null
     },
     {
-      "slug": "typia",
-      "name": "Typia",
+      "slug": "is-my-json-valid",
+      "name": "is-my-json-valid",
       "category": "Validation",
       "repoCount": 3,
       "weeklyDelta": 3,
@@ -1164,6 +1164,6 @@
       "weeklyPercentChange": null
     }
   ],
-  "snapshotDate": "2026-08-16",
-  "comparisonDate": "2026-08-09"
+  "snapshotDate": "2026-08-17",
+  "comparisonDate": "2026-08-10"
 }
