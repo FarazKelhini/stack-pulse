@@ -19,9 +19,12 @@ const CATEGORIES = [
   'Authentication', 'BuildTools', 'StateManagement', 'UILibraries'
 ];
 
+const getBaseUrl = () => {
+  return process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+};
+
 async function TrendingDataWrapper() {
-  // Replace your existing baseUrl line with this:
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const baseUrl = getBaseUrl();
 
   let trending = [];
   try {
@@ -54,7 +57,7 @@ async function HotThisWeekWrapper() {
 }
 
 async function FallingThisMonthWrapper() {
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+  const baseUrl = getBaseUrl();
   let technologies = [];
   try {
     const res = await fetch(`${baseUrl}/api/trending/falling?limit=10`);
@@ -69,7 +72,7 @@ async function FallingThisMonthWrapper() {
 }
 
 async function TopPerCategoryWrapper() {
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+  const baseUrl = getBaseUrl();
   let categories = [];
   try {
     const res = await fetch(`${baseUrl}/api/categories/top`);
@@ -84,7 +87,7 @@ async function TopPerCategoryWrapper() {
 }
 
 async function TopPairingsWrapper() {
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+  const baseUrl = getBaseUrl();
   let pairings = [];
   try {
     const res = await fetch(`${baseUrl}/api/pairings/top?limit=10`);
