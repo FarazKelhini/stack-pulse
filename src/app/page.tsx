@@ -215,13 +215,13 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-2 py-8 px-6 max-w-7xl mx-auto w-full">
       <a
-        href="https://github.com/StackPulse/StackPulse"
+        href="https://github.com/FarazKelhini/stack-pulse"
         target="_blank"
         rel="noopener noreferrer"
         className="w-full flex items-center justify-center gap-3 bg-card border border-border p-4 rounded-xl hover:bg-muted transition-colors shadow-sm"
       >
         <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-        <span className="text-sm font-medium">Enjoying StackPulse? Please star the project on GitHub to support us!</span>
+        <span className="text-sm font-medium">Consider starring the repository on GitHub to help support open data!</span>
       </a>
 
       <Hero metrics={
