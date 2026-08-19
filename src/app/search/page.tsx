@@ -6,7 +6,7 @@ import { SearchResults } from '@/components/search/SearchResults';
 export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string; category?: string }> }) {
   const { q: query, category } = await searchParams;
 
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
   if (!query && !category) {
     return (

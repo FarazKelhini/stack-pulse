@@ -5,7 +5,7 @@ import { TrendingList } from '@/components/trending/TrendingList';
 export const dynamic = 'force-dynamic';
 
 export default async function TrendingPage() {
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
   const res = await fetch(`${baseUrl}/api/trending`);
 
   if (!res.ok) return <div className="p-8 text-center text-red-500">Error loading trends.</div>;

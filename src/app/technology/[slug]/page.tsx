@@ -5,7 +5,7 @@ import { TechDashboard } from '@/components/tech-detail/TechDashboard';
 
 export default async function TechnologyPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
   const res = await fetch(`${baseUrl}/api/technology/${slug}`);
 
   if (res.status === 404) notFound();
