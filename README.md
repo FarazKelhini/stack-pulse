@@ -14,7 +14,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 > StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#repository-eligibility)).
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: August 18, 2026)
+## The Pulse (Updated: August 19, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-one.vercel.app)
 
@@ -22,16 +22,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 61.9% | ▲ +3.75 |
-| React | 28.2% | ▲ +3.40 |
-| Vitest | 17.8% | ▲ +3.17 |
-| Jest | 16.8% | ▲ +3.09 |
-| Vite | 14.3% | ▲ +3.09 |
-| Babel | 13.8% | ▲ +3.02 |
-| rimraf | 13.4% | ▲ +3.01 |
-| Mocha | 13.4% | ▲ +3.02 |
-| Webpack | 12.4% | ▲ +2.95 |
-| cross-env | 11.9% | ▲ +2.93 |
+| TypeScript | 62.8% | ▲ +3.81 |
+| React | 28.7% | ▲ +3.46 |
+| Vitest | 18.1% | ▲ +3.24 |
+| Jest | 16.9% | ▲ +3.12 |
+| Vite | 14.6% | ▲ +3.15 |
+| Babel | 13.8% | ▲ +3.03 |
+| rimraf | 13.5% | ▲ +3.02 |
+| Mocha | 13.4% | ▲ +3.03 |
+| Webpack | 12.4% | ▲ +2.96 |
+| cross-env | 12.0% | ▲ +2.95 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -70,15 +70,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔗 Top Pairings
 | Tech A | Tech B | Strength Score |
 |---|---|---|
-| cva | tailwind-merge | 0.76 |
-| clsx | tailwind-merge | 0.72 |
+| cva | tailwind-merge | 0.77 |
+| clsx | tailwind-merge | 0.73 |
 | react-redux | redux | 0.67 |
 | testing-library-react | testing-library-jest-dom | 0.66 |
 | lucide-react | tailwind-merge | 0.63 |
-| cva | lucide-react | 0.62 |
+| cva | lucide-react | 0.61 |
 | cva | clsx | 0.61 |
 | lucide-react | clsx | 0.57 |
-| mobx | mobx-react | 0.55 |
+| mobx | mobx-react | 0.54 |
 | chai | mocha | 0.51 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*

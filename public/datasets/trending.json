@@ -1,1106 +1,1106 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-18T03:11:36.980Z",
-  "commitSha": "2ea2d839c931fc4aa4626842d428cd8c7a91a3d0",
+  "generatedAt": "2026-08-19T03:14:18.616Z",
+  "commitSha": "75a06a7b6a74b5fe0b8a4515b64c9aa6bccd394b",
   "trending": [
-    {
-      "slug": "pouchdb",
-      "name": "PouchDB",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
     {
       "slug": "hapi",
       "name": "Hapi",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "alpinejs",
-      "name": "Alpine.js",
+      "slug": "pouchdb",
+      "name": "PouchDB",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "meteor",
       "name": "Meteor",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "qwik",
       "name": "Qwik",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "gatsby",
       "name": "Gatsby",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "cassandra-driver",
-      "name": "Cassandra Driver",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "couchbase",
-      "name": "Couchbase",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "influx",
-      "name": "Influx",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "datastore",
-      "name": "Google Cloud Datastore",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "rxdb",
-      "name": "RxDB",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "neo4j-driver",
-      "name": "Neo4j Driver",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "mikro-orm",
       "name": "MikroORM",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "alpinejs",
+      "name": "Alpine.js",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "cassandra-driver",
+      "name": "Cassandra Driver",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "couchbase",
+      "name": "Couchbase",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "influx",
+      "name": "Influx",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "datastore",
+      "name": "Google Cloud Datastore",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "rxdb",
+      "name": "RxDB",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "neo4j-driver",
+      "name": "Neo4j Driver",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "objection",
       "name": "Objection.js",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "remix",
       "name": "Remix",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "dynamoose",
       "name": "Dynamoose",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "waterline",
       "name": "Waterline",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "typia",
       "name": "Typia",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "fastest-validator",
       "name": "Fastest Validator",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "argon2",
       "name": "Argon2",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "k6",
       "name": "k6",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "runtypes",
-      "name": "Runtypes",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "ow",
-      "name": "Ow",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "slonik",
-      "name": "Slonik",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "jsonschema",
-      "name": "JSONSchema",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "kysely",
       "name": "Kysely",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "runtypes",
+      "name": "Runtypes",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "ow",
+      "name": "Ow",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "slonik",
+      "name": "Slonik",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "is-my-json-valid",
       "name": "is-my-json-valid",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "jsonschema",
+      "name": "JSONSchema",
+      "trendScore": 0,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "pg-promise",
       "name": "pg-promise",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "oidc-provider",
       "name": "OIDC Provider",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "iron-session",
       "name": "Iron Session",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "supertokens-node",
       "name": "SuperTokens Node",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "lucia",
       "name": "Lucia",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "io-ts",
       "name": "io-ts",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "superstruct",
       "name": "Superstruct",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "valtio",
       "name": "Valtio",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "recoil",
       "name": "Recoil",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "radix-ui",
       "name": "Radix UI",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "typegoose",
       "name": "Typegoose",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "bulma",
       "name": "Bulma",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "auth0-react",
       "name": "Auth0 React",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "xstate",
-      "name": "XState",
-      "trendScore": 0,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "testcafe",
       "name": "TestCafe",
       "trendScore": 0,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "bootstrap",
-      "name": "Bootstrap",
-      "trendScore": 1.996900478341863,
-      "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
+      "slug": "nuxt",
+      "name": "Nuxt",
+      "trendScore": 1.754622777670768,
+      "adoptionDelta": 3,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "chai",
-      "name": "Chai",
-      "trendScore": 2.778045611896439,
-      "adoptionDelta": 18,
-      "snapshotDate": "2026-08-18"
+      "slug": "jest",
+      "name": "Jest",
+      "trendScore": 3.117264504183036,
+      "adoptionDelta": 44,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "sveltekit",
-      "name": "SvelteKit",
-      "trendScore": 1.497792866434326,
-      "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "styled-components",
-      "name": "Styled Components",
-      "trendScore": 2.029468167159558,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "gulp",
-      "name": "Gulp",
-      "trendScore": 2.513841658670273,
-      "adoptionDelta": 12,
-      "snapshotDate": "2026-08-18"
+      "slug": "babel",
+      "name": "Babel",
+      "trendScore": 3.02991726144061,
+      "adoptionDelta": 37,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "ava",
       "name": "AVA",
       "trendScore": 2.136192231376242,
       "adoptionDelta": 7,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "jest",
-      "name": "Jest",
-      "trendScore": 3.093976174899037,
-      "adoptionDelta": 38,
-      "snapshotDate": "2026-08-18"
+      "slug": "cross-env",
+      "name": "cross-env",
+      "trendScore": 2.94550061139007,
+      "adoptionDelta": 28,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "babel",
-      "name": "Babel",
-      "trendScore": 3.020624469082239,
-      "adoptionDelta": 35,
-      "snapshotDate": "2026-08-18"
+      "slug": "chai",
+      "name": "Chai",
+      "trendScore": 2.778045611896439,
+      "adoptionDelta": 18,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "redux",
       "name": "Redux",
       "trendScore": 2.235045647197792,
       "adoptionDelta": 4,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "next-js",
-      "name": "Next.js",
-      "trendScore": 2.810190336365101,
-      "adoptionDelta": 31,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "angular",
-      "name": "Angular",
-      "trendScore": 2.22596925977676,
-      "adoptionDelta": 8,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "better-sqlite3",
-      "name": "Better SQLite3",
-      "trendScore": 2.189840967447485,
-      "adoptionDelta": 7,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "mysql",
-      "name": "MySQL",
-      "trendScore": 1.617112397680935,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "cross-env",
-      "name": "cross-env",
-      "trendScore": 2.929799416926936,
-      "adoptionDelta": 25,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "firebase",
-      "name": "Firebase",
-      "trendScore": 1.875593595831979,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "firebase-admin",
-      "name": "Firebase Admin",
-      "trendScore": 1.617112397680935,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "nuxt",
-      "name": "Nuxt",
-      "trendScore": 1.670704273137005,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "pm2",
       "name": "PM2",
       "trendScore": 1.628517174992649,
       "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "esbuild",
-      "name": "esbuild",
-      "trendScore": 2.841146063117469,
-      "adoptionDelta": 30,
-      "snapshotDate": "2026-08-18"
+      "slug": "styled-components",
+      "name": "Styled Components",
+      "trendScore": 2.057727867632897,
+      "adoptionDelta": 3,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "gulp",
+      "name": "Gulp",
+      "trendScore": 2.513841658670273,
+      "adoptionDelta": 12,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "sveltekit",
+      "name": "SvelteKit",
+      "trendScore": 1.497792866434326,
+      "adoptionDelta": 1,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "better-sqlite3",
+      "name": "Better SQLite3",
+      "trendScore": 2.296925695740204,
+      "adoptionDelta": 11,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "next-js",
+      "name": "Next.js",
+      "trendScore": 2.892151575921637,
+      "adoptionDelta": 40,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "mysql",
+      "name": "MySQL",
+      "trendScore": 1.617112397680935,
+      "adoptionDelta": 2,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "angular",
+      "name": "Angular",
+      "trendScore": 2.22596925977676,
+      "adoptionDelta": 8,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "firebase",
+      "name": "Firebase",
+      "trendScore": 1.875593595831979,
+      "adoptionDelta": 3,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "bootstrap",
+      "name": "Bootstrap",
+      "trendScore": 1.996900478341863,
+      "adoptionDelta": 1,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "firebase-admin",
+      "name": "Firebase Admin",
+      "trendScore": 1.617112397680935,
+      "adoptionDelta": 2,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "mongoose",
       "name": "Mongoose",
-      "trendScore": 1.970376144294163,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "pg",
-      "name": "PostgreSQL (pg)",
-      "trendScore": 2.272857829604712,
-      "adoptionDelta": 9,
-      "snapshotDate": "2026-08-18"
+      "trendScore": 2.07835348093715,
+      "adoptionDelta": 6,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "valibot",
       "name": "Valibot",
       "trendScore": 1.61024644866354,
       "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "svelte",
-      "name": "Svelte",
-      "trendScore": 1.937358863455322,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
+      "slug": "pg",
+      "name": "PostgreSQL (pg)",
+      "trendScore": 2.320409364129879,
+      "adoptionDelta": 11,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "react-bootstrap",
       "name": "React Bootstrap",
       "trendScore": 1.361727836017593,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "supabase-js",
-      "name": "Supabase",
-      "trendScore": 1.801803510816539,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "typeorm",
-      "name": "TypeORM",
-      "trendScore": 1.663134315104353,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "solid-js",
       "name": "SolidJS",
       "trendScore": 1.666543318610394,
       "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "sqlite3",
-      "name": "SQLite3",
-      "trendScore": 1.833943252327689,
-      "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "joi",
-      "name": "Joi",
-      "trendScore": 1.63829410019521,
-      "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "dotenv",
-      "name": "dotenv",
-      "trendScore": 2.829701128020132,
-      "adoptionDelta": 27,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "nestjs",
-      "name": "NestJS",
-      "trendScore": 1.764226939575369,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "preact",
-      "name": "Preact",
-      "trendScore": 1.886342360227502,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "ts-node",
-      "name": "ts-node",
-      "trendScore": 2.903226610792535,
-      "adoptionDelta": 25,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "mobx-react",
-      "name": "MobX React",
-      "trendScore": 1.655664976151897,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "koa",
       "name": "Koa",
       "trendScore": 1.864658191876521,
       "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "clerk-nextjs",
-      "name": "Clerk (Next.js)",
-      "trendScore": 1.414973347970818,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "slug": "sqlite3",
+      "name": "SQLite3",
+      "trendScore": 1.833943252327689,
+      "adoptionDelta": 1,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "tape",
       "name": "Tape",
       "trendScore": 1.977731488452489,
       "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "testing-library-react",
-      "name": "React Testing Library",
-      "trendScore": 2.742929758038912,
-      "adoptionDelta": 18,
-      "snapshotDate": "2026-08-18"
+      "slug": "typeorm",
+      "name": "TypeORM",
+      "trendScore": 1.750261619476863,
+      "adoptionDelta": 3,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "istanbul",
-      "name": "nyc (Istanbul)",
-      "trendScore": 2.448661946028223,
-      "adoptionDelta": 6,
-      "snapshotDate": "2026-08-18"
+      "slug": "preact",
+      "name": "Preact",
+      "trendScore": 1.886342360227502,
+      "adoptionDelta": 3,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "yup",
-      "name": "Yup",
-      "trendScore": 1.70130541174118,
+      "slug": "nestjs",
+      "name": "NestJS",
+      "trendScore": 1.843080862719612,
+      "adoptionDelta": 4,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "dotenv",
+      "name": "dotenv",
+      "trendScore": 2.910966454570909,
+      "adoptionDelta": 38,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "joi",
+      "name": "Joi",
+      "trendScore": 1.708921244584018,
       "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "ts-node",
+      "name": "ts-node",
+      "trendScore": 2.931433670100338,
+      "adoptionDelta": 30,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "esbuild",
+      "name": "esbuild",
+      "trendScore": 2.856523889876287,
+      "adoptionDelta": 32,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "svelte",
+      "name": "Svelte",
+      "trendScore": 1.937358863455322,
+      "adoptionDelta": 3,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "supabase-js",
+      "name": "Supabase",
+      "trendScore": 2.116113592275525,
+      "adoptionDelta": 8,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "mobx-react",
+      "name": "MobX React",
+      "trendScore": 1.655664976151897,
+      "adoptionDelta": 2,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "clerk-nextjs",
+      "name": "Clerk (Next.js)",
+      "trendScore": 1.414973347970818,
+      "adoptionDelta": 0,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "mobx",
+      "name": "MobX",
+      "trendScore": 1.944732700555983,
+      "adoptionDelta": 5,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "bcrypt",
+      "name": "Bcrypt",
+      "trendScore": 1.933363148238173,
+      "adoptionDelta": 5,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "cors",
+      "name": "CORS",
+      "trendScore": 2.401719298357812,
+      "adoptionDelta": 13,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "rspack",
       "name": "Rspack",
       "trendScore": 1.61604580467479,
       "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "testing-library-react",
+      "name": "React Testing Library",
+      "trendScore": 2.789722265910177,
+      "adoptionDelta": 24,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "testing-library-jest-dom",
+      "name": "jest-dom",
+      "trendScore": 2.719470745497114,
+      "adoptionDelta": 21,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "nock",
+      "name": "Nock",
+      "trendScore": 2.056635781666083,
+      "adoptionDelta": 5,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "astro",
+      "name": "Astro",
+      "trendScore": 2.002574989159953,
+      "adoptionDelta": 6,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "passport",
+      "name": "Passport",
+      "trendScore": 1.944732700555983,
+      "adoptionDelta": 5,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "yup",
+      "name": "Yup",
+      "trendScore": 1.70130541174118,
+      "adoptionDelta": 2,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "grunt",
+      "name": "Grunt",
+      "trendScore": 2.369108505505876,
+      "adoptionDelta": 7,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "istanbul",
+      "name": "nyc (Istanbul)",
+      "trendScore": 2.448661946028223,
+      "adoptionDelta": 6,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "redis",
       "name": "Redis",
       "trendScore": 1.852240885816296,
       "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "astro",
-      "name": "Astro",
-      "trendScore": 1.843080862719612,
-      "adoptionDelta": 4,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "grunt",
-      "name": "Grunt",
-      "trendScore": 2.384742140532031,
-      "adoptionDelta": 8,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "passport",
-      "name": "Passport",
-      "trendScore": 1.887744449262243,
-      "adoptionDelta": 4,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "cors",
-      "name": "CORS",
-      "trendScore": 2.261896746524974,
-      "adoptionDelta": 6,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "mobx",
-      "name": "MobX",
-      "trendScore": 1.887744449262243,
-      "adoptionDelta": 4,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "nock",
-      "name": "Nock",
-      "trendScore": 2.022424422990808,
-      "adoptionDelta": 4,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "bcrypt",
-      "name": "Bcrypt",
-      "trendScore": 1.808201186941782,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "testing-library-jest-dom",
-      "name": "jest-dom",
-      "trendScore": 2.674251616425555,
-      "adoptionDelta": 16,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "knex",
       "name": "Knex.js",
       "trendScore": 1.518513939877888,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "msw",
-      "name": "Mock Service Worker",
-      "trendScore": 1.7481880270062,
-      "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "vuex",
-      "name": "Vuex",
-      "trendScore": 1.726680189737089,
-      "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "swc",
-      "name": "SWC",
-      "trendScore": 2.26136260024053,
-      "adoptionDelta": 7,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "jsonwebtoken",
-      "name": "JSON Web Token",
-      "trendScore": 2.172458803777296,
-      "adoptionDelta": 5,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "swr",
-      "name": "SWR",
-      "trendScore": 1.946225492266119,
-      "adoptionDelta": 4,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "heroicons",
-      "name": "Heroicons",
-      "trendScore": 1.794046048187111,
-      "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "react-query",
-      "name": "TanStack Query",
-      "trendScore": 2.10071139065174,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "redux-toolkit",
-      "name": "Redux Toolkit",
-      "trendScore": 1.846207416392874,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "apollo-client",
-      "name": "Apollo Client",
-      "trendScore": 1.554864478652276,
-      "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "class-validator",
-      "name": "Class Validator",
-      "trendScore": 1.759298479128238,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "vite",
-      "name": "Vite",
-      "trendScore": 3.086982735899827,
-      "adoptionDelta": 48,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "react-redux",
-      "name": "React Redux",
-      "trendScore": 2.284878390177642,
-      "adoptionDelta": 6,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "parcel",
-      "name": "Parcel",
-      "trendScore": 1.543642331115565,
-      "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "cypress",
-      "name": "Cypress",
-      "trendScore": 2.053235731134404,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "daisyui",
       "name": "daisyUI",
       "trendScore": 1.543642331115565,
       "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "vuex",
+      "name": "Vuex",
+      "trendScore": 1.726680189737089,
+      "adoptionDelta": 1,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "react-query",
+      "name": "TanStack Query",
+      "trendScore": 2.148503759289702,
+      "adoptionDelta": 4,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "swc",
+      "name": "SWC",
+      "trendScore": 2.26136260024053,
+      "adoptionDelta": 7,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "class-validator",
+      "name": "Class Validator",
+      "trendScore": 1.840932458687342,
+      "adoptionDelta": 4,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "mui-material",
+      "name": "Material UI",
+      "trendScore": 1.880989859800466,
+      "adoptionDelta": 3,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "react-redux",
+      "name": "React Redux",
+      "trendScore": 2.284878390177642,
+      "adoptionDelta": 6,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "heroicons",
+      "name": "Heroicons",
+      "trendScore": 1.794046048187111,
+      "adoptionDelta": 1,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "emotion-react",
+      "name": "Emotion",
+      "trendScore": 2.101331330619401,
+      "adoptionDelta": 5,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "redux-toolkit",
+      "name": "Redux Toolkit",
+      "trendScore": 1.846207416392874,
+      "adoptionDelta": 2,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "apollo-client",
+      "name": "Apollo Client",
+      "trendScore": 1.554864478652276,
+      "adoptionDelta": 1,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "swr",
+      "name": "SWR",
+      "trendScore": 1.990484052961835,
+      "adoptionDelta": 5,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "parcel",
+      "name": "Parcel",
+      "trendScore": 1.543642331115565,
+      "adoptionDelta": 1,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "cypress",
+      "name": "Cypress",
+      "trendScore": 2.053235731134404,
+      "adoptionDelta": 2,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "ant-design",
       "name": "Ant Design",
       "trendScore": 1.92441541291129,
       "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "xstate",
+      "name": "XState",
+      "trendScore": 1.626287494579977,
+      "adoptionDelta": 2,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "msw",
+      "name": "Mock Service Worker",
+      "trendScore": 1.840098775891761,
+      "adoptionDelta": 2,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "jsonwebtoken",
+      "name": "JSON Web Token",
+      "trendScore": 2.268663116850212,
+      "adoptionDelta": 9,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "vite",
+      "name": "Vite",
+      "trendScore": 3.146264822222783,
+      "adoptionDelta": 61,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "validator",
       "name": "Validator.js",
-      "trendScore": 1.93875432709153,
-      "adoptionDelta": 5,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "mui-material",
-      "name": "Material UI",
-      "trendScore": 1.833913738146824,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "emotion-react",
-      "name": "Emotion",
-      "trendScore": 2.042301059124708,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "webpack",
-      "name": "Webpack",
-      "trendScore": 2.946864862598103,
-      "adoptionDelta": 26,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "headlessui-react",
-      "name": "Headless UI",
-      "trendScore": 1.903370111464878,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "trendScore": 1.998788240395316,
+      "adoptionDelta": 6,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "nx",
       "name": "Nx",
       "trendScore": 1.663134315104353,
       "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "playwright",
-      "name": "Playwright",
-      "trendScore": 2.688882227532379,
-      "adoptionDelta": 18,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "chakra-ui",
       "name": "Chakra UI",
       "trendScore": 1.464461106351498,
       "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "cva",
-      "name": "Class Variance Authority",
-      "trendScore": 2.562355575787183,
-      "adoptionDelta": 15,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "zod",
-      "name": "Zod",
-      "trendScore": 2.893300597667085,
-      "adoptionDelta": 34,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "ajv",
-      "name": "Ajv",
-      "trendScore": 2.378526703222883,
-      "adoptionDelta": 12,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "fastify",
       "name": "Fastify",
       "trendScore": 1.598064956913658,
       "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "jotai",
       "name": "Jotai",
-      "trendScore": 1.825347629150637,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
+      "trendScore": 1.883361346317487,
+      "adoptionDelta": 4,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "ajv",
+      "name": "Ajv",
+      "trendScore": 2.398840758014137,
+      "adoptionDelta": 13,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "cva",
+      "name": "Class Variance Authority",
+      "trendScore": 2.661187447216488,
+      "adoptionDelta": 23,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "webpack",
+      "name": "Webpack",
+      "trendScore": 2.962057660834893,
+      "adoptionDelta": 29,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "express-session",
       "name": "Express Session",
-      "trendScore": 1.848003600837476,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
+      "trendScore": 1.901124676739332,
+      "adoptionDelta": 4,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "next-auth",
-      "name": "Auth.js (NextAuth)",
-      "trendScore": 1.95115427349563,
-      "adoptionDelta": 5,
-      "snapshotDate": "2026-08-18"
+      "slug": "pinia",
+      "name": "Pinia",
+      "trendScore": 1.875593595831979,
+      "adoptionDelta": 3,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "prisma",
       "name": "Prisma",
       "trendScore": 1.929529517141653,
       "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "pinia",
-      "name": "Pinia",
-      "trendScore": 1.827651119142846,
+      "slug": "playwright",
+      "name": "Playwright",
+      "trendScore": 2.734619363914056,
+      "adoptionDelta": 23,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "zod",
+      "name": "Zod",
+      "trendScore": 3.027441701739225,
+      "adoptionDelta": 53,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "headlessui-react",
+      "name": "Headless UI",
+      "trendScore": 1.903370111464878,
       "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "next-auth",
+      "name": "Auth.js (NextAuth)",
+      "trendScore": 2.005929616637121,
+      "adoptionDelta": 6,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "supertest",
       "name": "SuperTest",
-      "trendScore": 2.229939305959723,
-      "adoptionDelta": 4,
-      "snapshotDate": "2026-08-18"
+      "trendScore": 2.249412688337122,
+      "adoptionDelta": 5,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "tailwindcss",
-      "name": "Tailwind CSS",
-      "trendScore": 3.006089294284249,
-      "adoptionDelta": 45,
-      "snapshotDate": "2026-08-18"
+      "slug": "rollup",
+      "name": "Rollup",
+      "trendScore": 2.879272237269767,
+      "adoptionDelta": 24,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "lerna",
-      "name": "Lerna",
-      "trendScore": 2.49156972798062,
-      "adoptionDelta": 11,
-      "snapshotDate": "2026-08-18"
+      "slug": "turborepo",
+      "name": "Turborepo",
+      "trendScore": 2.702713313989656,
+      "adoptionDelta": 21,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "storybook",
       "name": "Storybook",
       "trendScore": 1.939519252618618,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "rollup",
-      "name": "Rollup",
-      "trendScore": 2.873335367378442,
-      "adoptionDelta": 23,
-      "snapshotDate": "2026-08-18"
+      "slug": "bcryptjs",
+      "name": "Bcrypt.js",
+      "trendScore": 1.955102639516805,
+      "adoptionDelta": 4,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "mongodb",
+      "name": "MongoDB",
+      "trendScore": 1.795137877436292,
+      "adoptionDelta": 2,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "sequelize",
       "name": "Sequelize",
       "trendScore": 1.518513939877888,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "bcryptjs",
-      "name": "Bcrypt.js",
-      "trendScore": 1.912425854806469,
-      "adoptionDelta": 3,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "turborepo",
-      "name": "Turborepo",
-      "trendScore": 2.693132070425554,
-      "adoptionDelta": 20,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "drizzle-orm",
       "name": "Drizzle ORM",
-      "trendScore": 2.103960967636139,
-      "adoptionDelta": 7,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "mongodb",
-      "name": "MongoDB",
-      "trendScore": 1.742533337780532,
-      "adoptionDelta": 1,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "cookie-parser",
-      "name": "Cookie Parser",
-      "trendScore": 1.9956532687857,
-      "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "vue",
-      "name": "Vue.js",
-      "trendScore": 2.523788817978755,
-      "adoptionDelta": 9,
-      "snapshotDate": "2026-08-18"
+      "trendScore": 2.142286077738242,
+      "adoptionDelta": 8,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "framer-motion",
       "name": "Framer Motion",
-      "trendScore": 2.406046183596153,
+      "trendScore": 2.484910390331419,
+      "adoptionDelta": 17,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "tailwindcss",
+      "name": "Tailwind CSS",
+      "trendScore": 3.112853412512505,
+      "adoptionDelta": 63,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "cookie-parser",
+      "name": "Cookie Parser",
+      "trendScore": 2.118823708451783,
+      "adoptionDelta": 6,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "lerna",
+      "name": "Lerna",
+      "trendScore": 2.49156972798062,
+      "adoptionDelta": 11,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "vue",
+      "name": "Vue.js",
+      "trendScore": 2.546203199330776,
+      "adoptionDelta": 11,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "lucide-react",
+      "name": "Lucide",
+      "trendScore": 2.794948005301193,
+      "adoptionDelta": 32,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "react",
+      "name": "React",
+      "trendScore": 3.461765999314286,
+      "adoptionDelta": 120,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "vitest",
+      "name": "Vitest",
+      "trendScore": 3.241129892579072,
+      "adoptionDelta": 74,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "mocha",
+      "name": "Mocha",
+      "trendScore": 3.025222809896838,
+      "adoptionDelta": 38,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "zustand",
+      "name": "Zustand",
+      "trendScore": 2.429137660629303,
       "adoptionDelta": 13,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "mysql2",
       "name": "MySQL2",
       "trendScore": 1.612783856719735,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "rimraf",
-      "name": "rimraf",
-      "trendScore": 3.008981000848673,
-      "adoptionDelta": 34,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "express",
-      "name": "Express",
-      "trendScore": 2.825844662659507,
-      "adoptionDelta": 22,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "less",
       "name": "Less",
       "trendScore": 2.325593711967904,
       "adoptionDelta": 9,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "rimraf",
+      "name": "rimraf",
+      "trendScore": 3.023216775056471,
+      "adoptionDelta": 37,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "sass",
       "name": "Sass",
-      "trendScore": 2.517637547464001,
-      "adoptionDelta": 7,
-      "snapshotDate": "2026-08-18"
+      "trendScore": 2.528398264053709,
+      "adoptionDelta": 8,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "mocha",
-      "name": "Mocha",
-      "trendScore": 3.020433605866339,
-      "adoptionDelta": 37,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "zustand",
-      "name": "Zustand",
-      "trendScore": 2.357881661960612,
-      "adoptionDelta": 9,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "sinon",
-      "name": "Sinon",
-      "trendScore": 2.639442508587121,
-      "adoptionDelta": 15,
-      "snapshotDate": "2026-08-18"
+      "slug": "express",
+      "name": "Express",
+      "trendScore": 2.906097265833049,
+      "adoptionDelta": 34,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "jasmine",
       "name": "Jasmine",
       "trendScore": 1.778151250383644,
       "adoptionDelta": 0,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "lucide-react",
-      "name": "Lucide",
-      "trendScore": 2.649457599103294,
-      "adoptionDelta": 18,
-      "snapshotDate": "2026-08-18"
+      "slug": "sinon",
+      "name": "Sinon",
+      "trendScore": 2.649165173179848,
+      "adoptionDelta": 16,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "vitest",
-      "name": "Vitest",
-      "trendScore": 3.165902015858226,
-      "adoptionDelta": 54,
-      "snapshotDate": "2026-08-18"
+      "slug": "nodemon",
+      "name": "Nodemon",
+      "trendScore": 2.502128472438079,
+      "adoptionDelta": 14,
+      "snapshotDate": "2026-08-19"
     },
     {
-      "slug": "react",
-      "name": "React",
-      "trendScore": 3.396174584178125,
-      "adoptionDelta": 94,
-      "snapshotDate": "2026-08-18"
+      "slug": "typescript",
+      "name": "TypeScript",
+      "trendScore": 3.807289968697292,
+      "adoptionDelta": 245,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "tailwind-merge",
+      "name": "Tailwind Merge",
+      "trendScore": 2.813350258416978,
+      "adoptionDelta": 34,
+      "snapshotDate": "2026-08-19"
+    },
+    {
+      "slug": "clsx",
+      "name": "clsx",
+      "trendScore": 2.880151729837068,
+      "adoptionDelta": 38,
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "ioredis",
       "name": "ioredis",
       "trendScore": 1.903370111464878,
       "adoptionDelta": 2,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "tailwind-merge",
-      "name": "Tailwind Merge",
-      "trendScore": 2.728439553080284,
-      "adoptionDelta": 26,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "clsx",
-      "name": "clsx",
-      "trendScore": 2.792849688957381,
-      "adoptionDelta": 28,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "typescript",
-      "name": "TypeScript",
-      "trendScore": 3.748323881517826,
-      "adoptionDelta": 198,
-      "snapshotDate": "2026-08-18"
-    },
-    {
-      "slug": "nodemon",
-      "name": "Nodemon",
-      "trendScore": 2.430047952295261,
-      "adoptionDelta": 9,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     },
     {
       "slug": "puppeteer",
       "name": "Puppeteer",
       "trendScore": 2.300317001441643,
       "adoptionDelta": 6,
-      "snapshotDate": "2026-08-18"
+      "snapshotDate": "2026-08-19"
     }
   ]
 }
