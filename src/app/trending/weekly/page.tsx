@@ -1,8 +1,15 @@
 import { TrendingUp, Calendar } from 'lucide-react';
 import Link from 'next/link';
 import { HotThisWeek } from '@/components/home/HotThisWeek';
+import prisma from '@/lib/prisma';
+import { rateLimit } from '@/lib/rate-limit';
+import { z } from 'zod';
 
 export const dynamic = 'force-dynamic';
+
+const TrendingSchema = z.object({
+  limit: z.coerce.number().int().min(1).max(100).default(50),
+});
 
 interface WeeklyTechnology {
   slug: string;
@@ -14,12 +21,52 @@ interface WeeklyTechnology {
 }
 
 export default async function WeeklyTrendingPage() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-  const res = await fetch(`${baseUrl}/api/trending/weekly?limit=50`);
+  // Rate limiting
+  const ip = 'server';
+  const rl = await rateLimit(ip);
+  if (!rl.success) {
+    return (
+      <div className="p-8 text-center text-red-500">Rate limit exceeded. Please try again later.</div>
+    );
+  }
 
-  if (!res.ok) return <div className="p-8 text-center text-red-500">Error loading weekly trends.</div>;
-  const data = await res.json();
-  const { technologies, snapshotDate, comparisonDate } = data;
+  // Get weekly trending data from datasets
+  const { HotThisWeek } = await import('@/components/home/HotThisWeek');
+  const fs = await import('fs/promises');
+  const path = await import('path');
+
+  let technologies: WeeklyTechnology[] = [];
+  try {
+    const dataset = JSON.parse(
+      await fs.readFile(path.join(process.cwd(), 'public', 'datasets', 'weekly-trending.json'), 'utf8')
+    );
+    technologies = [...(dataset.technologies ?? [])]
+      .sort((a: WeeklyTechnology, b: WeeklyTechnology) => (b.weeklyPercentChange ?? 0) - (a.weeklyPercentChange ?? 0))
+      .slice(0, 50);
+  } catch (e) {
+    console.error('Failed to load weekly trending dataset:', e);
+  }
+
+  // Get snapshot and comparison dates
+  const latestSnapshot = await prisma.trendingSnapshot.findFirst({
+    where: { trendScore: { gt: 0 } },
+    orderBy: { snapshotDate: "desc" },
+    select: { snapshotDate: true },
+  });
+
+  if (!latestSnapshot) {
+    return (
+      <div className="p-8 max-w-4xl mx-auto text-center py-20 space-y-4">
+        <div className="inline-flex p-4 rounded-full bg-muted border border-border mb-4">
+          <Calendar className="w-4 h-4 text-muted-foreground" />
+        </div>
+        <h2 className="text-2xl font-bold">Weekly trending data not available</h2>
+        <p className="text-muted-foreground">No trend data available yet.</p>
+      </div>
+    );
+  }
+
+  const snapshotDate = latestSnapshot.snapshotDate.toISOString().split("T")[0];
 
   return (
     <div className="p-8 max-w-4xl mx-auto space-y-12 py-12">
@@ -42,7 +89,7 @@ export default async function WeeklyTrendingPage() {
             </h1>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Calendar className="w-4 h-4" />
-              Compared: <span className="text-foreground font-medium">{comparisonDate}</span>
+              Compared: <span className="text-foreground font-medium">Previous week</span>
               {' '}to <span className="text-foreground font-medium">{snapshotDate}</span>
             </div>
           </div>

@@ -1,17 +1,29 @@
 import { TrendingUp, Calendar, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 import { TrendingList } from '@/components/trending/TrendingList';
+import prisma from '@/lib/prisma';
+import { rateLimit } from '@/lib/rate-limit';
 
 export const dynamic = 'force-dynamic';
 
 export default async function TrendingPage() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-  const res = await fetch(`${baseUrl}/api/trending`);
+  // Rate limiting
+  const ip = 'server';
+  const rl = await rateLimit(ip);
+  if (!rl.success) {
+    return (
+      <div className="p-8 text-center text-red-500">Rate limit exceeded. Please try again later.</div>
+    );
+  }
 
-  if (!res.ok) return <div className="p-8 text-center text-red-500">Error loading trends.</div>;
-  const { technologies, snapshotDate } = await res.json();
+  // Find the most recent snapshot date with at least one trendScore > 0
+  const latestSnapshot = await prisma.trendingSnapshot.findFirst({
+    where: { trendScore: { gt: 0 } },
+    orderBy: { snapshotDate: "desc" },
+    select: { snapshotDate: true },
+  });
 
-  if (!technologies || technologies.length === 0) {
+  if (!latestSnapshot) {
     return (
       <div className="p-8 max-w-4xl mx-auto text-center py-20 space-y-4">
         <div className="inline-flex p-4 rounded-full bg-muted border border-border mb-4">
@@ -22,6 +34,27 @@ export default async function TrendingPage() {
       </div>
     );
   }
+
+  const technologies = await prisma.trendingSnapshot.findMany({
+    where: {
+      snapshotDate: latestSnapshot.snapshotDate,
+      trendScore: { gt: 0 },
+      technology: { isActive: true },
+    },
+    orderBy: { trendScore: "desc" },
+    take: 50,
+    select: {
+      technology: {
+        select: {
+          slug: true,
+          name: true,
+          category: true,
+          repoCount: true,
+        },
+      },
+      trendScore: true,
+    },
+  });
 
   return (
     <div className="p-8 max-w-5xl mx-auto space-y-12 py-12">
@@ -39,16 +72,16 @@ export default async function TrendingPage() {
             </h1>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Calendar className="w-4 h-4" />
-              Latest snapshot: <span className="text-foreground font-medium">{snapshotDate}</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.
+              Latest snapshot: <span className="text-foreground font-medium">{latestSnapshot.snapshotDate.toISOString().split("T")[0]}</span>
             </div>
           </div>
         </div>
       </header>
 
-      <TrendingList technologies={technologies} />
+      <TrendingList technologies={technologies.map((t) => ({
+        ...t.technology,
+        trendScore: t.trendScore,
+      }))} />
     </div>
   );
 }

@@ -11,6 +11,7 @@ import FeaturedTech from '@/components/home/FeaturedTech';
 import { Suspense } from 'react';
 import { Star } from 'lucide-react';
 import prisma from '@/lib/prisma';
+import { rateLimit } from '@/lib/rate-limit';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
@@ -19,20 +20,40 @@ const CATEGORIES = [
   'Authentication', 'BuildTools', 'StateManagement', 'UILibraries'
 ];
 
-const getBaseUrl = () => {
-  return process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-};
-
 async function TrendingDataWrapper() {
-  const baseUrl = getBaseUrl();
+  // Rate limiting
+  const ip = 'server';
+  const rl = await rateLimit(ip);
+  if (!rl.success) {
+    console.warn('Rate limit exceeded for trending preview');
+    return <TrendingPreview trending={[]} layout="card" />;
+  }
 
-  let trending = [];
+  let trending: any[] = [];
   try {
-    const res = await fetch(`${baseUrl}/api/trending?limit=5`);
-    if (res.ok) {
-      const data = await res.json();
-      trending = data.technologies;
-    }
+    const technologies = await prisma.trendingSnapshot.findMany({
+      where: {
+        trendScore: { gt: 0 },
+        technology: { isActive: true },
+      },
+      orderBy: { snapshotDate: 'desc' },
+      take: 5,
+      select: {
+        technology: {
+          select: {
+            slug: true,
+            name: true,
+            category: true,
+            repoCount: true,
+          },
+        },
+        trendScore: true,
+      },
+    });
+    trending = technologies.map((t) => ({
+      ...t.technology,
+      trendScore: t.trendScore,
+    }));
   } catch (e) {
     console.error('Failed to fetch trending preview:', e);
   }
@@ -40,7 +61,7 @@ async function TrendingDataWrapper() {
 }
 
 async function HotThisWeekWrapper() {
-  let technologies = [];
+  let technologies: any[] = [];
   try {
     // Use the same exported dataset as update-readme.ts so the preview and
     // README have identical items and ranking.
@@ -48,7 +69,7 @@ async function HotThisWeekWrapper() {
       await fs.readFile(path.join(process.cwd(), 'public', 'datasets', 'weekly-trending.json'), 'utf8')
     );
     technologies = [...(dataset.technologies ?? [])]
-      .sort((a, b) => (b.weeklyPercentChange ?? 0) - (a.weeklyPercentChange ?? 0))
+      .sort((a: any, b: any) => (b.weeklyPercentChange ?? 0) - (a.weeklyPercentChange ?? 0))
       .slice(0, 5);
   } catch (e) {
     console.error('Failed to load weekly trending dataset:', e);
@@ -57,13 +78,48 @@ async function HotThisWeekWrapper() {
 }
 
 async function FallingThisMonthWrapper() {
-  const baseUrl = getBaseUrl();
-  let technologies = [];
+  // Rate limiting
+  const ip = 'server';
+  const rl = await rateLimit(ip);
+  if (!rl.success) {
+    console.warn('Rate limit exceeded for falling technologies');
+    return <FallingThisMonth technologies={[]} />;
+  }
+
+  let technologies: any[] = [];
   try {
-    const res = await fetch(`${baseUrl}/api/trending/falling?limit=10`);
-    if (res.ok) {
-      const data = await res.json();
-      technologies = data.technologies;
+    // Find the most recent snapshot date
+    const latestSnapshot = await prisma.trendingSnapshot.findFirst({
+      where: { trendScore: { gt: 0 } },
+      orderBy: { snapshotDate: 'desc' },
+      select: { snapshotDate: true },
+    });
+
+    if (latestSnapshot) {
+      const falling = await prisma.trendingSnapshot.findMany({
+        where: {
+          snapshotDate: latestSnapshot.snapshotDate,
+          trendScore: { lt: 1 }, // Low trend score indicates falling
+          technology: { isActive: true },
+        },
+        orderBy: { trendScore: 'asc' },
+        take: 10,
+        select: {
+          technology: {
+            select: {
+              slug: true,
+              name: true,
+              category: true,
+              repoCount: true,
+            },
+          },
+          trendScore: true,
+        },
+      });
+      technologies = falling.map((t) => ({
+        ...t.technology,
+        trendScore: t.trendScore,
+      }));
     }
   } catch (e) {
     console.error('Failed to fetch falling technologies:', e);
@@ -72,33 +128,74 @@ async function FallingThisMonthWrapper() {
 }
 
 async function TopPerCategoryWrapper() {
-  const baseUrl = getBaseUrl();
-  let categories = [];
+  // Rate limiting
+  const ip = 'server';
+  const rl = await rateLimit(ip);
+  if (!rl.success) {
+    console.warn('Rate limit exceeded for top per category');
+    return <TopPerCategory categories={[]} />;
+  }
+
   try {
-    const res = await fetch(`${baseUrl}/api/categories/top`);
-    if (res.ok) {
-      const data = await res.json();
-      categories = data.categories;
-    }
+    const categories = await prisma.technology.findMany({
+      where: { isActive: true },
+      select: { category: true },
+      distinct: ['category'],
+    }).then(async (c) => {
+      const results = [];
+      for (const cat of c) {
+        const topTech = await prisma.technology.findFirst({
+          where: { category: cat.category, isActive: true },
+          orderBy: { repoCount: 'desc' },
+          select: { slug: true, name: true, category: true, repoCount: true }
+        });
+        if (topTech) results.push(topTech);
+      }
+      return results;
+    });
+    return <TopPerCategory categories={categories} />;
   } catch (e) {
     console.error('Failed to fetch top per category:', e);
+    return <TopPerCategory categories={[]} />;
   }
-  return <TopPerCategory categories={categories} />;
 }
 
 async function TopPairingsWrapper() {
-  const baseUrl = getBaseUrl();
-  let pairings = [];
+  // Rate limiting
+  const ip = 'server';
+  const rl = await rateLimit(ip);
+  if (!rl.success) {
+    console.warn('Rate limit exceeded for top pairings');
+    return <TopPairings pairings={[]} />;
+  }
+
   try {
-    const res = await fetch(`${baseUrl}/api/pairings/top?limit=10`);
-    if (res.ok) {
-      const data = await res.json();
-      pairings = data.pairings;
-    }
+    const pairings = await prisma.technologyPairing.findMany({
+      where: {
+        technologyA: { isActive: true },
+        technologyB: { isActive: true },
+      },
+      orderBy: { strengthScore: 'desc' },
+      take: 10,
+      include: {
+        technologyA: { select: { name: true, slug: true } },
+        technologyB: { select: { name: true, slug: true } },
+      },
+    });
+
+    const results = pairings.map((p) => ({
+      techA: p.technologyA.name,
+      slugA: p.technologyA.slug,
+      techB: p.technologyB.name,
+      slugB: p.technologyB.slug,
+      strengthScore: Number(p.strengthScore.toFixed(2)),
+      repositoryCount: p.repositoryCount,
+    }));
+    return <TopPairings pairings={results} />;
   } catch (e) {
     console.error('Failed to fetch top pairings:', e);
+    return <TopPairings pairings={[]} />;
   }
-  return <TopPairings pairings={pairings} />;
 }
 
 export default async function Home() {

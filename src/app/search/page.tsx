@@ -2,45 +2,79 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Search, ArrowLeft, Package } from 'lucide-react';
 import { SearchResults } from '@/components/search/SearchResults';
+import prisma from '@/lib/prisma';
+import { rateLimit } from '@/lib/rate-limit';
+import { z } from 'zod';
+
+const SearchSchema = z.object({
+  q: z.string().trim().max(100).optional(),
+  category: z.string().optional(),
+}).refine(data => data.q || data.category, {
+  message: "Either q or category must be provided",
+  path: ["q"],
+});
 
 export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string; category?: string }> }) {
   const { q: query, category } = await searchParams;
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-
-  if (!query && !category) {
+  // Rate limiting
+  const ip = 'server';
+  const rl = await rateLimit(ip);
+  if (!rl.success) {
     return (
-      <div className="p-8 max-w-4xl mx-auto text-center space-y-8 py-20">
+      <div className="p-8 text-center text-red-500">Rate limit exceeded. Please try again later.</div>
+    );
+  }
+
+  // Validate search parameters
+  const result = SearchSchema.safeParse({ q: query, category });
+  if (!result.success) {
+    return (
+      <div className="p-8 max-w-4xl mx-auto text-center py-20 space-y-4">
         <div className="inline-flex p-4 rounded-full bg-muted border border-border mb-4">
           <Search className="w-8 h-8 text-muted-foreground" />
         </div>
-        <h1 className="text-4xl font-extrabold">Search Technologies</h1>
-        <p className="text-muted-foreground">Explore the most adopted tools in the JS/TS ecosystem</p>
-
-        <form className="max-w-xl mx-auto flex gap-2">
-          <input
-            name="q"
-            className="flex-1 bg-card border border-border p-4 rounded-2xl outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-            placeholder="Search for a technology..."
-          />
-          <button type="submit" className="bg-primary text-primary-foreground px-6 py-4 rounded-2xl font-semibold hover:opacity-90 transition-all active:scale-95">
-            Search
-          </button>
-        </form>
+        <h2 className="text-2xl font-bold">Invalid search</h2>
+        <p className="text-muted-foreground">Please provide either a query or category.</p>
+        <Link href="/" className="inline-flex items-center gap-2 text-primary hover:underline font-medium">
+          <ArrowLeft className="w-4 h-4" /> Back to Home
+        </Link>
       </div>
     );
   }
 
-  const params = new URLSearchParams();
-  if (query) params.append('q', query);
-  if (category) params.append('category', category);
+  const { q, category: searchCategory } = result.data;
 
-  const res = await fetch(`${baseUrl}/api/search?${params.toString()}`);
+  // Build Prisma where clause
+  const where: any = {
+    isActive: true,
+  };
 
-  if (!res.ok) return <div className="p-8 text-center text-red-500">Error loading results.</div>;
-  const { results } = await res.json();
+  if (searchCategory) {
+    where.category = searchCategory;
+  }
 
-  if (results.length === 0) {
+  if (q) {
+    where.OR = [
+      { slug: { startsWith: q, mode: "insensitive" } },
+      { name: { startsWith: q, mode: "insensitive" } },
+    ];
+  }
+
+  const technologies = await prisma.technology.findMany({
+    where,
+    orderBy: { repoCount: "desc" },
+    take: 20,
+    select: {
+      slug: true,
+      name: true,
+      category: true,
+      repoCount: true,
+      description: true,
+    },
+  });
+
+  if (!technologies || technologies.length === 0) {
     return (
       <div className="p-8 max-w-4xl mx-auto text-center py-20 space-y-4">
         <div className="inline-flex p-4 rounded-full bg-muted border border-border mb-4">
@@ -64,14 +98,14 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
           <span className="text-foreground">Search</span>
         </div>
         <h1 className="text-4xl font-extrabold tracking-tight">
-          {category ? `Technologies in ${category}` : 'Search Results'}
+          {searchCategory ? `Technologies in ${searchCategory}` : 'Search Results'}
         </h1>
         <p className="text-muted-foreground">
-          Showing {results.length} results {query ? `for "${query}"` : `in ${category}`}
+          Showing {technologies.length} results {query ? `for "${query}"` : `in ${searchCategory}`}
         </p>
       </header>
 
-      <SearchResults results={results} />
+      <SearchResults results={technologies} />
     </div>
   );
 }
