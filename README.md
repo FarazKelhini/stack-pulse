@@ -14,7 +14,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 > StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#repository-eligibility)).
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: August 19, 2026)
+## The Pulse (Updated: August 20, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-one.vercel.app)
 
@@ -22,32 +22,32 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 62.8% | ▲ +3.81 |
-| React | 28.7% | ▲ +3.46 |
-| Vitest | 18.1% | ▲ +3.24 |
-| Jest | 16.9% | ▲ +3.12 |
-| Vite | 14.6% | ▲ +3.15 |
-| Babel | 13.8% | ▲ +3.03 |
-| rimraf | 13.5% | ▲ +3.02 |
+| TypeScript | 63.4% | ▲ +3.85 |
+| React | 28.9% | ▲ +3.49 |
+| Vitest | 18.4% | ▲ +3.29 |
+| Jest | 17.1% | ▲ +3.15 |
+| Vite | 14.8% | ▲ +3.19 |
+| Babel | 13.9% | ▲ +3.05 |
+| rimraf | 13.6% | ▲ +3.06 |
 | Mocha | 13.4% | ▲ +3.03 |
-| Webpack | 12.4% | ▲ +2.96 |
-| cross-env | 12.0% | ▲ +2.95 |
+| Webpack | 12.5% | ▲ +2.98 |
+| cross-env | 12.1% | ▲ +2.99 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | TypeScript | BuildTools | N/A |
-| 2 | React | Frameworks | N/A |
-| 3 | Vitest | Testing | N/A |
-| 4 | Jest | Testing | N/A |
-| 5 | Vite | BuildTools | N/A |
-| 6 | Babel | BuildTools | N/A |
-| 7 | rimraf | BuildTools | N/A |
-| 8 | Mocha | Testing | N/A |
-| 9 | Webpack | BuildTools | N/A |
-| 10 | cross-env | BuildTools | N/A |
+| 1 | Typia | Validation | ▲ +50% |
+| 2 | Runtypes | Validation | ▲ +50% |
+| 3 | Recoil | StateManagement | ▲ +50% |
+| 4 | Rspack | BuildTools | ▲ +33.3% |
+| 5 | Astro | Frameworks | ▲ +29.2% |
+| 6 | Valibot | Validation | ▲ +25% |
+| 7 | XState | StateManagement | ▲ +25% |
+| 8 | Argon2 | Authentication | ▲ +25% |
+| 9 | Kysely | ORMs | ▲ +25% |
+| 10 | Supabase | Databases | ▲ +20% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -71,14 +71,14 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Tech A | Tech B | Strength Score |
 |---|---|---|
 | cva | tailwind-merge | 0.77 |
-| clsx | tailwind-merge | 0.73 |
+| clsx | tailwind-merge | 0.72 |
 | react-redux | redux | 0.67 |
 | testing-library-react | testing-library-jest-dom | 0.66 |
 | lucide-react | tailwind-merge | 0.63 |
 | cva | lucide-react | 0.61 |
 | cva | clsx | 0.61 |
 | lucide-react | clsx | 0.57 |
-| mobx | mobx-react | 0.54 |
+| mobx | mobx-react | 0.55 |
 | chai | mocha | 0.51 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
