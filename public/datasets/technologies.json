@@ -1,31 +1,23 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-08-20T03:13:29.587Z",
-  "commitSha": "1f335957f1af42df2a359797af802ffb4cd95db5",
+  "generatedAt": "2026-08-21T03:19:43.416Z",
+  "commitSha": "c5c9f541367906110463e7f59f554727a80f9102",
   "technologies": [
     {
-      "slug": "angular",
-      "name": "Angular",
-      "npmPackage": "@angular/core",
+      "slug": "nuxt",
+      "name": "Nuxt",
+      "npmPackage": "nuxt",
       "category": "Frameworks",
-      "description": "The web development framework for building the future.",
-      "repoCount": 103
+      "description": "The Intuitive Vue Framework.",
+      "repoCount": 25
     },
     {
-      "slug": "jest",
-      "name": "Jest",
-      "npmPackage": "jest",
-      "category": "Testing",
-      "description": "Delightful JavaScript Testing.",
-      "repoCount": 927
-    },
-    {
-      "slug": "babel",
-      "name": "Babel",
-      "npmPackage": "@babel/core",
-      "category": "BuildTools",
-      "description": "A compiler for writing next generation JavaScript.",
-      "repoCount": 753
+      "slug": "mysql",
+      "name": "MySQL",
+      "npmPackage": "mysql",
+      "category": "Databases",
+      "description": "A node.js driver for mysql.",
+      "repoCount": 16
     },
     {
       "slug": "hapi",
@@ -52,28 +44,28 @@
       "repoCount": 2
     },
     {
-      "slug": "better-sqlite3",
-      "name": "Better SQLite3",
-      "npmPackage": "better-sqlite3",
-      "category": "Databases",
-      "description": "The fastest and simplest library for SQLite3 in Node.js.",
-      "repoCount": 103
-    },
-    {
-      "slug": "react-redux",
-      "name": "React Redux",
-      "npmPackage": "react-redux",
-      "category": "StateManagement",
-      "description": "Official React bindings for Redux.",
-      "repoCount": 144
-    },
-    {
-      "slug": "gatsby",
-      "name": "Gatsby",
-      "npmPackage": "gatsby",
+      "slug": "sveltekit",
+      "name": "SvelteKit",
+      "npmPackage": "@sveltejs/kit",
       "category": "Frameworks",
-      "description": "The fastest frontend for the modern web.",
-      "repoCount": 9
+      "description": "The fastest way to build Svelte apps.",
+      "repoCount": 14
+    },
+    {
+      "slug": "nestjs",
+      "name": "NestJS",
+      "npmPackage": "@nestjs/core",
+      "category": "Frameworks",
+      "description": "A progressive Node.js framework for building efficient and scalable server-side applications.",
+      "repoCount": 28
+    },
+    {
+      "slug": "gulp",
+      "name": "Gulp",
+      "npmPackage": "gulp",
+      "category": "BuildTools",
+      "description": "The streaming build system.",
+      "repoCount": 233
     },
     {
       "slug": "meteor",
@@ -108,28 +100,28 @@
       "repoCount": 2
     },
     {
+      "slug": "styled-components",
+      "name": "Styled Components",
+      "npmPackage": "styled-components",
+      "category": "UILibraries",
+      "description": "Visual primitives for the component age.",
+      "repoCount": 88
+    },
+    {
       "slug": "cross-env",
       "name": "cross-env",
       "npmPackage": "cross-env",
       "category": "BuildTools",
       "description": "Run scripts that set and use environment variables across platforms.",
-      "repoCount": 656
+      "repoCount": 659
     },
     {
-      "slug": "mysql",
-      "name": "MySQL",
-      "npmPackage": "mysql",
-      "category": "Databases",
-      "description": "A node.js driver for mysql.",
-      "repoCount": 16
-    },
-    {
-      "slug": "nuxt",
-      "name": "Nuxt",
-      "npmPackage": "nuxt",
-      "category": "Frameworks",
-      "description": "The Intuitive Vue Framework.",
-      "repoCount": 25
+      "slug": "react-redux",
+      "name": "React Redux",
+      "npmPackage": "react-redux",
+      "category": "StateManagement",
+      "description": "Official React bindings for Redux.",
+      "repoCount": 144
     },
     {
       "slug": "alpinejs",
@@ -156,20 +148,20 @@
       "repoCount": 0
     },
     {
-      "slug": "ava",
-      "name": "AVA",
-      "npmPackage": "ava",
-      "category": "Testing",
-      "description": "Futuristic test runner.",
-      "repoCount": 79
+      "slug": "pm2",
+      "name": "PM2",
+      "npmPackage": "pm2",
+      "category": "BuildTools",
+      "description": "Production process manager for Node.js.",
+      "repoCount": 27
     },
     {
-      "slug": "gulp",
-      "name": "Gulp",
-      "npmPackage": "gulp",
-      "category": "BuildTools",
-      "description": "The streaming build system.",
-      "repoCount": 232
+      "slug": "bootstrap",
+      "name": "Bootstrap",
+      "npmPackage": "bootstrap",
+      "category": "UILibraries",
+      "description": "The most popular HTML, CSS, and JavaScript framework.",
+      "repoCount": 84
     },
     {
       "slug": "influx",
@@ -188,36 +180,12 @@
       "repoCount": 0
     },
     {
-      "slug": "redux",
-      "name": "Redux",
-      "npmPackage": "redux",
-      "category": "StateManagement",
-      "description": "Predictable state container for JavaScript apps.",
-      "repoCount": 139
-    },
-    {
       "slug": "rxdb",
       "name": "RxDB",
       "npmPackage": "rxdb",
       "category": "ORMs",
       "description": "A fast, offline-first, reactive database for JavaScript Applications.",
       "repoCount": 2
-    },
-    {
-      "slug": "sveltekit",
-      "name": "SvelteKit",
-      "npmPackage": "@sveltejs/kit",
-      "category": "Frameworks",
-      "description": "The fastest way to build Svelte apps.",
-      "repoCount": 15
-    },
-    {
-      "slug": "styled-components",
-      "name": "Styled Components",
-      "npmPackage": "styled-components",
-      "category": "UILibraries",
-      "description": "Visual primitives for the component age.",
-      "repoCount": 88
     },
     {
       "slug": "firebase-admin",
@@ -228,20 +196,52 @@
       "repoCount": 16
     },
     {
-      "slug": "chai",
-      "name": "Chai",
-      "npmPackage": "chai",
+      "slug": "ava",
+      "name": "AVA",
+      "npmPackage": "ava",
       "category": "Testing",
-      "description": "BDD/TDD assertion library for node.js and the browser.",
-      "repoCount": 457
+      "description": "Futuristic test runner.",
+      "repoCount": 79
     },
     {
-      "slug": "pm2",
-      "name": "PM2",
-      "npmPackage": "pm2",
+      "slug": "jest",
+      "name": "Jest",
+      "npmPackage": "jest",
+      "category": "Testing",
+      "description": "Delightful JavaScript Testing.",
+      "repoCount": 928
+    },
+    {
+      "slug": "gatsby",
+      "name": "Gatsby",
+      "npmPackage": "gatsby",
+      "category": "Frameworks",
+      "description": "The fastest frontend for the modern web.",
+      "repoCount": 9
+    },
+    {
+      "slug": "babel",
+      "name": "Babel",
+      "npmPackage": "@babel/core",
       "category": "BuildTools",
-      "description": "Production process manager for Node.js.",
-      "repoCount": 27
+      "description": "A compiler for writing next generation JavaScript.",
+      "repoCount": 753
+    },
+    {
+      "slug": "better-sqlite3",
+      "name": "Better SQLite3",
+      "npmPackage": "better-sqlite3",
+      "category": "Databases",
+      "description": "The fastest and simplest library for SQLite3 in Node.js.",
+      "repoCount": 102
+    },
+    {
+      "slug": "redux",
+      "name": "Redux",
+      "npmPackage": "redux",
+      "category": "StateManagement",
+      "description": "Predictable state container for JavaScript apps.",
+      "repoCount": 139
     },
     {
       "slug": "objection",
@@ -252,20 +252,20 @@
       "repoCount": 1
     },
     {
-      "slug": "bootstrap",
-      "name": "Bootstrap",
-      "npmPackage": "bootstrap",
-      "category": "UILibraries",
-      "description": "The most popular HTML, CSS, and JavaScript framework.",
-      "repoCount": 84
+      "slug": "angular",
+      "name": "Angular",
+      "npmPackage": "@angular/core",
+      "category": "Frameworks",
+      "description": "The web development framework for building the future.",
+      "repoCount": 103
     },
     {
-      "slug": "nestjs",
-      "name": "NestJS",
-      "npmPackage": "@nestjs/core",
-      "category": "Frameworks",
-      "description": "A progressive Node.js framework for building efficient and scalable server-side applications.",
-      "repoCount": 28
+      "slug": "chai",
+      "name": "Chai",
+      "npmPackage": "chai",
+      "category": "Testing",
+      "description": "BDD/TDD assertion library for node.js and the browser.",
+      "repoCount": 457
     },
     {
       "slug": "remix",
@@ -292,28 +292,20 @@
       "repoCount": 0
     },
     {
-      "slug": "solid-js",
-      "name": "SolidJS",
-      "npmPackage": "solid-js",
-      "category": "Frameworks",
-      "description": "Simple and performant reactivity for building user interfaces.",
-      "repoCount": 31
-    },
-    {
-      "slug": "ts-node",
-      "name": "ts-node",
-      "npmPackage": "ts-node",
+      "slug": "esbuild",
+      "name": "esbuild",
+      "npmPackage": "esbuild",
       "category": "BuildTools",
-      "description": "TypeScript execution and REPL for node.js.",
-      "repoCount": 603
+      "description": "An extremely fast JavaScript and CSS bundler and minifier.",
+      "repoCount": 440
     },
     {
-      "slug": "valibot",
-      "name": "Valibot",
-      "npmPackage": "valibot",
-      "category": "Validation",
-      "description": "The modular and type safe schema library for validating structural data.",
-      "repoCount": 15
+      "slug": "clerk-nextjs",
+      "name": "Clerk (Next.js)",
+      "npmPackage": "@clerk/nextjs",
+      "category": "Authentication",
+      "description": "Clerk authentication and user management for Next.js apps.",
+      "repoCount": 16
     },
     {
       "slug": "tape",
@@ -324,12 +316,12 @@
       "repoCount": 75
     },
     {
-      "slug": "typeorm",
-      "name": "TypeORM",
-      "npmPackage": "typeorm",
-      "category": "ORMs",
-      "description": "Data-Mapper ORM for TypeScript, ES7, ES6, ES5.",
-      "repoCount": 25
+      "slug": "dotenv",
+      "name": "dotenv",
+      "npmPackage": "dotenv",
+      "category": "BuildTools",
+      "description": "Loads environment variables from .env file.",
+      "repoCount": 461
     },
     {
       "slug": "react-bootstrap",
@@ -348,30 +340,6 @@
       "repoCount": 3
     },
     {
-      "slug": "svelte",
-      "name": "Svelte",
-      "npmPackage": "svelte",
-      "category": "Frameworks",
-      "description": "Cybernetically enhanced web apps.",
-      "repoCount": 59
-    },
-    {
-      "slug": "clerk-nextjs",
-      "name": "Clerk (Next.js)",
-      "npmPackage": "@clerk/nextjs",
-      "category": "Authentication",
-      "description": "Clerk authentication and user management for Next.js apps.",
-      "repoCount": 16
-    },
-    {
-      "slug": "dotenv",
-      "name": "dotenv",
-      "npmPackage": "dotenv",
-      "category": "BuildTools",
-      "description": "Loads environment variables from .env file.",
-      "repoCount": 459
-    },
-    {
       "slug": "fastest-validator",
       "name": "Fastest Validator",
       "npmPackage": "fastest-validator",
@@ -380,12 +348,12 @@
       "repoCount": 2
     },
     {
-      "slug": "esbuild",
-      "name": "esbuild",
-      "npmPackage": "esbuild",
-      "category": "BuildTools",
-      "description": "An extremely fast JavaScript and CSS bundler and minifier.",
-      "repoCount": 439
+      "slug": "pg",
+      "name": "PostgreSQL (pg)",
+      "npmPackage": "pg",
+      "category": "Databases",
+      "description": "Non-blocking PostgreSQL client for Node.js.",
+      "repoCount": 117
     },
     {
       "slug": "supabase-js",
@@ -396,6 +364,38 @@
       "repoCount": 48
     },
     {
+      "slug": "argon2",
+      "name": "Argon2",
+      "npmPackage": "argon2",
+      "category": "Authentication",
+      "description": "An Argon2 library for Node.",
+      "repoCount": 5
+    },
+    {
+      "slug": "valibot",
+      "name": "Valibot",
+      "npmPackage": "valibot",
+      "category": "Validation",
+      "description": "The modular and type safe schema library for validating structural data.",
+      "repoCount": 15
+    },
+    {
+      "slug": "typeorm",
+      "name": "TypeORM",
+      "npmPackage": "typeorm",
+      "category": "ORMs",
+      "description": "Data-Mapper ORM for TypeScript, ES7, ES6, ES5.",
+      "repoCount": 25
+    },
+    {
+      "slug": "joi",
+      "name": "Joi",
+      "npmPackage": "joi",
+      "category": "Validation",
+      "description": "The most powerful data validation library for JS.",
+      "repoCount": 29
+    },
+    {
       "slug": "k6",
       "name": "k6",
       "npmPackage": "k6",
@@ -404,12 +404,20 @@
       "repoCount": 0
     },
     {
-      "slug": "sqlite3",
-      "name": "SQLite3",
-      "npmPackage": "sqlite3",
-      "category": "Databases",
-      "description": "Asynchronous, non-blocking SQLite3 bindings for Node.js.",
-      "repoCount": 53
+      "slug": "svelte",
+      "name": "Svelte",
+      "npmPackage": "svelte",
+      "category": "Frameworks",
+      "description": "Cybernetically enhanced web apps.",
+      "repoCount": 59
+    },
+    {
+      "slug": "ts-node",
+      "name": "ts-node",
+      "npmPackage": "ts-node",
+      "category": "BuildTools",
+      "description": "TypeScript execution and REPL for node.js.",
+      "repoCount": 604
     },
     {
       "slug": "runtypes",
@@ -428,12 +436,12 @@
       "repoCount": 3
     },
     {
-      "slug": "firebase",
-      "name": "Firebase",
-      "npmPackage": "firebase",
-      "category": "Databases",
-      "description": "Firebase JavaScript library for web and Node.js.",
-      "repoCount": 47
+      "slug": "mobx-react",
+      "name": "MobX React",
+      "npmPackage": "mobx-react",
+      "category": "StateManagement",
+      "description": "React bindings for MobX.",
+      "repoCount": 23
     },
     {
       "slug": "ow",
@@ -444,12 +452,12 @@
       "repoCount": 2
     },
     {
-      "slug": "argon2",
-      "name": "Argon2",
-      "npmPackage": "argon2",
-      "category": "Authentication",
-      "description": "An Argon2 library for Node.",
-      "repoCount": 5
+      "slug": "sqlite3",
+      "name": "SQLite3",
+      "npmPackage": "sqlite3",
+      "category": "Databases",
+      "description": "Asynchronous, non-blocking SQLite3 bindings for Node.js.",
+      "repoCount": 53
     },
     {
       "slug": "kysely",
@@ -460,20 +468,20 @@
       "repoCount": 5
     },
     {
-      "slug": "pg",
-      "name": "PostgreSQL (pg)",
-      "npmPackage": "pg",
+      "slug": "firebase",
+      "name": "Firebase",
+      "npmPackage": "firebase",
       "category": "Databases",
-      "description": "Non-blocking PostgreSQL client for Node.js.",
-      "repoCount": 116
+      "description": "Firebase JavaScript library for web and Node.js.",
+      "repoCount": 47
     },
     {
-      "slug": "mobx-react",
-      "name": "MobX React",
-      "npmPackage": "mobx-react",
-      "category": "StateManagement",
-      "description": "React bindings for MobX.",
-      "repoCount": 23
+      "slug": "mongoose",
+      "name": "Mongoose",
+      "npmPackage": "mongoose",
+      "category": "ORMs",
+      "description": "MongoDB object modeling designed to work in an asynchronous environment.",
+      "repoCount": 69
     },
     {
       "slug": "slonik",
@@ -484,14 +492,6 @@
       "repoCount": 1
     },
     {
-      "slug": "joi",
-      "name": "Joi",
-      "npmPackage": "joi",
-      "category": "Validation",
-      "description": "The most powerful data validation library for JS.",
-      "repoCount": 29
-    },
-    {
       "slug": "koa",
       "name": "Koa",
       "npmPackage": "koa",
@@ -500,12 +500,12 @@
       "repoCount": 59
     },
     {
-      "slug": "mongoose",
-      "name": "Mongoose",
-      "npmPackage": "mongoose",
-      "category": "ORMs",
-      "description": "MongoDB object modeling designed to work in an asynchronous environment.",
-      "repoCount": 69
+      "slug": "solid-js",
+      "name": "SolidJS",
+      "npmPackage": "solid-js",
+      "category": "Frameworks",
+      "description": "Simple and performant reactivity for building user interfaces.",
+      "repoCount": 31
     },
     {
       "slug": "jsonschema",
@@ -524,12 +524,12 @@
       "repoCount": 5
     },
     {
-      "slug": "bcrypt",
-      "name": "Bcrypt",
-      "npmPackage": "bcrypt",
+      "slug": "lucia",
+      "name": "Lucia",
+      "npmPackage": "lucia",
       "category": "Authentication",
-      "description": "A library to help you hash passwords.",
-      "repoCount": 37
+      "description": "Authentication, simple and clean.",
+      "repoCount": 1
     },
     {
       "slug": "iron-session",
@@ -548,6 +548,14 @@
       "repoCount": 0
     },
     {
+      "slug": "rspack",
+      "name": "Rspack",
+      "npmPackage": "@rspack/cli",
+      "category": "BuildTools",
+      "description": "A fast Rust-based web bundler.",
+      "repoCount": 12
+    },
+    {
       "slug": "xstate",
       "name": "XState",
       "npmPackage": "xstate",
@@ -556,12 +564,28 @@
       "repoCount": 10
     },
     {
-      "slug": "superstruct",
-      "name": "Superstruct",
-      "npmPackage": "superstruct",
-      "category": "Validation",
-      "description": "A simple and composable way to validate data in JavaScript.",
-      "repoCount": 6
+      "slug": "grunt",
+      "name": "Grunt",
+      "npmPackage": "grunt",
+      "category": "BuildTools",
+      "description": "The JavaScript Task Runner.",
+      "repoCount": 179
+    },
+    {
+      "slug": "nock",
+      "name": "Nock",
+      "npmPackage": "nock",
+      "category": "Testing",
+      "description": "HTTP server mocking and expectations library for Node.js.",
+      "repoCount": 73
+    },
+    {
+      "slug": "istanbul",
+      "name": "nyc (Istanbul)",
+      "npmPackage": "nyc",
+      "category": "Testing",
+      "description": "The Istanbul command line interface for code coverage.",
+      "repoCount": 233
     },
     {
       "slug": "astro",
@@ -572,28 +596,20 @@
       "repoCount": 31
     },
     {
-      "slug": "oidc-provider",
-      "name": "OIDC Provider",
-      "npmPackage": "oidc-provider",
+      "slug": "cors",
+      "name": "CORS",
+      "npmPackage": "cors",
       "category": "Authentication",
-      "description": "OAuth 2.0 Authorization Server & OpenID Connect Provider implementation.",
-      "repoCount": 3
+      "description": "Node.js CORS middleware.",
+      "repoCount": 143
     },
     {
-      "slug": "lucia",
-      "name": "Lucia",
-      "npmPackage": "lucia",
-      "category": "Authentication",
-      "description": "Authentication, simple and clean.",
-      "repoCount": 1
-    },
-    {
-      "slug": "passport",
-      "name": "Passport",
-      "npmPackage": "passport",
-      "category": "Authentication",
-      "description": "Simple, unobtrusive authentication for Node.js.",
-      "repoCount": 41
+      "slug": "testing-library-react",
+      "name": "React Testing Library",
+      "npmPackage": "@testing-library/react",
+      "category": "Testing",
+      "description": "Simple and complete React DOM testing utilities.",
+      "repoCount": 421
     },
     {
       "slug": "io-ts",
@@ -612,12 +628,12 @@
       "repoCount": 23
     },
     {
-      "slug": "rspack",
-      "name": "Rspack",
-      "npmPackage": "@rspack/cli",
-      "category": "BuildTools",
-      "description": "A fast Rust-based web bundler.",
-      "repoCount": 12
+      "slug": "next-js",
+      "name": "Next.js",
+      "npmPackage": "next",
+      "category": "Frameworks",
+      "description": "The React Framework for the Web.",
+      "repoCount": 372
     },
     {
       "slug": "swr",
@@ -636,20 +652,28 @@
       "repoCount": 29
     },
     {
-      "slug": "emotion-react",
-      "name": "Emotion",
-      "npmPackage": "@emotion/react",
-      "category": "UILibraries",
-      "description": "CSS-in-JS library designed for high performance style composition.",
-      "repoCount": 86
+      "slug": "passport",
+      "name": "Passport",
+      "npmPackage": "passport",
+      "category": "Authentication",
+      "description": "Simple, unobtrusive authentication for Node.js.",
+      "repoCount": 41
     },
     {
-      "slug": "cors",
-      "name": "CORS",
-      "npmPackage": "cors",
-      "category": "Authentication",
-      "description": "Node.js CORS middleware.",
-      "repoCount": 143
+      "slug": "testing-library-jest-dom",
+      "name": "jest-dom",
+      "npmPackage": "@testing-library/jest-dom",
+      "category": "Testing",
+      "description": "Custom jest matchers to test the state of the DOM.",
+      "repoCount": 355
+    },
+    {
+      "slug": "valtio",
+      "name": "Valtio",
+      "npmPackage": "valtio",
+      "category": "StateManagement",
+      "description": "Valtio makes proxy-state simple for React and Vanilla.",
+      "repoCount": 6
     },
     {
       "slug": "redux-toolkit",
@@ -660,19 +684,43 @@
       "repoCount": 48
     },
     {
-      "slug": "mobx",
-      "name": "MobX",
-      "npmPackage": "mobx",
-      "category": "StateManagement",
-      "description": "Simple, scalable state management.",
-      "repoCount": 42
+      "slug": "oidc-provider",
+      "name": "OIDC Provider",
+      "npmPackage": "oidc-provider",
+      "category": "Authentication",
+      "description": "OAuth 2.0 Authorization Server & OpenID Connect Provider implementation.",
+      "repoCount": 3
     },
     {
-      "slug": "valtio",
-      "name": "Valtio",
-      "npmPackage": "valtio",
-      "category": "StateManagement",
-      "description": "Valtio makes proxy-state simple for React and Vanilla.",
+      "slug": "msw",
+      "name": "Mock Service Worker",
+      "npmPackage": "msw",
+      "category": "Testing",
+      "description": "Seamless REST/GraphQL API mocking library for browser and Node.js.",
+      "repoCount": 48
+    },
+    {
+      "slug": "emotion-react",
+      "name": "Emotion",
+      "npmPackage": "@emotion/react",
+      "category": "UILibraries",
+      "description": "CSS-in-JS library designed for high performance style composition.",
+      "repoCount": 86
+    },
+    {
+      "slug": "bcrypt",
+      "name": "Bcrypt",
+      "npmPackage": "bcrypt",
+      "category": "Authentication",
+      "description": "A library to help you hash passwords.",
+      "repoCount": 37
+    },
+    {
+      "slug": "superstruct",
+      "name": "Superstruct",
+      "npmPackage": "superstruct",
+      "category": "Validation",
+      "description": "A simple and composable way to validate data in JavaScript.",
       "repoCount": 6
     },
     {
@@ -684,22 +732,6 @@
       "repoCount": 131
     },
     {
-      "slug": "recoil",
-      "name": "Recoil",
-      "npmPackage": "recoil",
-      "category": "StateManagement",
-      "description": "A state management library for React.",
-      "repoCount": 3
-    },
-    {
-      "slug": "istanbul",
-      "name": "nyc (Istanbul)",
-      "npmPackage": "nyc",
-      "category": "Testing",
-      "description": "The Istanbul command line interface for code coverage.",
-      "repoCount": 234
-    },
-    {
       "slug": "redis",
       "name": "Redis",
       "npmPackage": "redis",
@@ -708,60 +740,36 @@
       "repoCount": 50
     },
     {
-      "slug": "testing-library-react",
-      "name": "React Testing Library",
-      "npmPackage": "@testing-library/react",
-      "category": "Testing",
-      "description": "Simple and complete React DOM testing utilities.",
-      "repoCount": 420
+      "slug": "mobx",
+      "name": "MobX",
+      "npmPackage": "mobx",
+      "category": "StateManagement",
+      "description": "Simple, scalable state management.",
+      "repoCount": 42
     },
     {
-      "slug": "msw",
-      "name": "Mock Service Worker",
-      "npmPackage": "msw",
-      "category": "Testing",
-      "description": "Seamless REST/GraphQL API mocking library for browser and Node.js.",
-      "repoCount": 48
+      "slug": "recoil",
+      "name": "Recoil",
+      "npmPackage": "recoil",
+      "category": "StateManagement",
+      "description": "A state management library for React.",
+      "repoCount": 3
     },
     {
-      "slug": "testing-library-jest-dom",
-      "name": "jest-dom",
-      "npmPackage": "@testing-library/jest-dom",
-      "category": "Testing",
-      "description": "Custom jest matchers to test the state of the DOM.",
-      "repoCount": 354
+      "slug": "vuex",
+      "name": "Vuex",
+      "npmPackage": "vuex",
+      "category": "StateManagement",
+      "description": "State management pattern + library for Vue.js applications.",
+      "repoCount": 39
     },
     {
-      "slug": "next-js",
-      "name": "Next.js",
-      "npmPackage": "next",
-      "category": "Frameworks",
-      "description": "The React Framework for the Web.",
-      "repoCount": 372
-    },
-    {
-      "slug": "nock",
-      "name": "Nock",
-      "npmPackage": "nock",
-      "category": "Testing",
-      "description": "HTTP server mocking and expectations library for Node.js.",
-      "repoCount": 72
-    },
-    {
-      "slug": "grunt",
-      "name": "Grunt",
-      "npmPackage": "grunt",
+      "slug": "vite",
+      "name": "Vite",
+      "npmPackage": "vite",
       "category": "BuildTools",
-      "description": "The JavaScript Task Runner.",
-      "repoCount": 179
-    },
-    {
-      "slug": "jsonwebtoken",
-      "name": "JSON Web Token",
-      "npmPackage": "jsonwebtoken",
-      "category": "Authentication",
-      "description": "JSON Web Token implementation (symmetric and asymmetric).",
-      "repoCount": 112
+      "description": "Next generation frontend tooling. It's fast!",
+      "repoCount": 803
     },
     {
       "slug": "radix-ui",
@@ -772,36 +780,20 @@
       "repoCount": 0
     },
     {
-      "slug": "daisyui",
-      "name": "daisyUI",
-      "npmPackage": "daisyui",
+      "slug": "bulma",
+      "name": "Bulma",
+      "npmPackage": "bulma",
       "category": "UILibraries",
-      "description": "The most popular component library for Tailwind CSS.",
-      "repoCount": 19
+      "description": "Free, open source, and modern CSS framework based on Flexbox.",
+      "repoCount": 8
     },
     {
-      "slug": "class-validator",
-      "name": "Class Validator",
-      "npmPackage": "class-validator",
-      "category": "Validation",
-      "description": "Decorator-based property validation for classes.",
-      "repoCount": 27
-    },
-    {
-      "slug": "cypress",
-      "name": "Cypress",
-      "npmPackage": "cypress",
-      "category": "Testing",
-      "description": "Fast, easy and reliable testing for anything that runs in a browser.",
-      "repoCount": 95
-    },
-    {
-      "slug": "react-query",
-      "name": "TanStack Query",
-      "npmPackage": "@tanstack/react-query",
-      "category": "StateManagement",
-      "description": "Powerful asynchronous state management for TS/JS.",
-      "repoCount": 109
+      "slug": "mui-material",
+      "name": "Material UI",
+      "npmPackage": "@mui/material",
+      "category": "UILibraries",
+      "description": "React components that implement Google's Material Design.",
+      "repoCount": 49
     },
     {
       "slug": "parcel",
@@ -812,12 +804,20 @@
       "repoCount": 19
     },
     {
-      "slug": "heroicons",
-      "name": "Heroicons",
-      "npmPackage": "@heroicons/react",
+      "slug": "daisyui",
+      "name": "daisyUI",
+      "npmPackage": "daisyui",
       "category": "UILibraries",
-      "description": "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.",
-      "repoCount": 47
+      "description": "The most popular component library for Tailwind CSS.",
+      "repoCount": 19
+    },
+    {
+      "slug": "react-query",
+      "name": "TanStack Query",
+      "npmPackage": "@tanstack/react-query",
+      "category": "StateManagement",
+      "description": "Powerful asynchronous state management for TS/JS.",
+      "repoCount": 109
     },
     {
       "slug": "validator",
@@ -836,14 +836,6 @@
       "repoCount": 20
     },
     {
-      "slug": "mui-material",
-      "name": "Material UI",
-      "npmPackage": "@mui/material",
-      "category": "UILibraries",
-      "description": "React components that implement Google's Material Design.",
-      "repoCount": 49
-    },
-    {
       "slug": "typegoose",
       "name": "Typegoose",
       "npmPackage": "@typegoose/typegoose",
@@ -860,14 +852,6 @@
       "repoCount": 63
     },
     {
-      "slug": "bulma",
-      "name": "Bulma",
-      "npmPackage": "bulma",
-      "category": "UILibraries",
-      "description": "Free, open source, and modern CSS framework based on Flexbox.",
-      "repoCount": 7
-    },
-    {
       "slug": "auth0-react",
       "name": "Auth0 React",
       "npmPackage": "@auth0/auth0-react",
@@ -876,36 +860,52 @@
       "repoCount": 4
     },
     {
-      "slug": "vite",
-      "name": "Vite",
-      "npmPackage": "vite",
-      "category": "BuildTools",
-      "description": "Next generation frontend tooling. It's fast!",
-      "repoCount": 801
-    },
-    {
-      "slug": "vuex",
-      "name": "Vuex",
-      "npmPackage": "vuex",
-      "category": "StateManagement",
-      "description": "State management pattern + library for Vue.js applications.",
-      "repoCount": 39
-    },
-    {
-      "slug": "jotai",
-      "name": "Jotai",
-      "npmPackage": "jotai",
-      "category": "StateManagement",
-      "description": "Primitive and flexible state management for React.",
-      "repoCount": 39
-    },
-    {
-      "slug": "ajv",
-      "name": "Ajv",
-      "npmPackage": "ajv",
+      "slug": "class-validator",
+      "name": "Class Validator",
+      "npmPackage": "class-validator",
       "category": "Validation",
-      "description": "The fastest JSON Schema Validator.",
-      "repoCount": 141
+      "description": "Decorator-based property validation for classes.",
+      "repoCount": 27
+    },
+    {
+      "slug": "cypress",
+      "name": "Cypress",
+      "npmPackage": "cypress",
+      "category": "Testing",
+      "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+      "repoCount": 96
+    },
+    {
+      "slug": "heroicons",
+      "name": "Heroicons",
+      "npmPackage": "@heroicons/react",
+      "category": "UILibraries",
+      "description": "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.",
+      "repoCount": 47
+    },
+    {
+      "slug": "jsonwebtoken",
+      "name": "JSON Web Token",
+      "npmPackage": "jsonwebtoken",
+      "category": "Authentication",
+      "description": "JSON Web Token implementation (symmetric and asymmetric).",
+      "repoCount": 112
+    },
+    {
+      "slug": "headlessui-react",
+      "name": "Headless UI",
+      "npmPackage": "@headlessui/react",
+      "category": "UILibraries",
+      "description": "Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.",
+      "repoCount": 60
+    },
+    {
+      "slug": "playwright",
+      "name": "Playwright",
+      "npmPackage": "@playwright/test",
+      "category": "Testing",
+      "description": "Playwright Test runner.",
+      "repoCount": 353
     },
     {
       "slug": "chakra-ui",
@@ -916,36 +916,20 @@
       "repoCount": 12
     },
     {
-      "slug": "playwright",
-      "name": "Playwright",
-      "npmPackage": "@playwright/test",
+      "slug": "supertest",
+      "name": "SuperTest",
+      "npmPackage": "supertest",
       "category": "Testing",
-      "description": "Playwright Test runner.",
-      "repoCount": 354
+      "description": "Super-agent driven library for testing node.js HTTP servers.",
+      "repoCount": 138
     },
     {
-      "slug": "cva",
-      "name": "Class Variance Authority",
-      "npmPackage": "class-variance-authority",
-      "category": "UILibraries",
-      "description": "CSS-in-TS for traditional CSS developers.",
-      "repoCount": 253
-    },
-    {
-      "slug": "zod",
-      "name": "Zod",
-      "npmPackage": "zod",
+      "slug": "ajv",
+      "name": "Ajv",
+      "npmPackage": "ajv",
       "category": "Validation",
-      "description": "TypeScript-first schema declaration and validation library.",
-      "repoCount": 497
-    },
-    {
-      "slug": "prisma",
-      "name": "Prisma",
-      "npmPackage": "prisma",
-      "category": "ORMs",
-      "description": "Next-generation ORM for Node.js and TypeScript.",
-      "repoCount": 64
+      "description": "The fastest JSON Schema Validator.",
+      "repoCount": 143
     },
     {
       "slug": "webpack",
@@ -964,44 +948,20 @@
       "repoCount": 43
     },
     {
-      "slug": "fastify",
-      "name": "Fastify",
-      "npmPackage": "fastify",
-      "category": "Frameworks",
-      "description": "Fast and low overhead web framework, for Node.js.",
-      "repoCount": 24
+      "slug": "prisma",
+      "name": "Prisma",
+      "npmPackage": "prisma",
+      "category": "ORMs",
+      "description": "Next-generation ORM for Node.js and TypeScript.",
+      "repoCount": 64
     },
     {
-      "slug": "nx",
-      "name": "Nx",
-      "npmPackage": "@nx/workspace",
-      "category": "BuildTools",
-      "description": "Smart, Fast and Extensible Build System.",
-      "repoCount": 23
-    },
-    {
-      "slug": "supertest",
-      "name": "SuperTest",
-      "npmPackage": "supertest",
-      "category": "Testing",
-      "description": "Super-agent driven library for testing node.js HTTP servers.",
-      "repoCount": 138
-    },
-    {
-      "slug": "headlessui-react",
-      "name": "Headless UI",
-      "npmPackage": "@headlessui/react",
-      "category": "UILibraries",
-      "description": "Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.",
-      "repoCount": 60
-    },
-    {
-      "slug": "next-auth",
-      "name": "Auth.js (NextAuth)",
-      "npmPackage": "next-auth",
-      "category": "Authentication",
-      "description": "Authentication for Next.js.",
-      "repoCount": 44
+      "slug": "zod",
+      "name": "Zod",
+      "npmPackage": "zod",
+      "category": "Validation",
+      "description": "TypeScript-first schema declaration and validation library.",
+      "repoCount": 498
     },
     {
       "slug": "pinia",
@@ -1012,52 +972,44 @@
       "repoCount": 48
     },
     {
-      "slug": "storybook",
-      "name": "Storybook",
-      "npmPackage": "storybook",
-      "category": "Testing",
-      "description": "Frontend workshop for UI components and pages.",
-      "repoCount": 78
-    },
-    {
-      "slug": "turborepo",
-      "name": "Turborepo",
-      "npmPackage": "turbo",
-      "category": "BuildTools",
-      "description": "High-performance build system for JavaScript and TypeScript codebases.",
-      "repoCount": 333
-    },
-    {
-      "slug": "rollup",
-      "name": "Rollup",
-      "npmPackage": "rollup",
-      "category": "BuildTools",
-      "description": "Next-generation ES module bundler.",
-      "repoCount": 563
-    },
-    {
-      "slug": "bcryptjs",
-      "name": "Bcrypt.js",
-      "npmPackage": "bcryptjs",
+      "slug": "next-auth",
+      "name": "Auth.js (NextAuth)",
+      "npmPackage": "next-auth",
       "category": "Authentication",
-      "description": "Optimized bcrypt in JavaScript with zero dependencies.",
-      "repoCount": 57
+      "description": "Authentication for Next.js.",
+      "repoCount": 44
     },
     {
-      "slug": "tailwindcss",
-      "name": "Tailwind CSS",
-      "npmPackage": "tailwindcss",
+      "slug": "cva",
+      "name": "Class Variance Authority",
+      "npmPackage": "class-variance-authority",
       "category": "UILibraries",
-      "description": "A utility-first CSS framework for rapidly building custom designs.",
-      "repoCount": 613
+      "description": "CSS-in-TS for traditional CSS developers.",
+      "repoCount": 254
     },
     {
-      "slug": "vue",
-      "name": "Vue.js",
-      "npmPackage": "vue",
+      "slug": "nx",
+      "name": "Nx",
+      "npmPackage": "@nx/workspace",
+      "category": "BuildTools",
+      "description": "Smart, Fast and Extensible Build System.",
+      "repoCount": 23
+    },
+    {
+      "slug": "jotai",
+      "name": "Jotai",
+      "npmPackage": "jotai",
+      "category": "StateManagement",
+      "description": "Primitive and flexible state management for React.",
+      "repoCount": 39
+    },
+    {
+      "slug": "fastify",
+      "name": "Fastify",
+      "npmPackage": "fastify",
       "category": "Frameworks",
-      "description": "The Progressive JavaScript Framework.",
-      "repoCount": 269
+      "description": "Fast and low overhead web framework, for Node.js.",
+      "repoCount": 24
     },
     {
       "slug": "sequelize",
@@ -1076,20 +1028,12 @@
       "repoCount": 68
     },
     {
-      "slug": "mongodb",
-      "name": "MongoDB",
-      "npmPackage": "mongodb",
-      "category": "Databases",
-      "description": "The official MongoDB driver for Node.js.",
-      "repoCount": 41
-    },
-    {
-      "slug": "cookie-parser",
-      "name": "Cookie Parser",
-      "npmPackage": "cookie-parser",
-      "category": "Authentication",
-      "description": "Parse HTTP request cookies.",
-      "repoCount": 82
+      "slug": "storybook",
+      "name": "Storybook",
+      "npmPackage": "storybook",
+      "category": "Testing",
+      "description": "Frontend workshop for UI components and pages.",
+      "repoCount": 78
     },
     {
       "slug": "lerna",
@@ -1100,36 +1044,68 @@
       "repoCount": 226
     },
     {
+      "slug": "cookie-parser",
+      "name": "Cookie Parser",
+      "npmPackage": "cookie-parser",
+      "category": "Authentication",
+      "description": "Parse HTTP request cookies.",
+      "repoCount": 82
+    },
+    {
+      "slug": "rollup",
+      "name": "Rollup",
+      "npmPackage": "rollup",
+      "category": "BuildTools",
+      "description": "Next-generation ES module bundler.",
+      "repoCount": 563
+    },
+    {
+      "slug": "turborepo",
+      "name": "Turborepo",
+      "npmPackage": "turbo",
+      "category": "BuildTools",
+      "description": "High-performance build system for JavaScript and TypeScript codebases.",
+      "repoCount": 334
+    },
+    {
+      "slug": "tailwindcss",
+      "name": "Tailwind CSS",
+      "npmPackage": "tailwindcss",
+      "category": "UILibraries",
+      "description": "A utility-first CSS framework for rapidly building custom designs.",
+      "repoCount": 615
+    },
+    {
+      "slug": "mongodb",
+      "name": "MongoDB",
+      "npmPackage": "mongodb",
+      "category": "Databases",
+      "description": "The official MongoDB driver for Node.js.",
+      "repoCount": 41
+    },
+    {
+      "slug": "vue",
+      "name": "Vue.js",
+      "npmPackage": "vue",
+      "category": "Frameworks",
+      "description": "The Progressive JavaScript Framework.",
+      "repoCount": 269
+    },
+    {
+      "slug": "bcryptjs",
+      "name": "Bcrypt.js",
+      "npmPackage": "bcryptjs",
+      "category": "Authentication",
+      "description": "Optimized bcrypt in JavaScript with zero dependencies.",
+      "repoCount": 57
+    },
+    {
       "slug": "framer-motion",
       "name": "Framer Motion",
       "npmPackage": "framer-motion",
       "category": "UILibraries",
       "description": "Open source, production-ready animation and gesture library for React.",
       "repoCount": 150
-    },
-    {
-      "slug": "mysql2",
-      "name": "MySQL2",
-      "npmPackage": "mysql2",
-      "category": "Databases",
-      "description": "MySQL client for Node.js with focus on performance.",
-      "repoCount": 31
-    },
-    {
-      "slug": "rimraf",
-      "name": "rimraf",
-      "npmPackage": "rimraf",
-      "category": "BuildTools",
-      "description": "A deep deletion module for node (like rm -rf).",
-      "repoCount": 740
-    },
-    {
-      "slug": "sinon",
-      "name": "Sinon",
-      "npmPackage": "sinon",
-      "category": "Testing",
-      "description": "JavaScript test spies, stubs and mocks.",
-      "repoCount": 322
     },
     {
       "slug": "mocha",
@@ -1140,12 +1116,12 @@
       "repoCount": 728
     },
     {
-      "slug": "express",
-      "name": "Express",
-      "npmPackage": "express",
-      "category": "Frameworks",
-      "description": "Fast, unopinionated, minimalist web framework for Node.js.",
-      "repoCount": 507
+      "slug": "rimraf",
+      "name": "rimraf",
+      "npmPackage": "rimraf",
+      "category": "BuildTools",
+      "description": "A deep deletion module for node (like rm -rf).",
+      "repoCount": 740
     },
     {
       "slug": "zustand",
@@ -1153,23 +1129,23 @@
       "npmPackage": "zustand",
       "category": "StateManagement",
       "description": "Bear necessities for state management in React.",
-      "repoCount": 163
+      "repoCount": 165
     },
     {
-      "slug": "lucide-react",
-      "name": "Lucide",
-      "npmPackage": "lucide-react",
-      "category": "UILibraries",
-      "description": "Beautiful & consistent icon toolkit made by the community.",
-      "repoCount": 315
-    },
-    {
-      "slug": "react",
-      "name": "React",
-      "npmPackage": "react",
+      "slug": "express",
+      "name": "Express",
+      "npmPackage": "express",
       "category": "Frameworks",
-      "description": "The library for web and native user interfaces.",
-      "repoCount": 1568
+      "description": "Fast, unopinionated, minimalist web framework for Node.js.",
+      "repoCount": 509
+    },
+    {
+      "slug": "sass",
+      "name": "Sass",
+      "npmPackage": "sass",
+      "category": "UILibraries",
+      "description": "CSS with superpowers.",
+      "repoCount": 277
     },
     {
       "slug": "vitest",
@@ -1177,7 +1153,23 @@
       "npmPackage": "vitest",
       "category": "Testing",
       "description": "A blazing fast unit test framework powered by Vite.",
-      "repoCount": 997
+      "repoCount": 1000
+    },
+    {
+      "slug": "react",
+      "name": "React",
+      "npmPackage": "react",
+      "category": "Frameworks",
+      "description": "The library for web and native user interfaces.",
+      "repoCount": 1573
+    },
+    {
+      "slug": "sinon",
+      "name": "Sinon",
+      "npmPackage": "sinon",
+      "category": "Testing",
+      "description": "JavaScript test spies, stubs and mocks.",
+      "repoCount": 323
     },
     {
       "slug": "less",
@@ -1188,12 +1180,20 @@
       "repoCount": 141
     },
     {
-      "slug": "sass",
-      "name": "Sass",
-      "npmPackage": "sass",
+      "slug": "mysql2",
+      "name": "MySQL2",
+      "npmPackage": "mysql2",
+      "category": "Databases",
+      "description": "MySQL client for Node.js with focus on performance.",
+      "repoCount": 31
+    },
+    {
+      "slug": "lucide-react",
+      "name": "Lucide",
+      "npmPackage": "lucide-react",
       "category": "UILibraries",
-      "description": "CSS with superpowers.",
-      "repoCount": 276
+      "description": "Beautiful & consistent icon toolkit made by the community.",
+      "repoCount": 317
     },
     {
       "slug": "jasmine",
@@ -1212,30 +1212,6 @@
       "repoCount": 6
     },
     {
-      "slug": "ioredis",
-      "name": "ioredis",
-      "npmPackage": "ioredis",
-      "category": "Databases",
-      "description": "A robust, performance-focused, and full-featured Redis client.",
-      "repoCount": 60
-    },
-    {
-      "slug": "clsx",
-      "name": "clsx",
-      "npmPackage": "clsx",
-      "category": "UILibraries",
-      "description": "A tiny utility for constructing className strings conditionally.",
-      "repoCount": 385
-    },
-    {
-      "slug": "tailwind-merge",
-      "name": "Tailwind Merge",
-      "npmPackage": "tailwind-merge",
-      "category": "UILibraries",
-      "description": "Utility function to efficiently merge Tailwind CSS classes in JS without style conflicts.",
-      "repoCount": 310
-    },
-    {
       "slug": "puppeteer",
       "name": "Puppeteer",
       "npmPackage": "puppeteer",
@@ -1249,7 +1225,15 @@
       "npmPackage": "typescript",
       "category": "BuildTools",
       "description": "A language for application-scale JavaScript.",
-      "repoCount": 3440
+      "repoCount": 3448
+    },
+    {
+      "slug": "tailwind-merge",
+      "name": "Tailwind Merge",
+      "npmPackage": "tailwind-merge",
+      "category": "UILibraries",
+      "description": "Utility function to efficiently merge Tailwind CSS classes in JS without style conflicts.",
+      "repoCount": 311
     },
     {
       "slug": "nodemon",
@@ -1257,7 +1241,23 @@
       "npmPackage": "nodemon",
       "category": "BuildTools",
       "description": "Simple monitor script for use during development of a node.js app.",
-      "repoCount": 207
+      "repoCount": 208
+    },
+    {
+      "slug": "ioredis",
+      "name": "ioredis",
+      "npmPackage": "ioredis",
+      "category": "Databases",
+      "description": "A robust, performance-focused, and full-featured Redis client.",
+      "repoCount": 60
+    },
+    {
+      "slug": "clsx",
+      "name": "clsx",
+      "npmPackage": "clsx",
+      "category": "UILibraries",
+      "description": "A tiny utility for constructing className strings conditionally.",
+      "repoCount": 386
     }
   ]
 }

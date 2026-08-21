@@ -14,7 +14,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 > StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#repository-eligibility)).
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: August 20, 2026)
+## The Pulse (Updated: August 21, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-one.vercel.app)
 
@@ -22,32 +22,32 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 63.4% | ▲ +3.85 |
-| React | 28.9% | ▲ +3.49 |
-| Vitest | 18.4% | ▲ +3.29 |
+| TypeScript | 63.6% | ▲ +3.86 |
+| React | 29.0% | ▲ +3.50 |
+| Vitest | 18.4% | ▲ +3.30 |
 | Jest | 17.1% | ▲ +3.15 |
-| Vite | 14.8% | ▲ +3.19 |
+| Vite | 14.8% | ▲ +3.20 |
 | Babel | 13.9% | ▲ +3.05 |
 | rimraf | 13.6% | ▲ +3.06 |
 | Mocha | 13.4% | ▲ +3.03 |
 | Webpack | 12.5% | ▲ +2.98 |
-| cross-env | 12.1% | ▲ +2.99 |
+| cross-env | 12.2% | ▲ +3.00 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Typia | Validation | ▲ +50% |
-| 2 | Runtypes | Validation | ▲ +50% |
-| 3 | Recoil | StateManagement | ▲ +50% |
-| 4 | Rspack | BuildTools | ▲ +33.3% |
-| 5 | Astro | Frameworks | ▲ +29.2% |
-| 6 | Valibot | Validation | ▲ +25% |
-| 7 | XState | StateManagement | ▲ +25% |
-| 8 | Argon2 | Authentication | ▲ +25% |
-| 9 | Kysely | ORMs | ▲ +25% |
-| 10 | Supabase | Databases | ▲ +20% |
+| 1 | Argon2 | Authentication | ▲ +25% |
+| 2 | Kysely | ORMs | ▲ +25% |
+| 3 | Astro | Frameworks | ▲ +14.8% |
+| 4 | Supabase | Databases | ▲ +14.3% |
+| 5 | Bulma | UILibraries | ▲ +14.3% |
+| 6 | Gatsby | Frameworks | ▲ +12.5% |
+| 7 | Bcrypt | Authentication | ▲ +12.1% |
+| 8 | XState | StateManagement | ▲ +11.1% |
+| 9 | Rspack | BuildTools | ▲ +9.1% |
+| 10 | TypeORM | ORMs | ▲ +8.7% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -71,9 +71,9 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Tech A | Tech B | Strength Score |
 |---|---|---|
 | cva | tailwind-merge | 0.77 |
-| clsx | tailwind-merge | 0.72 |
+| clsx | tailwind-merge | 0.73 |
 | react-redux | redux | 0.67 |
-| testing-library-react | testing-library-jest-dom | 0.66 |
+| testing-library-react | testing-library-jest-dom | 0.67 |
 | lucide-react | tailwind-merge | 0.63 |
 | cva | lucide-react | 0.61 |
 | cva | clsx | 0.61 |
