@@ -14,24 +14,24 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 > StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#repository-eligibility)).
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: August 21, 2026)
+## The Pulse (Updated: August 22, 2026)
 
-🔗 [View the live dashboard →](https://stack-pulse-one.vercel.app)
+🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
 ### 📊 Daily Snapshot
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 63.6% | ▲ +3.86 |
-| React | 29.0% | ▲ +3.50 |
-| Vitest | 18.4% | ▲ +3.30 |
-| Jest | 17.1% | ▲ +3.15 |
-| Vite | 14.8% | ▲ +3.20 |
-| Babel | 13.9% | ▲ +3.05 |
-| rimraf | 13.6% | ▲ +3.06 |
-| Mocha | 13.4% | ▲ +3.03 |
+| TypeScript | 64.6% | ▲ +3.93 |
+| React | 29.4% | ▲ +3.56 |
+| Vitest | 18.9% | ▲ +3.40 |
+| Jest | 17.2% | ▲ +3.16 |
+| Vite | 15.1% | ▲ +3.28 |
+| Babel | 13.9% | ▲ +3.06 |
+| rimraf | 13.8% | ▲ +3.10 |
+| Mocha | 13.4% | ▲ +3.04 |
 | Webpack | 12.5% | ▲ +2.98 |
-| cross-env | 12.2% | ▲ +3.00 |
+| cross-env | 12.2% | ▲ +3.02 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -40,14 +40,14 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 |------|------------|----------|-------------:|
 | 1 | Argon2 | Authentication | ▲ +25% |
 | 2 | Kysely | ORMs | ▲ +25% |
-| 3 | Astro | Frameworks | ▲ +14.8% |
-| 4 | Supabase | Databases | ▲ +14.3% |
-| 5 | Bulma | UILibraries | ▲ +14.3% |
-| 6 | Gatsby | Frameworks | ▲ +12.5% |
-| 7 | Bcrypt | Authentication | ▲ +12.1% |
-| 8 | XState | StateManagement | ▲ +11.1% |
-| 9 | Rspack | BuildTools | ▲ +9.1% |
-| 10 | TypeORM | ORMs | ▲ +8.7% |
+| 3 | pg-promise | ORMs | ▲ +20% |
+| 4 | Astro | Frameworks | ▲ +14.8% |
+| 5 | Supabase | Databases | ▲ +14.3% |
+| 6 | Valibot | Validation | ▲ +14.3% |
+| 7 | Bulma | UILibraries | ▲ +14.3% |
+| 8 | Gatsby | Frameworks | ▲ +12.5% |
+| 9 | Bcrypt | Authentication | ▲ +12.1% |
+| 10 | XState | StateManagement | ▲ +11.1% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -75,9 +75,9 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | react-redux | redux | 0.67 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | lucide-react | tailwind-merge | 0.63 |
-| cva | lucide-react | 0.61 |
 | cva | clsx | 0.61 |
-| lucide-react | clsx | 0.57 |
+| cva | lucide-react | 0.61 |
+| lucide-react | clsx | 0.56 |
 | mobx | mobx-react | 0.55 |
 | chai | mocha | 0.51 |
 
