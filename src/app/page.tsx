@@ -199,19 +199,6 @@ async function TopPairingsWrapper() {
 }
 
 export default async function Home() {
-  // Fetch general metrics for the Hero
-  const [repoCount, techCount, adoptionCount] = await Promise.all([
-    prisma.repository.count(),
-    prisma.technology.count(),
-    prisma.repositoryTechnology.count(),
-  ]);
-
-  const metrics = [
-    { label: 'Repositories', value: repoCount.toLocaleString(), description: 'Public JS/TS repos tracked' },
-    { label: 'Technologies', value: techCount.toLocaleString(), description: 'Canonical packages indexed' },
-    { label: 'Adoptions', value: adoptionCount.toLocaleString(), description: 'Technology usages detected' },
-  ];
-
   return (
     <div className="flex flex-col gap-2 py-8 px-6 max-w-7xl mx-auto w-full">
       <a
@@ -224,16 +211,7 @@ export default async function Home() {
         <span className="text-sm font-medium">Consider starring the repository on GitHub to help support open data!</span>
       </a>
 
-      <Hero metrics={
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {metrics.map((m) => (
-            <div key={m.label} className="bg-card/50 border border-border p-4 rounded-2xl">
-              <div className="text-2xl font-bold">{m.value}</div>
-              <div className="text-xs text-muted-foreground">{m.label}</div>
-            </div>
-          ))}
-        </div>
-      } />
+      <Hero />
 
       <div className="py-10 space-y-8">
 
