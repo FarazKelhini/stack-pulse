@@ -14,7 +14,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 > StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#repository-eligibility)).
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: August 22, 2026)
+## The Pulse (Updated: August 23, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -29,7 +29,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Vite | 15.1% | ▲ +3.28 |
 | Babel | 13.9% | ▲ +3.06 |
 | rimraf | 13.8% | ▲ +3.10 |
-| Mocha | 13.4% | ▲ +3.04 |
+| Mocha | 13.5% | ▲ +3.04 |
 | Webpack | 12.5% | ▲ +2.98 |
 | cross-env | 12.2% | ▲ +3.02 |
 
@@ -41,12 +41,12 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | 1 | Argon2 | Authentication | ▲ +25% |
 | 2 | Kysely | ORMs | ▲ +25% |
 | 3 | pg-promise | ORMs | ▲ +20% |
-| 4 | Astro | Frameworks | ▲ +14.8% |
-| 5 | Supabase | Databases | ▲ +14.3% |
-| 6 | Valibot | Validation | ▲ +14.3% |
-| 7 | Bulma | UILibraries | ▲ +14.3% |
-| 8 | Gatsby | Frameworks | ▲ +12.5% |
-| 9 | Bcrypt | Authentication | ▲ +12.1% |
+| 4 | Supabase | Databases | ▲ +14.3% |
+| 5 | Valibot | Validation | ▲ +14.3% |
+| 6 | Bulma | UILibraries | ▲ +14.3% |
+| 7 | Gatsby | Frameworks | ▲ +12.5% |
+| 8 | Bcrypt | Authentication | ▲ +12.1% |
+| 9 | NestJS | Frameworks | ▲ +11.5% |
 | 10 | XState | StateManagement | ▲ +11.1% |
 
 ### 📉 Falling This Month
