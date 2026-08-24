@@ -14,7 +14,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 > StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#repository-eligibility)).
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: August 23, 2026)
+## The Pulse (Updated: August 24, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -22,15 +22,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 64.6% | ▲ +3.93 |
-| React | 29.4% | ▲ +3.56 |
-| Vitest | 18.9% | ▲ +3.40 |
+| TypeScript | 64.9% | ▲ +3.95 |
+| React | 29.6% | ▲ +3.58 |
+| Vitest | 19.1% | ▲ +3.43 |
 | Jest | 17.2% | ▲ +3.16 |
-| Vite | 15.1% | ▲ +3.28 |
+| Vite | 15.2% | ▲ +3.30 |
 | Babel | 13.9% | ▲ +3.06 |
 | rimraf | 13.8% | ▲ +3.10 |
 | Mocha | 13.5% | ▲ +3.04 |
-| Webpack | 12.5% | ▲ +2.98 |
+| Webpack | 12.5% | ▲ +2.99 |
 | cross-env | 12.2% | ▲ +3.02 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
@@ -40,9 +40,9 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 |------|------------|----------|-------------:|
 | 1 | Argon2 | Authentication | ▲ +25% |
 | 2 | Kysely | ORMs | ▲ +25% |
-| 3 | pg-promise | ORMs | ▲ +20% |
-| 4 | Supabase | Databases | ▲ +14.3% |
-| 5 | Valibot | Validation | ▲ +14.3% |
+| 3 | Valibot | Validation | ▲ +21.4% |
+| 4 | pg-promise | ORMs | ▲ +20% |
+| 5 | Supabase | Databases | ▲ +14.3% |
 | 6 | Bulma | UILibraries | ▲ +14.3% |
 | 7 | Gatsby | Frameworks | ▲ +12.5% |
 | 8 | Bcrypt | Authentication | ▲ +12.1% |
