@@ -33,7 +33,11 @@ interface FallingThisMonthProps {
 }
 
 export function FallingThisMonth({ technologies }: FallingThisMonthProps) {
-  if (!technologies || technologies.length === 0) {
+  const validTechnologies = technologies?.filter(
+    (tech) => tech.percentChange !== undefined && tech.percentChange !== null
+  );
+
+  if (!validTechnologies || validTechnologies.length === 0) {
     return (
       <div className="card-modern p-5 space-y-6">
         <h2 className="text-xl font-bold flex items-center gap-2">
@@ -58,7 +62,7 @@ export function FallingThisMonth({ technologies }: FallingThisMonthProps) {
         </div>
 
         <ul className="space-y-2">
-          {technologies.map((tech, i) => {
+          {validTechnologies.map((tech, i) => {
             const { bg, text } = getCategoryStyles(tech.category);
             return (
               <motion.li
