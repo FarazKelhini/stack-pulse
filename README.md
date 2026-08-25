@@ -14,7 +14,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 > StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#repository-eligibility)).
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: August 24, 2026)
+## The Pulse (Updated: August 25, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -22,32 +22,32 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 64.9% | ▲ +3.95 |
-| React | 29.6% | ▲ +3.58 |
-| Vitest | 19.1% | ▲ +3.43 |
+| TypeScript | 65.4% | ▲ +3.99 |
+| React | 29.8% | ▲ +3.62 |
+| Vitest | 19.4% | ▲ +3.49 |
 | Jest | 17.2% | ▲ +3.16 |
-| Vite | 15.2% | ▲ +3.30 |
+| Vite | 15.4% | ▲ +3.34 |
 | Babel | 13.9% | ▲ +3.06 |
-| rimraf | 13.8% | ▲ +3.10 |
-| Mocha | 13.5% | ▲ +3.04 |
+| rimraf | 13.8% | ▲ +3.09 |
+| Mocha | 13.5% | ▲ +3.05 |
 | Webpack | 12.5% | ▲ +2.99 |
-| cross-env | 12.2% | ▲ +3.02 |
+| cross-env | 12.3% | ▲ +3.04 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Argon2 | Authentication | ▲ +25% |
-| 2 | Kysely | ORMs | ▲ +25% |
-| 3 | Valibot | Validation | ▲ +21.4% |
-| 4 | pg-promise | ORMs | ▲ +20% |
-| 5 | Supabase | Databases | ▲ +14.3% |
+| 1 | Kysely | ORMs | ▲ +25% |
+| 2 | Valibot | Validation | ▲ +21.4% |
+| 3 | pg-promise | ORMs | ▲ +20% |
+| 4 | Supabase | Databases | ▲ +14.3% |
+| 5 | Remix | Frameworks | ▲ +14.3% |
 | 6 | Bulma | UILibraries | ▲ +14.3% |
-| 7 | Gatsby | Frameworks | ▲ +12.5% |
-| 8 | Bcrypt | Authentication | ▲ +12.1% |
-| 9 | NestJS | Frameworks | ▲ +11.5% |
-| 10 | XState | StateManagement | ▲ +11.1% |
+| 7 | Jotai | StateManagement | ▲ +13.2% |
+| 8 | Gatsby | Frameworks | ▲ +12.5% |
+| 9 | Lucide | UILibraries | ▲ +11.4% |
+| 10 | NestJS | Frameworks | ▲ +11.1% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -61,7 +61,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | BuildTools | TypeScript |
 | Databases | PostgreSQL (pg) |
 | Frameworks | React |
-| ORMs | Mongoose |
+| ORMs | Drizzle ORM |
 | StateManagement | Zustand |
 | Testing | Vitest |
 | UILibraries | Tailwind CSS |
@@ -75,7 +75,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | react-redux | redux | 0.67 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | lucide-react | tailwind-merge | 0.63 |
-| cva | clsx | 0.61 |
+| cva | clsx | 0.62 |
 | cva | lucide-react | 0.61 |
 | lucide-react | clsx | 0.56 |
 | mobx | mobx-react | 0.55 |
