@@ -14,7 +14,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 > StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#repository-eligibility)).
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: August 25, 2026)
+## The Pulse (Updated: August 26, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -23,10 +23,10 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
 | TypeScript | 65.4% | ▲ +3.99 |
-| React | 29.8% | ▲ +3.62 |
+| React | 29.9% | ▲ +3.62 |
 | Vitest | 19.4% | ▲ +3.49 |
 | Jest | 17.2% | ▲ +3.16 |
-| Vite | 15.4% | ▲ +3.34 |
+| Vite | 15.4% | ▲ +3.35 |
 | Babel | 13.9% | ▲ +3.06 |
 | rimraf | 13.8% | ▲ +3.09 |
 | Mocha | 13.5% | ▲ +3.05 |
@@ -38,16 +38,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Kysely | ORMs | ▲ +25% |
-| 2 | Valibot | Validation | ▲ +21.4% |
-| 3 | pg-promise | ORMs | ▲ +20% |
-| 4 | Supabase | Databases | ▲ +14.3% |
-| 5 | Remix | Frameworks | ▲ +14.3% |
-| 6 | Bulma | UILibraries | ▲ +14.3% |
-| 7 | Jotai | StateManagement | ▲ +13.2% |
-| 8 | Gatsby | Frameworks | ▲ +12.5% |
-| 9 | Lucide | UILibraries | ▲ +11.4% |
-| 10 | NestJS | Frameworks | ▲ +11.1% |
+| 1 | Valibot | Validation | ▲ +21.4% |
+| 2 | pg-promise | ORMs | ▲ +20% |
+| 3 | Remix | Frameworks | ▲ +14.3% |
+| 4 | Bulma | UILibraries | ▲ +14.3% |
+| 5 | Gatsby | Frameworks | ▲ +12.5% |
+| 6 | Jotai | StateManagement | ▲ +10.3% |
+| 7 | Rspack | BuildTools | ▲ +9.1% |
+| 8 | Pinia | StateManagement | ▲ +8.5% |
+| 9 | Material UI | UILibraries | ▲ +8.3% |
+| 10 | Fastify | Frameworks | ▲ +8.3% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -77,7 +77,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | lucide-react | tailwind-merge | 0.63 |
 | cva | clsx | 0.62 |
 | cva | lucide-react | 0.61 |
-| lucide-react | clsx | 0.56 |
+| lucide-react | clsx | 0.57 |
 | mobx | mobx-react | 0.55 |
 | chai | mocha | 0.51 |
 
