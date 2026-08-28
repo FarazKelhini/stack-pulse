@@ -165,7 +165,7 @@ Target: a fully running local environment in under 15 minutes.
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-org/stackpulse && cd stackpulse
+git clone https://github.com/FarazKelhini/stack-pulse && cd stack-pulse
 
 # 2. Install dependencies
 npm install
