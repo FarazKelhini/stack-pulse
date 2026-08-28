@@ -151,48 +151,169 @@ Pages are React Server Components that fetch from the API routes above rather th
 | Logging | Pino |
 | Hosting | Vercel |
 
-## Getting started
+## Local Development
 
 Target: a fully running local environment in under 15 minutes.
 
 ### Prerequisites
 
+- Git
 - Node.js 20+
 - Docker (for local PostgreSQL)
-- A GitHub Personal Access Token (classic, `read:public_repo` / "Public Repositories (read-only)")
+- A GitHub account and a GitHub Personal Access Token for the crawler
 
 ### Setup
 
+#### 1. Clone the repository
+
 ```bash
-# 1. Clone the repo
-git clone https://github.com/FarazKelhini/stack-pulse && cd stack-pulse
+git clone https://github.com/FarazKelhini/stack-pulse
+cd stack-pulse
+```
 
-# 2. Install dependencies
+#### 2. Install dependencies
+
+```bash
 npm install
+```
 
-# 3. Copy environment template
+#### 3. Configure environment variables
+
+Copy the example environment file:
+
+**Linux/macOS:**
+
+```bash
 cp .env.example .env.local
-# Fill in DATABASE_URL and GITHUB_TOKEN
+```
 
-# 4. Start local PostgreSQL
-docker run -d --name stackpulse-db \
+**Windows PowerShell:**
+
+```powershell
+Copy-Item .env.example .env.local
+```
+
+Then open `.env.local` and configure the required variables.
+
+For the local PostgreSQL database created in the next step, use:
+
+```env
+DATABASE_URL="postgresql://stackpulse:stackpulse@localhost:5432/stackpulse"
+```
+
+You'll also need to provide a GitHub token:
+
+```env
+GITHUB_TOKEN="your_github_token"
+```
+
+The GitHub token is used by the crawler to access the GitHub API. Keep it private and **never commit `.env.local` to Git**.
+
+#### 4. Start local PostgreSQL
+
+The following Linux/macOS command creates a PostgreSQL 16 container named `stackpulse-db`:
+
+```bash
+docker run -d \
+  --name stackpulse-db \
   -e POSTGRES_DB=stackpulse \
   -e POSTGRES_USER=stackpulse \
   -e POSTGRES_PASSWORD=stackpulse \
-  -p 5432:5432 postgres:16
+  -p 5432:5432 \
+  postgres:16
+```
 
-# 5. Run migrations
+Or use this one line command that works identically in both Linux Bash and Windows PowerShell:
+
+```bash
+docker run -d --name stackpulse-db -e POSTGRES_DB=stackpulse -e POSTGRES_USER=stackpulse -e POSTGRES_PASSWORD=stackpulse -p 5432:5432 postgres:16
+```
+
+The database will be available at `localhost:5432` with:
+
+| Setting  | Value        |
+| -------- | ------------ |
+| Database | `stackpulse` |
+| User     | `stackpulse` |
+| Password | `stackpulse` |
+| Host     | `localhost`  |
+| Port     | `5432`       |
+
+> **Already have a `stackpulse-db` container?**
+> You can start it again with:
+>
+> ```bash
+> docker start stackpulse-db
+> ```
+
+#### 5. Run database migrations
+
+```bash
 npx prisma migrate dev
+```
 
-# 6. Seed the technology dictionary
+This creates/updates the local database schema.
+
+#### 6. Seed the technology dictionary
+
+```bash
 npx prisma db seed
+```
 
-# 7. (Optional) Run a small crawl to get some data
-CRAWL_BATCH_SIZE=1 npm run crawl 
+This populates the database with the initial technology dictionary.
 
-# 8. Start the dev server
+#### 7. (Optional) Crawl some GitHub data
+
+To populate the application with a small amount of data, run a crawl with a batch size of `1`.
+
+**Linux/macOS:**
+
+```bash
+CRAWL_BATCH_SIZE=1 npm run crawl
+```
+
+**Windows PowerShell:**
+
+```powershell
+$env:CRAWL_BATCH_SIZE="1"; npm run crawl
+```
+
+> The crawler uses the GitHub API, so a valid `GITHUB_TOKEN` is required.
+
+#### 8. Start the development server
+
+```bash
 npm run dev
 ```
+
+Then open the URL shown in the terminal, typically:
+
+**http://localhost:3000**
+
+#### Troubleshooting
+
+**PostgreSQL connection error**
+
+Make sure the container is running:
+
+```bash
+docker ps
+```
+
+If it isn't running:
+
+```bash
+docker start stackpulse-db
+```
+
+**Port 5432 is already in use**
+
+Another PostgreSQL instance may already be using port `5432`. Either stop it or change the host-side port in the Docker command and update `DATABASE_URL` accordingly.
+
+**Port 3000 is already in use**
+
+The development server may choose another available port. Use the URL printed by `npm run dev`.
+
 
 ## Environment variables
 
