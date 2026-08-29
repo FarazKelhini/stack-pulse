@@ -2,8 +2,8 @@ name: Daily Pipeline
 
 on:
   schedule:
-    - cron: '0 2 * * *'    # 02:00 UTC daily
-  workflow_dispatch:         # Allow manual trigger
+    - cron: '43 4 * * *'    # 04:43 UTC (4 AM UTC is past the midnight-UTC pile-up and past the 2–3 AM band and :43 is a non-round minute to avoid both the top-of-hour spike and the half-hour mark, which also sees elevated load.)
+  workflow_dispatch:        # Allow manual trigger
 
 concurrency:
   group: daily-pipeline
@@ -19,11 +19,11 @@ jobs:
     timeout-minutes: 120
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: '22'
           cache: 'npm'
@@ -81,7 +81,7 @@ jobs:
         run: npm run update-readme
 
       - name: Commit datasets
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'chore: update datasets [skip ci]'
           file_pattern: 'public/datasets/*.json README.md'
