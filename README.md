@@ -15,25 +15,23 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: August 28, 2026)
+## The Pulse (Updated: August 30, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
-
-> StackPulse does not attempt to measure the entire JavaScript ecosystem. All analytics are derived from the tracked repository sample (see [Repository Eligibility](#repository-eligibility)).
 
 ### 📊 Daily Snapshot
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 66.4% | ▲ +4.05 |
-| React | 30.3% | ▲ +3.69 |
-| Vitest | 19.8% | ▲ +3.58 |
+| TypeScript | 66.5% | ▲ +4.06 |
+| React | 30.4% | ▲ +3.70 |
+| Vitest | 19.9% | ▲ +3.59 |
 | Jest | 17.2% | ▲ +3.18 |
-| Vite | 15.7% | ▲ +3.43 |
+| Vite | 15.8% | ▲ +3.44 |
 | Babel | 14.0% | ▲ +3.07 |
 | rimraf | 13.8% | ▲ +3.11 |
 | Mocha | 13.5% | ▲ +3.05 |
-| Webpack | 12.5% | ▲ +3.00 |
+| Webpack | 12.5% | ▲ +2.99 |
 | cross-env | 12.4% | ▲ +3.07 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
@@ -41,16 +39,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | pg-promise | ORMs | ▲ +20% |
-| 2 | Remix | Frameworks | ▲ +14.3% |
-| 3 | Valibot | Validation | ▲ +13.3% |
-| 4 | Jotai | StateManagement | ▲ +12.8% |
-| 5 | Material UI | UILibraries | ▲ +10.2% |
-| 6 | Better SQLite3 | Databases | ▲ +9.8% |
-| 7 | Lucide | UILibraries | ▲ +9.5% |
-| 8 | Emotion | UILibraries | ▲ +9.3% |
-| 9 | Drizzle ORM | ORMs | ▲ +8.8% |
-| 10 | Bcrypt.js | Authentication | ▲ +8.8% |
+| 1 | Remix | Frameworks | ▲ +14.3% |
+| 2 | Jotai | StateManagement | ▲ +10.3% |
+| 3 | Lucide | UILibraries | ▲ +9% |
+| 4 | Better SQLite3 | Databases | ▲ +8.7% |
+| 5 | Chakra UI | UILibraries | ▲ +8.3% |
+| 6 | Drizzle ORM | ORMs | ▲ +7.2% |
+| 7 | Tailwind Merge | UILibraries | ▲ +6.7% |
+| 8 | Class Variance Authority | UILibraries | ▲ +6.6% |
+| 9 | Framer Motion | UILibraries | ▲ +6.6% |
+| 10 | Valibot | Validation | ▲ +6.3% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -75,12 +73,12 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 |---|---|---|
 | cva | tailwind-merge | 0.77 |
 | clsx | tailwind-merge | 0.74 |
-| react-redux | redux | 0.67 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
+| react-redux | redux | 0.67 |
 | lucide-react | tailwind-merge | 0.62 |
 | cva | clsx | 0.62 |
-| cva | lucide-react | 0.61 |
-| lucide-react | clsx | 0.56 |
+| cva | lucide-react | 0.60 |
+| lucide-react | clsx | 0.57 |
 | mobx | mobx-react | 0.55 |
 | chai | mocha | 0.51 |
 
