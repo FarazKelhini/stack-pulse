@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>StackPulse — Pairing Network</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+  :root{
+    --bg: #0b0e14;
+    --bg-panel: #11151d;
+    --line: #232936;
+    --text: #e6e9ef;
+    --text-dim: #7a8394;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; height:100%; background:var(--bg); color:var(--text); font-family:var(--sans); overflow:hidden; }
+  #app{ position:relative; width:100%; height:100vh; }
+  svg{ width:100%; height:100%; display:block; cursor:grab; }
+  svg:active{ cursor:grabbing; }
+
+  .hud-top{ position:absolute; top:0; left:0; right:0; display:flex; justify-content:space-between; align-items:flex-start; padding:22px 26px; pointer-events:none; }
+  .title{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-dim); margin:0 0 4px 0; }
+  .subtitle{ font-size:20px; font-weight:600; margin:0; letter-spacing:-0.01em; }
+  .stats{ font-family:var(--mono); font-size:11px; color:var(--text-dim); margin-top:6px; }
+
+  .panel{ pointer-events:auto; background:var(--bg-panel); border:1px solid var(--line); border-radius:10px; padding:14px 16px; width:230px; }
+  .panel label{ display:block; font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--text-dim); margin-bottom:6px; }
+  .panel .row{ margin-bottom:14px; }
+  .panel .row:last-child{ margin-bottom:0; }
+  .panel input[type=range]{ width:100%; accent-color:#f0b429; }
+  .panel input[type=text]{
+    width:100%; background:var(--bg); border:1px solid var(--line); border-radius:6px;
+    color:var(--text); font-family:var(--mono); font-size:12px; padding:6px 8px;
+  }
+  .panel .val{ font-family:var(--mono); font-size:11px; color:var(--text); float:right; }
+
+  .hint{ position:absolute; bottom:22px; left:26px; font-family:var(--mono); font-size:11px; color:var(--text-dim); }
+
+  .node-label{ font-family:var(--mono); font-size:11px; fill:var(--text); pointer-events:none; paint-order:stroke; stroke:var(--bg); stroke-width:3px; stroke-linejoin:round; }
+  .node-label.dim{ fill:var(--text-dim); opacity:.3; }
+
+  .tooltip{
+    position:absolute; pointer-events:none; opacity:0;
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:8px;
+    padding:8px 11px; font-family:var(--mono); font-size:12px;
+    transition:opacity .1s ease; transform:translate(-50%,-115%); white-space:nowrap;
+  }
+  .tooltip b{ color:#fff; }
+</style>
+</head>
+<body>
+<div id="app">
+  <svg id="canvas"></svg>
+
+  <div class="hud-top">
+    <div>
+      <p class="title">StackPulse / pairing network</p>
+      <p class="subtitle">Technology co-occurrence</p>
+      <p class="stats" id="stats"></p>
+    </div>
+    <div class="panel">
+      <div class="row">
+        <label>Pairings shown <span class="val" id="countVal"></span></label>
+        <input type="range" id="countSlider" min="5" max="400" step="1">
+      </div>
+      <div class="row">
+        <label>Min repositories <span class="val" id="repoVal"></span></label>
+        <input type="range" id="repoSlider" min="3" max="1246" step="1">
+      </div>
+      <div class="row">
+        <label>Focus a technology</label>
+        <input type="text" id="search" placeholder="e.g. tailwind-merge">
+      </div>
+    </div>
+  </div>
+
+  <div class="hint">drag nodes · hover to trace connections · scroll to zoom</div>
+  <div class="tooltip" id="tooltip"></div>
+</div>
+
+<script>
+// Pre-filtered pool embedded at build time (top 400 pairs by strength,
+// repositoryCount >= 3). Generated 2026-08-28T14:01:09.874Z from
+// commit e57b8ac443dc0df7a0e97a6984fdb6f35b07761b. Fields are shortened (a/b/s/n) to keep payload small.
+const POOL = [{"a":"cva","b":"tailwind-merge","s":0.7726,"n":265},{"a":"clsx","b":"tailwind-merge","s":0.7372,"n":317},{"a":"react-redux","b":"redux","s":0.6667,"n":114},{"a":"testing-library-react","b":"testing-library-jest-dom","s":0.6667,"n":322},{"a":"lucide-react","b":"tailwind-merge","s":0.6238,"n":262},{"a":"cva","b":"clsx","s":0.6194,"n":262},{"a":"cva","b":"lucide-react","s":0.6062,"n":234},{"a":"lucide-react","b":"clsx","s":0.5649,"n":274},{"a":"mobx","b":"mobx-react","s":0.5476,"n":23},{"a":"chai","b":"mocha","s":0.5127,"n":404},{"a":"mui-material","b":"emotion-react","s":0.5102,"n":50},{"a":"tailwindcss","b":"tailwind-merge","s":0.4985,"n":328},{"a":"tailwindcss","b":"clsx","s":0.4846,"n":347},{"a":"lucide-react","b":"tailwindcss","s":0.4698,"n":319},{"a":"cva","b":"tailwindcss","s":0.4043,"n":266},{"a":"next-js","b":"tailwindcss","s":0.3854,"n":291},{"a":"class-validator","b":"nestjs","s":0.381,"n":16},{"a":"heroicons","b":"headlessui-react","s":0.3415,"n":28},{"a":"react","b":"tailwindcss","s":0.3226,"n":560},{"a":"next-js","b":"lucide-react","s":0.3203,"n":180},{"a":"next-js","b":"tailwind-merge","s":0.3177,"n":176},{"a":"react-redux","b":"redux-toolkit","s":0.3154,"n":47},{"a":"react","b":"typescript","s":0.3116,"n":1246},{"a":"vitest","b":"vite","s":0.31,"n":456},{"a":"next-js","b":"clsx","s":0.3079,"n":190},{"a":"chai","b":"sinon","s":0.3045,"n":183},{"a":"cva","b":"next-js","s":0.2896,"n":150},{"a":"cookie-parser","b":"express-session","s":0.28,"n":28},{"a":"zod","b":"tailwind-merge","s":0.273,"n":187},{"a":"vitest","b":"typescript","s":0.2705,"n":995},{"a":"sinon","b":"mocha","s":0.2692,"n":224},{"a":"cva","b":"zod","s":0.2656,"n":170},{"a":"zod","b":"clsx","s":0.2636,"n":198},{"a":"zod","b":"tailwindcss","s":0.2598,"n":245},{"a":"zod","b":"lucide-react","s":0.2575,"n":181},{"a":"express","b":"cors","s":0.25,"n":135},{"a":"react","b":"testing-library-react","s":0.2422,"n":406},{"a":"react","b":"clsx","s":0.2407,"n":399},{"a":"next-auth","b":"prisma","s":0.2391,"n":22},{"a":"typeorm","b":"class-validator","s":0.2326,"n":10},{"a":"express-session","b":"passport","s":0.2319,"n":16},{"a":"webpack","b":"babel","s":0.2312,"n":270},{"a":"firebase","b":"firebase-admin","s":0.2308,"n":12},{"a":"react","b":"next-js","s":0.2304,"n":382},{"a":"babel","b":"jest","s":0.2268,"n":313},{"a":"vite","b":"tailwindcss","s":0.2188,"n":270},{"a":"zustand","b":"clsx","s":0.2186,"n":106},{"a":"framer-motion","b":"lucide-react","s":0.2182,"n":91},{"a":"zustand","b":"lucide-react","s":0.2148,"n":93},{"a":"svelte","b":"sveltekit","s":0.2131,"n":13},{"a":"react","b":"vite","s":0.212,"n":437},{"a":"istanbul","b":"mocha","s":0.209,"n":167},{"a":"react","b":"lucide-react","s":0.2087,"n":344},{"a":"cross-env","b":"rimraf","s":0.2071,"n":244},{"a":"zustand","b":"tailwind-merge","s":0.2066,"n":88},{"a":"zustand","b":"react-query","s":0.2049,"n":50},{"a":"vite","b":"typescript","s":0.2045,"n":756},{"a":"sqlite3","b":"sequelize","s":0.2031,"n":13},{"a":"jsonwebtoken","b":"cors","s":0.2009,"n":43},{"a":"zod","b":"next-js","s":0.1995,"n":155},{"a":"framer-motion","b":"tailwind-merge","s":0.1981,"n":82},{"a":"typeorm","b":"nestjs","s":0.1957,"n":9},{"a":"cva","b":"react-query","s":0.1938,"n":63},{"a":"framer-motion","b":"clsx","s":0.1938,"n":93},{"a":"rollup","b":"babel","s":0.1928,"n":214},{"a":"react","b":"tailwind-merge","s":0.1913,"n":318},{"a":"framer-motion","b":"tailwindcss","s":0.1906,"n":130},{"a":"react","b":"testing-library-jest-dom","s":0.189,"n":320},{"a":"cva","b":"zustand","s":0.1864,"n":71},{"a":"cva","b":"framer-motion","s":0.1858,"n":68},{"a":"passport","b":"mongoose","s":0.1828,"n":17},{"a":"zustand","b":"tailwindcss","s":0.1823,"n":128},{"a":"testing-library-react","b":"clsx","s":0.1808,"n":130},{"a":"typescript","b":"jest","s":0.1785,"n":687},{"a":"sinon","b":"istanbul","s":0.1772,"n":84},{"a":"jsonwebtoken","b":"bcryptjs","s":0.1769,"n":26},{"a":"chai","b":"istanbul","s":0.1763,"n":104},{"a":"react-query","b":"lucide-react","s":0.1756,"n":69},{"a":"framer-motion","b":"next-js","s":0.1755,"n":83},{"a":"react","b":"zod","s":0.1737,"n":323},{"a":"vitest","b":"testing-library-react","s":0.1731,"n":223},{"a":"vue","b":"pinia","s":0.1727,"n":48},{"a":"cross-env","b":"webpack","s":0.1726,"n":199},{"a":"cross-env","b":"babel","s":0.1721,"n":210},{"a":"react-query","b":"tailwind-merge","s":0.1719,"n":66},{"a":"pg","b":"ioredis","s":0.1709,"n":27},{"a":"react-query","b":"clsx","s":0.1685,"n":76},{"a":"cookie-parser","b":"passport","s":0.1682,"n":18},{"a":"react","b":"jest","s":0.1679,"n":371},{"a":"cookie-parser","b":"jsonwebtoken","s":0.1677,"n":28},{"a":"testing-library-react","b":"tailwindcss","s":0.1661,"n":155},{"a":"typescript","b":"tailwindcss","s":0.1659,"n":605},{"a":"react","b":"babel","s":0.1654,"n":341},{"a":"ts-node","b":"jest","s":0.1653,"n":219},{"a":"ts-node","b":"typescript","s":0.164,"n":593},{"a":"vitest","b":"playwright","s":0.1628,"n":203},{"a":"vitest","b":"zod","s":0.1623,"n":225},{"a":"jest","b":"rimraf","s":0.1621,"n":235},{"a":"cookie-parser","b":"cors","s":0.1616,"n":32},{"a":"react","b":"cva","s":0.1596,"n":264},{"a":"jsonwebtoken","b":"bcrypt","s":0.1563,"n":20},{"a":"nodemon","b":"express","s":0.1549,"n":99},{"a":"ts-node","b":"rimraf","s":0.1546,"n":182},{"a":"react","b":"vitest","s":0.1531,"n":361},{"a":"react-query","b":"drizzle-orm","s":0.1524,"n":25},{"a":"cookie-parser","b":"bcrypt","s":0.1524,"n":16},{"a":"vite","b":"clsx","s":0.1521,"n":167},{"a":"testing-library-jest-dom","b":"clsx","s":0.1504,"n":102},{"a":"zod","b":"dotenv","s":0.1497,"n":134},{"a":"nodemon","b":"cors","s":0.1489,"n":46},{"a":"zustand","b":"framer-motion","s":0.1486,"n":44},{"a":"express","b":"cookie-parser","s":0.1479,"n":79},{"a":"zod","b":"react-query","s":0.1459,"n":83},{"a":"vitest","b":"testing-library-jest-dom","s":0.1454,"n":183},{"a":"testing-library-jest-dom","b":"tailwindcss","s":0.1449,"n":129},{"a":"express","b":"dotenv","s":0.1446,"n":129},{"a":"webpack","b":"jest","s":0.1446,"n":204},{"a":"testing-library-react","b":"lucide-react","s":0.1445,"n":99},{"a":"vite","b":"playwright","s":0.1443,"n":155},{"a":"react","b":"cross-env","s":0.1436,"n":291},{"a":"webpack","b":"rimraf","s":0.1431,"n":179},{"a":"next-auth","b":"swr","s":0.1429,"n":13},{"a":"typescript","b":"rimraf","s":0.1426,"n":543},{"a":"testing-library-react","b":"tailwind-merge","s":0.142,"n":96},{"a":"webpack","b":"mocha","s":0.1415,"n":175},{"a":"cva","b":"drizzle-orm","s":0.1414,"n":43},{"a":"vite","b":"lucide-react","s":0.1407,"n":148},{"a":"vitest","b":"tailwindcss","s":0.1394,"n":211},{"a":"playwright","b":"testing-library-jest-dom","s":0.1394,"n":91},{"a":"validator","b":"passport","s":0.1389,"n":10},{"a":"zod","b":"typescript","s":0.1387,"n":504},{"a":"chakra-ui","b":"emotion-react","s":0.1383,"n":13},{"a":"vue","b":"vuex","s":0.1377,"n":38},{"a":"babel","b":"rimraf","s":0.1364,"n":181},{"a":"playwright","b":"testing-library-react","s":0.1355,"n":97},{"a":"rollup","b":"rimraf","s":0.1355,"n":157},{"a":"react","b":"webpack","s":0.1353,"n":277},{"a":"react-query","b":"tailwindcss","s":0.1348,"n":91},{"a":"vite","b":"tailwind-merge","s":0.1336,"n":140},{"a":"vite","b":"testing-library-react","s":0.1336,"n":152},{"a":"vite","b":"zod","s":0.1328,"n":163},{"a":"sqlite3","b":"knex","s":0.1324,"n":9},{"a":"cookie-parser","b":"supertest","s":0.132,"n":26},{"a":"redux-toolkit","b":"redux","s":0.1317,"n":22},{"a":"react-query","b":"framer-motion","s":0.1311,"n":32},{"a":"passport","b":"bcrypt","s":0.1304,"n":9},{"a":"rollup","b":"jest","s":0.1303,"n":173},{"a":"vue","b":"vite","s":0.1291,"n":129},{"a":"cross-env","b":"jest","s":0.1277,"n":182},{"a":"bcrypt","b":"mongoose","s":0.1277,"n":12},{"a":"cross-env","b":"typescript","s":0.1275,"n":483},{"a":"drizzle-orm","b":"tailwind-merge","s":0.1267,"n":46},{"a":"drizzle-orm","b":"lucide-react","s":0.1257,"n":47},{"a":"jsonwebtoken","b":"mongoose","s":0.125,"n":20},{"a":"testing-library-react","b":"jest","s":0.1246,"n":152},{"a":"vite","b":"testing-library-jest-dom","s":0.1243,"n":135},{"a":"zod","b":"zustand","s":0.124,"n":79},{"a":"express-session","b":"supertest","s":0.1227,"n":20},{"a":"testing-library-jest-dom","b":"lucide-react","s":0.1224,"n":78},{"a":"zustand","b":"next-js","s":0.1211,"n":62},{"a":"nodemon","b":"mongoose","s":0.121,"n":30},{"a":"express","b":"jsonwebtoken","s":0.1208,"n":69},{"a":"class-validator","b":"bcrypt","s":0.1207,"n":7},{"a":"babel","b":"typescript","s":0.12,"n":467},{"a":"chai","b":"webpack","s":0.1198,"n":122},{"a":"cors","b":"mongoose","s":0.1198,"n":23},{"a":"next-auth","b":"next-js","s":0.119,"n":47},{"a":"pg","b":"drizzle-orm","s":0.1186,"n":21},{"a":"nodemon","b":"cookie-parser","s":0.1183,"n":31},{"a":"cors","b":"supertest","s":0.1176,"n":30},{"a":"testing-library-jest-dom","b":"tailwind-merge","s":0.1176,"n":74},{"a":"koa","b":"supertest","s":0.1173,"n":21},{"a":"prisma","b":"react-query","s":0.1166,"n":19},{"a":"jest","b":"testing-library-jest-dom","s":0.1165,"n":136},{"a":"mysql2","b":"mysql","s":0.1163,"n":5},{"a":"next-auth","b":"heroicons","s":0.1163,"n":10},{"a":"prisma","b":"next-js","s":0.1159,"n":48},{"a":"express","b":"supertest","s":0.1152,"n":69},{"a":"cva","b":"testing-library-react","s":0.1146,"n":73},{"a":"cross-env","b":"testing-library-react","s":0.1146,"n":114},{"a":"nx","b":"swc","s":0.1143,"n":16},{"a":"mysql","b":"sequelize","s":0.1143,"n":4},{"a":"testing-library-react","b":"zustand","s":0.1139,"n":63},{"a":"pg","b":"knex","s":0.1136,"n":15},{"a":"bcrypt","b":"ioredis","s":0.1136,"n":10},{"a":"next-auth","b":"headlessui-react","s":0.1134,"n":11},{"a":"zod","b":"testing-library-react","s":0.1131,"n":99},{"a":"class-validator","b":"ioredis","s":0.1125,"n":9},{"a":"cors","b":"bcryptjs","s":0.1123,"n":21},{"a":"next-auth","b":"bcryptjs","s":0.1122,"n":11},{"a":"ts-node","b":"dotenv","s":0.1121,"n":111},{"a":"vitest","b":"esbuild","s":0.1121,"n":155},{"a":"prisma","b":"bcryptjs","s":0.1121,"n":13},{"a":"jotai","b":"react-query","s":0.1119,"n":16},{"a":"nestjs","b":"supertest","s":0.1118,"n":17},{"a":"esbuild","b":"typescript","s":0.1116,"n":408},{"a":"cors","b":"dotenv","s":0.1115,"n":64},{"a":"nodemon","b":"jsonwebtoken","s":0.1111,"n":32},{"a":"mongoose","b":"mongodb","s":0.1111,"n":11},{"a":"vite","b":"cva","s":0.1105,"n":112},{"a":"drizzle-orm","b":"clsx","s":0.1096,"n":48},{"a":"webpack","b":"sinon","s":0.1094,"n":99},{"a":"react-redux","b":"styled-components","s":0.109,"n":23},{"a":"jsonwebtoken","b":"dotenv","s":0.1085,"n":59},{"a":"cross-env","b":"ts-node","s":0.1081,"n":125},{"a":"typescript","b":"clsx","s":0.108,"n":391},{"a":"playwright","b":"tailwindcss","s":0.1079,"n":100},{"a":"webpack","b":"ts-node","s":0.1074,"n":125},{"a":"redux","b":"styled-components","s":0.1073,"n":22},{"a":"vitest","b":"clsx","s":0.1073,"n":144},{"a":"drizzle-orm","b":"better-sqlite3","s":0.1071,"n":18},{"a":"react","b":"zustand","s":0.1068,"n":176},{"a":"mysql2","b":"pg","s":0.1064,"n":15},{"a":"testing-library-react","b":"typescript","s":0.1063,"n":388},{"a":"rimraf","b":"mocha","s":0.106,"n":142},{"a":"class-validator","b":"supertest","s":0.106,"n":16},{"a":"mysql2","b":"bcryptjs","s":0.1059,"n":9},{"a":"mui-material","b":"yup","s":0.1053,"n":8},{"a":"zod","b":"drizzle-orm","s":0.1049,"n":58},{"a":"heroicons","b":"swr","s":0.1042,"n":10},{"a":"cross-env","b":"testing-library-jest-dom","s":0.104,"n":98},{"a":"rollup","b":"typescript","s":0.1039,"n":392},{"a":"vue","b":"sass","s":0.1034,"n":52},{"a":"cross-env","b":"express","s":0.1028,"n":112},{"a":"zod","b":"framer-motion","s":0.1027,"n":65},{"a":"webpack","b":"redux","s":0.1023,"n":76},{"a":"cross-env","b":"vitest","s":0.1023,"n":162},{"a":"nodemon","b":"dotenv","s":0.1022,"n":65},{"a":"pg","b":"dotenv","s":0.102,"n":57},{"a":"react","b":"rimraf","s":0.1017,"n":221},{"a":"playwright","b":"zod","s":0.1013,"n":84},{"a":"express","b":"mocha","s":0.1013,"n":116},{"a":"babel","b":"mocha","s":0.1013,"n":137},{"a":"esbuild","b":"vite","s":0.1012,"n":121},{"a":"dotenv","b":"clsx","s":0.1011,"n":83},{"a":"swr","b":"drizzle-orm","s":0.1008,"n":12},{"a":"pg","b":"redis","s":0.1006,"n":16},{"a":"ts-node","b":"mocha","s":0.1001,"n":122},{"a":"mysql2","b":"knex","s":0.1,"n":5},{"a":"chai","b":"ts-node","s":0.0998,"n":97},{"a":"sass","b":"babel","s":0.0996,"n":94},{"a":"babel","b":"testing-library-react","s":0.0994,"n":108},{"a":"react-query","b":"next-js","s":0.0991,"n":46},{"a":"express","b":"webpack","s":0.0991,"n":109},{"a":"vite","b":"zustand","s":0.099,"n":93},{"a":"playwright","b":"clsx","s":0.099,"n":71},{"a":"next-js","b":"headlessui-react","s":0.0988,"n":41},{"a":"cross-env","b":"vite","s":0.0987,"n":137},{"a":"rollup","b":"cross-env","s":0.0985,"n":111},{"a":"zustand","b":"testing-library-jest-dom","s":0.0984,"n":49},{"a":"typescript","b":"next-js","s":0.0981,"n":357},{"a":"tailwindcss","b":"dotenv","s":0.098,"n":102},{"a":"nock","b":"supertest","s":0.0974,"n":19},{"a":"prisma","b":"swr","s":0.0973,"n":11},{"a":"playwright","b":"tailwind-merge","s":0.0972,"n":63},{"a":"react","b":"framer-motion","s":0.0972,"n":160},{"a":"express-session","b":"mongoose","s":0.0971,"n":10},{"a":"react","b":"dotenv","s":0.097,"n":189},{"a":"webpack","b":"react-redux","s":0.0969,"n":73},{"a":"typescript","b":"dotenv","s":0.0968,"n":361},{"a":"vitest","b":"tailwind-merge","s":0.0965,"n":124},{"a":"testing-library-react","b":"next-js","s":0.0962,"n":73},{"a":"yup","b":"redux-toolkit","s":0.0959,"n":7},{"a":"cors","b":"bcrypt","s":0.0958,"n":16},{"a":"vitest","b":"lucide-react","s":0.0956,"n":124},{"a":"playwright","b":"lucide-react","s":0.0955,"n":63},{"a":"class-validator","b":"passport","s":0.0952,"n":6},{"a":"cookie-parser","b":"pg","s":0.0947,"n":18},{"a":"vue","b":"less","s":0.0945,"n":36},{"a":"webpack","b":"typescript","s":0.0943,"n":369},{"a":"nx","b":"angular","s":0.094,"n":11},{"a":"heroicons","b":"framer-motion","s":0.0938,"n":18},{"a":"jsonwebtoken","b":"validator","s":0.0935,"n":13},{"a":"jsonwebtoken","b":"passport","s":0.0935,"n":13},{"a":"webpack","b":"sass","s":0.0934,"n":82},{"a":"next-js","b":"drizzle-orm","s":0.0932,"n":40},{"a":"express","b":"ts-node","s":0.0932,"n":97},{"a":"webpack","b":"less","s":0.0931,"n":70},{"a":"cookie-parser","b":"mongoose","s":0.0929,"n":13},{"a":"jest","b":"dotenv","s":0.0926,"n":121},{"a":"angular","b":"bootstrap","s":0.0925,"n":16},{"a":"typescript","b":"lucide-react","s":0.0924,"n":334},{"a":"nestjs","b":"passport","s":0.0923,"n":6},{"a":"pg","b":"sqlite3","s":0.092,"n":15},{"a":"headlessui-react","b":"tailwindcss","s":0.092,"n":60},{"a":"cva","b":"testing-library-jest-dom","s":0.092,"n":54},{"a":"cross-env","b":"dotenv","s":0.0919,"n":98},{"a":"jsonwebtoken","b":"supertest","s":0.0917,"n":21},{"a":"pg","b":"prisma","s":0.0914,"n":16},{"a":"lucide-react","b":"dotenv","s":0.091,"n":70},{"a":"nodemon","b":"supertest","s":0.0909,"n":29},{"a":"passport","b":"supertest","s":0.0909,"n":15},{"a":"typescript","b":"tailwind-merge","s":0.0906,"n":327},{"a":"less","b":"ant-design","s":0.0904,"n":17},{"a":"zod","b":"testing-library-jest-dom","s":0.0904,"n":75},{"a":"react-bootstrap","b":"bootstrap","s":0.0899,"n":8},{"a":"express-session","b":"mongodb","s":0.0897,"n":7},{"a":"dotenv","b":"tailwind-merge","s":0.0896,"n":68},{"a":"cookie-parser","b":"bcryptjs","s":0.0896,"n":12},{"a":"chai","b":"express","s":0.0892,"n":81},{"a":"next-auth","b":"framer-motion","s":0.089,"n":17},{"a":"typescript","b":"testing-library-jest-dom","s":0.0883,"n":322},{"a":"cross-env","b":"playwright","s":0.0883,"n":85},{"a":"react","b":"react-redux","s":0.0881,"n":145},{"a":"cross-env","b":"sass","s":0.088,"n":77},{"a":"heroicons","b":"redux-toolkit","s":0.0879,"n":8},{"a":"nodemon","b":"ts-node","s":0.0878,"n":66},{"a":"vitest","b":"turborepo","s":0.0876,"n":114},{"a":"typeorm","b":"pg","s":0.0876,"n":12},{"a":"redis","b":"ioredis","s":0.0874,"n":9},{"a":"express","b":"mongoose","s":0.0873,"n":48},{"a":"cookie-parser","b":"validator","s":0.087,"n":10},{"a":"supertest","b":"ioredis","s":0.087,"n":16},{"a":"esbuild","b":"playwright","s":0.0867,"n":67},{"a":"cva","b":"dotenv","s":0.0866,"n":61},{"a":"swr","b":"next-js","s":0.0865,"n":36},{"a":"chai","b":"cross-env","s":0.0864,"n":90},{"a":"vitest","b":"rimraf","s":0.0864,"n":145},{"a":"sinon","b":"rimraf","s":0.0859,"n":85},{"a":"drizzle-orm","b":"tailwindcss","s":0.0853,"n":57},{"a":"playwright","b":"typescript","s":0.0852,"n":312},{"a":"ts-node","b":"angular","s":0.0851,"n":56},{"a":"framer-motion","b":"emotion-react","s":0.0851,"n":20},{"a":"babel","b":"testing-library-jest-dom","s":0.0848,"n":88},{"a":"next-auth","b":"cva","s":0.0847,"n":25},{"a":"passport","b":"knex","s":0.0847,"n":5},{"a":"testing-library-react","b":"storybook","s":0.0844,"n":40},{"a":"rollup","b":"mocha","s":0.0844,"n":101},{"a":"next-js","b":"dotenv","s":0.0844,"n":69},{"a":"pg","b":"cors","s":0.0843,"n":21},{"a":"clerk-nextjs","b":"drizzle-orm","s":0.0843,"n":7},{"a":"istanbul","b":"supertest","s":0.0843,"n":29},{"a":"passport","b":"bcryptjs","s":0.0842,"n":8},{"a":"react","b":"playwright","s":0.0836,"n":156},{"a":"mongoose","b":"supertest","s":0.0833,"n":16},{"a":"mysql","b":"knex","s":0.0833,"n":3},{"a":"chai","b":"rimraf","s":0.0833,"n":93},{"a":"ts-node","b":"swc","s":0.0832,"n":57},{"a":"jest","b":"lerna","s":0.083,"n":89},{"a":"pg","b":"jsonwebtoken","s":0.0829,"n":18},{"a":"framer-motion","b":"drizzle-orm","s":0.0829,"n":18},{"a":"chai","b":"babel","s":0.0827,"n":93},{"a":"mongoose","b":"bcryptjs","s":0.0826,"n":10},{"a":"swr","b":"headlessui-react","s":0.0826,"n":9},{"a":"redis","b":"mongodb","s":0.0824,"n":7},{"a":"rollup","b":"chai","s":0.0823,"n":78},{"a":"react-redux","b":"testing-library-jest-dom","s":0.0821,"n":39},{"a":"jotai","b":"cva","s":0.0819,"n":24},{"a":"sass","b":"testing-library-jest-dom","s":0.0818,"n":49},{"a":"jsonwebtoken","b":"ioredis","s":0.0818,"n":13},{"a":"nx","b":"nestjs","s":0.0816,"n":4},{"a":"express-session","b":"bcryptjs","s":0.0816,"n":8},{"a":"react-redux","b":"testing-library-react","s":0.0816,"n":44},{"a":"cross-env","b":"sinon","s":0.0814,"n":75},{"a":"mysql2","b":"ioredis","s":0.0814,"n":7},{"a":"nodemon","b":"express-session","s":0.0812,"n":19},{"a":"sass","b":"vite","s":0.0811,"n":85},{"a":"testing-library-react","b":"rimraf","s":0.0811,"n":89},{"a":"rimraf","b":"lerna","s":0.0808,"n":73},{"a":"cross-env","b":"mocha","s":0.0808,"n":105},{"a":"testing-library-jest-dom","b":"next-js","s":0.0807,"n":57},{"a":"nestjs","b":"bcrypt","s":0.0806,"n":5},{"a":"pg","b":"bcrypt","s":0.0805,"n":12},{"a":"next-auth","b":"drizzle-orm","s":0.0804,"n":9},{"a":"nodemon","b":"koa","s":0.08,"n":20},{"a":"next-auth","b":"react-query","s":0.08,"n":12},{"a":"express-session","b":"bcrypt","s":0.08,"n":6},{"a":"babel","b":"ts-node","s":0.0798,"n":101},{"a":"express","b":"sinon","s":0.0797,"n":63},{"a":"testing-library-react","b":"emotion-react","s":0.0793,"n":39},{"a":"vitest","b":"dotenv","s":0.0793,"n":115},{"a":"express","b":"express-session","s":0.0791,"n":42},{"a":"next-auth","b":"tailwind-merge","s":0.0791,"n":28},{"a":"typeorm","b":"mysql","s":0.0789,"n":3},{"a":"typeorm","b":"supertest","s":0.0789,"n":12},{"a":"nodemon","b":"bcrypt","s":0.0789,"n":18},{"a":"sinon","b":"babel","s":0.0788,"n":79},{"a":"mongoose","b":"pm2","s":0.0787,"n":7},{"a":"prisma","b":"zod","s":0.0786,"n":44},{"a":"swr","b":"emotion-react","s":0.0786,"n":11},{"a":"mysql2","b":"sequelize","s":0.0784,"n":4},{"a":"validator","b":"mongoose","s":0.0784,"n":8},{"a":"sass","b":"testing-library-react","s":0.0782,"n":52},{"a":"heroicons","b":"daisyui","s":0.0781,"n":5},{"a":"mysql2","b":"redis","s":0.0779,"n":6},{"a":"esbuild","b":"zod","s":0.0775,"n":72},{"a":"testing-library-react","b":"framer-motion","s":0.0775,"n":43},{"a":"ts-node","b":"testing-library-react","s":0.0772,"n":75},{"a":"testing-library-jest-dom","b":"emotion-react","s":0.0769,"n":33},{"a":"emotion-react","b":"styled-components","s":0.0769,"n":13},{"a":"vite","b":"dotenv","s":0.0769,"n":96},{"a":"react","b":"sass","s":0.0766,"n":137},{"a":"pg","b":"zod","s":0.0765,"n":47},{"a":"cva","b":"playwright","s":0.0763,"n":46},{"a":"react-redux","b":"emotion-react","s":0.0762,"n":17},{"a":"express-session","b":"validator","s":0.0759,"n":6},{"a":"prisma","b":"cva","s":0.0759,"n":24},{"a":"vitest","b":"cva","s":0.0759,"n":95},{"a":"express-session","b":"pm2","s":0.0758,"n":5},{"a":"prisma","b":"headlessui-react","s":0.0756,"n":9}];
+const DEFAULT_SHOWN = 60;
+
+const svg = d3.select("#canvas");
+const g = svg.append("g");
+const tooltip = d3.select("#tooltip");
+const countSlider = document.getElementById("countSlider");
+const countVal = document.getElementById("countVal");
+const repoSlider = document.getElementById("repoSlider");
+const repoVal = document.getElementById("repoVal");
+const statsEl = document.getElementById("stats");
+const searchInput = document.getElementById("search");
+
+countSlider.value = Math.min(DEFAULT_SHOWN, POOL.length);
+repoSlider.value = repoSlider.min;
+
+let sim = null;
+let linkSel, nodeSel, labelSel;
+
+// Deep-link support: /network?focus=tailwind-merge pins that node on load.
+// pinnedId/activeId live at module scope (not inside buildGraph) so a pin
+// survives slider changes and window resizes, which both rebuild the graph.
+const urlParams = new URLSearchParams(window.location.search);
+const requestedFocus = urlParams.get("focus");
+let pinnedId = requestedFocus
+  ? (POOL.find(p => p.a === requestedFocus || p.b === requestedFocus)
+      ? requestedFocus
+      : (POOL.find(p => p.a.toLowerCase() === requestedFocus.toLowerCase() || p.b.toLowerCase() === requestedFocus.toLowerCase())?.a ?? null))
+  : null;
+let activeId = null;
+let searchId = null; // node id currently locked in by the search box, if any
+
+if (pinnedId) searchInput.value = pinnedId;
+
+function syncUrl(id){
+  const url = new URL(window.location.href);
+  if (id) url.searchParams.set("focus", id);
+  else url.searchParams.delete("focus");
+  history.replaceState(null, "", url.toString());
+}
+
+function currentEdges(){
+  const minRepos = Number(repoSlider.value);
+  const count = Number(countSlider.value);
+  const base = POOL.filter(p => p.n >= minRepos).slice(0, count);
+
+  // Whatever's pinned must be visible even if the slider currently excludes
+  // it, or a deep link / search focus would silently render nothing.
+  if (pinnedId) {
+    const seen = new Set(base.map(e => e.a + "|" + e.b));
+    POOL.filter(p => p.n >= minRepos && (p.a === pinnedId || p.b === pinnedId))
+      .forEach(p => {
+        const key = p.a + "|" + p.b;
+        if (!seen.has(key)) { base.push(p); seen.add(key); }
+      });
+  }
+  return base;
+}
+
+function buildGraph(){
+  g.selectAll("*").remove();
+  if (sim) sim.stop();
+
+  const edges = currentEdges();
+  countVal.textContent = countSlider.value;
+  repoVal.textContent = repoSlider.value;
+
+  const nodeIds = Array.from(new Set(edges.flatMap(e => [e.a, e.b])));
+  const degree = {};
+  nodeIds.forEach(id => degree[id] = 0);
+  edges.forEach(e => { degree[e.a]++; degree[e.b]++; });
+
+  const nodes = nodeIds.map(id => ({ id, degree: degree[id] }));
+  const links = edges.map(e => ({ source: e.a, target: e.b, value: e.s, repos: e.n }));
+
+  // A pin can go stale (e.g. the tech doesn't exist below the current
+  // min-repos floor at all) — drop it quietly rather than pointing at nothing.
+  if (pinnedId && !nodeIds.includes(pinnedId)) {
+    pinnedId = null;
+    syncUrl(null);
+  }
+
+  statsEl.textContent = nodes.length + " technologies · " + links.length + " pairings";
+
+  const maxDeg = d3.max(nodes, d => d.degree) || 1;
+  // Inferno's low end is near-black, which disappears against the dark
+  // background. Remap degree into the [0.32, 0.94] slice of the scale so
+  // even degree-1 nodes stay clearly visible.
+  const color = (deg) => {
+    const t = Math.min(deg / (maxDeg * 1.15), 1);
+    return d3.interpolateInferno(0.32 + t * 0.62);
+  };
+  const radius = d => 8 + Math.sqrt(d.degree) * 6;
+
+  const W = window.innerWidth, H = window.innerHeight;
+
+  sim = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id)
+      .distance(d => 220 - d.value * 160)
+      .strength(d => 0.1 + d.value * 0.6))
+    .force("charge", d3.forceManyBody().strength(-210))
+    .force("center", d3.forceCenter(W/2, H/2))
+    .force("collide", d3.forceCollide().radius(d => radius(d) + 18));
+
+  // Each pairing gets two overlapping lines: a thin visible one (unchanged
+  // look) and a much fatter invisible one on top that owns all pointer
+  // events. This makes hover/click forgiving without widening the actual
+  // stroke you see.
+  const linkGroup = g.append("g").selectAll("g.link")
+    .data(links).join("g").attr("class", "link");
+
+  const linkVisible = linkGroup.append("line")
+    .attr("stroke", "#f0b429")
+    .attr("stroke-opacity", d => 0.12 + d.value * 0.6)
+    .attr("stroke-width", d => 0.8 + d.value * 5)
+    .style("pointer-events", "none");
+
+  const linkHit = linkGroup.append("line")
+    .attr("stroke", "transparent")
+    .attr("stroke-width", d => Math.max(16, 6 + d.value * 10))
+    .style("cursor", "pointer")
+    .on("mouseenter", function(ev,d){
+      if (activeId && !isEndpoint(d, activeId)) return; // don't wake up dimmed edges
+      d3.select(this.parentNode).select("line").attr("stroke-opacity", 1);
+      tooltip.style("opacity",1).html(
+        "<b>"+d.source.id+"</b> \u2194 <b>"+d.target.id+"</b><br>strength: "+d.value.toFixed(3)+" &middot; "+d.repos+" repos"
+      );
+    })
+    .on("mousemove", (ev,d) => {
+      if (activeId && !isEndpoint(d, activeId)) return;
+      tooltip.style("left", ev.pageX+"px").style("top", ev.pageY+"px");
+    })
+    .on("mouseleave", function(ev,d){
+      if (activeId && !isEndpoint(d, activeId)) return;
+      d3.select(this.parentNode).select("line").attr("stroke-opacity", 0.12 + d.value * 0.6);
+      tooltip.style("opacity",0);
+    })
+    .on("click", function(ev,d){
+      if (activeId && !isEndpoint(d, activeId)) {
+        // clicking a dimmed edge acts like clicking empty canvas
+        pinnedId = null;
+        searchId = null;
+        searchInput.value = "";
+        highlight(null);
+        syncUrl(null);
+        return;
+      }
+      ev.stopPropagation(); // clicking a highlighted edge shouldn't clear the pin
+    });
+
+  function isEndpoint(link, id){
+    const s = link.source.id ?? link.source, t = link.target.id ?? link.target;
+    return s === id || t === id;
+  }
+
+  const node = g.append("g").selectAll("circle")
+    .data(nodes).join("circle")
+    .attr("r", radius)
+    .attr("fill", d => color(d.degree))
+    .attr("fill-opacity", 0.92)
+    .attr("stroke", "#1c2230")
+    .attr("stroke-width", 1.5)
+    .style("cursor", "pointer")
+    .call(d3.drag()
+      .on("start", (ev,d) => { if(!ev.active) sim.alphaTarget(0.25).restart(); d.fx=d.x; d.fy=d.y; })
+      .on("drag", (ev,d) => { d.fx=ev.x; d.fy=ev.y; })
+      .on("end", (ev,d) => { if(!ev.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }))
+    .on("mouseenter", (ev,d) => { if(!pinnedId && !searchId) highlight(d.id); })
+    .on("mouseleave", () => { if(!pinnedId && !searchId) highlight(null); })
+    .on("click", (ev,d) => {
+      ev.stopPropagation();
+      const newId = (pinnedId === d.id) ? null : d.id;
+      pinnedId = newId;
+      searchId = newId; // keep the search box in sync with the click-pin
+      searchInput.value = newId || "";
+      highlight(newId);
+      syncUrl(newId);
+    });
+
+  // clicking empty canvas clears the pin and the search field
+  svg.on("click", () => {
+    pinnedId = null;
+    searchId = null;
+    searchInput.value = "";
+    highlight(null);
+    syncUrl(null);
+  });
+
+  const label = g.append("g").selectAll("text")
+    .data(nodes).join("text")
+    .attr("class","node-label")
+    .attr("text-anchor","middle")
+    .attr("dy", d => radius(d) + 14)
+    .text(d => d.id);
+
+  linkSel = linkVisible; nodeSel = node; labelSel = label;
+
+  function highlight(id){
+    activeId = id;
+    if(!id){
+      linkVisible.attr("stroke-opacity", d => 0.12 + d.value * 0.6);
+      node.attr("opacity", 1).attr("stroke", "#1c2230");
+      label.classed("dim", false);
+      return;
+    }
+    const connected = new Set([id]);
+    links.forEach(l => {
+      const s = l.source.id ?? l.source, t = l.target.id ?? l.target;
+      if(s===id) connected.add(t);
+      if(t===id) connected.add(s);
+    });
+    linkVisible.attr("stroke-opacity", l => {
+      const s = l.source.id ?? l.source, t = l.target.id ?? l.target;
+      return (s===id||t===id) ? 0.95 : 0.05;
+    });
+    node.attr("opacity", d => connected.has(d.id) ? 1 : 0.2)
+        .attr("stroke", d => d.id === id ? "#fff" : "#1c2230");
+    label.classed("dim", d => !connected.has(d.id));
+  }
+  buildGraph._highlight = (id) => { if(!pinnedId) highlight(id); };
+
+  // Restore (or apply, on first load) the pin after a rebuild — slider
+  // changes and window resizes both call buildGraph() and would otherwise
+  // drop back to the unhighlighted state.
+  if (pinnedId || searchId) highlight(pinnedId || searchId);
+
+  sim.on("tick", () => {
+    // Keep nodes on-screen and out from under the title/legend chrome —
+    // the force layout otherwise has no idea those areas are occupied.
+    const padX = 44, topPad = 130, bottomPad = 44;
+    nodes.forEach(d => {
+      d.x = Math.max(padX, Math.min(W - padX, d.x));
+      d.y = Math.max(topPad, Math.min(H - bottomPad, d.y));
+    });
+    linkVisible.attr("x1", d=>d.source.x).attr("y1", d=>d.source.y)
+        .attr("x2", d=>d.target.x).attr("y2", d=>d.target.y);
+    linkHit.attr("x1", d=>d.source.x).attr("y1", d=>d.source.y)
+        .attr("x2", d=>d.target.x).attr("y2", d=>d.target.y);
+    node.attr("cx", d=>d.x).attr("cy", d=>d.y);
+    label.attr("x", d=>d.x).attr("y", d=>d.y);
+  });
+}
+
+// Wheel zoom: smaller per-tick steps (finer wheelDelta) plus a rAF loop that
+// eases the transform toward each new target, so scrolling feels continuous
+// instead of jumping in discrete increments. Drag/pinch panning is applied
+// immediately (no easing) so it stays responsive under the pointer.
+let currentTransform = d3.zoomIdentity;
+let targetTransform = d3.zoomIdentity;
+
+const zoomBehavior = d3.zoom()
+  .scaleExtent([0.3, 3])
+  .wheelDelta((event) => -event.deltaY * (event.deltaMode === 1 ? 0.025 : event.deltaMode ? 1 : 0.0015) * (event.ctrlKey ? 6 : 1))
+  .on("zoom", (ev) => {
+    targetTransform = ev.transform;
+    if (!ev.sourceEvent || ev.sourceEvent.type !== "wheel") {
+      currentTransform = ev.transform; // drag/pinch: no easing lag
+      g.attr("transform", currentTransform);
+    }
+  });
+
+svg.call(zoomBehavior);
+
+(function easeZoom(){
+  const k = currentTransform.k + (targetTransform.k - currentTransform.k) * 0.18;
+  const x = currentTransform.x + (targetTransform.x - currentTransform.x) * 0.18;
+  const y = currentTransform.y + (targetTransform.y - currentTransform.y) * 0.18;
+  currentTransform = new d3.ZoomTransform(k, x, y);
+  g.attr("transform", currentTransform);
+  requestAnimationFrame(easeZoom);
+})();
+
+countSlider.addEventListener("input", buildGraph);
+repoSlider.addEventListener("input", buildGraph);
+searchInput.addEventListener("input", () => {
+  // Editing the field by hand is an explicit new intent — release any
+  // click-pin so it doesn't block the highlight from updating.
+  if (pinnedId !== null) { pinnedId = null; syncUrl(null); }
+
+  const q = searchInput.value.trim().toLowerCase();
+  if (!q) {
+    searchId = null;
+    buildGraph._highlight && buildGraph._highlight(null);
+    return;
+  }
+  const found = nodeSel && nodeSel.data().find(d => d.id.toLowerCase().includes(q));
+  searchId = found ? found.id : "__none__";
+  buildGraph._highlight && buildGraph._highlight(searchId);
+});
+
+window.addEventListener("resize", buildGraph);
+
+buildGraph();
+</script>
+</body>
+</html>
