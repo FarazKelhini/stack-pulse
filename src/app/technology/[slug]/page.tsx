@@ -126,13 +126,23 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
             </p>
           </div>
 
-          <Link
-            href="/"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-muted border border-border text-sm font-medium hover:bg-muted-foreground/20 transition-all"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Explore
-          </Link>
+          <div className="flex gap-4">
+            <Link
+              href={`/network?focus=${tech.slug}`}
+              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-all"
+            >
+              <ExternalLink className="w-4 h-4" />
+              View in Network
+            </Link>
+
+            <Link
+              href="/"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-muted border border-border text-sm font-medium hover:bg-muted-foreground/20 transition-all"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Explore
+            </Link>
+          </div>
         </div>
       </header>
 

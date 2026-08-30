@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Search, ArrowRight } from 'lucide-react';
 import { MetricsRow } from './MetricsRow';
@@ -64,6 +65,22 @@ export function Hero({ metrics, rightColumn }: HeroProps) {
                 <ArrowRight className="w-5 h-5" />
               </button>
             </form>
+            <div className="mt-10 flex justify-center">
+              <Link
+                href="/network"
+                className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-card border border-primary/20 hover:border-primary/50 text-foreground transition-all duration-300 shadow-[0_0_15px_-3px_rgba(139,92,246,0.3)] hover:shadow-[0_0_25px_-5px_rgba(139,92,246,0.6)] active:scale-95"
+              >
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <span className="relative flex items-center gap-3 font-semibold text-lg">
+                  <div className="flex -space-x-2">
+                    <div className="w-6 h-6 rounded-full bg-violet-500 border-2 border-card" />
+                    <div className="w-6 h-6 rounded-full bg-fuchsia-500 border-2 border-card" />
+                  </div>
+                  Explore Network Visualization
+                  <ArrowRight className="w-5 h-5 text-primary group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            </div>
           </motion.div>
 
           {metrics && <div className="w-full pt-8">{metrics}</div>}

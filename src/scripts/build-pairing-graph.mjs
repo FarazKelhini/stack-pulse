@@ -85,21 +85,36 @@ function renderHtml(pool, meta, opts) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <style>
   :root{
-    --bg: #0b0e14;
-    --bg-panel: #11151d;
-    --line: #232936;
-    --text: #e6e9ef;
-    --text-dim: #7a8394;
+    /* Colors synced with src/app/globals.css */
+    --bg: hsl(222, 47%, 11%);
+    --bg-panel: hsl(222, 47%, 14%);
+    --line: hsl(222, 47%, 20%);
+    --text: hsl(213, 31%, 91%);
+    --text-dim: hsl(215, 20%, 65%);
+    --primary: hsl(226, 70%, 60%);
     --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --sans: 'Inter', system-ui, sans-serif;
   }
   *{ box-sizing: border-box; }
   html,body{ margin:0; height:100%; background:var(--bg); color:var(--text); font-family:var(--sans); overflow:hidden; }
-  #app{ position:relative; width:100%; height:100vh; }
+  #app{ position:relative; width:100%; height:100vh;
+    background-image: linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
   svg{ width:100%; height:100%; display:block; cursor:grab; }
   svg:active{ cursor:grabbing; }
 
+  .nav-link{
+    display: inline-block; margin-bottom: 12px;
+    padding:6px 12px; background:var(--bg-panel); border:1px solid var(--line);
+    border-radius:6px; color:var(--text); font-size:11px; font-family:var(--mono);
+    text-decoration:none; transition: all 0.2s;
+  }
+  .nav-link:hover{ border-color:var(--primary); }
+
   .hud-top{ position:absolute; top:0; left:0; right:0; display:flex; justify-content:space-between; align-items:flex-start; padding:22px 26px; pointer-events:none; }
+  .hud-top > div{ pointer-events:auto; }
   .title{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-dim); margin:0 0 4px 0; }
   .subtitle{ font-size:20px; font-weight:600; margin:0; letter-spacing:-0.01em; }
   .stats{ font-family:var(--mono); font-size:11px; color:var(--text-dim); margin-top:6px; }
@@ -135,6 +150,7 @@ function renderHtml(pool, meta, opts) {
 
   <div class="hud-top">
     <div>
+      <a href="http://localhost:3000/" class="nav-link">← Back to Main</a>
       <p class="title">StackPulse / pairing network</p>
       <p class="subtitle">Technology co-occurrence</p>
       <p class="stats" id="stats"></p>
