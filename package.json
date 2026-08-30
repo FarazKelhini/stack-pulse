@@ -17,6 +17,7 @@
     "export": "tsx src/scripts/export.ts",
     "validate-exports": "tsx src/scripts/validate-exports.ts",
     "update-readme": "tsx src/scripts/update-readme.ts",
+    "generate-network": "node src/scripts/build-pairing-graph.mjs"
     "test": "vitest run"
   },
   "keywords": [],

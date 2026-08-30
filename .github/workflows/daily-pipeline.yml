@@ -80,6 +80,9 @@ jobs:
       - name: Update README summary
         run: npm run update-readme
 
+      - name: Generate network graph
+        run: npm run generate-network
+
       - name: Commit datasets
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
