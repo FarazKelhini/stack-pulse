@@ -10,8 +10,8 @@
  *   node scripts/build-pairing-graph.mjs \
  *     --input public/datasets/pairings.json \
  *     --output public/pairing-network.html \
- *     --min-repos 3 \
- *     --pool-size 400
+ *     --min-repos 1 \
+ *     --pool-size 800
  *
  * All flags are optional; defaults are tuned for the current dataset size.
  */
@@ -26,8 +26,8 @@ function parseArgs(argv) {
   const args = {
     input: path.resolve(__dirname, "../..", "public/datasets/pairings.json"),
     output: path.resolve(__dirname, "../..", "public/pairing-network.html"),
-    minRepos: 3,      // drop pairs seen in fewer than this many repos (noise floor)
-    poolSize: 400,     // how many top pairs (by strength) get embedded in the page
+    minRepos: 1,      // drop pairs seen in fewer than this many repos (noise floor)
+    poolSize: 800,     // how many top pairs (by strength) get embedded in the page
     defaultShown: 60,  // how many are shown on first load, before the user adjusts the slider
   };
   for (let i = 0; i < argv.length; i += 2) {
@@ -123,6 +123,12 @@ function renderHtml(pool, meta, opts) {
   .panel label{ display:block; font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--text-dim); margin-bottom:6px; }
   .panel .row{ margin-bottom:14px; }
   .panel .row:last-child{ margin-bottom:0; }
+  .warning{
+    position: absolute; bottom: 60px; right: 26px; padding: 10px;
+    background: rgba(220, 38, 38, 0.9); color: #fff;
+    border-radius: 6px; font-family: var(--mono); font-size: 11px;
+    pointer-events: none; opacity: 0; transition: opacity 0.3s;
+  }
   .panel input[type=range]{ width:100%; accent-color:#f0b429; }
   .panel input[type=text]{
     width:100%; background:var(--bg); border:1px solid var(--line); border-radius:6px;
@@ -172,6 +178,7 @@ function renderHtml(pool, meta, opts) {
   </div>
 
   <div class="hint">drag nodes · hover to trace connections · scroll to zoom</div>
+  <div class="warning" id="warning">No pairings found for that technology</div>
   <div class="tooltip" id="tooltip"></div>
 </div>
 
@@ -190,10 +197,15 @@ const countVal = document.getElementById("countVal");
 const repoSlider = document.getElementById("repoSlider");
 const repoVal = document.getElementById("repoVal");
 const statsEl = document.getElementById("stats");
+const warningEl = document.getElementById("warning");
 const searchInput = document.getElementById("search");
 
 countSlider.value = Math.min(DEFAULT_SHOWN, POOL.length);
 repoSlider.value = repoSlider.min;
+
+function showWarning(show) {
+  warningEl.style.opacity = show ? 1 : 0;
+}
 
 let sim = null;
 let linkSel, nodeSel, labelSel;
@@ -208,10 +220,17 @@ let pinnedId = requestedFocus
       ? requestedFocus
       : (POOL.find(p => p.a.toLowerCase() === requestedFocus.toLowerCase() || p.b.toLowerCase() === requestedFocus.toLowerCase())?.a ?? null))
   : null;
+
+// Track if a focus was requested but not found in the global pool
+let focusNotFound = requestedFocus && !pinnedId;
 let activeId = null;
 let searchId = null; // node id currently locked in by the search box, if any
 
-if (pinnedId) searchInput.value = pinnedId;
+if (pinnedId) {
+  searchInput.value = pinnedId;
+} else if (requestedFocus) {
+  searchInput.value = requestedFocus;
+}
 
 function syncUrl(id){
   const url = new URL(window.location.href);
@@ -259,6 +278,7 @@ function buildGraph(){
   if (pinnedId && !nodeIds.includes(pinnedId)) {
     pinnedId = null;
     syncUrl(null);
+    showWarning(true);
   }
 
   statsEl.textContent = nodes.length + " technologies · " + links.length + " pairings";
@@ -365,6 +385,7 @@ function buildGraph(){
     searchInput.value = "";
     highlight(null);
     syncUrl(null);
+    showWarning(false);
   });
 
   const label = g.append("g").selectAll("text")
@@ -378,12 +399,37 @@ function buildGraph(){
 
   function highlight(id){
     activeId = id;
+
+    // Determine the state to return to if id is null.
+    // If we have a pin/search active, we should keep it highlighted.
+    // If not, we reset to full display.
+    const activeTarget = pinnedId || searchId;
+
     if(!id){
-      linkVisible.attr("stroke-opacity", d => 0.12 + d.value * 0.6);
-      node.attr("opacity", 1).attr("stroke", "#1c2230");
-      label.classed("dim", false);
+      if (activeTarget) {
+        // If we are currently "highlighting out" of a pin/search,
+        // we should re-apply the pin/search highlight instead of full reset.
+        highlight(activeTarget);
+      } else {
+        linkVisible.attr("stroke-opacity", d => 0.12 + d.value * 0.6);
+        node.attr("opacity", 1).attr("stroke", "#1c2230");
+        label.classed("dim", false);
+      }
       return;
     }
+
+    // Check if the node actually exists in our current graph
+    const exists = nodes.find(d => d.id === id);
+    if (!exists) {
+      // De-highlight everything
+      linkVisible.attr("stroke-opacity", 0.05);
+      node.attr("opacity", 0.2).attr("stroke", "#1c2230");
+      label.classed("dim", true);
+      // Ensure tooltip is hidden if search fails
+      tooltip.style("opacity", 0);
+      return;
+    }
+
     const connected = new Set([id]);
     links.forEach(l => {
       const s = l.source.id ?? l.source, t = l.target.id ?? l.target;
@@ -403,7 +449,21 @@ function buildGraph(){
   // Restore (or apply, on first load) the pin after a rebuild — slider
   // changes and window resizes both call buildGraph() and would otherwise
   // drop back to the unhighlighted state.
-  if (pinnedId || searchId) highlight(pinnedId || searchId);
+  const target = pinnedId || searchId || requestedFocus;
+  const found = target ? nodes.find(n => n.id === target) : null;
+
+  if (target) {
+    if (found) {
+        highlight(target);
+        showWarning(false);
+    } else {
+        highlight("NON_EXISTENT_ID_FORCE_DIM");
+        showWarning(true);
+    }
+  } else {
+    highlight(null);
+    showWarning(false);
+  }
 
   sim.on("tick", () => {
     // Keep nodes on-screen and out from under the title/legend chrome —
@@ -462,11 +522,15 @@ searchInput.addEventListener("input", () => {
   if (!q) {
     searchId = null;
     buildGraph._highlight && buildGraph._highlight(null);
+    showWarning(false);
     return;
   }
   const found = nodeSel && nodeSel.data().find(d => d.id.toLowerCase().includes(q));
   searchId = found ? found.id : "__none__";
   buildGraph._highlight && buildGraph._highlight(searchId);
+
+  if (q && searchId === "__none__") showWarning(true);
+  else showWarning(false);
 });
 
 window.addEventListener("resize", buildGraph);
