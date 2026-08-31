@@ -121,11 +121,16 @@ async function FallingThisMonthWrapper() {
             },
           },
           trendScore: true,
+          adoptionDelta: true,
         },
       });
       return falling.map((t) => ({
-        ...t.technology,
-        trendScore: t.trendScore,
+        slug: t.technology.slug,
+        name: t.technology.name,
+        category: t.technology.category,
+        repoCount: t.technology.repoCount,
+        percentChange: t.trendScore,
+        adoptionDelta: t.adoptionDelta,
       }));
     } catch (e) {
       console.error('Failed to fetch falling technologies:', e);
