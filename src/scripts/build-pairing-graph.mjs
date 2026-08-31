@@ -273,12 +273,12 @@ function buildGraph(){
   const nodes = nodeIds.map(id => ({ id, degree: degree[id] }));
   const links = edges.map(e => ({ source: e.a, target: e.b, value: e.s, repos: e.n }));
 
-  // A pin can go stale (e.g. the tech doesn't exist below the current
-  // min-repos floor at all) — drop it quietly rather than pointing at nothing.
-  if (pinnedId && !nodeIds.includes(pinnedId)) {
-    pinnedId = null;
-    syncUrl(null);
-    showWarning(true);
+  const pinCurrentlyVisible = !pinnedId || nodeIds.includes(pinnedId);
+  if (pinnedId && !pinCurrentlyVisible) {
+    showWarning(true);   // tell the user why it's hidden right now
+    // do NOT clear pinnedId or call syncUrl(null) here
+  } else {
+    showWarning(false);
   }
 
   statsEl.textContent = nodes.length + " technologies · " + links.length + " pairings";
