@@ -242,6 +242,7 @@ function buildGraph(){
     .attr("stroke-width", d => Math.max(16, 6 + d.value * 10))
     .style("cursor", "pointer")
     .on("mouseenter", function(ev,d){
+      if (focusNotFound) return;
       if (activeId && !isEndpoint(d, activeId)) return; // don't wake up dimmed edges
       d3.select(this.parentNode).select("line").attr("stroke-opacity", 1);
       tooltip.style("opacity",1).html(
@@ -249,10 +250,12 @@ function buildGraph(){
       );
     })
     .on("mousemove", (ev,d) => {
+      if (focusNotFound) return;
       if (activeId && !isEndpoint(d, activeId)) return;
       tooltip.style("left", ev.pageX+"px").style("top", ev.pageY+"px");
     })
     .on("mouseleave", function(ev,d){
+      if (focusNotFound) return;
       if (activeId && !isEndpoint(d, activeId)) return;
       d3.select(this.parentNode).select("line").attr("stroke-opacity", 0.12 + d.value * 0.6);
       tooltip.style("opacity",0);
@@ -287,8 +290,8 @@ function buildGraph(){
       .on("start", (ev,d) => { if(!ev.active) sim.alphaTarget(0.25).restart(); d.fx=d.x; d.fy=d.y; })
       .on("drag", (ev,d) => { d.fx=ev.x; d.fy=ev.y; })
       .on("end", (ev,d) => { if(!ev.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }))
-    .on("mouseenter", (ev,d) => { if(!pinnedId && !searchId) highlight(d.id); })
-    .on("mouseleave", () => { if(!pinnedId && !searchId) highlight(null); })
+    .on("mouseenter", (ev,d) => { if(!pinnedId && !searchId && !focusNotFound) highlight(d.id); })
+    .on("mouseleave", () => { if(!pinnedId && !searchId && !focusNotFound) highlight(null); })
     .on("click", (ev,d) => {
       ev.stopPropagation();
       const newId = (pinnedId === d.id) ? null : d.id;

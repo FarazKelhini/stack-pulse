@@ -10,6 +10,7 @@ import { LivePulse } from '@/components/home/LivePulse';
 import FeaturedTech from '@/components/home/FeaturedTech';
 import { Suspense } from 'react';
 import { Star } from 'lucide-react';
+import { cachedFetch } from '@/lib/cache';
 import prisma from '@/lib/prisma';
 import { rateLimit } from '@/lib/rate-limit';
 import fs from 'node:fs/promises';
@@ -29,51 +30,57 @@ async function TrendingDataWrapper() {
     return <TrendingPreview trending={[]} layout="card" />;
   }
 
-  let trending: any[] = [];
-  try {
-    const technologies = await prisma.trendingSnapshot.findMany({
-      where: {
-        trendScore: { gt: 0 },
-        technology: { isActive: true },
-      },
-      orderBy: { snapshotDate: 'desc' },
-      take: 5,
-      select: {
-        technology: {
-          select: {
-            slug: true,
-            name: true,
-            category: true,
-            repoCount: true,
-          },
+  const fetchTrending = async () => {
+    try {
+      const technologies = await prisma.trendingSnapshot.findMany({
+        where: {
+          trendScore: { gt: 0 },
+          technology: { isActive: true },
         },
-        trendScore: true,
-      },
-    });
-    trending = technologies.map((t) => ({
-      ...t.technology,
-      trendScore: t.trendScore,
-    }));
-  } catch (e) {
-    console.error('Failed to fetch trending preview:', e);
-  }
+        orderBy: { snapshotDate: 'desc' },
+        take: 5,
+        select: {
+          technology: {
+            select: {
+              slug: true,
+              name: true,
+              category: true,
+              repoCount: true,
+            },
+          },
+          trendScore: true,
+        },
+      });
+      return technologies.map((t) => ({
+        ...t.technology,
+        trendScore: t.trendScore,
+      }));
+    } catch (e) {
+      console.error('Failed to fetch trending preview:', e);
+      return [];
+    }
+  };
+
+  const trending = await cachedFetch('home:trending', fetchTrending, 86400); // 24 hours
   return <TrendingPreview trending={trending} layout="card" />;
 }
 
 async function HotThisWeekWrapper() {
-  let technologies: any[] = [];
-  try {
-    // Use the same exported dataset as update-readme.ts so the preview and
-    // README have identical items and ranking.
-    const dataset = JSON.parse(
-      await fs.readFile(path.join(process.cwd(), 'public', 'datasets', 'weekly-trending.json'), 'utf8')
-    );
-    technologies = [...(dataset.technologies ?? [])]
-      .sort((a: any, b: any) => (b.weeklyPercentChange ?? 0) - (a.weeklyPercentChange ?? 0))
-      .slice(0, 5);
-  } catch (e) {
-    console.error('Failed to load weekly trending dataset:', e);
-  }
+  const fetchHot = async () => {
+    try {
+      const dataset = JSON.parse(
+        await fs.readFile(path.join(process.cwd(), 'public', 'datasets', 'weekly-trending.json'), 'utf8')
+      );
+      return [...(dataset.technologies ?? [])]
+        .sort((a: any, b: any) => (b.weeklyPercentChange ?? 0) - (a.weeklyPercentChange ?? 0))
+        .slice(0, 5);
+    } catch (e) {
+      console.error('Failed to load weekly trending dataset:', e);
+      return [];
+    }
+  };
+
+  const technologies = await cachedFetch('home:hot-this-week', fetchHot, 604800); // 7 days
   return <HotThisWeek technologies={technologies} />;
 }
 
@@ -86,20 +93,20 @@ async function FallingThisMonthWrapper() {
     return <FallingThisMonth technologies={[]} />;
   }
 
-  let technologies: any[] = [];
-  try {
-    // Find the most recent snapshot date
-    const latestSnapshot = await prisma.trendingSnapshot.findFirst({
-      where: { trendScore: { gt: 0 } },
-      orderBy: { snapshotDate: 'desc' },
-      select: { snapshotDate: true },
-    });
+  const fetchFalling = async () => {
+    try {
+      const latestSnapshot = await prisma.trendingSnapshot.findFirst({
+        where: { trendScore: { gt: 0 } },
+        orderBy: { snapshotDate: 'desc' },
+        select: { snapshotDate: true },
+      });
 
-    if (latestSnapshot) {
+      if (!latestSnapshot) return [];
+
       const falling = await prisma.trendingSnapshot.findMany({
         where: {
           snapshotDate: latestSnapshot.snapshotDate,
-          trendScore: { lt: 1 }, // Low trend score indicates falling
+          trendScore: { lt: 1 },
           technology: { isActive: true },
         },
         orderBy: { trendScore: 'asc' },
@@ -116,14 +123,17 @@ async function FallingThisMonthWrapper() {
           trendScore: true,
         },
       });
-      technologies = falling.map((t) => ({
+      return falling.map((t) => ({
         ...t.technology,
         trendScore: t.trendScore,
       }));
+    } catch (e) {
+      console.error('Failed to fetch falling technologies:', e);
+      return [];
     }
-  } catch (e) {
-    console.error('Failed to fetch falling technologies:', e);
-  }
+  };
+
+  const technologies = await cachedFetch('home:falling', fetchFalling, 86400); // 24 hours
   return <FallingThisMonth technologies={technologies} />;
 }
 
@@ -136,28 +146,31 @@ async function TopPerCategoryWrapper() {
     return <TopPerCategory categories={[]} />;
   }
 
-  try {
-    const categories = await prisma.technology.findMany({
-      where: { isActive: true },
-      select: { category: true },
-      distinct: ['category'],
-    }).then(async (c) => {
-      const results = [];
-      for (const cat of c) {
-        const topTech = await prisma.technology.findFirst({
-          where: { category: cat.category, isActive: true },
-          orderBy: { repoCount: 'desc' },
-          select: { slug: true, name: true, category: true, repoCount: true }
-        });
-        if (topTech) results.push(topTech);
-      }
-      return results;
-    });
-    return <TopPerCategory categories={categories} />;
-  } catch (e) {
-    console.error('Failed to fetch top per category:', e);
-    return <TopPerCategory categories={[]} />;
-  }
+  const fetchCategories = async () => {
+    try {
+      return await prisma.technology.findMany({
+        where: { isActive: true },
+        select: { category: true },
+        distinct: ['category'],
+      }).then(async (c) => {
+        return await Promise.all(
+          c.map(async (cat) => {
+            return await prisma.technology.findFirst({
+              where: { category: cat.category, isActive: true },
+              orderBy: { repoCount: 'desc' },
+              select: { slug: true, name: true, category: true, repoCount: true },
+            });
+          })
+        ).then((results) => results.filter((t): t is NonNullable<typeof t> => t !== null));
+      });
+    } catch (e) {
+      console.error('Failed to fetch top per category:', e);
+      return [];
+    }
+  };
+
+  const categories = await cachedFetch('home:top-categories', fetchCategories, 86400); // 24 hours
+  return <TopPerCategory categories={categories} />;
 }
 
 async function TopPairingsWrapper() {
@@ -169,33 +182,37 @@ async function TopPairingsWrapper() {
     return <TopPairings pairings={[]} />;
   }
 
-  try {
-    const pairings = await prisma.technologyPairing.findMany({
-      where: {
-        technologyA: { isActive: true },
-        technologyB: { isActive: true },
-      },
-      orderBy: { strengthScore: 'desc' },
-      take: 10,
-      include: {
-        technologyA: { select: { name: true, slug: true } },
-        technologyB: { select: { name: true, slug: true } },
-      },
-    });
+  const fetchPairings = async () => {
+    try {
+      const pairings = await prisma.technologyPairing.findMany({
+        where: {
+          technologyA: { isActive: true },
+          technologyB: { isActive: true },
+        },
+        orderBy: { strengthScore: 'desc' },
+        take: 10,
+        include: {
+          technologyA: { select: { name: true, slug: true } },
+          technologyB: { select: { name: true, slug: true } },
+        },
+      });
 
-    const results = pairings.map((p) => ({
-      techA: p.technologyA.name,
-      slugA: p.technologyA.slug,
-      techB: p.technologyB.name,
-      slugB: p.technologyB.slug,
-      strengthScore: Number(p.strengthScore.toFixed(2)),
-      repositoryCount: p.repositoryCount,
-    }));
-    return <TopPairings pairings={results} />;
-  } catch (e) {
-    console.error('Failed to fetch top pairings:', e);
-    return <TopPairings pairings={[]} />;
-  }
+      return pairings.map((p) => ({
+        techA: p.technologyA.name,
+        slugA: p.technologyA.slug,
+        techB: p.technologyB.name,
+        slugB: p.technologyB.slug,
+        strengthScore: Number(p.strengthScore.toFixed(2)),
+        repositoryCount: p.repositoryCount,
+      }));
+    } catch (e) {
+      console.error('Failed to fetch top pairings:', e);
+      return [];
+    }
+  };
+
+  const pairings = await cachedFetch('home:pairings', fetchPairings, 86400); // 24 hours
+  return <TopPairings pairings={pairings} />;
 }
 
 export default async function Home() {
