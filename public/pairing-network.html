@@ -457,7 +457,14 @@ searchInput.addEventListener("input", () => {
     showWarning(false);
     return;
   }
-  const found = nodeSel && nodeSel.data().find(d => d.id.toLowerCase().includes(q));
+  // Prefer an exact id match, then a prefix match, then fall back to a
+  // substring match. Plain "includes" alone would let "react" match
+  // "testing-library-react" before the actual "react" node.
+  const data = nodeSel ? nodeSel.data() : [];
+  const found =
+    data.find(d => d.id.toLowerCase() === q) ||
+    data.find(d => d.id.toLowerCase().startsWith(q)) ||
+    data.find(d => d.id.toLowerCase().includes(q));
   searchId = found ? found.id : "__none__";
   buildGraph._highlight && buildGraph._highlight(searchId);
 
