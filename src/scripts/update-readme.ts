@@ -85,7 +85,6 @@ async function main() {
       content += `| ${i + 1} | ${t.name} | ${t.category} | ${deltaDisplay} |\n`;
     });
  
-    content += `\n### 📉 Falling This Month\n| Name | 30-Day Trend |\n|---|---|\n`;
     const falling = [...trending]
       .filter(t => (t.adoptionDelta ?? 0) < 0)
       .map(t => {
@@ -101,9 +100,11 @@ async function main() {
       .sort((a, b) => a.percentChange - b.percentChange)
       .slice(0, 10);
 
-    falling.forEach(t => content += `| ${t.name} | ${t.percentChange.toFixed(1)}% |\n`);
-    if (falling.length === 0) content += `| No declining trends this month | - |\n`;
-    content += `\n`;
+    if (falling.length > 0) {
+      content += `\n### 📉 Falling This Month\n| Name | 30-Day Trend |\n|---|---|\n`;
+      falling.forEach(t => content += `| ${t.name} | ${t.percentChange.toFixed(1)}% |\n`);
+      content += `\n`;
+    }
 
     content += `### 🏷️ Top Per Category\n| Category | Top Technology |\n|---|---|\n`;
     const categories = Array.from(new Set(technologies.map(t => t.category))).sort();
