@@ -364,6 +364,7 @@ npm run trends            # Compute trend scores
 npm run export            # Export datasets to public/datasets/
 npm run validate-exports  # Validate exported dataset schemas
 npm run monitor           # Integrity check: find stale tech links
+npm run generate-network  # Generate pairing network file
 npm run test              # Run the Vitest suite
 ```
 
@@ -380,7 +381,8 @@ A scheduled GitHub Actions workflow (`.github/workflows/daily-pipeline.yml`) run
 7. `export` — Generate and commit datasets (export.ts)
 8. `validate-exports` — Validate exported dataset schemas
 9. `monitor` — Non-blocking integrity check (monitor_stale.ts). Final step; failures do not halt the pipeline.
-10. `commit` — Commit updated datasets back to the repo
+10. `network` - Generate pairing network file
+11. `commit` — Commit updated datasets back to the repo
 
 Every step is idempotent and resumable. Crawl failures and DB connection failures are treated as critical and halt the pipeline; failures in other steps degrade gracefully so later steps still run with whatever data is available.
 
