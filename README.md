@@ -1,3 +1,4 @@
+
 # StackPulse
 
 **THE JAVASCRIPT ECOSYSTEM — OBSERVED DAILY**
@@ -5,7 +6,7 @@
 <div align="center">
 
 <a href="https://stack-pulse-data.vercel.app/network">
-  <img width="800" height="369" alt="demo" src="https://github.com/user-attachments/assets/dd60649f-7b6c-4d9c-b389-79bdee3494cf" />
+  <img width="800" height="369" alt="StackPulse Demo" src="https://github.com/user-attachments/assets/a73c0960-57ee-4b1d-bb90-0dc66ac1e50c" />
 </a>
 
 <a href="https://stack-pulse-data.vercel.app/network">
