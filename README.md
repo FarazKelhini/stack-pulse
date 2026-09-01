@@ -10,7 +10,7 @@
 </a>
 
 <a href="https://stack-pulse-data.vercel.app/network">
-  <img src="https://img.shields.io/badge/Explore%20Network%20Visualization-000000?style=for-the-badge&logoColor=white" alt="Explore Network Visualization" />
+  <img src="https://img.shields.io/badge/Explore%20Network%20Visualization%20→-000000?style=for-the-badge&logoColor=white" alt="Explore Network Visualization" />
 </a>
 
 </div>
