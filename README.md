@@ -28,7 +28,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 1, 2026)
+## The Pulse (Updated: September 2, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -36,38 +36,32 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 67.4% | ▲ +4.13 |
-| React | 30.9% | ▲ +3.76 |
-| Vitest | 20.4% | ▲ +3.70 |
-| Jest | 17.3% | ▲ +3.20 |
-| Vite | 16.3% | ▲ +3.58 |
+| TypeScript | 67.8% | ▲ +4.15 |
+| React | 31.1% | ▲ +3.79 |
+| Vitest | 20.5% | ▲ +3.72 |
+| Jest | 17.4% | ▲ +3.21 |
+| Vite | 16.5% | ▲ +3.61 |
 | Babel | 14.0% | ▲ +3.07 |
 | rimraf | 13.9% | ▲ +3.12 |
 | Mocha | 13.5% | ▲ +3.05 |
-| Webpack | 12.6% | ▲ +3.00 |
-| cross-env | 12.4% | ▲ +3.08 |
+| Webpack | 12.6% | ▲ +3.01 |
+| cross-env | 12.4% | ▲ +3.09 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | React Bootstrap | UILibraries | ▲ +15.4% |
-| 2 | Zustand | StateManagement | ▲ +9.3% |
-| 3 | Lucide | UILibraries | ▲ +9% |
-| 4 | Knex.js | ORMs | ▲ +8.7% |
-| 5 | Bcrypt.js | Authentication | ▲ +8.5% |
-| 6 | Better SQLite3 | Databases | ▲ +8.4% |
-| 7 | Chakra UI | UILibraries | ▲ +8.3% |
-| 8 | Material UI | UILibraries | ▲ +7.7% |
-| 9 | PM2 | BuildTools | ▲ +7.4% |
-| 10 | SvelteKit | Frameworks | ▲ +7.1% |
-
-### 📉 Falling This Month
-| Name | 30-Day Trend |
-|---|---|
-| No declining trends this month | - |
-
+| 1 | React Bootstrap | UILibraries | ▲ +23.1% |
+| 2 | Lucide | UILibraries | ▲ +10.5% |
+| 3 | Material UI | UILibraries | ▲ +9.6% |
+| 4 | Zustand | StateManagement | ▲ +9.2% |
+| 5 | Knex.js | ORMs | ▲ +8.7% |
+| 6 | Bcrypt.js | Authentication | ▲ +8.5% |
+| 7 | Better SQLite3 | Databases | ▲ +8.3% |
+| 8 | ioredis | Databases | ▲ +8.3% |
+| 9 | Supabase | Databases | ▲ +8.3% |
+| 10 | Chakra UI | UILibraries | ▲ +8.3% |
 ### 🏷️ Top Per Category
 | Category | Top Technology |
 |---|---|
@@ -85,11 +79,11 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Tech A | Tech B | Strength Score |
 |---|---|---|
 | cva | tailwind-merge | 0.77 |
-| clsx | tailwind-merge | 0.73 |
+| clsx | tailwind-merge | 0.74 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.66 |
-| cva | clsx | 0.61 |
-| lucide-react | tailwind-merge | 0.61 |
+| cva | clsx | 0.62 |
+| lucide-react | tailwind-merge | 0.60 |
 | cva | lucide-react | 0.59 |
 | lucide-react | clsx | 0.56 |
 | mobx | mobx-react | 0.55 |
