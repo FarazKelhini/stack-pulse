@@ -232,6 +232,9 @@ function buildGraph(){
         linkVisible.attr("stroke-opacity", d => 0.12 + d.value * 0.6);
         node.attr("opacity", 1).attr("stroke", "#1c2230");
         label.classed("dim", false);
+        // Nothing is dimmed, so every hit-line should be able to catch
+        // pointer events again.
+        linkHit.style("pointer-events", "auto");
       }
       return;
     }
@@ -245,6 +248,10 @@ function buildGraph(){
       label.classed("dim", true);
       // Ensure tooltip is hidden if search fails
       tooltip.style("opacity", 0);
+      // Nothing qualifies as "connected" here, so no hit-line should be
+      // interactive (and none should be able to block another, since
+      // there's nothing left to reveal underneath).
+      linkHit.style("pointer-events", "none");
       return;
     }
 
@@ -261,6 +268,18 @@ function buildGraph(){
     node.attr("opacity", d => connected.has(d.id) ? 1 : 0.2)
         .attr("stroke", d => d.id === id ? "#fff" : "#1c2230");
     label.classed("dim", d => !connected.has(d.id));
+
+    // The dimmed hit-lines are still full-width and still sit in the DOM
+    // wherever they were originally drawn, so a dimmed pairing that
+    // geometrically crosses a highlighted one can end up painted on top
+    // of it and silently absorb the hover/click before it ever reaches
+    // the highlighted line underneath (its own handlers just no-op on
+    // account of activeId). Turning pointer-events off for every dimmed
+    // hit-line lets the mouse "see through" it to whatever's beneath.
+    linkHit.style("pointer-events", l => {
+      const s = l.source.id ?? l.source, t = l.target.id ?? l.target;
+      return (s===id||t===id) ? "auto" : "none";
+    });
   }
   buildGraph._highlight = (id) => { if(!pinnedId) highlight(id); };
 
