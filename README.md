@@ -1,7 +1,7 @@
 
 # StackPulse
 
-**THE JAVASCRIPT ECOSYSTEM — OBSERVED DAILY**
+**THE JAVASCRIPT ECOSYSTEM | OBSERVED DAILY**
 
 <div align="center">
 
