@@ -5,16 +5,16 @@
 
 <div align="center">
 
-<a href="https://stack-pulse-data.vercel.app/">
-  <img width="800" height="431" alt="Demo2" src="https://github.com/user-attachments/assets/d3e85106-2dce-41ea-a6b7-8e28a7e45241" />
+<a href="https://stack-pulse-data.vercel.app/network">
+  <img width="800" height="369" alt="StackPulse Demo" src="https://github.com/user-attachments/assets/a73c0960-57ee-4b1d-bb90-0dc66ac1e50c" />
 </a>
 
 <a href="https://stack-pulse-data.vercel.app/network">
   <img src="https://img.shields.io/badge/Explore%20Network%20Visualization%20→-000000?style=for-the-badge&logoColor=white" alt="Explore Network Visualization" />
 </a>
 
-<a href="https://stack-pulse-data.vercel.app/network">
-  <img width="800" height="369" alt="StackPulse Demo" src="https://github.com/user-attachments/assets/a73c0960-57ee-4b1d-bb90-0dc66ac1e50c" />
+<a href="https://stack-pulse-data.vercel.app/">
+  <img width="800" height="431" alt="Demo2" src="https://github.com/user-attachments/assets/d3e85106-2dce-41ea-a6b7-8e28a7e45241" />
 </a>
 
 </div>
