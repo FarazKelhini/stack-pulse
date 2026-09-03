@@ -34,7 +34,7 @@ interface FallingThisMonthProps {
 
 export function FallingThisMonth({ technologies }: FallingThisMonthProps) {
   const validTechnologies = technologies?.filter(
-    (tech) => tech.percentChange !== undefined && tech.percentChange !== null
+    (tech) => tech.percentChange !== undefined && tech.percentChange !== null && tech.percentChange < 0
   );
 
   if (!validTechnologies || validTechnologies.length === 0) {
@@ -45,7 +45,7 @@ export function FallingThisMonth({ technologies }: FallingThisMonthProps) {
           Falling This Month
         </h2>
         <p className="text-muted-foreground italic py-4 text-sm text-center">
-          No declining technologies recorded this month.
+          There have been no falling technologies this month.
         </p>
       </div>
     );
