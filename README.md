@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 3, 2026)
+## The Pulse (Updated: September 4, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -41,11 +41,11 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
 | TypeScript | 68.2% | ▲ +4.18 |
-| React | 31.2% | ▲ +3.81 |
-| Vitest | 20.6% | ▲ +3.75 |
+| React | 31.3% | ▲ +3.81 |
+| Vitest | 20.7% | ▲ +3.76 |
 | Jest | 17.4% | ▲ +3.21 |
 | Vite | 16.5% | ▲ +3.63 |
-| Babel | 14.0% | ▲ +3.07 |
+| Babel | 14.0% | ▲ +3.08 |
 | rimraf | 13.9% | ▲ +3.12 |
 | Mocha | 13.5% | ▲ +3.05 |
 | Webpack | 12.6% | ▲ +3.01 |
@@ -57,15 +57,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | React Bootstrap | UILibraries | ▲ +23.1% |
-| 2 | Lucide | UILibraries | ▲ +8.7% |
-| 3 | Knex.js | ORMs | ▲ +8.7% |
-| 4 | Better SQLite3 | Databases | ▲ +8.3% |
-| 5 | Supabase | Databases | ▲ +8.3% |
-| 6 | Bcrypt.js | Authentication | ▲ +8.2% |
-| 7 | ioredis | Databases | ▲ +8.2% |
-| 8 | Material UI | UILibraries | ▲ +7.5% |
-| 9 | PM2 | BuildTools | ▲ +7.4% |
-| 10 | Zustand | StateManagement | ▲ +7.3% |
+| 2 | Knex.js | ORMs | ▲ +8.7% |
+| 3 | ioredis | Databases | ▲ +8.2% |
+| 4 | Lucide | UILibraries | ▲ +7.8% |
+| 5 | PM2 | BuildTools | ▲ +7.4% |
+| 6 | SvelteKit | Frameworks | ▲ +7.1% |
+| 7 | Ajv | Validation | ▲ +6.5% |
+| 8 | Bcrypt.js | Authentication | ▲ +6.5% |
+| 9 | MySQL2 | Databases | ▲ +6.3% |
+| 10 | Clerk (Next.js) | Authentication | ▲ +6.3% |
 ### 🏷️ Top Per Category
 | Category | Top Technology |
 |---|---|
@@ -86,9 +86,9 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | clsx | tailwind-merge | 0.74 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.66 |
-| cva | clsx | 0.61 |
+| cva | clsx | 0.62 |
 | lucide-react | tailwind-merge | 0.60 |
-| cva | lucide-react | 0.59 |
+| cva | lucide-react | 0.58 |
 | lucide-react | clsx | 0.56 |
 | mobx | mobx-react | 0.55 |
 | mui-material | emotion-react | 0.52 |
