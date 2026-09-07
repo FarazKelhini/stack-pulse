@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 6, 2026)
+## The Pulse (Updated: September 7, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,15 +40,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 69.0% | ▲ +4.23 |
-| React | 31.5% | ▲ +3.85 |
-| Vitest | 21.0% | ▲ +3.82 |
+| TypeScript | 69.3% | ▲ +4.25 |
+| React | 31.7% | ▲ +3.88 |
+| Vitest | 21.2% | ▲ +3.86 |
 | Jest | 17.4% | ▲ +3.22 |
-| Vite | 16.8% | ▲ +3.70 |
-| Babel | 14.0% | ▲ +3.09 |
+| Vite | 17.0% | ▲ +3.74 |
+| Babel | 14.1% | ▲ +3.09 |
 | rimraf | 13.9% | ▲ +3.12 |
 | Mocha | 13.5% | ▲ +3.06 |
-| Tailwind CSS | 12.7% | ▲ +3.62 |
+| Tailwind CSS | 12.8% | ▲ +3.67 |
 | Webpack | 12.6% | ▲ +3.02 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
@@ -56,16 +56,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | React Bootstrap | UILibraries | ▲ +23.1% |
-| 2 | Knex.js | ORMs | ▲ +13% |
-| 3 | Lucide | UILibraries | ▲ +9.4% |
-| 4 | Zustand | StateManagement | ▲ +9.4% |
-| 5 | MySQL2 | Databases | ▲ +9.4% |
-| 6 | ioredis | Databases | ▲ +8.2% |
-| 7 | Bcrypt.js | Authentication | ▲ +8.1% |
-| 8 | Fastify | Frameworks | ▲ +7.7% |
-| 9 | PM2 | BuildTools | ▲ +7.4% |
-| 10 | Zod | Validation | ▲ +7.2% |
+| 1 | MySQL2 | Databases | ▲ +9.4% |
+| 2 | Knex.js | ORMs | ▲ +8.3% |
+| 3 | Drizzle ORM | ORMs | ▲ +8.1% |
+| 4 | Fastify | Frameworks | ▲ +7.7% |
+| 5 | Lucide | UILibraries | ▲ +7.2% |
+| 6 | SvelteKit | Frameworks | ▲ +7.1% |
+| 7 | Ajv | Validation | ▲ +7% |
+| 8 | React Bootstrap | UILibraries | ▲ +6.7% |
+| 9 | ioredis | Databases | ▲ +6.5% |
+| 10 | Bcrypt.js | Authentication | ▲ +6.3% |
 ### 🏷️ Top Per Category
 | Category | Top Technology |
 |---|---|
