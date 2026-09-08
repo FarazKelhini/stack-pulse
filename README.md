@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 7, 2026)
+## The Pulse (Updated: September 8, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,32 +40,32 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 69.3% | ▲ +4.25 |
-| React | 31.7% | ▲ +3.88 |
-| Vitest | 21.2% | ▲ +3.86 |
-| Jest | 17.4% | ▲ +3.22 |
-| Vite | 17.0% | ▲ +3.74 |
-| Babel | 14.1% | ▲ +3.09 |
+| TypeScript | 69.9% | ▲ +4.29 |
+| React | 32.0% | ▲ +3.92 |
+| Vitest | 21.4% | ▲ +3.90 |
+| Jest | 17.5% | ▲ +3.23 |
+| Vite | 17.3% | ▲ +3.82 |
+| Babel | 14.0% | ▲ +3.09 |
 | rimraf | 13.9% | ▲ +3.12 |
 | Mocha | 13.5% | ▲ +3.06 |
-| Tailwind CSS | 12.8% | ▲ +3.67 |
-| Webpack | 12.6% | ▲ +3.02 |
+| Tailwind CSS | 13.1% | ▲ +3.74 |
+| Webpack | 12.7% | ▲ +3.03 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | MySQL2 | Databases | ▲ +9.4% |
-| 2 | Knex.js | ORMs | ▲ +8.3% |
-| 3 | Drizzle ORM | ORMs | ▲ +8.1% |
-| 4 | Fastify | Frameworks | ▲ +7.7% |
-| 5 | Lucide | UILibraries | ▲ +7.2% |
-| 6 | SvelteKit | Frameworks | ▲ +7.1% |
-| 7 | Ajv | Validation | ▲ +7% |
-| 8 | React Bootstrap | UILibraries | ▲ +6.7% |
-| 9 | ioredis | Databases | ▲ +6.5% |
-| 10 | Bcrypt.js | Authentication | ▲ +6.3% |
+| 1 | Kysely | ORMs | ▲ +20% |
+| 2 | Lucide | UILibraries | ▲ +8.8% |
+| 3 | Zustand | StateManagement | ▲ +8% |
+| 4 | Supabase | Databases | ▲ +7.8% |
+| 5 | Fastify | Frameworks | ▲ +7.7% |
+| 6 | Ajv | Validation | ▲ +7.6% |
+| 7 | Framer Motion | UILibraries | ▲ +7.3% |
+| 8 | Drizzle ORM | ORMs | ▲ +6.7% |
+| 9 | SvelteKit | Frameworks | ▲ +6.7% |
+| 10 | React Bootstrap | UILibraries | ▲ +6.7% |
 ### 🏷️ Top Per Category
 | Category | Top Technology |
 |---|---|
@@ -87,11 +87,11 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.66 |
 | cva | clsx | 0.62 |
-| lucide-react | tailwind-merge | 0.60 |
+| lucide-react | tailwind-merge | 0.59 |
 | cva | lucide-react | 0.58 |
-| lucide-react | clsx | 0.56 |
+| lucide-react | clsx | 0.55 |
 | mobx | mobx-react | 0.55 |
-| mui-material | emotion-react | 0.53 |
+| mui-material | emotion-react | 0.52 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
 
