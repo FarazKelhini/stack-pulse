@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 8, 2026)
+## The Pulse (Updated: September 9, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,12 +40,12 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 69.9% | ▲ +4.29 |
+| TypeScript | 70.0% | ▲ +4.30 |
 | React | 32.0% | ▲ +3.92 |
-| Vitest | 21.4% | ▲ +3.90 |
+| Vitest | 21.4% | ▲ +3.91 |
 | Jest | 17.5% | ▲ +3.23 |
-| Vite | 17.3% | ▲ +3.82 |
-| Babel | 14.0% | ▲ +3.09 |
+| Vite | 17.3% | ▲ +3.83 |
+| Babel | 14.0% | ▲ +3.08 |
 | rimraf | 13.9% | ▲ +3.12 |
 | Mocha | 13.5% | ▲ +3.06 |
 | Tailwind CSS | 13.1% | ▲ +3.74 |
@@ -57,15 +57,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | Kysely | ORMs | ▲ +20% |
-| 2 | Lucide | UILibraries | ▲ +8.8% |
-| 3 | Zustand | StateManagement | ▲ +8% |
-| 4 | Supabase | Databases | ▲ +7.8% |
-| 5 | Fastify | Frameworks | ▲ +7.7% |
-| 6 | Ajv | Validation | ▲ +7.6% |
-| 7 | Framer Motion | UILibraries | ▲ +7.3% |
-| 8 | Drizzle ORM | ORMs | ▲ +6.7% |
-| 9 | SvelteKit | Frameworks | ▲ +6.7% |
-| 10 | React Bootstrap | UILibraries | ▲ +6.7% |
+| 2 | Fastify | Frameworks | ▲ +7.7% |
+| 3 | Zustand | StateManagement | ▲ +7.4% |
+| 4 | Lucide | UILibraries | ▲ +7% |
+| 5 | SvelteKit | Frameworks | ▲ +6.7% |
+| 6 | Ajv | Validation | ▲ +6.3% |
+| 7 | Bcrypt.js | Authentication | ▲ +6.3% |
+| 8 | MySQL2 | Databases | ▲ +6.1% |
+| 9 | Framer Motion | UILibraries | ▲ +6% |
+| 10 | Supabase | Databases | ▲ +5.8% |
 ### 🏷️ Top Per Category
 | Category | Top Technology |
 |---|---|
