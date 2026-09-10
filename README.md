@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 9, 2026)
+## The Pulse (Updated: September 10, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,11 +40,11 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 70.0% | ▲ +4.30 |
-| React | 32.0% | ▲ +3.92 |
-| Vitest | 21.4% | ▲ +3.91 |
+| TypeScript | 70.2% | ▲ +4.31 |
+| React | 32.1% | ▲ +3.93 |
+| Vitest | 21.5% | ▲ +3.93 |
 | Jest | 17.5% | ▲ +3.23 |
-| Vite | 17.3% | ▲ +3.83 |
+| Vite | 17.4% | ▲ +3.86 |
 | Babel | 14.0% | ▲ +3.08 |
 | rimraf | 13.9% | ▲ +3.12 |
 | Mocha | 13.5% | ▲ +3.06 |
@@ -57,15 +57,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | Kysely | ORMs | ▲ +20% |
-| 2 | Fastify | Frameworks | ▲ +7.7% |
-| 3 | Zustand | StateManagement | ▲ +7.4% |
-| 4 | Lucide | UILibraries | ▲ +7% |
-| 5 | SvelteKit | Frameworks | ▲ +6.7% |
-| 6 | Ajv | Validation | ▲ +6.3% |
-| 7 | Bcrypt.js | Authentication | ▲ +6.3% |
-| 8 | MySQL2 | Databases | ▲ +6.1% |
-| 9 | Framer Motion | UILibraries | ▲ +6% |
-| 10 | Supabase | Databases | ▲ +5.8% |
+| 2 | SvelteKit | Frameworks | ▲ +13.3% |
+| 3 | daisyUI | UILibraries | ▲ +9.5% |
+| 4 | Fastify | Frameworks | ▲ +7.7% |
+| 5 | Zustand | StateManagement | ▲ +6.8% |
+| 6 | Lucide | UILibraries | ▲ +5.6% |
+| 7 | Ajv | Validation | ▲ +5.6% |
+| 8 | Vite | BuildTools | ▲ +5.5% |
+| 9 | Playwright | Testing | ▲ +5.4% |
+| 10 | Framer Motion | UILibraries | ▲ +5.4% |
 ### 🏷️ Top Per Category
 | Category | Top Technology |
 |---|---|
@@ -84,7 +84,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 |---|---|---|
 | cva | tailwind-merge | 0.77 |
 | clsx | tailwind-merge | 0.74 |
-| testing-library-react | testing-library-jest-dom | 0.67 |
+| testing-library-react | testing-library-jest-dom | 0.66 |
 | react-redux | redux | 0.66 |
 | cva | clsx | 0.62 |
 | lucide-react | tailwind-merge | 0.59 |
