@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 10, 2026)
+## The Pulse (Updated: September 11, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,16 +40,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 70.2% | ▲ +4.31 |
-| React | 32.1% | ▲ +3.93 |
-| Vitest | 21.5% | ▲ +3.93 |
-| Jest | 17.5% | ▲ +3.23 |
-| Vite | 17.4% | ▲ +3.86 |
-| Babel | 14.0% | ▲ +3.08 |
-| rimraf | 13.9% | ▲ +3.12 |
-| Mocha | 13.5% | ▲ +3.06 |
-| Tailwind CSS | 13.1% | ▲ +3.74 |
-| Webpack | 12.7% | ▲ +3.03 |
+| TypeScript | 71.1% | ▲ +4.37 |
+| React | 32.4% | ▲ +3.98 |
+| Vitest | 21.7% | ▲ +3.98 |
+| Vite | 17.7% | ▲ +3.93 |
+| Jest | 17.6% | ▲ +3.25 |
+| Babel | 14.1% | ▲ +3.10 |
+| rimraf | 13.9% | ▲ +3.14 |
+| Mocha | 13.6% | ▲ +3.07 |
+| Tailwind CSS | 13.3% | ▲ +3.82 |
+| Webpack | 12.7% | ▲ +3.05 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -57,15 +57,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | Kysely | ORMs | ▲ +20% |
-| 2 | SvelteKit | Frameworks | ▲ +13.3% |
-| 3 | daisyUI | UILibraries | ▲ +9.5% |
-| 4 | Fastify | Frameworks | ▲ +7.7% |
-| 5 | Zustand | StateManagement | ▲ +6.8% |
-| 6 | Lucide | UILibraries | ▲ +5.6% |
-| 7 | Ajv | Validation | ▲ +5.6% |
-| 8 | Vite | BuildTools | ▲ +5.5% |
-| 9 | Playwright | Testing | ▲ +5.4% |
-| 10 | Framer Motion | UILibraries | ▲ +5.4% |
+| 2 | daisyUI | UILibraries | ▲ +14.3% |
+| 3 | SvelteKit | Frameworks | ▲ +13.3% |
+| 4 | Prisma | ORMs | ▲ +8.6% |
+| 5 | Zustand | StateManagement | ▲ +7.9% |
+| 6 | Fastify | Frameworks | ▲ +7.7% |
+| 7 | Lucide | UILibraries | ▲ +7.5% |
+| 8 | Vite | BuildTools | ▲ +7% |
+| 9 | Class Variance Authority | UILibraries | ▲ +6.7% |
+| 10 | Playwright | Testing | ▲ +6.6% |
 ### 🏷️ Top Per Category
 | Category | Top Technology |
 |---|---|
@@ -84,14 +84,14 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 |---|---|---|
 | cva | tailwind-merge | 0.77 |
 | clsx | tailwind-merge | 0.74 |
-| testing-library-react | testing-library-jest-dom | 0.66 |
 | react-redux | redux | 0.66 |
+| testing-library-react | testing-library-jest-dom | 0.66 |
 | cva | clsx | 0.62 |
 | lucide-react | tailwind-merge | 0.59 |
 | cva | lucide-react | 0.58 |
 | lucide-react | clsx | 0.55 |
 | mobx | mobx-react | 0.55 |
-| mui-material | emotion-react | 0.52 |
+| mui-material | emotion-react | 0.53 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
 
