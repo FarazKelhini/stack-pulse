@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 11, 2026)
+## The Pulse (Updated: September 12, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,10 +40,10 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 71.1% | ▲ +4.37 |
+| TypeScript | 71.0% | ▲ +4.37 |
 | React | 32.4% | ▲ +3.98 |
 | Vitest | 21.7% | ▲ +3.98 |
-| Vite | 17.7% | ▲ +3.93 |
+| Vite | 17.7% | ▲ +3.94 |
 | Jest | 17.6% | ▲ +3.25 |
 | Babel | 14.1% | ▲ +3.10 |
 | rimraf | 13.9% | ▲ +3.14 |
@@ -60,12 +60,12 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | 2 | daisyUI | UILibraries | ▲ +14.3% |
 | 3 | SvelteKit | Frameworks | ▲ +13.3% |
 | 4 | Prisma | ORMs | ▲ +8.6% |
-| 5 | Zustand | StateManagement | ▲ +7.9% |
-| 6 | Fastify | Frameworks | ▲ +7.7% |
-| 7 | Lucide | UILibraries | ▲ +7.5% |
-| 8 | Vite | BuildTools | ▲ +7% |
-| 9 | Class Variance Authority | UILibraries | ▲ +6.7% |
-| 10 | Playwright | Testing | ▲ +6.6% |
+| 5 | Svelte | Frameworks | ▲ +6.6% |
+| 6 | SolidJS | Frameworks | ▲ +6.5% |
+| 7 | Vite | BuildTools | ▲ +6.1% |
+| 8 | Pinia | StateManagement | ▲ +5.9% |
+| 9 | Clerk (Next.js) | Authentication | ▲ +5.9% |
+| 10 | Lucide | UILibraries | ▲ +5.8% |
 ### 🏷️ Top Per Category
 | Category | Top Technology |
 |---|---|
