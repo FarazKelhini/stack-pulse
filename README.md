@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 12, 2026)
+## The Pulse (Updated: September 13, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,16 +40,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 71.0% | ▲ +4.37 |
-| React | 32.4% | ▲ +3.98 |
-| Vitest | 21.7% | ▲ +3.98 |
-| Vite | 17.7% | ▲ +3.94 |
-| Jest | 17.6% | ▲ +3.25 |
-| Babel | 14.1% | ▲ +3.10 |
-| rimraf | 13.9% | ▲ +3.14 |
-| Mocha | 13.6% | ▲ +3.07 |
-| Tailwind CSS | 13.3% | ▲ +3.82 |
-| Webpack | 12.7% | ▲ +3.05 |
+| TypeScript | 71.3% | ▲ +4.19 |
+| React | 32.5% | ▲ +3.78 |
+| Vitest | 21.9% | ▲ +3.86 |
+| Vite | 17.8% | ▲ +3.79 |
+| Jest | 17.6% | ▲ +3.12 |
+| Babel | 14.1% | ▲ +2.96 |
+| rimraf | 14.0% | ▲ +3.01 |
+| Mocha | 13.6% | ▲ +2.93 |
+| Tailwind CSS | 13.4% | ▲ +3.60 |
+| Webpack | 12.7% | ▲ +2.95 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -63,9 +63,17 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | 5 | Svelte | Frameworks | ▲ +6.6% |
 | 6 | SolidJS | Frameworks | ▲ +6.5% |
 | 7 | Vite | BuildTools | ▲ +6.1% |
-| 8 | Pinia | StateManagement | ▲ +5.9% |
-| 9 | Clerk (Next.js) | Authentication | ▲ +5.9% |
-| 10 | Lucide | UILibraries | ▲ +5.8% |
+| 8 | Clerk (Next.js) | Authentication | ▲ +5.9% |
+| 9 | Better SQLite3 | Databases | ▲ +5.8% |
+| 10 | Bcrypt | Authentication | ▲ +5.3% |
+
+### 📉 Falling This Month
+| Name | 30-Day Trend |
+|---|---|
+| Parcel | -5.3% |
+| Redux | -0.7% |
+| React Redux | -0.7% |
+
 ### 🏷️ Top Per Category
 | Category | Top Technology |
 |---|---|
@@ -87,7 +95,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | react-redux | redux | 0.66 |
 | testing-library-react | testing-library-jest-dom | 0.66 |
 | cva | clsx | 0.62 |
-| lucide-react | tailwind-merge | 0.59 |
+| lucide-react | tailwind-merge | 0.58 |
 | cva | lucide-react | 0.58 |
 | lucide-react | clsx | 0.55 |
 | mobx | mobx-react | 0.55 |
