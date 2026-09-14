@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 13, 2026)
+## The Pulse (Updated: September 14, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,15 +40,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 71.3% | ▲ +4.19 |
-| React | 32.5% | ▲ +3.78 |
-| Vitest | 21.9% | ▲ +3.86 |
-| Vite | 17.8% | ▲ +3.79 |
-| Jest | 17.6% | ▲ +3.12 |
-| Babel | 14.1% | ▲ +2.96 |
-| rimraf | 14.0% | ▲ +3.01 |
-| Mocha | 13.6% | ▲ +2.93 |
-| Tailwind CSS | 13.4% | ▲ +3.60 |
+| TypeScript | 71.8% | ▲ +4.23 |
+| React | 32.7% | ▲ +3.81 |
+| Vitest | 22.1% | ▲ +3.90 |
+| Vite | 17.9% | ▲ +3.81 |
+| Jest | 17.6% | ▲ +3.14 |
+| Babel | 14.1% | ▲ +2.97 |
+| rimraf | 14.0% | ▲ +3.02 |
+| Mocha | 13.6% | ▲ +2.94 |
+| Tailwind CSS | 13.5% | ▲ +3.65 |
 | Webpack | 12.7% | ▲ +2.95 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
@@ -59,13 +59,13 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | 1 | Kysely | ORMs | ▲ +20% |
 | 2 | daisyUI | UILibraries | ▲ +14.3% |
 | 3 | SvelteKit | Frameworks | ▲ +13.3% |
-| 4 | Prisma | ORMs | ▲ +8.6% |
-| 5 | Svelte | Frameworks | ▲ +6.6% |
-| 6 | SolidJS | Frameworks | ▲ +6.5% |
-| 7 | Vite | BuildTools | ▲ +6.1% |
-| 8 | Clerk (Next.js) | Authentication | ▲ +5.9% |
-| 9 | Better SQLite3 | Databases | ▲ +5.8% |
-| 10 | Bcrypt | Authentication | ▲ +5.3% |
+| 4 | Prisma | ORMs | ▲ +9.9% |
+| 5 | Better SQLite3 | Databases | ▲ +8.3% |
+| 6 | Svelte | Frameworks | ▲ +6.6% |
+| 7 | Clerk (Next.js) | Authentication | ▲ +5.9% |
+| 8 | Valibot | Validation | ▲ +5.9% |
+| 9 | Vite | BuildTools | ▲ +5.7% |
+| 10 | Tailwind CSS | UILibraries | ▲ +5.3% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -95,7 +95,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | react-redux | redux | 0.66 |
 | testing-library-react | testing-library-jest-dom | 0.66 |
 | cva | clsx | 0.62 |
-| lucide-react | tailwind-merge | 0.58 |
+| lucide-react | tailwind-merge | 0.59 |
 | cva | lucide-react | 0.58 |
 | lucide-react | clsx | 0.55 |
 | mobx | mobx-react | 0.55 |
