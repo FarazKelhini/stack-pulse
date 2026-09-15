@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 14, 2026)
+## The Pulse (Updated: September 15, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,37 +40,38 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 71.8% | ▲ +4.23 |
-| React | 32.7% | ▲ +3.81 |
-| Vitest | 22.1% | ▲ +3.90 |
-| Vite | 17.9% | ▲ +3.81 |
-| Jest | 17.6% | ▲ +3.14 |
-| Babel | 14.1% | ▲ +2.97 |
-| rimraf | 14.0% | ▲ +3.02 |
-| Mocha | 13.6% | ▲ +2.94 |
-| Tailwind CSS | 13.5% | ▲ +3.65 |
-| Webpack | 12.7% | ▲ +2.95 |
+| TypeScript | 71.9% | ▲ +4.19 |
+| React | 32.7% | ▲ +3.78 |
+| Vitest | 22.2% | ▲ +3.87 |
+| Vite | 17.9% | ▲ +3.76 |
+| Jest | 17.6% | ▲ +3.13 |
+| Babel | 14.1% | ▲ +2.96 |
+| rimraf | 14.0% | ▲ +3.01 |
+| Mocha | 13.6% | ▲ +2.92 |
+| Tailwind CSS | 13.5% | ▲ +3.60 |
+| Webpack | 12.7% | ▲ +2.93 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Kysely | ORMs | ▲ +20% |
-| 2 | daisyUI | UILibraries | ▲ +14.3% |
-| 3 | SvelteKit | Frameworks | ▲ +13.3% |
-| 4 | Prisma | ORMs | ▲ +9.9% |
-| 5 | Better SQLite3 | Databases | ▲ +8.3% |
-| 6 | Svelte | Frameworks | ▲ +6.6% |
-| 7 | Clerk (Next.js) | Authentication | ▲ +5.9% |
-| 8 | Valibot | Validation | ▲ +5.9% |
-| 9 | Vite | BuildTools | ▲ +5.7% |
-| 10 | Tailwind CSS | UILibraries | ▲ +5.3% |
+| 1 | daisyUI | UILibraries | ▲ +9.1% |
+| 2 | Better SQLite3 | Databases | ▲ +8.3% |
+| 3 | Prisma | ORMs | ▲ +8.3% |
+| 4 | SvelteKit | Frameworks | ▲ +6.3% |
+| 5 | Clerk (Next.js) | Authentication | ▲ +5.9% |
+| 6 | Valibot | Validation | ▲ +5.9% |
+| 7 | Svelte | Frameworks | ▲ +4.8% |
+| 8 | Zod | Validation | ▲ +4.4% |
+| 9 | Sequelize | ORMs | ▲ +4.3% |
+| 10 | Ajv | Validation | ▲ +4.1% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
 | Parcel | -5.3% |
+| Joi | -3.6% |
 | Redux | -0.7% |
 | React Redux | -0.7% |
 
