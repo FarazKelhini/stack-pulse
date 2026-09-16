@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 15, 2026)
+## The Pulse (Updated: September 16, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,40 +40,38 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 71.9% | ▲ +4.19 |
-| React | 32.7% | ▲ +3.78 |
-| Vitest | 22.2% | ▲ +3.87 |
-| Vite | 17.9% | ▲ +3.76 |
-| Jest | 17.6% | ▲ +3.13 |
-| Babel | 14.1% | ▲ +2.96 |
+| TypeScript | 72.6% | ▲ +4.23 |
+| React | 33.1% | ▲ +3.83 |
+| Vitest | 22.5% | ▲ +3.93 |
+| Vite | 18.2% | ▲ +3.81 |
+| Jest | 17.7% | ▲ +3.14 |
+| Babel | 14.1% | ▲ +2.97 |
 | rimraf | 14.0% | ▲ +3.01 |
-| Mocha | 13.6% | ▲ +2.92 |
-| Tailwind CSS | 13.5% | ▲ +3.60 |
-| Webpack | 12.7% | ▲ +2.93 |
+| Tailwind CSS | 13.7% | ▲ +3.65 |
+| Mocha | 13.6% | ▲ +2.94 |
+| Webpack | 12.7% | ▲ +2.94 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | daisyUI | UILibraries | ▲ +9.1% |
-| 2 | Better SQLite3 | Databases | ▲ +8.3% |
+| 1 | Better SQLite3 | Databases | ▲ +10% |
+| 2 | daisyUI | UILibraries | ▲ +9.1% |
 | 3 | Prisma | ORMs | ▲ +8.3% |
-| 4 | SvelteKit | Frameworks | ▲ +6.3% |
-| 5 | Clerk (Next.js) | Authentication | ▲ +5.9% |
-| 6 | Valibot | Validation | ▲ +5.9% |
-| 7 | Svelte | Frameworks | ▲ +4.8% |
-| 8 | Zod | Validation | ▲ +4.4% |
-| 9 | Sequelize | ORMs | ▲ +4.3% |
-| 10 | Ajv | Validation | ▲ +4.1% |
+| 4 | Zod | Validation | ▲ +6.5% |
+| 5 | Svelte | Frameworks | ▲ +6.5% |
+| 6 | SvelteKit | Frameworks | ▲ +6.3% |
+| 7 | Clerk (Next.js) | Authentication | ▲ +5.9% |
+| 8 | Valibot | Validation | ▲ +5.9% |
+| 9 | MySQL2 | Databases | ▲ +5.7% |
+| 10 | Lucide | UILibraries | ▲ +5.6% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
 | Parcel | -5.3% |
-| Joi | -3.6% |
 | Redux | -0.7% |
-| React Redux | -0.7% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |
@@ -93,10 +91,10 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 |---|---|---|
 | cva | tailwind-merge | 0.77 |
 | clsx | tailwind-merge | 0.74 |
-| react-redux | redux | 0.66 |
 | testing-library-react | testing-library-jest-dom | 0.66 |
+| react-redux | redux | 0.66 |
 | cva | clsx | 0.62 |
-| lucide-react | tailwind-merge | 0.59 |
+| lucide-react | tailwind-merge | 0.58 |
 | cva | lucide-react | 0.58 |
 | lucide-react | clsx | 0.55 |
 | mobx | mobx-react | 0.55 |
