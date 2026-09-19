@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 18, 2026)
+## The Pulse (Updated: September 19, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,38 +40,39 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 73.2% | ▲ +4.20 |
-| React | 33.3% | ▲ +3.79 |
-| Vitest | 22.8% | ▲ +3.88 |
-| Vite | 18.4% | ▲ +3.79 |
-| Jest | 17.7% | ▲ +3.11 |
-| Babel | 14.2% | ▲ +2.97 |
-| rimraf | 14.0% | ▲ +3.00 |
-| Tailwind CSS | 13.9% | ▲ +3.58 |
-| Mocha | 13.6% | ▲ +2.91 |
-| Webpack | 12.7% | ▲ +2.91 |
+| TypeScript | 73.8% | ▲ +4.19 |
+| React | 33.7% | ▲ +3.80 |
+| Vitest | 22.9% | ▲ +3.87 |
+| Vite | 18.7% | ▲ +3.81 |
+| Jest | 17.8% | ▲ +3.11 |
+| Babel | 14.2% | ▲ +2.96 |
+| Tailwind CSS | 14.0% | ▲ +3.58 |
+| rimraf | 14.0% | ▲ +2.96 |
+| Mocha | 13.6% | ▲ +2.90 |
+| Webpack | 12.7% | ▲ +2.90 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Better SQLite3 | Databases | ▲ +9.7% |
-| 2 | Zustand | StateManagement | ▲ +5.9% |
-| 3 | Valibot | Validation | ▲ +5.9% |
-| 4 | Zod | Validation | ▲ +5.8% |
-| 5 | MySQL2 | Databases | ▲ +5.6% |
-| 6 | Lucide | UILibraries | ▲ +5.2% |
-| 7 | Bcrypt | Authentication | ▲ +5.1% |
-| 8 | TanStack Query | StateManagement | ▲ +5% |
-| 9 | Vitest | Testing | ▲ +4.7% |
-| 10 | esbuild | BuildTools | ▲ +4.4% |
+| 1 | Better SQLite3 | Databases | ▲ +11.3% |
+| 2 | Bcrypt | Authentication | ▲ +10.3% |
+| 3 | Zustand | StateManagement | ▲ +7.3% |
+| 4 | Zod | Validation | ▲ +7% |
+| 5 | Lucide | UILibraries | ▲ +7% |
+| 6 | MySQL | Databases | ▲ +6.3% |
+| 7 | Drizzle ORM | ORMs | ▲ +6.1% |
+| 8 | CORS | Authentication | ▲ +6% |
+| 9 | SvelteKit | Frameworks | ▲ +5.9% |
+| 10 | Valibot | Validation | ▲ +5.9% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
 | Parcel | -5.3% |
 | Joi | -3.4% |
+| AVA | -1.3% |
 | Redux | -0.7% |
 
 ### 🏷️ Top Per Category
@@ -94,12 +95,12 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | clsx | tailwind-merge | 0.75 |
 | testing-library-react | testing-library-jest-dom | 0.66 |
 | react-redux | redux | 0.65 |
-| cva | clsx | 0.62 |
+| cva | clsx | 0.63 |
 | lucide-react | tailwind-merge | 0.58 |
-| cva | lucide-react | 0.57 |
+| cva | lucide-react | 0.58 |
 | mobx | mobx-react | 0.56 |
 | lucide-react | clsx | 0.55 |
-| mui-material | emotion-react | 0.53 |
+| mui-material | emotion-react | 0.54 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
 
