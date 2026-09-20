@@ -32,7 +32,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 19, 2026)
+## The Pulse (Updated: September 20, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -40,15 +40,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 73.8% | ▲ +4.19 |
-| React | 33.7% | ▲ +3.80 |
-| Vitest | 22.9% | ▲ +3.87 |
+| TypeScript | 73.9% | ▲ +4.19 |
+| React | 33.7% | ▲ +3.79 |
+| Vitest | 23.0% | ▲ +3.86 |
 | Vite | 18.7% | ▲ +3.81 |
-| Jest | 17.8% | ▲ +3.11 |
+| Jest | 17.8% | ▲ +3.10 |
 | Babel | 14.2% | ▲ +2.96 |
-| Tailwind CSS | 14.0% | ▲ +3.58 |
+| Tailwind CSS | 14.1% | ▲ +3.58 |
 | rimraf | 14.0% | ▲ +2.96 |
-| Mocha | 13.6% | ▲ +2.90 |
+| Mocha | 13.6% | ▲ +2.91 |
 | Webpack | 12.7% | ▲ +2.90 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
@@ -56,14 +56,14 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Better SQLite3 | Databases | ▲ +11.3% |
-| 2 | Bcrypt | Authentication | ▲ +10.3% |
+| 1 | Better SQLite3 | Databases | ▲ +7.9% |
+| 2 | Bcrypt | Authentication | ▲ +7.5% |
 | 3 | Zustand | StateManagement | ▲ +7.3% |
-| 4 | Zod | Validation | ▲ +7% |
-| 5 | Lucide | UILibraries | ▲ +7% |
-| 6 | MySQL | Databases | ▲ +6.3% |
-| 7 | Drizzle ORM | ORMs | ▲ +6.1% |
-| 8 | CORS | Authentication | ▲ +6% |
+| 4 | Zod | Validation | ▲ +6.7% |
+| 5 | Lucide | UILibraries | ▲ +6.7% |
+| 6 | TanStack Query | StateManagement | ▲ +6.6% |
+| 7 | MySQL | Databases | ▲ +6.3% |
+| 8 | Heroicons | UILibraries | ▲ +6% |
 | 9 | SvelteKit | Frameworks | ▲ +5.9% |
 | 10 | Valibot | Validation | ▲ +5.9% |
 
@@ -95,7 +95,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | clsx | tailwind-merge | 0.75 |
 | testing-library-react | testing-library-jest-dom | 0.66 |
 | react-redux | redux | 0.65 |
-| cva | clsx | 0.63 |
+| cva | clsx | 0.62 |
 | lucide-react | tailwind-merge | 0.58 |
 | cva | lucide-react | 0.58 |
 | mobx | mobx-react | 0.56 |
