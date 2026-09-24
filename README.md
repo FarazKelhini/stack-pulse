@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 23, 2026)
+## The Pulse (Updated: September 24, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,14 +24,14 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 74.8% | ▲ +4.16 |
-| React | 34.1% | ▲ +3.77 |
-| Vitest | 23.4% | ▲ +3.81 |
-| Vite | 19.0% | ▲ +3.77 |
-| Jest | 17.9% | ▲ +3.11 |
-| Tailwind CSS | 14.2% | ▲ +3.57 |
-| Babel | 14.2% | ▲ +2.95 |
-| rimraf | 14.0% | ▲ +2.93 |
+| TypeScript | 75.4% | ▲ +4.16 |
+| React | 34.3% | ▲ +3.77 |
+| Vitest | 23.6% | ▲ +3.79 |
+| Vite | 19.2% | ▲ +3.78 |
+| Jest | 17.9% | ▲ +3.12 |
+| Tailwind CSS | 14.4% | ▲ +3.56 |
+| Babel | 14.3% | ▲ +2.96 |
+| rimraf | 14.0% | ▲ +2.94 |
 | Mocha | 13.6% | ▲ +2.91 |
 | Webpack | 12.8% | ▲ +2.91 |
 
@@ -40,23 +40,22 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Supabase | Databases | ▲ +11.1% |
-| 2 | Preact | Frameworks | ▲ +7.7% |
-| 3 | Better SQLite3 | Databases | ▲ +7.6% |
-| 4 | MySQL | Databases | ▲ +6.3% |
-| 5 | Drizzle ORM | ORMs | ▲ +6% |
-| 6 | SvelteKit | Frameworks | ▲ +5.9% |
-| 7 | Zustand | StateManagement | ▲ +5.6% |
-| 8 | Clerk (Next.js) | Authentication | ▲ +5.6% |
-| 9 | Ajv | Validation | ▲ +5.1% |
-| 10 | Zod | Validation | ▲ +5% |
+| 1 | SvelteKit | Frameworks | ▲ +11.8% |
+| 2 | Supabase | Databases | ▲ +11.1% |
+| 3 | Preact | Frameworks | ▲ +9.6% |
+| 4 | Drizzle ORM | ORMs | ▲ +7.1% |
+| 5 | Zustand | StateManagement | ▲ +6.5% |
+| 6 | MySQL | Databases | ▲ +6.3% |
+| 7 | Svelte | Frameworks | ▲ +6.1% |
+| 8 | Class Variance Authority | UILibraries | ▲ +5.8% |
+| 9 | Lucide | UILibraries | ▲ +5.7% |
+| 10 | Clerk (Next.js) | Authentication | ▲ +5.6% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
 | Parcel | -5.3% |
 | AVA | -1.3% |
-| Redux | -0.7% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |
@@ -76,14 +75,14 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 |---|---|---|
 | cva | tailwind-merge | 0.77 |
 | clsx | tailwind-merge | 0.75 |
-| testing-library-react | testing-library-jest-dom | 0.66 |
+| testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.65 |
 | cva | clsx | 0.62 |
 | cva | lucide-react | 0.58 |
 | lucide-react | tailwind-merge | 0.58 |
 | mobx | mobx-react | 0.55 |
-| mui-material | emotion-react | 0.54 |
 | lucide-react | clsx | 0.54 |
+| mui-material | emotion-react | 0.54 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
 
