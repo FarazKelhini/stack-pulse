@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 24, 2026)
+## The Pulse (Updated: September 25, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -25,12 +25,12 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
 | TypeScript | 75.4% | ▲ +4.16 |
-| React | 34.3% | ▲ +3.77 |
-| Vitest | 23.6% | ▲ +3.79 |
-| Vite | 19.2% | ▲ +3.78 |
+| React | 34.3% | ▲ +3.76 |
+| Vitest | 23.7% | ▲ +3.80 |
+| Vite | 19.2% | ▲ +3.77 |
 | Jest | 17.9% | ▲ +3.12 |
 | Tailwind CSS | 14.4% | ▲ +3.56 |
-| Babel | 14.3% | ▲ +2.96 |
+| Babel | 14.2% | ▲ +2.96 |
 | rimraf | 14.0% | ▲ +2.94 |
 | Mocha | 13.6% | ▲ +2.91 |
 | Webpack | 12.8% | ▲ +2.91 |
@@ -40,16 +40,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | SvelteKit | Frameworks | ▲ +11.8% |
-| 2 | Supabase | Databases | ▲ +11.1% |
+| 1 | Supabase | Databases | ▲ +13% |
+| 2 | SvelteKit | Frameworks | ▲ +11.8% |
 | 3 | Preact | Frameworks | ▲ +9.6% |
 | 4 | Drizzle ORM | ORMs | ▲ +7.1% |
-| 5 | Zustand | StateManagement | ▲ +6.5% |
-| 6 | MySQL | Databases | ▲ +6.3% |
-| 7 | Svelte | Frameworks | ▲ +6.1% |
-| 8 | Class Variance Authority | UILibraries | ▲ +5.8% |
-| 9 | Lucide | UILibraries | ▲ +5.7% |
-| 10 | Clerk (Next.js) | Authentication | ▲ +5.6% |
+| 5 | MySQL | Databases | ▲ +6.3% |
+| 6 | Svelte | Frameworks | ▲ +6.1% |
+| 7 | Ajv | Validation | ▲ +5.6% |
+| 8 | Clerk (Next.js) | Authentication | ▲ +5.6% |
+| 9 | Zustand | StateManagement | ▲ +5.5% |
+| 10 | Lucide | UILibraries | ▲ +5.4% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -73,13 +73,13 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔗 Top Pairings
 | Tech A | Tech B | Strength Score |
 |---|---|---|
-| cva | tailwind-merge | 0.77 |
+| cva | tailwind-merge | 0.76 |
 | clsx | tailwind-merge | 0.75 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.65 |
 | cva | clsx | 0.62 |
-| cva | lucide-react | 0.58 |
 | lucide-react | tailwind-merge | 0.58 |
+| cva | lucide-react | 0.58 |
 | mobx | mobx-react | 0.55 |
 | lucide-react | clsx | 0.54 |
 | mui-material | emotion-react | 0.54 |
