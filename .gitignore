@@ -40,3 +40,7 @@ ts_results.txt
 # OS files
 .DS_Store
 Thumbs.db
+
+
+AGENTS.md
+CLAUDE.md

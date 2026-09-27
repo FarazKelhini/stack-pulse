@@ -106,10 +106,10 @@ async function FallingThisMonthWrapper() {
       const falling = await prisma.trendingSnapshot.findMany({
         where: {
           snapshotDate: latestSnapshot.snapshotDate,
-          trendScore: { lt: 1 },
+          adoptionDelta: { lt: 0 },
           technology: { isActive: true },
         },
-        orderBy: { trendScore: 'asc' },
+        orderBy: { adoptionDelta: 'asc' },
         take: 10,
         select: {
           technology: {
@@ -122,23 +122,30 @@ async function FallingThisMonthWrapper() {
           },
           trendScore: true,
           adoptionDelta: true,
+          adoptionCount: true,
         },
       });
-      return falling.map((t) => ({
-        slug: t.technology.slug,
-        name: t.technology.name,
-        category: t.technology.category,
-        repoCount: t.technology.repoCount,
-        percentChange: t.trendScore,
-        adoptionDelta: t.adoptionDelta,
-      }));
+      return falling.map((t) => {
+        const delta = t.adoptionDelta;
+        const currentCount = t.adoptionCount;
+        const previousCount = currentCount - delta;
+        const percentChange = previousCount > 0 ? (delta / previousCount) * 100 : 0;
+        return {
+          slug: t.technology.slug,
+          name: t.technology.name,
+          category: t.technology.category,
+          repoCount: t.technology.repoCount,
+          percentChange: Math.round(percentChange * 10) / 10,
+          adoptionDelta: t.adoptionDelta,
+        };
+      });
     } catch (e) {
       console.error('Failed to fetch falling technologies:', e);
       return [];
     }
   };
 
-  const technologies = await cachedFetch('home:falling', fetchFalling, 86400); // 24 hours
+  const technologies = await fetchFalling();
   return <FallingThisMonth technologies={technologies} />;
 }
 
