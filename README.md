@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 27, 2026)
+## The Pulse (Updated: September 28, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,14 +24,14 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 76.4% | ▲ +4.16 |
+| TypeScript | 76.4% | ▲ +4.17 |
 | React | 34.9% | ▲ +3.77 |
-| Vitest | 24.1% | ▲ +3.79 |
-| Vite | 19.6% | ▲ +3.78 |
+| Vitest | 24.1% | ▲ +3.80 |
+| Vite | 19.7% | ▲ +3.79 |
 | Jest | 18.0% | ▲ +3.13 |
 | Tailwind CSS | 14.7% | ▲ +3.56 |
 | Babel | 14.2% | ▲ +2.94 |
-| rimraf | 14.1% | ▲ +2.94 |
+| rimraf | 14.1% | ▲ +2.95 |
 | Mocha | 13.7% | ▲ +2.91 |
 | Webpack | 12.8% | ▲ +2.90 |
 
@@ -41,15 +41,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | Rspack | BuildTools | ▲ +16.7% |
-| 2 | Better SQLite3 | Databases | ▲ +8.8% |
-| 3 | Supabase | Databases | ▲ +8.8% |
-| 4 | Drizzle ORM | ORMs | ▲ +8.1% |
-| 5 | Fastify | Frameworks | ▲ +6.9% |
-| 6 | Framer Motion | UILibraries | ▲ +6.6% |
-| 7 | Lucide | UILibraries | ▲ +6.5% |
-| 8 | Zustand | StateManagement | ▲ +6.3% |
-| 9 | Preact | Frameworks | ▲ +5.6% |
-| 10 | SvelteKit | Frameworks | ▲ +5.6% |
+| 2 | Kysely | ORMs | ▲ +16.7% |
+| 3 | Drizzle ORM | ORMs | ▲ +9.3% |
+| 4 | Better SQLite3 | Databases | ▲ +7.2% |
+| 5 | Supabase | Databases | ▲ +7% |
+| 6 | Fastify | Frameworks | ▲ +6.9% |
+| 7 | Framer Motion | UILibraries | ▲ +6% |
+| 8 | Zustand | StateManagement | ▲ +5.8% |
+| 9 | SvelteKit | Frameworks | ▲ +5.6% |
+| 10 | Clerk (Next.js) | Authentication | ▲ +5.6% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -77,7 +77,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | testing-library-react | testing-library-jest-dom | 0.66 |
 | react-redux | redux | 0.65 |
 | cva | clsx | 0.62 |
-| cva | lucide-react | 0.58 |
+| cva | lucide-react | 0.57 |
 | lucide-react | tailwind-merge | 0.57 |
 | mobx | mobx-react | 0.55 |
 | mui-material | emotion-react | 0.54 |
