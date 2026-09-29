@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 28, 2026)
+## The Pulse (Updated: September 29, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,16 +24,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 76.4% | ▲ +4.17 |
-| React | 34.9% | ▲ +3.77 |
-| Vitest | 24.1% | ▲ +3.80 |
+| TypeScript | 76.5% | ▲ +4.16 |
+| React | 34.9% | ▲ +3.76 |
+| Vitest | 24.1% | ▲ +3.78 |
 | Vite | 19.7% | ▲ +3.79 |
 | Jest | 18.0% | ▲ +3.13 |
-| Tailwind CSS | 14.7% | ▲ +3.56 |
+| Tailwind CSS | 14.7% | ▲ +3.55 |
 | Babel | 14.2% | ▲ +2.94 |
 | rimraf | 14.1% | ▲ +2.95 |
 | Mocha | 13.7% | ▲ +2.91 |
-| Webpack | 12.8% | ▲ +2.90 |
+| Webpack | 12.8% | ▲ +2.91 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -42,14 +42,14 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 |------|------------|----------|-------------:|
 | 1 | Rspack | BuildTools | ▲ +16.7% |
 | 2 | Kysely | ORMs | ▲ +16.7% |
-| 3 | Drizzle ORM | ORMs | ▲ +9.3% |
-| 4 | Better SQLite3 | Databases | ▲ +7.2% |
-| 5 | Supabase | Databases | ▲ +7% |
-| 6 | Fastify | Frameworks | ▲ +6.9% |
-| 7 | Framer Motion | UILibraries | ▲ +6% |
-| 8 | Zustand | StateManagement | ▲ +5.8% |
-| 9 | SvelteKit | Frameworks | ▲ +5.6% |
-| 10 | Clerk (Next.js) | Authentication | ▲ +5.6% |
+| 3 | Fastify | Frameworks | ▲ +6.9% |
+| 4 | Drizzle ORM | ORMs | ▲ +6.8% |
+| 5 | Better SQLite3 | Databases | ▲ +5.7% |
+| 6 | SvelteKit | Frameworks | ▲ +5.6% |
+| 7 | Framer Motion | UILibraries | ▲ +5.4% |
+| 8 | Pinia | StateManagement | ▲ +5.4% |
+| 9 | esbuild | BuildTools | ▲ +4.9% |
+| 10 | Zustand | StateManagement | ▲ +4.9% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
