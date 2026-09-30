@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 29, 2026)
+## The Pulse (Updated: September 30, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,32 +24,32 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 76.5% | ▲ +4.16 |
-| React | 34.9% | ▲ +3.76 |
-| Vitest | 24.1% | ▲ +3.78 |
-| Vite | 19.7% | ▲ +3.79 |
-| Jest | 18.0% | ▲ +3.13 |
-| Tailwind CSS | 14.7% | ▲ +3.55 |
-| Babel | 14.2% | ▲ +2.94 |
-| rimraf | 14.1% | ▲ +2.95 |
-| Mocha | 13.7% | ▲ +2.91 |
-| Webpack | 12.8% | ▲ +2.91 |
+| TypeScript | 77.6% | ▲ +4.17 |
+| React | 35.3% | ▲ +3.76 |
+| Vitest | 24.6% | ▲ +3.80 |
+| Vite | 20.0% | ▲ +3.73 |
+| Jest | 18.1% | ▲ +3.13 |
+| Tailwind CSS | 14.9% | ▲ +3.51 |
+| Babel | 14.3% | ▲ +2.95 |
+| rimraf | 14.1% | ▲ +2.94 |
+| Mocha | 13.7% | ▲ +2.92 |
+| Webpack | 12.9% | ▲ +2.92 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Rspack | BuildTools | ▲ +16.7% |
+| 1 | Fastify | Frameworks | ▲ +17.2% |
 | 2 | Kysely | ORMs | ▲ +16.7% |
-| 3 | Fastify | Frameworks | ▲ +6.9% |
-| 4 | Drizzle ORM | ORMs | ▲ +6.8% |
-| 5 | Better SQLite3 | Databases | ▲ +5.7% |
-| 6 | SvelteKit | Frameworks | ▲ +5.6% |
-| 7 | Framer Motion | UILibraries | ▲ +5.4% |
-| 8 | Pinia | StateManagement | ▲ +5.4% |
-| 9 | esbuild | BuildTools | ▲ +4.9% |
-| 10 | Zustand | StateManagement | ▲ +4.9% |
+| 3 | JSONSchema | Validation | ▲ +14.3% |
+| 4 | SvelteKit | Frameworks | ▲ +11.1% |
+| 5 | Rspack | BuildTools | ▲ +8.3% |
+| 6 | Svelte | Frameworks | ▲ +7.5% |
+| 7 | Pinia | StateManagement | ▲ +7.1% |
+| 8 | Better SQLite3 | Databases | ▲ +7% |
+| 9 | PM2 | BuildTools | ▲ +6.9% |
+| 10 | Drizzle ORM | ORMs | ▲ +6.7% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -72,9 +72,9 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔗 Top Pairings
 | Tech A | Tech B | Strength Score |
 |---|---|---|
-| cva | tailwind-merge | 0.76 |
+| cva | tailwind-merge | 0.77 |
 | clsx | tailwind-merge | 0.75 |
-| testing-library-react | testing-library-jest-dom | 0.66 |
+| testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.65 |
 | cva | clsx | 0.62 |
 | cva | lucide-react | 0.57 |
