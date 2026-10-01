@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: September 30, 2026)
+## The Pulse (Updated: October 1, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -26,12 +26,12 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 |------------|---------:|------------:|
 | TypeScript | 77.6% | ▲ +4.17 |
 | React | 35.3% | ▲ +3.76 |
-| Vitest | 24.6% | ▲ +3.80 |
+| Vitest | 24.6% | ▲ +3.78 |
 | Vite | 20.0% | ▲ +3.73 |
-| Jest | 18.1% | ▲ +3.13 |
-| Tailwind CSS | 14.9% | ▲ +3.51 |
+| Jest | 18.1% | ▲ +3.14 |
+| Tailwind CSS | 14.9% | ▲ +3.50 |
 | Babel | 14.3% | ▲ +2.95 |
-| rimraf | 14.1% | ▲ +2.94 |
+| rimraf | 14.1% | ▲ +2.95 |
 | Mocha | 13.7% | ▲ +2.92 |
 | Webpack | 12.9% | ▲ +2.92 |
 
@@ -43,18 +43,18 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | 1 | Fastify | Frameworks | ▲ +17.2% |
 | 2 | Kysely | ORMs | ▲ +16.7% |
 | 3 | JSONSchema | Validation | ▲ +14.3% |
-| 4 | SvelteKit | Frameworks | ▲ +11.1% |
-| 5 | Rspack | BuildTools | ▲ +8.3% |
-| 6 | Svelte | Frameworks | ▲ +7.5% |
-| 7 | Pinia | StateManagement | ▲ +7.1% |
-| 8 | Better SQLite3 | Databases | ▲ +7% |
-| 9 | PM2 | BuildTools | ▲ +6.9% |
-| 10 | Drizzle ORM | ORMs | ▲ +6.7% |
+| 4 | Rspack | BuildTools | ▲ +8.3% |
+| 5 | Pinia | StateManagement | ▲ +7% |
+| 6 | PM2 | BuildTools | ▲ +6.9% |
+| 7 | Yup | Validation | ▲ +6.5% |
+| 8 | Better SQLite3 | Databases | ▲ +6.3% |
+| 9 | React Bootstrap | UILibraries | ▲ +6.3% |
+| 10 | TanStack Query | StateManagement | ▲ +6.2% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
-| Parcel | -5.3% |
+| Vuex | -2.5% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |
@@ -72,7 +72,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔗 Top Pairings
 | Tech A | Tech B | Strength Score |
 |---|---|---|
-| cva | tailwind-merge | 0.77 |
+| cva | tailwind-merge | 0.76 |
 | clsx | tailwind-merge | 0.75 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.65 |
