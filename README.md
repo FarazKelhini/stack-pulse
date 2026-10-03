@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 2, 2026)
+## The Pulse (Updated: October 3, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,16 +24,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 77.8% | ▲ +4.16 |
-| React | 35.4% | ▲ +3.75 |
-| Vitest | 24.8% | ▲ +3.79 |
-| Vite | 20.2% | ▲ +3.73 |
+| TypeScript | 78.3% | ▲ +4.17 |
+| React | 35.6% | ▲ +3.75 |
+| Vitest | 25.0% | ▲ +3.81 |
+| Vite | 20.4% | ▲ +3.77 |
 | Jest | 18.1% | ▲ +3.12 |
-| Tailwind CSS | 15.0% | ▲ +3.51 |
+| Tailwind CSS | 15.1% | ▲ +3.52 |
 | Babel | 14.3% | ▲ +2.95 |
-| rimraf | 14.1% | ▲ +2.95 |
-| Mocha | 13.7% | ▲ +2.92 |
-| Zod | 12.9% | ▲ +3.57 |
+| rimraf | 14.1% | ▲ +2.94 |
+| Mocha | 13.7% | ▲ +2.93 |
+| Zod | 13.1% | ▲ +3.57 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -43,18 +43,19 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | 1 | Fastify | Frameworks | ▲ +17.2% |
 | 2 | Kysely | ORMs | ▲ +16.7% |
 | 3 | JSONSchema | Validation | ▲ +14.3% |
-| 4 | Rspack | BuildTools | ▲ +8.3% |
-| 5 | Better SQLite3 | Databases | ▲ +7.7% |
-| 6 | Pinia | StateManagement | ▲ +7% |
-| 7 | TanStack Query | StateManagement | ▲ +6.9% |
-| 8 | PM2 | BuildTools | ▲ +6.9% |
-| 9 | Drizzle ORM | ORMs | ▲ +6.7% |
-| 10 | Yup | Validation | ▲ +6.5% |
+| 4 | Better SQLite3 | Databases | ▲ +9.2% |
+| 5 | Pinia | StateManagement | ▲ +8.8% |
+| 6 | Rspack | BuildTools | ▲ +8.3% |
+| 7 | Zustand | StateManagement | ▲ +7.4% |
+| 8 | Lucide | UILibraries | ▲ +6.9% |
+| 9 | TanStack Query | StateManagement | ▲ +6.9% |
+| 10 | PM2 | BuildTools | ▲ +6.9% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
 | Vuex | -2.5% |
+| AVA | -1.3% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |
@@ -77,7 +78,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.65 |
 | cva | clsx | 0.62 |
-| cva | lucide-react | 0.57 |
+| cva | lucide-react | 0.58 |
 | lucide-react | tailwind-merge | 0.57 |
 | mui-material | emotion-react | 0.55 |
 | mobx | mobx-react | 0.55 |
