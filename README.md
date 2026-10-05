@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 4, 2026)
+## The Pulse (Updated: October 5, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,37 +24,37 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 78.4% | ▲ +4.17 |
-| React | 35.6% | ▲ +3.75 |
-| Vitest | 25.0% | ▲ +3.80 |
-| Vite | 20.5% | ▲ +3.77 |
-| Jest | 18.1% | ▲ +3.12 |
-| Tailwind CSS | 15.1% | ▲ +3.52 |
+| TypeScript | 78.7% | ▲ +4.16 |
+| React | 35.8% | ▲ +3.75 |
+| Vitest | 25.2% | ▲ +3.79 |
+| Vite | 20.5% | ▲ +3.75 |
+| Jest | 18.2% | ▲ +3.12 |
+| Tailwind CSS | 15.2% | ▲ +3.51 |
 | Babel | 14.3% | ▲ +2.95 |
-| rimraf | 14.1% | ▲ +2.94 |
-| Mocha | 13.7% | ▲ +2.93 |
-| Zod | 13.1% | ▲ +3.57 |
+| rimraf | 14.2% | ▲ +2.95 |
+| Mocha | 13.8% | ▲ +2.93 |
+| Zod | 13.1% | ▲ +3.55 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Kysely | ORMs | ▲ +16.7% |
-| 2 | JSONSchema | Validation | ▲ +14.3% |
-| 3 | Fastify | Frameworks | ▲ +9.7% |
-| 4 | Pinia | StateManagement | ▲ +8.8% |
-| 5 | Yup | Validation | ▲ +6.5% |
-| 6 | Astro | Frameworks | ▲ +6.3% |
-| 7 | React Bootstrap | UILibraries | ▲ +6.3% |
-| 8 | Valibot | Validation | ▲ +5.6% |
-| 9 | Zustand | StateManagement | ▲ +5.5% |
-| 10 | TanStack Query | StateManagement | ▲ +5.3% |
+| 1 | JSONSchema | Validation | ▲ +14.3% |
+| 2 | Fastify | Frameworks | ▲ +9.7% |
+| 3 | TypeORM | ORMs | ▲ +8% |
+| 4 | Class Validator | Validation | ▲ +7.1% |
+| 5 | Pinia | StateManagement | ▲ +6.9% |
+| 6 | Zustand | StateManagement | ▲ +6.8% |
+| 7 | Yup | Validation | ▲ +6.5% |
+| 8 | Astro | Frameworks | ▲ +6.3% |
+| 9 | React Bootstrap | UILibraries | ▲ +6.3% |
+| 10 | TanStack Query | StateManagement | ▲ +6% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
-| Apollo Client | -4.8% |
+| Knex.js | -3.8% |
 | AVA | -2.5% |
 | Vuex | -2.5% |
 
@@ -77,13 +77,13 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | cva | tailwind-merge | 0.76 |
 | clsx | tailwind-merge | 0.76 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
-| react-redux | redux | 0.65 |
+| react-redux | redux | 0.66 |
 | cva | clsx | 0.62 |
-| cva | lucide-react | 0.57 |
+| cva | lucide-react | 0.58 |
 | lucide-react | tailwind-merge | 0.57 |
 | mobx | mobx-react | 0.55 |
 | mui-material | emotion-react | 0.54 |
-| lucide-react | clsx | 0.53 |
+| lucide-react | clsx | 0.54 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
 
