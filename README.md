@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 5, 2026)
+## The Pulse (Updated: October 6, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,16 +24,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 78.7% | ▲ +4.16 |
-| React | 35.8% | ▲ +3.75 |
-| Vitest | 25.2% | ▲ +3.79 |
-| Vite | 20.5% | ▲ +3.75 |
-| Jest | 18.2% | ▲ +3.12 |
-| Tailwind CSS | 15.2% | ▲ +3.51 |
-| Babel | 14.3% | ▲ +2.95 |
+| TypeScript | 79.3% | ▲ +4.18 |
+| React | 36.0% | ▲ +3.76 |
+| Vitest | 25.4% | ▲ +3.81 |
+| Vite | 20.8% | ▲ +3.78 |
+| Jest | 18.1% | ▲ +3.12 |
+| Tailwind CSS | 15.3% | ▲ +3.53 |
+| Babel | 14.3% | ▲ +2.94 |
 | rimraf | 14.2% | ▲ +2.95 |
 | Mocha | 13.8% | ▲ +2.93 |
-| Zod | 13.1% | ▲ +3.55 |
+| Zod | 13.4% | ▲ +3.59 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -41,22 +41,22 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | JSONSchema | Validation | ▲ +14.3% |
-| 2 | Fastify | Frameworks | ▲ +9.7% |
-| 3 | TypeORM | ORMs | ▲ +8% |
-| 4 | Class Validator | Validation | ▲ +7.1% |
-| 5 | Pinia | StateManagement | ▲ +6.9% |
-| 6 | Zustand | StateManagement | ▲ +6.8% |
-| 7 | Yup | Validation | ▲ +6.5% |
-| 8 | Astro | Frameworks | ▲ +6.3% |
-| 9 | React Bootstrap | UILibraries | ▲ +6.3% |
-| 10 | TanStack Query | StateManagement | ▲ +6% |
+| 2 | SvelteKit | Frameworks | ▲ +10.5% |
+| 3 | Fastify | Frameworks | ▲ +9.7% |
+| 4 | Zustand | StateManagement | ▲ +8.1% |
+| 5 | TypeORM | ORMs | ▲ +8% |
+| 6 | MySQL2 | Databases | ▲ +7.9% |
+| 7 | Class Validator | Validation | ▲ +7.1% |
+| 8 | TanStack Query | StateManagement | ▲ +6.8% |
+| 9 | Zod | Validation | ▲ +6.6% |
+| 10 | Class Variance Authority | UILibraries | ▲ +6.5% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
+| Firebase Admin | -6.3% |
 | Knex.js | -3.8% |
 | AVA | -2.5% |
-| Vuex | -2.5% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |
@@ -77,7 +77,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | cva | tailwind-merge | 0.76 |
 | clsx | tailwind-merge | 0.76 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
-| react-redux | redux | 0.66 |
+| react-redux | redux | 0.65 |
 | cva | clsx | 0.62 |
 | cva | lucide-react | 0.58 |
 | lucide-react | tailwind-merge | 0.57 |
