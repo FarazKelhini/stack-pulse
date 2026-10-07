@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 6, 2026)
+## The Pulse (Updated: October 7, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,39 +24,39 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 79.3% | ▲ +4.18 |
-| React | 36.0% | ▲ +3.76 |
-| Vitest | 25.4% | ▲ +3.81 |
-| Vite | 20.8% | ▲ +3.78 |
-| Jest | 18.1% | ▲ +3.12 |
-| Tailwind CSS | 15.3% | ▲ +3.53 |
+| TypeScript | 79.3% | ▲ +4.16 |
+| React | 36.0% | ▲ +3.74 |
+| Vitest | 25.4% | ▲ +3.77 |
+| Vite | 20.8% | ▲ +3.75 |
+| Jest | 18.1% | ▲ +3.11 |
+| Tailwind CSS | 15.3% | ▲ +3.49 |
 | Babel | 14.3% | ▲ +2.94 |
-| rimraf | 14.2% | ▲ +2.95 |
+| rimraf | 14.1% | ▲ +2.95 |
 | Mocha | 13.8% | ▲ +2.93 |
-| Zod | 13.4% | ▲ +3.59 |
+| Zod | 13.4% | ▲ +3.56 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | JSONSchema | Validation | ▲ +14.3% |
-| 2 | SvelteKit | Frameworks | ▲ +10.5% |
-| 3 | Fastify | Frameworks | ▲ +9.7% |
-| 4 | Zustand | StateManagement | ▲ +8.1% |
-| 5 | TypeORM | ORMs | ▲ +8% |
-| 6 | MySQL2 | Databases | ▲ +7.9% |
-| 7 | Class Validator | Validation | ▲ +7.1% |
-| 8 | TanStack Query | StateManagement | ▲ +6.8% |
-| 9 | Zod | Validation | ▲ +6.6% |
-| 10 | Class Variance Authority | UILibraries | ▲ +6.5% |
+| 1 | Class Validator | Validation | ▲ +7.1% |
+| 2 | Zustand | StateManagement | ▲ +5.8% |
+| 3 | Class Variance Authority | UILibraries | ▲ +5.3% |
+| 4 | MySQL2 | Databases | ▲ +5.1% |
+| 5 | SvelteKit | Frameworks | ▲ +5% |
+| 6 | Lucide | UILibraries | ▲ +4.7% |
+| 7 | esbuild | BuildTools | ▲ +4.6% |
+| 8 | Vite | BuildTools | ▲ +4.3% |
+| 9 | Zod | Validation | ▲ +4.3% |
+| 10 | Tailwind Merge | UILibraries | ▲ +4.2% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
 | Firebase Admin | -6.3% |
 | Knex.js | -3.8% |
-| AVA | -2.5% |
+| AVA | -3.8% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |
