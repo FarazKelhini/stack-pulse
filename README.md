@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 8, 2026)
+## The Pulse (Updated: October 9, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,16 +24,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 79.5% | ▲ +4.14 |
-| React | 36.1% | ▲ +3.72 |
-| Vitest | 25.5% | ▲ +3.75 |
-| Vite | 20.9% | ▲ +3.71 |
-| Jest | 18.1% | ▲ +3.10 |
-| Tailwind CSS | 15.4% | ▲ +3.46 |
-| Babel | 14.3% | ▲ +2.94 |
-| rimraf | 14.2% | ▲ +2.95 |
+| TypeScript | 80.2% | ▲ +4.17 |
+| React | 36.5% | ▲ +3.75 |
+| Vitest | 25.7% | ▲ +3.78 |
+| Vite | 21.1% | ▲ +3.73 |
+| Jest | 18.2% | ▲ +3.13 |
+| Tailwind CSS | 15.6% | ▲ +3.50 |
+| Babel | 14.4% | ▲ +2.97 |
+| rimraf | 14.2% | ▲ +2.97 |
 | Mocha | 13.8% | ▲ +2.93 |
-| Zod | 13.4% | ▲ +3.55 |
+| Zod | 13.6% | ▲ +3.60 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -41,15 +41,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | Superstruct | Validation | ▲ +16.7% |
-| 2 | Zustand | StateManagement | ▲ +7.1% |
-| 3 | Class Validator | Validation | ▲ +7.1% |
-| 4 | Jotai | StateManagement | ▲ +6.3% |
-| 5 | Lucide | UILibraries | ▲ +5.6% |
-| 6 | Class Variance Authority | UILibraries | ▲ +5.5% |
-| 7 | Tailwind Merge | UILibraries | ▲ +5.1% |
-| 8 | Vuex | StateManagement | ▲ +5.1% |
-| 9 | MySQL2 | Databases | ▲ +5.1% |
-| 10 | SvelteKit | Frameworks | ▲ +5% |
+| 2 | SvelteKit | Frameworks | ▲ +15% |
+| 3 | Kysely | ORMs | ▲ +14.3% |
+| 4 | io-ts | Validation | ▲ +14.3% |
+| 5 | Zustand | StateManagement | ▲ +8.2% |
+| 6 | MySQL2 | Databases | ▲ +7.7% |
+| 7 | Class Validator | Validation | ▲ +7.1% |
+| 8 | Jotai | StateManagement | ▲ +6.3% |
+| 9 | Fastify | Frameworks | ▲ +5.9% |
+| 10 | Class Variance Authority | UILibraries | ▲ +5.8% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -84,7 +84,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | lucide-react | tailwind-merge | 0.57 |
 | mobx | mobx-react | 0.55 |
 | mui-material | emotion-react | 0.54 |
-| lucide-react | clsx | 0.53 |
+| lucide-react | clsx | 0.54 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
 
