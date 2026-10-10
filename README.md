@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 9, 2026)
+## The Pulse (Updated: October 10, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,16 +24,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 80.2% | ▲ +4.17 |
+| TypeScript | 80.2% | ▲ +4.16 |
 | React | 36.5% | ▲ +3.75 |
-| Vitest | 25.7% | ▲ +3.78 |
-| Vite | 21.1% | ▲ +3.73 |
-| Jest | 18.2% | ▲ +3.13 |
+| Vitest | 25.8% | ▲ +3.78 |
+| Vite | 21.2% | ▲ +3.71 |
+| Jest | 18.2% | ▲ +3.12 |
 | Tailwind CSS | 15.6% | ▲ +3.50 |
 | Babel | 14.4% | ▲ +2.97 |
-| rimraf | 14.2% | ▲ +2.97 |
+| rimraf | 14.3% | ▲ +2.97 |
 | Mocha | 13.8% | ▲ +2.93 |
-| Zod | 13.6% | ▲ +3.60 |
+| Zod | 13.6% | ▲ +3.57 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -44,12 +44,12 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | 2 | SvelteKit | Frameworks | ▲ +15% |
 | 3 | Kysely | ORMs | ▲ +14.3% |
 | 4 | io-ts | Validation | ▲ +14.3% |
-| 5 | Zustand | StateManagement | ▲ +8.2% |
-| 6 | MySQL2 | Databases | ▲ +7.7% |
-| 7 | Class Validator | Validation | ▲ +7.1% |
-| 8 | Jotai | StateManagement | ▲ +6.3% |
-| 9 | Fastify | Frameworks | ▲ +5.9% |
-| 10 | Class Variance Authority | UILibraries | ▲ +5.8% |
+| 5 | XState | StateManagement | ▲ +11.1% |
+| 6 | Jotai | StateManagement | ▲ +8.3% |
+| 7 | MySQL2 | Databases | ▲ +7.7% |
+| 8 | Class Validator | Validation | ▲ +7.1% |
+| 9 | Zustand | StateManagement | ▲ +6.9% |
+| 10 | Fastify | Frameworks | ▲ +5.9% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
