@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 10, 2026)
+## The Pulse (Updated: October 11, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,16 +24,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 80.2% | ▲ +4.16 |
-| React | 36.5% | ▲ +3.75 |
-| Vitest | 25.8% | ▲ +3.78 |
-| Vite | 21.2% | ▲ +3.71 |
-| Jest | 18.2% | ▲ +3.12 |
-| Tailwind CSS | 15.6% | ▲ +3.50 |
-| Babel | 14.4% | ▲ +2.97 |
-| rimraf | 14.3% | ▲ +2.97 |
-| Mocha | 13.8% | ▲ +2.93 |
-| Zod | 13.6% | ▲ +3.57 |
+| TypeScript | 80.6% | ▲ +4.13 |
+| React | 36.6% | ▲ +3.73 |
+| Vitest | 26.0% | ▲ +3.77 |
+| Vite | 21.4% | ▲ +3.70 |
+| Jest | 18.2% | ▲ +3.11 |
+| Tailwind CSS | 15.7% | ▲ +3.47 |
+| Babel | 14.4% | ▲ +2.96 |
+| rimraf | 14.3% | ▲ +2.96 |
+| Zod | 13.8% | ▲ +3.58 |
+| Mocha | 13.8% | ▲ +2.92 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -46,9 +46,9 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | 4 | io-ts | Validation | ▲ +14.3% |
 | 5 | XState | StateManagement | ▲ +11.1% |
 | 6 | Jotai | StateManagement | ▲ +8.3% |
-| 7 | MySQL2 | Databases | ▲ +7.7% |
-| 8 | Class Validator | Validation | ▲ +7.1% |
-| 9 | Zustand | StateManagement | ▲ +6.9% |
+| 7 | Zustand | StateManagement | ▲ +7.7% |
+| 8 | MySQL2 | Databases | ▲ +7.7% |
+| 9 | Class Validator | Validation | ▲ +7.1% |
 | 10 | Fastify | Frameworks | ▲ +5.9% |
 
 ### 📉 Falling This Month
@@ -57,7 +57,6 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Firebase Admin | -6.3% |
 | Knex.js | -3.8% |
 | AVA | -3.8% |
-| Grunt | -0.6% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |
@@ -75,7 +74,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔗 Top Pairings
 | Tech A | Tech B | Strength Score |
 |---|---|---|
-| cva | tailwind-merge | 0.76 |
+| cva | tailwind-merge | 0.77 |
 | clsx | tailwind-merge | 0.76 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.65 |
@@ -84,7 +83,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | lucide-react | tailwind-merge | 0.57 |
 | mobx | mobx-react | 0.55 |
 | mui-material | emotion-react | 0.54 |
-| lucide-react | clsx | 0.54 |
+| lucide-react | clsx | 0.53 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
 
