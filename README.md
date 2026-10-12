@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 11, 2026)
+## The Pulse (Updated: October 12, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,15 +24,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 80.6% | ▲ +4.13 |
-| React | 36.6% | ▲ +3.73 |
-| Vitest | 26.0% | ▲ +3.77 |
-| Vite | 21.4% | ▲ +3.70 |
+| TypeScript | 81.3% | ▲ +4.17 |
+| React | 36.9% | ▲ +3.76 |
+| Vitest | 26.2% | ▲ +3.81 |
+| Vite | 21.5% | ▲ +3.73 |
 | Jest | 18.2% | ▲ +3.11 |
-| Tailwind CSS | 15.7% | ▲ +3.47 |
+| Tailwind CSS | 15.9% | ▲ +3.52 |
 | Babel | 14.4% | ▲ +2.96 |
-| rimraf | 14.3% | ▲ +2.96 |
-| Zod | 13.8% | ▲ +3.58 |
+| rimraf | 14.3% | ▲ +2.98 |
+| Zod | 13.8% | ▲ +3.60 |
 | Mocha | 13.8% | ▲ +2.92 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
@@ -40,15 +40,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Superstruct | Validation | ▲ +16.7% |
+| 1 | Superstruct | Validation | ▲ +33.3% |
 | 2 | SvelteKit | Frameworks | ▲ +15% |
 | 3 | Kysely | ORMs | ▲ +14.3% |
 | 4 | io-ts | Validation | ▲ +14.3% |
 | 5 | XState | StateManagement | ▲ +11.1% |
-| 6 | Jotai | StateManagement | ▲ +8.3% |
-| 7 | Zustand | StateManagement | ▲ +7.7% |
-| 8 | MySQL2 | Databases | ▲ +7.7% |
-| 9 | Class Validator | Validation | ▲ +7.1% |
+| 6 | Storybook | Testing | ▲ +8.4% |
+| 7 | Mock Service Worker | Testing | ▲ +7.4% |
+| 8 | Zustand | StateManagement | ▲ +6.3% |
+| 9 | Jotai | StateManagement | ▲ +6.1% |
 | 10 | Fastify | Frameworks | ▲ +5.9% |
 
 ### 📉 Falling This Month
@@ -74,15 +74,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔗 Top Pairings
 | Tech A | Tech B | Strength Score |
 |---|---|---|
-| cva | tailwind-merge | 0.77 |
+| cva | tailwind-merge | 0.76 |
 | clsx | tailwind-merge | 0.76 |
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.65 |
 | cva | clsx | 0.63 |
 | cva | lucide-react | 0.58 |
 | lucide-react | tailwind-merge | 0.57 |
+| mui-material | emotion-react | 0.55 |
 | mobx | mobx-react | 0.55 |
-| mui-material | emotion-react | 0.54 |
 | lucide-react | clsx | 0.53 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
