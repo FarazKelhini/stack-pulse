@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 12, 2026)
+## The Pulse (Updated: October 13, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,15 +24,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 81.3% | ▲ +4.17 |
+| TypeScript | 81.3% | ▲ +4.16 |
 | React | 36.9% | ▲ +3.76 |
-| Vitest | 26.2% | ▲ +3.81 |
-| Vite | 21.5% | ▲ +3.73 |
+| Vitest | 26.2% | ▲ +3.78 |
+| Vite | 21.6% | ▲ +3.71 |
 | Jest | 18.2% | ▲ +3.11 |
-| Tailwind CSS | 15.9% | ▲ +3.52 |
-| Babel | 14.4% | ▲ +2.96 |
-| rimraf | 14.3% | ▲ +2.98 |
-| Zod | 13.8% | ▲ +3.60 |
+| Tailwind CSS | 15.9% | ▲ +3.50 |
+| Babel | 14.4% | ▲ +2.97 |
+| rimraf | 14.3% | ▲ +2.97 |
+| Zod | 13.9% | ▲ +3.61 |
 | Mocha | 13.8% | ▲ +2.92 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
@@ -41,22 +41,22 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | Superstruct | Validation | ▲ +33.3% |
-| 2 | SvelteKit | Frameworks | ▲ +15% |
-| 3 | Kysely | ORMs | ▲ +14.3% |
-| 4 | io-ts | Validation | ▲ +14.3% |
-| 5 | XState | StateManagement | ▲ +11.1% |
-| 6 | Storybook | Testing | ▲ +8.4% |
-| 7 | Mock Service Worker | Testing | ▲ +7.4% |
-| 8 | Zustand | StateManagement | ▲ +6.3% |
-| 9 | Jotai | StateManagement | ▲ +6.1% |
+| 2 | Kysely | ORMs | ▲ +14.3% |
+| 3 | io-ts | Validation | ▲ +14.3% |
+| 4 | XState | StateManagement | ▲ +11.1% |
+| 5 | Valibot | Validation | ▲ +10.5% |
+| 6 | SvelteKit | Frameworks | ▲ +9.5% |
+| 7 | Mock Service Worker | Testing | ▲ +9.3% |
+| 8 | Storybook | Testing | ▲ +7.1% |
+| 9 | SolidJS | Frameworks | ▲ +6.3% |
 | 10 | Fastify | Frameworks | ▲ +5.9% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
 | Firebase Admin | -6.3% |
+| AVA | -5.1% |
 | Knex.js | -3.8% |
-| AVA | -3.8% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |
