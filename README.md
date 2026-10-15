@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 14, 2026)
+## The Pulse (Updated: October 15, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,15 +24,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 81.6% | ▲ +4.15 |
-| React | 37.1% | ▲ +3.75 |
-| Vitest | 26.3% | ▲ +3.76 |
-| Vite | 21.7% | ▲ +3.72 |
-| Jest | 18.2% | ▲ +3.10 |
-| Tailwind CSS | 15.9% | ▲ +3.45 |
+| TypeScript | 82.4% | ▲ +4.18 |
+| React | 37.4% | ▲ +3.78 |
+| Vitest | 26.7% | ▲ +3.80 |
+| Vite | 22.0% | ▲ +3.78 |
+| Jest | 18.3% | ▲ +3.11 |
+| Tailwind CSS | 16.0% | ▲ +3.48 |
 | Babel | 14.4% | ▲ +2.96 |
-| rimraf | 14.3% | ▲ +2.96 |
-| Zod | 13.9% | ▲ +3.56 |
+| rimraf | 14.4% | ▲ +2.97 |
+| Zod | 14.1% | ▲ +3.59 |
 | Mocha | 13.8% | ▲ +2.92 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
@@ -40,16 +40,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Superstruct | Validation | ▲ +33.3% |
-| 2 | SvelteKit | Frameworks | ▲ +14.3% |
-| 3 | Kysely | ORMs | ▲ +14.3% |
+| 1 | SvelteKit | Frameworks | ▲ +14.3% |
+| 2 | Kysely | ORMs | ▲ +14.3% |
+| 3 | Superstruct | Validation | ▲ +14.3% |
 | 4 | io-ts | Validation | ▲ +14.3% |
-| 5 | XState | StateManagement | ▲ +11.1% |
-| 6 | Valibot | Validation | ▲ +10.5% |
-| 7 | SolidJS | Frameworks | ▲ +9.4% |
-| 8 | Mock Service Worker | Testing | ▲ +9.3% |
-| 9 | SQLite3 | Databases | ▲ +7% |
-| 10 | Svelte | Frameworks | ▲ +6.8% |
+| 5 | SolidJS | Frameworks | ▲ +12.5% |
+| 6 | XState | StateManagement | ▲ +11.1% |
+| 7 | Valibot | Validation | ▲ +10.5% |
+| 8 | Fastify | Frameworks | ▲ +8.6% |
+| 9 | Mock Service Worker | Testing | ▲ +7.3% |
+| 10 | SQLite3 | Databases | ▲ +7% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -57,7 +57,6 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Firebase Admin | -6.3% |
 | AVA | -5.1% |
 | Knex.js | -3.8% |
-| nyc (Istanbul) | -0.4% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |
@@ -80,10 +79,10 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | testing-library-react | testing-library-jest-dom | 0.67 |
 | react-redux | redux | 0.65 |
 | cva | clsx | 0.63 |
-| cva | lucide-react | 0.58 |
+| cva | lucide-react | 0.57 |
 | lucide-react | tailwind-merge | 0.57 |
 | mui-material | emotion-react | 0.55 |
-| mobx | mobx-react | 0.55 |
+| mobx | mobx-react | 0.53 |
 | lucide-react | clsx | 0.53 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
