@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 18, 2026)
+## The Pulse (Updated: October 19, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,32 +24,32 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 83.1% | ▲ +4.15 |
-| React | 37.8% | ▲ +3.75 |
-| Vitest | 27.1% | ▲ +3.76 |
-| Vite | 22.3% | ▲ +3.75 |
-| Jest | 18.2% | ▲ +3.09 |
-| Tailwind CSS | 16.2% | ▲ +3.44 |
+| TypeScript | 83.2% | ▲ +4.12 |
+| React | 37.8% | ▲ +3.72 |
+| Vitest | 27.1% | ▲ +3.75 |
+| Vite | 22.4% | ▲ +3.70 |
+| Jest | 18.2% | ▲ +3.07 |
+| Tailwind CSS | 16.2% | ▲ +3.42 |
 | Babel | 14.4% | ▲ +2.94 |
 | rimraf | 14.4% | ▲ +2.97 |
-| Zod | 14.3% | ▲ +3.55 |
-| Mocha | 13.8% | ▲ +2.93 |
+| Zod | 14.3% | ▲ +3.52 |
+| Mocha | 13.8% | ▲ +2.94 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Superstruct | Validation | ▲ +14.3% |
-| 2 | Valibot | Validation | ▲ +10.5% |
-| 3 | SolidJS | Frameworks | ▲ +9.1% |
-| 4 | Mock Service Worker | Testing | ▲ +8.9% |
-| 5 | Prisma | ORMs | ▲ +8.2% |
-| 6 | TypeORM | ORMs | ▲ +7.4% |
-| 7 | Auth.js (NextAuth) | Authentication | ▲ +7.1% |
-| 8 | Bcrypt | Authentication | ▲ +6.8% |
-| 9 | Fastify | Frameworks | ▲ +5.6% |
-| 10 | Playwright | Testing | ▲ +5.2% |
+| 1 | Kysely | ORMs | ▲ +12.5% |
+| 2 | SolidJS | Frameworks | ▲ +9.1% |
+| 3 | Prisma | ORMs | ▲ +7% |
+| 4 | Bcrypt | Authentication | ▲ +6.8% |
+| 5 | Fastify | Frameworks | ▲ +5.6% |
+| 6 | Auth.js (NextAuth) | Authentication | ▲ +5.3% |
+| 7 | Mock Service Worker | Testing | ▲ +5.2% |
+| 8 | Drizzle ORM | ORMs | ▲ +5.1% |
+| 9 | SQLite3 | Databases | ▲ +5.1% |
+| 10 | Valibot | Validation | ▲ +5% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -58,8 +58,11 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Firebase Admin | -6.3% |
 | MobX React | -4.2% |
 | Knex.js | -3.8% |
-| Lerna | -1.3% |
+| Cypress | -2.1% |
+| Jasmine | -2.0% |
+| Lerna | -1.7% |
 | Angular | -0.9% |
+| Less | -0.7% |
 | nyc (Istanbul) | -0.4% |
 
 ### 🏷️ Top Per Category
