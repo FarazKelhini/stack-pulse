@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 21, 2026)
+## The Pulse (Updated: October 22, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,15 +24,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 84.4% | ▲ +4.17 |
-| React | 38.2% | ▲ +3.75 |
-| Vitest | 27.6% | ▲ +3.79 |
-| Vite | 22.8% | ▲ +3.74 |
-| Jest | 18.1% | ▲ +3.06 |
-| Tailwind CSS | 16.5% | ▲ +3.46 |
-| Zod | 14.6% | ▲ +3.56 |
+| TypeScript | 84.5% | ▲ +4.15 |
+| React | 38.3% | ▲ +3.73 |
+| Vitest | 27.7% | ▲ +3.79 |
+| Vite | 22.8% | ▲ +3.73 |
+| Jest | 18.1% | ▲ +3.05 |
+| Tailwind CSS | 16.5% | ▲ +3.45 |
+| Zod | 14.6% | ▲ +3.53 |
 | Babel | 14.4% | ▲ +2.95 |
-| rimraf | 14.4% | ▲ +2.97 |
+| rimraf | 14.4% | ▲ +2.98 |
 | Mocha | 13.9% | ▲ +2.94 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
@@ -41,15 +41,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | Kysely | ORMs | ▲ +12.5% |
-| 2 | Drizzle ORM | ORMs | ▲ +8.1% |
-| 3 | Prisma | ORMs | ▲ +8.1% |
-| 4 | Chakra UI | UILibraries | ▲ +7.7% |
-| 5 | Better SQLite3 | Databases | ▲ +6.8% |
-| 6 | Bcrypt | Authentication | ▲ +6.8% |
-| 7 | Class Validator | Validation | ▲ +6.7% |
-| 8 | Playwright | Testing | ▲ +6.6% |
-| 9 | NestJS | Frameworks | ▲ +6.5% |
-| 10 | Zustand | StateManagement | ▲ +5.9% |
+| 2 | Chakra UI | UILibraries | ▲ +7.7% |
+| 3 | Better SQLite3 | Databases | ▲ +6.1% |
+| 4 | Drizzle ORM | ORMs | ▲ +5.9% |
+| 5 | Astro | Frameworks | ▲ +5.9% |
+| 6 | SolidJS | Frameworks | ▲ +5.6% |
+| 7 | Parcel | BuildTools | ▲ +5.6% |
+| 8 | Zustand | StateManagement | ▲ +5.5% |
+| 9 | Playwright | Testing | ▲ +5.2% |
+| 10 | Bcrypt.js | Authentication | ▲ +5.1% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -87,7 +87,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | cva | lucide-react | 0.57 |
 | lucide-react | tailwind-merge | 0.56 |
 | mui-material | emotion-react | 0.54 |
-| lucide-react | clsx | 0.52 |
+| lucide-react | clsx | 0.53 |
 | mobx | mobx-react | 0.52 |
 
 *Strength Score measures the co-occurrence affinity between two technologies using the Jaccard similarity coefficient:*
