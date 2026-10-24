@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 23, 2026)
+## The Pulse (Updated: October 24, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,16 +24,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 85.3% | ▲ +4.18 |
-| React | 38.7% | ▲ +3.78 |
-| Vitest | 28.1% | ▲ +3.83 |
-| Vite | 23.3% | ▲ +3.80 |
-| Jest | 18.2% | ▲ +3.05 |
-| Tailwind CSS | 16.8% | ▲ +3.50 |
-| Zod | 14.8% | ▲ +3.57 |
-| Babel | 14.5% | ▲ +2.97 |
-| rimraf | 14.4% | ▲ +2.99 |
-| Mocha | 13.9% | ▲ +2.94 |
+| TypeScript | 85.3% | ▲ +4.15 |
+| React | 38.8% | ▲ +3.75 |
+| Vitest | 28.2% | ▲ +3.81 |
+| Vite | 23.3% | ▲ +3.76 |
+| Jest | 18.2% | ▲ +3.04 |
+| Tailwind CSS | 16.8% | ▲ +3.46 |
+| Zod | 14.9% | ▲ +3.58 |
+| Babel | 14.5% | ▲ +2.96 |
+| rimraf | 14.5% | ▲ +2.99 |
+| Mocha | 13.9% | ▲ +2.93 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
 
@@ -41,20 +41,20 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | Kysely | ORMs | ▲ +12.5% |
-| 2 | Zustand | StateManagement | ▲ +8% |
-| 3 | Drizzle ORM | ORMs | ▲ +7.8% |
-| 4 | Chakra UI | UILibraries | ▲ +7.7% |
-| 5 | Better SQLite3 | Databases | ▲ +6.7% |
-| 6 | Playwright | Testing | ▲ +6.5% |
-| 7 | Bcrypt.js | Authentication | ▲ +6.4% |
-| 8 | Lucide | UILibraries | ▲ +6.1% |
-| 9 | Astro | Frameworks | ▲ +5.9% |
-| 10 | SolidJS | Frameworks | ▲ +5.6% |
+| 2 | Chakra UI | UILibraries | ▲ +7.7% |
+| 3 | Drizzle ORM | ORMs | ▲ +6.8% |
+| 4 | Zustand | StateManagement | ▲ +6.1% |
+| 5 | Astro | Frameworks | ▲ +5.9% |
+| 6 | SolidJS | Frameworks | ▲ +5.6% |
+| 7 | Parcel | BuildTools | ▲ +5.6% |
+| 8 | Better SQLite3 | Databases | ▲ +5.4% |
+| 9 | Bcrypt.js | Authentication | ▲ +5.1% |
+| 10 | Playwright | Testing | ▲ +5% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
 |---|---|
-| AVA | -6.4% |
+| AVA | -9.0% |
 | Firebase Admin | -6.3% |
 | MobX React | -4.2% |
 | Knex.js | -3.8% |
@@ -62,6 +62,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Jasmine | -2.0% |
 | Lerna | -1.7% |
 | Angular | -0.9% |
+| Grunt | -0.6% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |
