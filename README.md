@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 24, 2026)
+## The Pulse (Updated: October 25, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,15 +24,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 85.3% | ▲ +4.15 |
-| React | 38.8% | ▲ +3.75 |
-| Vitest | 28.2% | ▲ +3.81 |
-| Vite | 23.3% | ▲ +3.76 |
-| Jest | 18.2% | ▲ +3.04 |
-| Tailwind CSS | 16.8% | ▲ +3.46 |
-| Zod | 14.9% | ▲ +3.58 |
-| Babel | 14.5% | ▲ +2.96 |
-| rimraf | 14.5% | ▲ +2.99 |
+| TypeScript | 86.3% | ▲ +4.20 |
+| React | 39.2% | ▲ +3.80 |
+| Vitest | 28.7% | ▲ +3.87 |
+| Vite | 23.8% | ▲ +3.85 |
+| Jest | 18.2% | ▲ +3.05 |
+| Tailwind CSS | 17.0% | ▲ +3.51 |
+| Zod | 15.2% | ▲ +3.66 |
+| Babel | 14.6% | ▲ +2.97 |
+| rimraf | 14.5% | ▲ +3.00 |
 | Mocha | 13.9% | ▲ +2.93 |
 
 <small><i>Trend Score is a log-scaled growth index: (current adoption / prior adoption) × log10(current adoption + 10), weighted so both the rate of change and the technology's overall scale matter.</i></small>
@@ -41,15 +41,15 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
 | 1 | Kysely | ORMs | ▲ +12.5% |
-| 2 | Chakra UI | UILibraries | ▲ +7.7% |
-| 3 | Drizzle ORM | ORMs | ▲ +6.8% |
-| 4 | Zustand | StateManagement | ▲ +6.1% |
-| 5 | Astro | Frameworks | ▲ +5.9% |
-| 6 | SolidJS | Frameworks | ▲ +5.6% |
-| 7 | Parcel | BuildTools | ▲ +5.6% |
-| 8 | Better SQLite3 | Databases | ▲ +5.4% |
-| 9 | Bcrypt.js | Authentication | ▲ +5.1% |
-| 10 | Playwright | Testing | ▲ +5% |
+| 2 | SolidJS | Frameworks | ▲ +11.1% |
+| 3 | Drizzle ORM | ORMs | ▲ +8.7% |
+| 4 | Chakra UI | UILibraries | ▲ +7.7% |
+| 5 | Zustand | StateManagement | ▲ +7.5% |
+| 6 | Lucide | UILibraries | ▲ +6.6% |
+| 7 | Better SQLite3 | Databases | ▲ +6.6% |
+| 8 | Vite | BuildTools | ▲ +6.4% |
+| 9 | Zod | Validation | ▲ +6.3% |
+| 10 | Vitest | Testing | ▲ +6.1% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -57,7 +57,6 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | AVA | -9.0% |
 | Firebase Admin | -6.3% |
 | MobX React | -4.2% |
-| Knex.js | -3.8% |
 | Cypress | -2.1% |
 | Jasmine | -2.0% |
 | Lerna | -1.7% |
