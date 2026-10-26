@@ -16,7 +16,7 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 
 <!-- STACKPULSE:SUMMARY:START -->
-## The Pulse (Updated: October 25, 2026)
+## The Pulse (Updated: October 26, 2026)
 
 🔗 [View the live dashboard →](https://stack-pulse-data.vercel.app/)
 
@@ -24,14 +24,14 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 
 | Technology | Adoption | Trend Score |
 |------------|---------:|------------:|
-| TypeScript | 86.3% | ▲ +4.20 |
+| TypeScript | 86.3% | ▲ +4.19 |
 | React | 39.2% | ▲ +3.80 |
 | Vitest | 28.7% | ▲ +3.87 |
 | Vite | 23.8% | ▲ +3.85 |
 | Jest | 18.2% | ▲ +3.05 |
-| Tailwind CSS | 17.0% | ▲ +3.51 |
-| Zod | 15.2% | ▲ +3.66 |
-| Babel | 14.6% | ▲ +2.97 |
+| Tailwind CSS | 17.1% | ▲ +3.51 |
+| Zod | 15.2% | ▲ +3.64 |
+| Babel | 14.6% | ▲ +2.98 |
 | rimraf | 14.5% | ▲ +3.00 |
 | Mocha | 13.9% | ▲ +2.93 |
 
@@ -40,16 +40,16 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 ### 🔥 Hot This Week
 | Rank | Technology | Category | Weekly Change |
 |------|------------|----------|-------------:|
-| 1 | Kysely | ORMs | ▲ +12.5% |
-| 2 | SolidJS | Frameworks | ▲ +11.1% |
-| 3 | Drizzle ORM | ORMs | ▲ +8.7% |
-| 4 | Chakra UI | UILibraries | ▲ +7.7% |
-| 5 | Zustand | StateManagement | ▲ +7.5% |
-| 6 | Lucide | UILibraries | ▲ +6.6% |
-| 7 | Better SQLite3 | Databases | ▲ +6.6% |
-| 8 | Vite | BuildTools | ▲ +6.4% |
-| 9 | Zod | Validation | ▲ +6.3% |
-| 10 | Vitest | Testing | ▲ +6.1% |
+| 1 | SolidJS | Frameworks | ▲ +11.1% |
+| 2 | Drizzle ORM | ORMs | ▲ +7.7% |
+| 3 | Chakra UI | UILibraries | ▲ +7.7% |
+| 4 | Better SQLite3 | Databases | ▲ +7.2% |
+| 5 | MySQL2 | Databases | ▲ +7.1% |
+| 6 | Zustand | StateManagement | ▲ +6.8% |
+| 7 | Preact | Frameworks | ▲ +6.8% |
+| 8 | Lucide | UILibraries | ▲ +6.4% |
+| 9 | Vite | BuildTools | ▲ +6.3% |
+| 10 | Zod | Validation | ▲ +6.2% |
 
 ### 📉 Falling This Month
 | Name | 30-Day Trend |
@@ -60,8 +60,8 @@ StackPulse crawls a rolling sample of public JavaScript and TypeScript repositor
 | Cypress | -2.1% |
 | Jasmine | -2.0% |
 | Lerna | -1.7% |
+| Grunt | -1.1% |
 | Angular | -0.9% |
-| Grunt | -0.6% |
 
 ### 🏷️ Top Per Category
 | Category | Top Technology |

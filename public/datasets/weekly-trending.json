@@ -1,95 +1,87 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-10-25T09:46:41.845Z",
-  "commitSha": "e0a6dea341a0f6ea8598e6fc8735c6773ac6355a",
+  "generatedAt": "2026-10-26T10:53:47.757Z",
+  "commitSha": "3986d14ca68d4e64f1fab6a679704318c435e52c",
   "technologies": [
     {
       "slug": "typescript",
       "name": "TypeScript",
       "category": "BuildTools",
       "repoCount": 4679,
-      "weeklyDelta": 173,
-      "weeklyPercentChange": 3.8
+      "weeklyDelta": 167,
+      "weeklyPercentChange": 3.7
     },
     {
       "slug": "vitest",
       "name": "Vitest",
       "category": "Testing",
-      "repoCount": 1556,
-      "weeklyDelta": 89,
-      "weeklyPercentChange": 6.1
+      "repoCount": 1558,
+      "weeklyDelta": 87,
+      "weeklyPercentChange": 5.9
     },
     {
       "slug": "react",
       "name": "React",
       "category": "Frameworks",
-      "repoCount": 2126,
-      "weeklyDelta": 79,
-      "weeklyPercentChange": 3.9
+      "repoCount": 2127,
+      "weeklyDelta": 77,
+      "weeklyPercentChange": 3.8
     },
     {
       "slug": "vite",
       "name": "Vite",
       "category": "BuildTools",
-      "repoCount": 1288,
+      "repoCount": 1292,
       "weeklyDelta": 77,
-      "weeklyPercentChange": 6.4
+      "weeklyPercentChange": 6.3
     },
     {
       "slug": "zod",
       "name": "Zod",
       "category": "Validation",
       "repoCount": 826,
-      "weeklyDelta": 49,
-      "weeklyPercentChange": 6.3
+      "weeklyDelta": 48,
+      "weeklyPercentChange": 6.2
     },
     {
       "slug": "tailwindcss",
       "name": "Tailwind CSS",
       "category": "UILibraries",
-      "repoCount": 924,
-      "weeklyDelta": 47,
-      "weeklyPercentChange": 5.4
+      "repoCount": 925,
+      "weeklyDelta": 45,
+      "weeklyPercentChange": 5.1
     },
     {
       "slug": "esbuild",
       "name": "esbuild",
       "category": "BuildTools",
-      "repoCount": 654,
+      "repoCount": 656,
       "weeklyDelta": 35,
-      "weeklyPercentChange": 5.7
+      "weeklyPercentChange": 5.6
     },
     {
       "slug": "lucide-react",
       "name": "Lucide",
       "category": "UILibraries",
       "repoCount": 549,
-      "weeklyDelta": 34,
-      "weeklyPercentChange": 6.6
+      "weeklyDelta": 33,
+      "weeklyPercentChange": 6.4
     },
     {
       "slug": "playwright",
       "name": "Playwright",
       "category": "Testing",
-      "repoCount": 535,
-      "weeklyDelta": 30,
-      "weeklyPercentChange": 5.9
+      "repoCount": 536,
+      "weeklyDelta": 29,
+      "weeklyPercentChange": 5.7
     },
     {
       "slug": "next-js",
       "name": "Next.js",
       "category": "Frameworks",
       "repoCount": 510,
-      "weeklyDelta": 22,
-      "weeklyPercentChange": 4.5
-    },
-    {
-      "slug": "zustand",
-      "name": "Zustand",
-      "category": "StateManagement",
-      "repoCount": 300,
-      "weeklyDelta": 21,
-      "weeklyPercentChange": 7.5
+      "weeklyDelta": 23,
+      "weeklyPercentChange": 4.7
     },
     {
       "slug": "clsx",
@@ -108,68 +100,84 @@
       "weeklyPercentChange": 5
     },
     {
+      "slug": "zustand",
+      "name": "Zustand",
+      "category": "StateManagement",
+      "repoCount": 300,
+      "weeklyDelta": 19,
+      "weeklyPercentChange": 6.8
+    },
+    {
       "slug": "tailwind-merge",
       "name": "Tailwind Merge",
       "category": "UILibraries",
       "repoCount": 466,
-      "weeklyDelta": 20,
-      "weeklyPercentChange": 4.5
+      "weeklyDelta": 19,
+      "weeklyPercentChange": 4.3
     },
     {
       "slug": "cva",
       "name": "Class Variance Authority",
       "category": "UILibraries",
       "repoCount": 397,
-      "weeklyDelta": 19,
-      "weeklyPercentChange": 5
+      "weeklyDelta": 17,
+      "weeklyPercentChange": 4.5
     },
     {
       "slug": "testing-library-react",
       "name": "React Testing Library",
       "category": "Testing",
-      "repoCount": 545,
-      "weeklyDelta": 17,
-      "weeklyPercentChange": 3.2
+      "repoCount": 544,
+      "weeklyDelta": 15,
+      "weeklyPercentChange": 2.8
     },
     {
       "slug": "testing-library-jest-dom",
       "name": "jest-dom",
       "category": "Testing",
-      "repoCount": 453,
-      "weeklyDelta": 15,
-      "weeklyPercentChange": 3.4
-    },
-    {
-      "slug": "dotenv",
-      "name": "dotenv",
-      "category": "BuildTools",
-      "repoCount": 599,
-      "weeklyDelta": 14,
-      "weeklyPercentChange": 2.4
-    },
-    {
-      "slug": "express",
-      "name": "Express",
-      "category": "Frameworks",
-      "repoCount": 611,
+      "repoCount": 452,
       "weeklyDelta": 13,
-      "weeklyPercentChange": 2.2
+      "weeklyPercentChange": 3
     },
     {
       "slug": "better-sqlite3",
       "name": "Better SQLite3",
       "category": "Databases",
       "repoCount": 178,
-      "weeklyDelta": 11,
-      "weeklyPercentChange": 6.6
+      "weeklyDelta": 12,
+      "weeklyPercentChange": 7.2
+    },
+    {
+      "slug": "dotenv",
+      "name": "dotenv",
+      "category": "BuildTools",
+      "repoCount": 598,
+      "weeklyDelta": 12,
+      "weeklyPercentChange": 2
+    },
+    {
+      "slug": "express",
+      "name": "Express",
+      "category": "Frameworks",
+      "repoCount": 611,
+      "weeklyDelta": 12,
+      "weeklyPercentChange": 2
     },
     {
       "slug": "cross-env",
       "name": "cross-env",
       "category": "BuildTools",
       "repoCount": 716,
-      "weeklyDelta": 11,
-      "weeklyPercentChange": 1.6
+      "weeklyDelta": 10,
+      "weeklyPercentChange": 1.4
+    },
+    {
+      "slug": "babel",
+      "name": "Babel",
+      "category": "BuildTools",
+      "repoCount": 791,
+      "weeklyDelta": 10,
+      "weeklyPercentChange": 1.3
     },
     {
       "slug": "framer-motion",
@@ -180,20 +188,12 @@
       "weeklyPercentChange": 4.9
     },
     {
-      "slug": "drizzle-orm",
-      "name": "Drizzle ORM",
-      "category": "ORMs",
-      "repoCount": 112,
+      "slug": "ajv",
+      "name": "Ajv",
+      "category": "Validation",
+      "repoCount": 220,
       "weeklyDelta": 9,
-      "weeklyPercentChange": 8.7
-    },
-    {
-      "slug": "babel",
-      "name": "Babel",
-      "category": "BuildTools",
-      "repoCount": 790,
-      "weeklyDelta": 8,
-      "weeklyPercentChange": 1
+      "weeklyPercentChange": 4.3
     },
     {
       "slug": "ts-node",
@@ -204,20 +204,20 @@
       "weeklyPercentChange": 1.2
     },
     {
-      "slug": "ajv",
-      "name": "Ajv",
-      "category": "Validation",
-      "repoCount": 220,
+      "slug": "drizzle-orm",
+      "name": "Drizzle ORM",
+      "category": "ORMs",
+      "repoCount": 112,
       "weeklyDelta": 8,
-      "weeklyPercentChange": 3.8
+      "weeklyPercentChange": 7.7
     },
     {
       "slug": "pg",
       "name": "PostgreSQL (pg)",
       "category": "Databases",
-      "repoCount": 149,
-      "weeklyDelta": 6,
-      "weeklyPercentChange": 4.2
+      "repoCount": 150,
+      "weeklyDelta": 7,
+      "weeklyPercentChange": 4.9
     },
     {
       "slug": "react-query",
@@ -228,10 +228,18 @@
       "weeklyPercentChange": 4.1
     },
     {
+      "slug": "sass",
+      "name": "Sass",
+      "category": "UILibraries",
+      "repoCount": 312,
+      "weeklyDelta": 6,
+      "weeklyPercentChange": 2
+    },
+    {
       "slug": "rollup",
       "name": "Rollup",
       "category": "BuildTools",
-      "repoCount": 591,
+      "repoCount": 592,
       "weeklyDelta": 5,
       "weeklyPercentChange": 0.9
     },
@@ -252,28 +260,12 @@
       "weeklyPercentChange": 1.5
     },
     {
-      "slug": "sass",
-      "name": "Sass",
-      "category": "UILibraries",
-      "repoCount": 312,
-      "weeklyDelta": 5,
-      "weeklyPercentChange": 1.6
-    },
-    {
       "slug": "rimraf",
       "name": "rimraf",
       "category": "BuildTools",
       "repoCount": 785,
       "weeklyDelta": 5,
       "weeklyPercentChange": 0.6
-    },
-    {
-      "slug": "cors",
-      "name": "CORS",
-      "category": "Authentication",
-      "repoCount": 174,
-      "weeklyDelta": 4,
-      "weeklyPercentChange": 2.4
     },
     {
       "slug": "solid-js",
@@ -284,20 +276,36 @@
       "weeklyPercentChange": 11.1
     },
     {
+      "slug": "preact",
+      "name": "Preact",
+      "category": "Frameworks",
+      "repoCount": 63,
+      "weeklyDelta": 4,
+      "weeklyPercentChange": 6.8
+    },
+    {
+      "slug": "cors",
+      "name": "CORS",
+      "category": "Authentication",
+      "repoCount": 174,
+      "weeklyDelta": 4,
+      "weeklyPercentChange": 2.4
+    },
+    {
+      "slug": "swc",
+      "name": "SWC",
+      "category": "BuildTools",
+      "repoCount": 143,
+      "weeklyDelta": 4,
+      "weeklyPercentChange": 2.9
+    },
+    {
       "slug": "bcryptjs",
       "name": "Bcrypt.js",
       "category": "Authentication",
       "repoCount": 83,
       "weeklyDelta": 4,
       "weeklyPercentChange": 5.1
-    },
-    {
-      "slug": "mocha",
-      "name": "Mocha",
-      "category": "Testing",
-      "repoCount": 753,
-      "weeklyDelta": 4,
-      "weeklyPercentChange": 0.5
     },
     {
       "slug": "styled-components",
@@ -316,14 +324,6 @@
       "weeklyPercentChange": 3.8
     },
     {
-      "slug": "preact",
-      "name": "Preact",
-      "category": "Frameworks",
-      "repoCount": 62,
-      "weeklyDelta": 3,
-      "weeklyPercentChange": 5.1
-    },
-    {
       "slug": "ant-design",
       "name": "Ant Design",
       "category": "UILibraries",
@@ -332,18 +332,10 @@
       "weeklyPercentChange": 3.9
     },
     {
-      "slug": "swc",
-      "name": "SWC",
-      "category": "BuildTools",
-      "repoCount": 142,
-      "weeklyDelta": 3,
-      "weeklyPercentChange": 2.2
-    },
-    {
       "slug": "webpack",
       "name": "Webpack",
       "category": "BuildTools",
-      "repoCount": 706,
+      "repoCount": 705,
       "weeklyDelta": 3,
       "weeklyPercentChange": 0.4
     },
@@ -364,12 +356,28 @@
       "weeklyPercentChange": 2.1
     },
     {
+      "slug": "mysql2",
+      "name": "MySQL2",
+      "category": "Databases",
+      "repoCount": 45,
+      "weeklyDelta": 3,
+      "weeklyPercentChange": 7.1
+    },
+    {
       "slug": "ioredis",
       "name": "ioredis",
       "category": "Databases",
       "repoCount": 74,
       "weeklyDelta": 3,
       "weeklyPercentChange": 4.2
+    },
+    {
+      "slug": "jest",
+      "name": "Jest",
+      "category": "Testing",
+      "repoCount": 989,
+      "weeklyDelta": 2,
+      "weeklyPercentChange": 0.2
     },
     {
       "slug": "msw",
@@ -380,28 +388,12 @@
       "weeklyPercentChange": 3.3
     },
     {
-      "slug": "bootstrap",
-      "name": "Bootstrap",
-      "category": "UILibraries",
-      "repoCount": 94,
-      "weeklyDelta": 2,
-      "weeklyPercentChange": 2.2
-    },
-    {
       "slug": "mongoose",
       "name": "Mongoose",
       "category": "ORMs",
       "repoCount": 73,
       "weeklyDelta": 2,
       "weeklyPercentChange": 2.8
-    },
-    {
-      "slug": "supabase-js",
-      "name": "Supabase",
-      "category": "Databases",
-      "repoCount": 67,
-      "weeklyDelta": 2,
-      "weeklyPercentChange": 3.1
     },
     {
       "slug": "swr",
@@ -418,6 +410,14 @@
       "repoCount": 119,
       "weeklyDelta": 2,
       "weeklyPercentChange": 1.7
+    },
+    {
+      "slug": "supabase-js",
+      "name": "Supabase",
+      "category": "Databases",
+      "repoCount": 67,
+      "weeklyDelta": 2,
+      "weeklyPercentChange": 3.1
     },
     {
       "slug": "jotai",
@@ -444,36 +444,20 @@
       "weeklyPercentChange": 2.3
     },
     {
+      "slug": "mocha",
+      "name": "Mocha",
+      "category": "Testing",
+      "repoCount": 752,
+      "weeklyDelta": 2,
+      "weeklyPercentChange": 0.3
+    },
+    {
       "slug": "sinon",
       "name": "Sinon",
       "category": "Testing",
       "repoCount": 328,
       "weeklyDelta": 2,
       "weeklyPercentChange": 0.6
-    },
-    {
-      "slug": "mysql2",
-      "name": "MySQL2",
-      "category": "Databases",
-      "repoCount": 44,
-      "weeklyDelta": 2,
-      "weeklyPercentChange": 4.8
-    },
-    {
-      "slug": "nodemon",
-      "name": "Nodemon",
-      "category": "BuildTools",
-      "repoCount": 226,
-      "weeklyDelta": 2,
-      "weeklyPercentChange": 0.9
-    },
-    {
-      "slug": "kysely",
-      "name": "Kysely",
-      "category": "ORMs",
-      "repoCount": 9,
-      "weeklyDelta": 1,
-      "weeklyPercentChange": 12.5
     },
     {
       "slug": "sveltekit",
@@ -484,44 +468,12 @@
       "weeklyPercentChange": 4.2
     },
     {
-      "slug": "react-redux",
-      "name": "React Redux",
-      "category": "StateManagement",
-      "repoCount": 154,
+      "slug": "emotion-react",
+      "name": "Emotion",
+      "category": "UILibraries",
+      "repoCount": 105,
       "weeklyDelta": 1,
-      "weeklyPercentChange": 0.7
-    },
-    {
-      "slug": "nestjs",
-      "name": "NestJS",
-      "category": "Frameworks",
-      "repoCount": 33,
-      "weeklyDelta": 1,
-      "weeklyPercentChange": 3.1
-    },
-    {
-      "slug": "chai",
-      "name": "Chai",
-      "category": "Testing",
-      "repoCount": 469,
-      "weeklyDelta": 1,
-      "weeklyPercentChange": 0.2
-    },
-    {
-      "slug": "redux",
-      "name": "Redux",
-      "category": "StateManagement",
-      "repoCount": 144,
-      "weeklyDelta": 1,
-      "weeklyPercentChange": 0.7
-    },
-    {
-      "slug": "istanbul",
-      "name": "nyc (Istanbul)",
-      "category": "Testing",
-      "repoCount": 239,
-      "weeklyDelta": 1,
-      "weeklyPercentChange": 0.4
+      "weeklyPercentChange": 1
     },
     {
       "slug": "redux-toolkit",
@@ -532,6 +484,30 @@
       "weeklyPercentChange": 1.8
     },
     {
+      "slug": "bootstrap",
+      "name": "Bootstrap",
+      "category": "UILibraries",
+      "repoCount": 94,
+      "weeklyDelta": 1,
+      "weeklyPercentChange": 1.1
+    },
+    {
+      "slug": "nestjs",
+      "name": "NestJS",
+      "category": "Frameworks",
+      "repoCount": 33,
+      "weeklyDelta": 1,
+      "weeklyPercentChange": 3.1
+    },
+    {
+      "slug": "react-redux",
+      "name": "React Redux",
+      "category": "StateManagement",
+      "repoCount": 154,
+      "weeklyDelta": 1,
+      "weeklyPercentChange": 0.7
+    },
+    {
       "slug": "valibot",
       "name": "Valibot",
       "category": "Validation",
@@ -540,12 +516,12 @@
       "weeklyPercentChange": 4.8
     },
     {
-      "slug": "emotion-react",
-      "name": "Emotion",
-      "category": "UILibraries",
-      "repoCount": 105,
+      "slug": "istanbul",
+      "name": "nyc (Istanbul)",
+      "category": "Testing",
+      "repoCount": 239,
       "weeklyDelta": 1,
-      "weeklyPercentChange": 1
+      "weeklyPercentChange": 0.4
     },
     {
       "slug": "astro",
@@ -556,12 +532,20 @@
       "weeklyPercentChange": 2.9
     },
     {
-      "slug": "sqlite3",
-      "name": "SQLite3",
-      "category": "Databases",
-      "repoCount": 62,
+      "slug": "redux",
+      "name": "Redux",
+      "category": "StateManagement",
+      "repoCount": 144,
       "weeklyDelta": 1,
-      "weeklyPercentChange": 1.6
+      "weeklyPercentChange": 0.7
+    },
+    {
+      "slug": "class-validator",
+      "name": "Class Validator",
+      "category": "Validation",
+      "repoCount": 32,
+      "weeklyDelta": 1,
+      "weeklyPercentChange": 3.2
     },
     {
       "slug": "heroicons",
@@ -586,14 +570,6 @@
       "repoCount": 19,
       "weeklyDelta": 1,
       "weeklyPercentChange": 5.6
-    },
-    {
-      "slug": "class-validator",
-      "name": "Class Validator",
-      "category": "Validation",
-      "repoCount": 32,
-      "weeklyDelta": 1,
-      "weeklyPercentChange": 3.2
     },
     {
       "slug": "chakra-ui",
@@ -626,8 +602,16 @@
       "repoCount": 46,
       "weeklyDelta": 1,
       "weeklyPercentChange": 2.2
+    },
+    {
+      "slug": "nodemon",
+      "name": "Nodemon",
+      "category": "BuildTools",
+      "repoCount": 226,
+      "weeklyDelta": 1,
+      "weeklyPercentChange": 0.4
     }
   ],
-  "snapshotDate": "2026-10-25",
-  "comparisonDate": "2026-10-18"
+  "snapshotDate": "2026-10-26",
+  "comparisonDate": "2026-10-19"
 }
